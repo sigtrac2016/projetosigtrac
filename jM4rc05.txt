@@ -2,4 +2,4 @@ Arquivo de texto de José Marcos Gomes;
 
 Com duas linhas!
 
-Alteração do arquivo de texto dentro de uma branch!
+Alteração do mesmo arquivo de texto via github web - vai dar conflito!
