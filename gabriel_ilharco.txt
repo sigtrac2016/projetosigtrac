@@ -1,1 +1,2 @@
-Nova linha de texto, dessa vez na master
+Nova linha de texto
+
