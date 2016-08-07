@@ -1,0 +1,5 @@
+Arquivo de texto de José Marcos Gomes;
+
+Com duas linhas!
+
+Alteração do mesmo arquivo de texto via github web - vai dar conflito!
