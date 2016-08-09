@@ -1,2 +1,2 @@
 First commit
-Modified second commit
+second commit resolved
