@@ -1,1 +1,2 @@
-Arquivo para realizacao de um commit.
+Arquivo para realizacao de um commit. (Linha alterada na branch b_teste_rjanuzi)
+Linha adicionada na branch b_teste_rjanuzi
