@@ -1,1 +1,2 @@
 texto original do primeiro commit
+alteração no master para conflito
