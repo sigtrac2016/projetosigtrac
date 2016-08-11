@@ -1,1 +1,3 @@
-Arquivo para realizacao de um commit.
+Arquivo para realizacao de um commit. (Alteracao na branch master)
+Linha 1 inserida na branch master.
+Linha 2 inserido na branch master.
