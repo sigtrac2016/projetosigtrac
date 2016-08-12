@@ -1,1 +1,1 @@
-# Primeiro commit!!!!1
+This is an amazing project to prevent terrorist attacks and other crisis. SIG-TRAC stands for "Sistema Integrado de Tempo Real para Gerenciamento de Acidentes e Crises" (Real Time Crisis and Casuality Management Integrated System, RT-CCMIS).

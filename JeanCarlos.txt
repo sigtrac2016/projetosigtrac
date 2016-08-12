@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+teste teste teste 1234
+teste Jean#
+teste1234
+
+=======
+gerando conflito samara
+>>>>>>> c5632fa216e4d867046ad20c3d8cee53d714ac55
