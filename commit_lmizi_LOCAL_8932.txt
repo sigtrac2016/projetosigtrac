@@ -1,10 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 Teste lista 012222
 =======
 Teste lista 0111
 >>>>>>> 84addfc39ebabecbc3edea5e6d5655e0600b047c
-=======
-Teste lista 0
-Teste lista 0.1
->>>>>>> commit_lmizi.txt
