@@ -8,3 +8,5 @@ Teste lista 0111
 Teste lista 0
 Teste lista 0.1
 >>>>>>> commit_lmizi.txt
+
+Luciana
