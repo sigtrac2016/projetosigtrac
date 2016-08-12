@@ -1,1 +1,3 @@
 Commitando para testar conflito
+Alterando 1 vez
+Alteração 2 vezes
