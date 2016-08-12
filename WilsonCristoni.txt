@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Arquivo Inicial da "Listex 0" do projeto SIGTRAC na Branch master_wilson, agora editado localmente para dar conflito
+=======
+Arquivo Inicial da "Listex 0" do projeto SIGTRAC na Branch master_wilson, agora editado pelo github web para dar conflito
+>>>>>>> 9a75529d0046473dcfd367a4cb96ca15ee95c9f5
