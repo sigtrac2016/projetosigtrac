@@ -1,0 +1,5 @@
+Arquivo para realizacao de um commit. (Linha alterada na branch b_teste_rjanuzi)
+Arquivo para realizacao de um commit. (Alteracao na branch master)
+Linha adicionada na branch b_teste_rjanuzi
+Linha 1 inserida na branch master.
+Linha 2 inserido na branch master.
