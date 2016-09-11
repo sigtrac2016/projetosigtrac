@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="import" href="/components/depend.html">
+    <title>Portal SIG-TRAC-2016</title>
+</head>
+
+<div id="navigation"></div>
+
+<body>
+    <h2>Criado por TS#01</h2>
+    <p>Espaço dedicado ao Painel de Controle Central</p>
+
+    <div id="map" style="width:100%;height:500px"></div>
+
+    <script>
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+                center: new google.maps.LatLng(-23.21, -45.87),
+                zoom: 14
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+
+<div id="footer"></div>
+
+</html>
