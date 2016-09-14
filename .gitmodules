@@ -1,0 +1,3 @@
+[submodule "CrisisDetection"]
+	path = CrisisDetection
+	url = https://github.com/lucianohgo/CrisisDetection.git
