@@ -1,5 +1,5 @@
-* {
-    font-family: "verdana";
+body {
+    font-family: 'Roboto';
 }
 
 h1,
@@ -14,8 +14,28 @@ p {
     color: black;
 }
 
+body {
+    background-color: #eee;
+}
+
+.row {
+    width: 100%;
+}
+
 .wrapper {
     text-align: center;
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
+.fa {
+    font-size: 24px;
+}
+
+#map {
+    height: 500px
 }
 
 footer {
