@@ -3,6 +3,12 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 
+// Configuração das rotas principais
+var about = require('./web/server/about');
+var login = require('./web/server/login');
+var ccs = require('./web/server/ccs');
+var ccc = require('./web/server/ccc');
+
 // Store all HTML files in view folder.
 app.use(express.static(__dirname + '/web/views'));
 // Store all JS in Scripts folder.
@@ -14,9 +20,10 @@ app.use(express.static(__dirname + '/web/public'));
 // Store web path
 app.use(express.static(__dirname + '/web'));
 
-app.get('/', function(req, res) {
-    res.send(fs.readFileSync("web/views/main.html", "utf8"));
-})
+app.use('/about', about);
+app.use('/login', login);
+app.use('/ccs', ccs);
+app.use('/', ccc);
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
