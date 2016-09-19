@@ -1,0 +1,27 @@
+{
+  "name": "yano",
+  "version": "1.0.0",
+  "description": "Projeto do yano",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmullerm/yano.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasmullerm/yano/issues"
+  },
+  "homepage": "https://github.com/lucasmullerm/yano#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.15.0",
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0",
+    "underscore": "^1.8.3"
+  }
+}
