@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SigTrac</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">120.388.449-13</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="cpf_tile">CPF:</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_cpf">CPF inválido.</string>
+    <string name="error_invalid_password">A senha deve conter mais de 6 caracteres</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Campo obrigatório</string>
+</resources>
