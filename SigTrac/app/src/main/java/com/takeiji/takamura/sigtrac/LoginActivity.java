@@ -3,39 +3,21 @@ package com.takeiji.takamura.sigtrac;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.app.LoaderManager.LoaderCallbacks;
 
-import android.content.CursorLoader;
-import android.content.Loader;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.AsyncTask;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
@@ -154,7 +136,7 @@ public class LoginActivity extends AppCompatActivity {
      * Checks if the CPF is valid
      * ToDo: Apply the real test
      */
-    private boolean isCPFValid(String cpf) {
+    public boolean isCPFValid(String cpf) {
         // Removing '.', '-' and '/'
         cpf = cpf.replaceAll("\\.", "");
         cpf = cpf.replaceAll("\\-", "");
@@ -163,6 +145,9 @@ public class LoginActivity extends AppCompatActivity {
         // Only numbers are allowed
         String regex = "[0-9]+";
         if(!cpf.matches(regex))
+            return false;
+
+        if(cpf.length() > 12 || cpf.length() < 10)
             return false;
 
         // TO DO: Apply the real method of CPF testing
@@ -174,7 +159,7 @@ public class LoginActivity extends AppCompatActivity {
      * Checks if the password is valid
      * Atm: Checks only the length
      */
-    private boolean isPasswordValid(String password) {
+    public boolean isPasswordValid(String password) {
         return password.length() >= 6;
     }
 
