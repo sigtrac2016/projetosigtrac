@@ -44,8 +44,13 @@ app.use(function(req, res, next) {
 app.use('/api', routes);
 
 // START THE app
-app.listen(app.get('port'), function(){
+var server = app.listen(app.get('port'), function(){
     console.log("Server listening to port " + app.get('port'));
 });
+
+app.closeServer = function() {
+    server.close();
+    process.exit();
+};
 
 module.exports = app;
