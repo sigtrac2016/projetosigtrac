@@ -18,6 +18,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * A login screen that offers login via email/password.
@@ -244,10 +245,10 @@ public class LoginActivity extends AppCompatActivity {
             showProgress(false);
 
             if (success) {
-                Log.v("FUCK", "WHATTTT");
-                //finish();
+                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado!", Toast.LENGTH_SHORT);
+                // New screen
             } else {
-                Log.v("FUCK", "FUCKKKK");
+                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Negado!", Toast.LENGTH_SHORT);
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
             }
