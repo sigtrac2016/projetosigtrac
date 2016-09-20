@@ -1,35 +1,41 @@
-var expect  = require("chai").expect;
-var request = require("request");
-var apiServer = require("../app.js");
-var baseURL = "http://localhost:8080/api";
+var expect  = require('chai').expect;
+var request = require('request');
+var requestURL = require('url');
 
-describe("Hello world", function() {
+var apiServer = require('../app.js');
 
-    describe ("GET /api", function() {
+var baseURL = 'http://localhost:9092/api';
+var vitimasURL = '/vitimas';
 
-        it("return status code 200", function(done) {
+describe('Vitimas', function() {
+
+    describe ('API', function() {
+
+        it('return status code 200', function(done) {
             request({
                 url: baseURL,
                 method: 'GET'
             }, function(error, response, body) {
+                expect(error).equal(null);
                 expect(response.statusCode).to.equal(200);
                 done();
             });
         });
 
-        it("return Hello World", function(done) {
+        it('return Hello World', function(done) {
             request({
                 url: baseURL,
                 method: 'GET'
             }, function(error, response, body) {
-                expect(body).to.equal("Hello World. Oie.");
+                expect(error).equal(null);
+                expect(body).to.equal('Hello World. Oie.');
                 done();
             });
         });
 
-        it("post vitima", function(done) {
+        it('post vitima', function(done) {
             request({
-                url: baseURL,
+                url: requestURL.resolve(baseURL, vitimasURL),
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -50,33 +56,33 @@ describe("Hello world", function() {
                 	cumpreOrdens: false
                 })
             }, function(error, response, body) {
+                expect(error).equal(null);
                 expect(response.statusCode).to.equal(200);
                 done();
             });
         });
 
-        it("get vitima especifica", function(done) {
+        it('get vitima especifica', function(done) {
             request({
-                url: baseURL,
-                method: 'GET',
-                qs: {
-                    alias: "001"
-                }
+                url: requestURL.resolve(baseURL, vitimasURL, '001'),
+                method: 'GET'
             }, function(error, response, body) {
+                expect(error).equal(null);
                 expect(response.statusCode).to.equal(200);
                 done();
             });
         });
 
-        it("get vitima inexistente", function(done) {
+        it('get vitima inexistente', function(done) {
             request({
-                url: baseURL,
+                url: requestURL.resolve(baseURL, vitimasURL),
                 method: 'GET',
                 qs: {
-                    alias: "999"
+                    alias: '999'
                 }
             }, function(error, response, body) {
-                expect(response.statusCode).to.equal(200);
+                expect(error).equal(null);
+                expect(response.statusCode).to.equal(404);
                 done();
             });
         });
