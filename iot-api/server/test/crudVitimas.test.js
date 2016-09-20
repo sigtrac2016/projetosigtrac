@@ -6,7 +6,7 @@ var requestURL = require('url');
 
 var apiServer = require('../app.js');
 
-var baseURL = 'http://localhost:9092';
+var baseURL = 'http://localhost:8080';
 var baseAPI = '/api';
 var vitimasAPI = '/api/vitimas';
 
