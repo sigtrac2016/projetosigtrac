@@ -2,7 +2,7 @@
     <string name="app_name">SigTrac</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">120.388.449-13</string>
+    <string name="prompt_email">xxx.xxx.xxx-xx</string>
     <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Entrar</string>
     <string name="cpf_tile">CPF:</string>

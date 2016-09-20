@@ -56,13 +56,15 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/layout_bg"
                 android:layout_marginBottom="@dimen/activity_vertical_margin">
 
                 <AutoCompleteTextView
                     android:id="@+id/cpf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:hint="@string/prompt_email"
                     android:inputType="number"
                     android:maxLines="1"
@@ -76,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:text="Acesso Restrito"
-                android:background="@android:color/white"
+                android:background="@drawable/layout_bg"
                 android:paddingRight="10dp"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:onClick="onCheckBoxClicked"
@@ -86,13 +88,15 @@
                 android:id="@+id/passwordViewID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/layout_bg"
                 android:visibility="invisible">
 
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"

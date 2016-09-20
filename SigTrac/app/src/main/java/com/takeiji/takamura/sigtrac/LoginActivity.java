@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "39079933813:123456", "11111111111:111111"
+            "39079933813:123456:Milton", "11111111111:111111:Test"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -209,6 +209,7 @@ public class LoginActivity extends AppCompatActivity {
 
         private final String mCPF;
         private final String mPassword;
+        private String mName;
 
         UserLoginTask(String cpf, String password) {
             mCPF = cpf;
@@ -231,6 +232,7 @@ public class LoginActivity extends AppCompatActivity {
                 String[] pieces = credential.split(":");
                 if (pieces[0].equals(mCPF)) {
                     // Account exists, return true if the password matches.
+                    mName = pieces[2];
                     return pieces[1].equals(mPassword);
                 }
             }
@@ -245,12 +247,22 @@ public class LoginActivity extends AppCompatActivity {
             showProgress(false);
 
             if (success) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado! " + mName , Toast.LENGTH_SHORT);
+                toast.show();
                 // New screen
             } else {
-                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Negado!", Toast.LENGTH_SHORT);
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
+                // Restrict access
+                if(mCheckBox.isChecked()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Acesso Negado!", Toast.LENGTH_SHORT);
+                    toast.show();
+                    mPasswordView.setError(getString(R.string.error_incorrect_password));
+                    mPasswordView.requestFocus();
+                }
+                // General access
+                else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado! Usuario Comum", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
             }
         }
 
