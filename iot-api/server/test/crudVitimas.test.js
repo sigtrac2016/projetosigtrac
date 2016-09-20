@@ -51,9 +51,9 @@ describe('Vitimas', function() {
                         longitude: -45.0
                     },
                     deambulando: true,
-                    respiracao: 100,
+                    respiracao: 20,
                     respiraViasAereas: true,
-                    reenchimentoCapilar: 100,
+                    reenchimentoCapilar: 2,
                     pulsoRadial: true,
                     cumpreOrdens: false
                 },
