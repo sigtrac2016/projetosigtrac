@@ -1,3 +1,5 @@
+'use strict';
+
 var should = require('should');
 var request = require('request');
 var requestURL = require('url');
@@ -40,21 +42,22 @@ describe('Vitimas', function() {
             request({
                 url: requestURL.resolve(baseURL, vitimasAPI),
                 method: 'POST',
-                body: JSON.stringify({
+                body: {
                     alias: '001',
-                	name: 'Teste 001',
-                	timeCreated: '2016-09-16',
-                	location: {
-                		latitude: -23.0,
-                		longitude: -45.0
-                	},
-                	deambulando: true,
-                	respiracao: 100,
-                	respiraViasAereas: true,
-                	reenchimentoCapilar: 100,
-                	pulsoRadial: true,
-                	cumpreOrdens: false
-                })
+                    name: 'Teste 001',
+                    timeCreated: '2016-09-16',
+                    location: {
+                        latitude: -23.0,
+                        longitude: -45.0
+                    },
+                    deambulando: true,
+                    respiracao: 100,
+                    respiraViasAereas: true,
+                    reenchimentoCapilar: 100,
+                    pulsoRadial: true,
+                    cumpreOrdens: false
+                },
+                json: true
             }, function(error, response, body) {
                 should.not.exist(error);
                 should.exist(response);
