@@ -1,11 +1,12 @@
-var expect  = require('chai').expect;
+var should = require('should');
 var request = require('request');
 var requestURL = require('url');
 
 var apiServer = require('../app.js');
 
-var baseURL = 'http://localhost:9092/api';
-var vitimasURL = '/vitimas';
+var baseURL = 'http://localhost:9092';
+var baseAPI = '/api';
+var vitimasAPI = '/api/vitimas';
 
 describe('Vitimas', function() {
 
@@ -13,33 +14,32 @@ describe('Vitimas', function() {
 
         it('return status code 200', function(done) {
             request({
-                url: baseURL,
+                url: requestURL.resolve(baseURL, baseAPI),
                 method: 'GET'
             }, function(error, response, body) {
-                expect(error).equal(null);
-                expect(response.statusCode).to.equal(200);
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(200);
                 done();
             });
         });
 
         it('return Hello World', function(done) {
             request({
-                url: baseURL,
+                url: requestURL.resolve(baseURL, baseAPI),
                 method: 'GET'
             }, function(error, response, body) {
-                expect(error).equal(null);
-                expect(body).to.equal('Hello World. Oie.');
+                should.not.exist(error);
+                should.exist(response);
+                body.should.equal('Hello World. Oie.');
                 done();
             });
         });
 
         it('post vitima', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasURL),
+                url: requestURL.resolve(baseURL, vitimasAPI),
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
                 body: JSON.stringify({
                     alias: '001',
                 	name: 'Teste 001',
@@ -56,33 +56,57 @@ describe('Vitimas', function() {
                 	cumpreOrdens: false
                 })
             }, function(error, response, body) {
-                expect(error).equal(null);
-                expect(response.statusCode).to.equal(200);
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(200);
                 done();
             });
         });
 
         it('get vitima especifica', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasURL, '001'),
+                url: requestURL.resolve(baseURL, vitimasAPI, '001'),
                 method: 'GET'
             }, function(error, response, body) {
-                expect(error).equal(null);
-                expect(response.statusCode).to.equal(200);
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(200);
                 done();
             });
         });
 
         it('get vitima inexistente', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasURL),
-                method: 'GET',
-                qs: {
-                    alias: '999'
-                }
+                url: requestURL.resolve(baseURL, vitimasAPI, '999'),
+                method: 'GET'
             }, function(error, response, body) {
-                expect(error).equal(null);
-                expect(response.statusCode).to.equal(404);
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(404);
+                done();
+            });
+        });
+
+        it('delete vitima', function(done) {
+            request({
+                url: requestURL.resolve(baseURL, vitimasAPI, '100'),
+                method: 'DELETE'
+            }, function(error, response, body) {
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(200);
+                done();
+            });
+        });
+
+        it('delete vitima inexistente', function(done) {
+            request({
+                url: requestURL.resolve(baseURL, vitimasAPI, '999'),
+                method: 'DELETE'
+            }, function(error, response, body) {
+                should.not.exist(error);
+                should.exist(response);
+                response.statusCode.should.equal(404);
                 done();
             });
         });
