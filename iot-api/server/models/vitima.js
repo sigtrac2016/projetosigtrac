@@ -14,7 +14,8 @@ var VitimaSchema = new Schema({
 	respiraViasAereas: Boolean,
 	reenchimentoCapilar: Number,
 	pulsoRadial: Boolean,
-	cumpreOrdens: Boolean
+	cumpreOrdens: Boolean,
+	status: String
 });
 
 VitimaSchema

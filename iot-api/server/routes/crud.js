@@ -1,4 +1,4 @@
-//Basic Crud template
+	//Basic Crud template
 var _ = require('lodash');
 
 
@@ -29,7 +29,15 @@ function saveModel(object, res){
 	});
 }
 
-module.exports = function(router, route, Model) {
+module.exports = function(router, route, Model, config) {
+	if (_.isUndefined(config.handleVirtuals)){
+		handleVirtuals = function(object){
+			return object
+		}
+	}
+	else {
+		handleVirtuals = require(config.handleVirtuals);
+	}
 	
 	//LIST
 	router.get(route, function(req, res) {
@@ -52,7 +60,9 @@ module.exports = function(router, route, Model) {
 
 		//Checking if it is unique
 		Model.findOne({'alias': objectPost.alias}, function(err, object){
-			console.log(object)
+			if (err){
+				res.send(err);
+			}
 			if (object == null){
 				saveModel(objectPost, res);
 			}
@@ -67,7 +77,17 @@ module.exports = function(router, route, Model) {
 	router.get(route + '/:Alias', function(req, res){
 
 		Model.findOne({'alias': req.params.Alias}, function(err, object){
-			res.send(object);
+			if(err){
+				console.log(err)
+				res.send(err);
+			}
+			if (object == null){
+				res.status(404).json("Nenhum objeto encontrado");
+			}
+			else{
+				object = handleVirtuals(object);
+				res.send(object);
+			} 
 		});
 	});
 
@@ -75,10 +95,19 @@ module.exports = function(router, route, Model) {
 	router.patch(route + '/:Alias', function(req, res){
 
 		Model.findOne({'alias': req.params.Alias}, function(err, object){
+			
+			if(err){
+				console.log(err)
+				res.send(err);
+			}
 
-			object = readRequest(object, Model, req);
-
-			saveModel(object, res);
+			if (object == null){
+				res.status(404).json("Nenhum objeto encontrado");
+			}
+			else{
+				object = readRequest(object, Model, req);
+				saveModel(object, res);
+			}
 		});
 	});
 
@@ -86,12 +115,15 @@ module.exports = function(router, route, Model) {
 	router.delete(route + '/:Alias', function(req,res){
 		Model.findOne({'alias': req.params.Alias}, function(err, object) {
 			if(err) {
-				res.json({ERROR: err});
+				res.send(err);
+			}
+			if (object == null){
+				res.status(404).json("Nenhum objeto encontrado");
 			}
 			else {
 				object.remove(function(err) {
 					if(err) {
-						res.json({ERROR: err});
+						res.send(err);
 					}
 					else {
 						res.json({DELETED: object});
