@@ -29,7 +29,10 @@ cd /var/www/server
 npm cache clean
 npm install --no-bin-links
 
-npm install -g jasmine-node --save-dev
+npm install jasmine-node --save-dev
+npm install mocha --save-dev
+npm install chai --save-dev
+npm install stryker-api --save-dev
 npm install request --save
 
 mkdir spec
