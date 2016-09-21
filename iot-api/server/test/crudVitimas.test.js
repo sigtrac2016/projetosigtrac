@@ -1,14 +1,14 @@
 'use strict';
 
-var should = require('should');
-var request = require('request');
-var requestURL = require('url');
+const should = require('chai').should();
+const request = require('request');
+const requestURL = require('url');
 
-var apiServer = require('../app.js');
+const apiServer = require('../app.js');
 
-var baseURL = 'http://localhost:8080';
-var baseAPI = '/api';
-var vitimasAPI = '/api/vitimas';
+const baseURL = 'http://localhost:8080';
+const baseAPI = '/api';
+const vitimasAPI = '/api/vitimas';
 
 describe('Vitimas', function() {
 
