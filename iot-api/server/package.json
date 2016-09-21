@@ -30,7 +30,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
-    "mocha-each": "^1.0.3",
     "stryker-api": "^0.2.0",
     "stryker-mocha-runner": "^0.1.0"
   }
