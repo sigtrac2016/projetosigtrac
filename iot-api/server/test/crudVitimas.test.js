@@ -68,7 +68,7 @@ describe('Vitimas', function() {
 
         it('get vitima especifica', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasAPI, '001'),
+                url: requestURL.resolve(baseURL, vitimasAPI + '/001'),
                 method: 'GET'
             }, function(error, response, body) {
                 should.not.exist(error);
@@ -80,7 +80,7 @@ describe('Vitimas', function() {
 
         it('get vitima inexistente', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasAPI, '999'),
+                url: requestURL.resolve(baseURL, vitimasAPI + '/999'),
                 method: 'GET'
             }, function(error, response, body) {
                 should.not.exist(error);
@@ -92,7 +92,7 @@ describe('Vitimas', function() {
 
         it('delete vitima', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasAPI, '100'),
+                url: requestURL.resolve(baseURL, vitimasAPI + '/001'),
                 method: 'DELETE'
             }, function(error, response, body) {
                 should.not.exist(error);
@@ -104,7 +104,7 @@ describe('Vitimas', function() {
 
         it('delete vitima inexistente', function(done) {
             request({
-                url: requestURL.resolve(baseURL, vitimasAPI, '999'),
+                url: requestURL.resolve(baseURL, vitimasAPI + '/999'),
                 method: 'DELETE'
             }, function(error, response, body) {
                 should.not.exist(error);
