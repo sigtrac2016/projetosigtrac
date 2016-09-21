@@ -4,7 +4,7 @@ const should = require('chai').should();
 const request = require('request');
 const requestURL = require('url');
 
-const apiServer = require('../app.js');
+const apiServer = require('../src/app.js');
 
 const baseURL = 'http://localhost:8080';
 const baseAPI = '/api';

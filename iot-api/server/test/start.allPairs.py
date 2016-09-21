@@ -1,11 +1,12 @@
 import metacomm.combinatorics.all_pairs2
+
 all_pairs = metacomm.combinatorics.all_pairs2.all_pairs2
 
 parameters = [
                 (  [ "TRUE", "FALSE" ] ),
-                (  [ "<=30", ">30"] ),
+                (  [ "0", "<=30", ">30"] ),
                 (  [ "TRUE", "FALSE" ] ),
-                (  [ "<=3", ">3"] ),
+                (  [ "<=2", ">2"] ),
                 (  [ "TRUE", "FALSE" ] ),
                 (  [ "TRUE", "FALSE" ] )
              ]

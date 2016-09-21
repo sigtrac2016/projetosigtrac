@@ -4,7 +4,7 @@ const should = require('chai').should();
 const request = require('request');
 const requestURL = require('url');
 
-const apiServer = require('../app.js');
+const apiServer = require('../src/app.js');
 
 const baseURL = 'http://localhost:8080';
 const baseAPI = '/api';
@@ -19,13 +19,15 @@ describe('Vitimas', function() {
 
     describe ('API Pairwise', function() {
         var tests = [
-            {exp: 1, deambulando: true, respiracao: 20, respiraViasAereas: true, reenchimentoCapilar: 2, pulsoRadial: true, cumpreOrdens: true},
-            {exp: 2, deambulando: false, respiracao: 40, respiraViasAereas: false, reenchimentoCapilar: 4, pulsoRadial: false, cumpreOrdens: true},
-            {exp: 3, deambulando: false, respiracao: 20, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: false, cumpreOrdens: false},
-            {exp: 4, deambulando: true, respiracao: 40, respiraViasAereas: true, reenchimentoCapilar: 4, pulsoRadial: true, cumpreOrdens: false},
-            {exp: 5, deambulando: true, respiracao: 40, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: true, cumpreOrdens: false},
-            {exp: 6, deambulando: false, respiracao: 20, respiraViasAereas: true, reenchimentoCapilar: 4, pulsoRadial: true, cumpreOrdens: false},
-            {exp: 7, deambulando: true, respiracao: 20, respiraViasAereas: true, reenchimentoCapilar: 4, pulsoRadial: false, cumpreOrdens: false}
+            {exp: 1, deambulando: true, respiracao: 0, respiraViasAereas: true, reenchimentoCapilar: 2, pulsoRadial: true, cumpreOrdens: true},
+            {exp: 2, deambulando: false, respiracao: 20, respiraViasAereas: false, reenchimentoCapilar: 3, pulsoRadial: false, cumpreOrdens: true},
+            {exp: 3, deambulando: false, respiracao: 40, respiraViasAereas: true, reenchimentoCapilar: 3, pulsoRadial: true, cumpreOrdens: false},
+            {exp: 4, deambulando: true, respiracao: 40, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: false, cumpreOrdens: false},
+            {exp: 5, deambulando: true, respiracao: 20, respiraViasAereas: true, reenchimentoCapilar: 2, pulsoRadial: false, cumpreOrdens: false},
+            {exp: 6, deambulando: false, respiracao: 0, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: false, cumpreOrdens: false},
+            {exp: 7, deambulando: true, respiracao: 0, respiraViasAereas: false, reenchimentoCapilar: 3, pulsoRadial: true, cumpreOrdens: false},
+            {exp: 8, deambulando: true, respiracao: 20, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: true, cumpreOrdens: false},
+            {exp: 9, deambulando: true, respiracao: 40, respiraViasAereas: false, reenchimentoCapilar: 2, pulsoRadial: true, cumpreOrdens: true}
         ];
 
         tests.forEach(function(data) {
@@ -67,6 +69,8 @@ describe('Vitimas', function() {
                 {exp: 5, status: VERDE},
                 {exp: 6, status: VERMELHO},
                 {exp: 7, status: VERDE},
+                {exp: 8, status: VERDE},
+                {exp: 9, status: VERDE}
             ];
 
             tests.forEach(function(data) {
