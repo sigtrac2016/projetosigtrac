@@ -1,6 +1,6 @@
 function genContentString(coor) {
     contentString = '<div id="content">' +
-        '<h1 >Alerta de incêndio</h1>' +
+        '<h1 >Alerta de Incêndio</h1>' +
         '<div>' +
         '<p><b>Horário de ocorrência: </b> 13:30h</p>' +
         '<p><b>Coordenadas: </b>' + coor + '</p>' +
