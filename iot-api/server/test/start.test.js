@@ -3,7 +3,6 @@
 const should = require('chai').should();
 const request = require('request');
 const requestURL = require('url');
-const forEach = require('mocha-each');
 
 const apiServer = require('../app.js');
 
@@ -62,16 +61,16 @@ describe('Vitimas', function() {
         context('Validação', () => {
             var tests = [
                 {exp: 1, status: VERDE},
-                {exp: 2, status: VERDE},
-                {exp: 3, status: VERDE},
+                {exp: 2, status: VERMELHO},
+                {exp: 3, status: VERMELHO},
                 {exp: 4, status: VERDE},
                 {exp: 5, status: VERDE},
-                {exp: 6, status: VERDE},
+                {exp: 6, status: VERMELHO},
                 {exp: 7, status: VERDE},
             ];
 
             tests.forEach(function(data) {
-                it('get experimento%d', function(done) {
+                it('get experimento' + data.exp, function(done) {
                     request({
                         url: requestURL.resolve(baseURL, vitimasAPI + '/experimento' + data.exp),
                         method: 'GET'
