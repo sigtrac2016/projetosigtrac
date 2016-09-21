@@ -4,12 +4,19 @@ Projeto do Yano
 Para executar use:
 -----------------
 
-```
-npm start```
+
+```npm start```
 
 
 Para executar os testes unitários use:
 -------------------------------------
 
-```
-npm test```
+```npm test```
+
+
+
+Para executar os testes de mutação use:
+--------------------------------------
+
+
+```npm run mutate```
