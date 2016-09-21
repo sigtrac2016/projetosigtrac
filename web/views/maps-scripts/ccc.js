@@ -18,3 +18,7 @@ function genContentString(coor) {
         '</div>' +
         '</div>';
 }
+
+function fillMarker(){
+    return "#aaa";
+}

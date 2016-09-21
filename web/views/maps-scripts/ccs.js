@@ -13,3 +13,15 @@ function genContentString(coor) {
         '</div>' +
         '</div>';
 }
+
+function deleteMarkers(param) {    
+    for (var i = 0; i < markers.length; i++){
+        if (markers[i].icon.fillColor != "#ff0000") {
+            markers[i].setMap(null);
+        }  
+    }
+}
+
+function fillMarker(){
+    return "#ff0000";
+}
