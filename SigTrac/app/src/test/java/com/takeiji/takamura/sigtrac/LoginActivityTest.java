@@ -16,7 +16,25 @@ public class LoginActivityTest {
 
     @Test
     public void testIsCPFValidWithPoints() {
-        Assert.assertTrue(mLoginActivity.isCPFValid("123.321.123-4"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("145.420.518-03"));
+    }
+
+    @Test
+    public void testIsCPFValidShouldReturnTrue() {
+        Assert.assertTrue(mLoginActivity.isCPFValid("593.382.592-18"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("661.358.517-30"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("172.549.539-28"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("210.752.815-20"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("092.586.376-90"));
+    }
+
+    @Test
+    public void testIsCPFValidShouldReturnFalse() {
+        Assert.assertFalse(mLoginActivity.isCPFValid("343.437.564-98"));
+        Assert.assertFalse(mLoginActivity.isCPFValid("781.235.117-20"));
+        Assert.assertFalse(mLoginActivity.isCPFValid("257.342.906-01"));
+        Assert.assertFalse(mLoginActivity.isCPFValid("210.752.815-19"));
+        Assert.assertFalse(mLoginActivity.isCPFValid("357.628.145-63"));
     }
 
     @Test
@@ -26,7 +44,7 @@ public class LoginActivityTest {
 
     @Test
     public void testIsCPFValidWithNumbersOnly() {
-        Assert.assertTrue(mLoginActivity.isCPFValid("1233211234"));
+        Assert.assertTrue(mLoginActivity.isCPFValid("35972017334"));
     }
 
     @Test
