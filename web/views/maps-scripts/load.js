@@ -25,6 +25,16 @@ var position_4 = {
     lng: -45.86
 };
 
+var position_5 = {
+    lat: -23.20,
+    lng: -45.89
+};
+
+var position_6 = {
+    lat: -23.205,
+    lng: -45.89
+};
+
 // Initializes the map
 var mapCanvas = document.getElementById("map");
 var mapOptions = {
@@ -35,7 +45,7 @@ var contentString, infoWindow;
 var map, selection, coor;
 
 // Mock variables
-var marker, marker_1, marker_2, marker_3, marker_4;
+var marker, marker_1, marker_2, marker_3, marker_4, marker_5, marker_6;
 
 var markers = [];
 
@@ -91,6 +101,23 @@ function loadMap() {
     });
     markers.push(marker_4);
 
+    marker_5 = new google.maps.Marker({
+        position: position_5,
+        map: map,
+        draggable: true,
+        // Color red
+        icon: pinSymbol("#ff0000")
+    });
+    markers.push(marker_5);
+
+    marker_6 = new google.maps.Marker({
+        position: position_6,
+        map: map,
+        draggable: true,
+        // Color red
+        icon: pinSymbol("#ff0000")
+    });
+    markers.push(marker_6);
 
     // Initializes infowindow
     infowindow = new google.maps.InfoWindow({
@@ -163,6 +190,22 @@ function loadMap() {
         infowindow.setContent(contentString);
         infowindow.open(map, marker_4);
     });
+
+    marker_5.addListener('click', function(event) {
+        genContentString(event.latLng);
+        map.setCenter(marker_5.getPosition());
+        selection = marker_5;
+        infowindow.setContent(contentString);
+        infowindow.open(map, marker_5);
+    });
+
+    marker_6.addListener('click', function(event) {
+        genContentString(event.latLng);
+        map.setCenter(marker_6.getPosition());
+        selection = marker_6;
+        infowindow.setContent(contentString);
+        infowindow.open(map, marker_6);
+    });
     // Função para ajudar o Mock
     deleteMarkers(markers);
 
@@ -186,4 +229,6 @@ function colorMarker(color) {
 
 function deleteMarker(param) {
     selection.setMap(null);
+    // Remove o marcador e salva os dados
+    markers.splice(markers.indexOf(selection), 1);
 }
