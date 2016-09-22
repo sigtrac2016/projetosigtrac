@@ -25,8 +25,6 @@ var position_4 = {
     lng: -45.86
 };
 
-
-
 // Initializes the map
 var mapCanvas = document.getElementById("map");
 var mapOptions = {
@@ -93,7 +91,7 @@ function loadMap() {
     });
     markers.push(marker_4);
 
-    
+
     // Initializes infowindow
     infowindow = new google.maps.InfoWindow({
         content: contentString
@@ -133,7 +131,7 @@ function loadMap() {
         infowindow.setContent(contentString);
         infowindow.open(map, marker);
     });
-    
+
     marker_1.addListener('click', function(event) {
         genContentString(event.latLng);
         map.setCenter(marker_1.getPosition());
@@ -164,8 +162,8 @@ function loadMap() {
         selection = marker_4;
         infowindow.setContent(contentString);
         infowindow.open(map, marker_4);
-    });  
-// Função para ajudar o Mock
+    });
+    // Função para ajudar o Mock
     deleteMarkers(markers);
 
 }
