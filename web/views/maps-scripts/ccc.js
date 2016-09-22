@@ -12,13 +12,17 @@ function genContentString(coor) {
         '<button class="btn btn-success" onclick="colorMarker(\'green\')">Segmento 4</button> ' +
         '<hr>' +
         '<h4>Comandos:</h4>' +
-       '<button class="btn btn-warning" onclick="deleteMarker()">Alerta falso</button> ' +
+        '<button class="btn btn-warning" onclick="deleteMarker()">Alerta falso</button> ' +
         '<button class="btn btn-default" onclick="deleteMarker()">Alerta de Reforços</button>' +
         '<button class="btn btn-danger" onclick="deleteMarker()">Finalizar alerta</button> ' +
         '</div>' +
         '</div>';
 }
 
-function fillMarker(){
+function fillMarker() {
     return "#aaa";
 }
+
+// Funções usadas para teste
+exports.genContentString = genContentString;
+exports.fillMarker = fillMarker;
