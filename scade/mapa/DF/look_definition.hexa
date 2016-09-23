@@ -1,0 +1,7191 @@
+a661 A661_DF_MAGIC_NUMBER
+01 Library version
+05 Supplement version
+0000 App ID (unused)
+0000 Size of OEM free data
+65 Begin styleset block
+00 padding
+0031 Number of elements specified below
+0000679c Command size
+
+ca01 Create component
+03dc Command size 
+435f4672616d65 Component name (C_Frame)
+000016Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000001 Styleset id
+00000009 BackColor
+0000000b OutlineDownColor
+00000005 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000002 Styleset id
+00000049 BackColor
+0000004d OutlineDownColor
+00000048 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000003 Styleset id
+0000000b BackColor
+0000000c OutlineDownColor
+00000007 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000004 Styleset id
+00000006 BackColor
+00000005 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000005 Styleset id
+00000048 BackColor
+00000049 OutlineDownColor
+0000004d OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000006 Styleset id
+0000000a BackColor
+00000008 OutlineDownColor
+0000000b OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000007 Styleset id
+0000000c BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000008 Styleset id
+00000001 BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000009 Styleset id
+00000000 BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+0000000a Styleset id
+00000000 BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+01 InnerHighlight
+00 align 4
+00 align 4
+0000000b Styleset id
+00000008 BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+01 InnerHighlight
+00 align 4
+00 align 4
+0000000c Styleset id
+00000000 BackColor
+00000001 OutlineDownColor
+0000000a OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+01 InnerHighlight
+00 align 4
+00 align 4
+0000000f Styleset id
+00000009 BackColor
+0000000b OutlineDownColor
+00000005 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+00 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000010 Styleset id
+00000005 BackColor
+00000009 OutlineDownColor
+00000002 OutlineTopColor
+42480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41a00000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000002 Shape
+00000002 GradientType
+00 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000014 Styleset id
+ffffffff BackColor
+00000001 OutlineDownColor
+00000001 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+00 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000015 Styleset id
+ffffffff BackColor
+00000007 OutlineDownColor
+00000007 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+00 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000028 Styleset id
+00000000 BackColor
+00000000 OutlineDownColor
+00000000 OutlineTopColor
+43480000 OutlineRadius
+00 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+00 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000033 Styleset id
+00000005 BackColor
+00000009 OutlineDownColor
+00000002 OutlineTopColor
+42c80000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41a00000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000002 Shape
+00000002 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000034 Styleset id
+00000002 BackColor
+00000004 OutlineDownColor
+00000008 OutlineTopColor
+42c80000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41f00000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000002 Shape
+00000002 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000035 Styleset id
+0000000a BackColor
+00000000 OutlineDownColor
+00000009 OutlineTopColor
+42c80000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41a00000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000002 Shape
+00000002 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000036 Styleset id
+00000008 BackColor
+0000000a OutlineDownColor
+0000000c OutlineTopColor
+42c80000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41f00000 OutlineThickness
+01 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000002 Shape
+00000002 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+00000037 Styleset id
+ffffffff BackColor
+00000001 OutlineDownColor
+00000001 OutlineTopColor
+43480000 OutlineRadius
+01 OutlineVisible
+00 align 4
+00 align 4
+00 align 4
+41200000 OutlineThickness
+00 BackgroundVisible
+00 align 4
+00 align 4
+00 align 4
+00000001 Shape
+00000001 GradientType
+01 GradientVisible
+00 InnerHighlight
+00 align 4
+00 align 4
+ca01 Create component
+0208 Command size 
+435f54657874 Component name (C_Text)
+0000 align 4
+0019Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000032 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000001 ColorIndex
+00000033 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+0000003d ColorIndex
+00000034 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000001 LineWidth
+00000001 Font
+00000033 ColorIndex
+00000035 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000029 ColorIndex
+00000036 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+0000001f ColorIndex
+00000037 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000015 ColorIndex
+00000038 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000009 ColorIndex
+00000039 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000000 ColorIndex
+0000003a Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000008 ColorIndex
+0000003b Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+0000000a ColorIndex
+0000003c Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+0000000c ColorIndex
+0000003d Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000001 Font
+00000042 ColorIndex
+00000046 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000001 ColorIndex
+00000047 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+0000003d ColorIndex
+00000048 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000033 ColorIndex
+00000049 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000029 ColorIndex
+0000004a Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+0000001f ColorIndex
+0000004b Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000015 ColorIndex
+0000004c Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000009 ColorIndex
+0000004d Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000000 ColorIndex
+0000004e Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000008 ColorIndex
+0000004f Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+0000000a ColorIndex
+00000050 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+0000000c ColorIndex
+00000051 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000005 LineWidth
+00000002 Font
+00000042 ColorIndex
+00000064 Styleset id
+00 Haloing
+00 align 4
+00 align 4
+00 align 4
+00000003 LineWidth
+fffffffe Font
+fffffffe ColorIndex
+ca01 Create component
+0090 Command size 
+41637469766541726561 Component name (ActiveArea)
+0000 align 4
+0003Number of stylesets
+0003 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000001 State Id
+00000065 Color
+00000000 Opacity
+00000002 State Id
+00000066 Color
+00000000 Opacity
+00000003 State Id
+00000039 Color
+00000000 Opacity
+00000002 Styleset id
+00000001 State Id
+00000065 Color
+00000040 Opacity
+00000002 State Id
+00000066 Color
+00000040 Opacity
+00000003 State Id
+0000004a Color
+00000040 Opacity
+00000003 Styleset id
+00000001 State Id
+00000065 Color
+00000080 Opacity
+00000002 State Id
+00000066 Color
+00000080 Opacity
+00000003 State Id
+0000004a Color
+00000080 Opacity
+ca01 Create component
+0738 Command size 
+436865636b427574746f6e Component name (CheckButton)
+00000cNumber of stylesets
+0006 Number of states
+0032 Default styleset
+0000 padding
+00000032 Styleset id
+42c80000 Border
+00000001 State Id
+00000028 Frame
+00000032 Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000028 Frame
+00000038 Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000028 Frame
+00000038 Text
+0000fdea CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000028 Frame
+00000032 Text
+0000fdeb CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000028 Frame
+00000038 Text
+0000fdec CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000028 Frame
+00000038 Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000003c Styleset id
+42c80000 Border
+00000001 State Id
+00000028 Frame
+00000032 Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000028 Frame
+00000038 Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000028 Frame
+00000038 Text
+0000fdf0 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000028 Frame
+00000032 Text
+0000fdf1 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000028 Frame
+00000038 Text
+0000fdf2 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000028 Frame
+00000038 Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000046 Styleset id
+42c80000 Border
+00000001 State Id
+00000028 Frame
+00000046 Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000028 Frame
+0000004c Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000028 Frame
+0000004c Text
+0000fdea CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000028 Frame
+00000046 Text
+0000fdeb CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000028 Frame
+0000004c Text
+0000fdec CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000028 Frame
+0000004c Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000050 Styleset id
+42c80000 Border
+00000001 State Id
+00000028 Frame
+00000046 Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000028 Frame
+0000004c Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000028 Frame
+0000004c Text
+0000fdf0 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000028 Frame
+00000046 Text
+0000fdf1 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000028 Frame
+0000004c Text
+0000fdf2 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000028 Frame
+0000004c Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000006e Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000032 Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+0000fdea CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+0000fdeb CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+0000fdec CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000078 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000032 Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+0000fdf0 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+0000fdf1 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+0000fdf2 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000046 Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+0000fdea CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+0000fdeb CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+0000fdec CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000008c Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000046 Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+0000fdf0 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+0000fdf1 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+0000fdf2 CheckPicture
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003c Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+0000fdea CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+0000fdeb CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+0000fdec CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000dc Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003c Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+0000fdf0 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+0000fdf1 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+0000fdf2 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000050 Text
+0000fde8 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+0000fde9 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+0000fdea CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+0000fdeb CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+0000fdec CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+0000fded CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000f0 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000050 Text
+0000fdee CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+0000fdef CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+0000fdf0 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+0000fdf1 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+0000fdf2 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+0000fdf3 CheckPicture
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+01f8 Command size 
+436f6d626f426f78 Component name (ComboBox)
+0000 align 4
+00 align 4
+00 align 4
+0004Number of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000032 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000046 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+0000003c Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+00000050 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+026c Command size 
+436f6d626f426f7845646974 Component name (ComboBoxEdit)
+0000 align 4
+00 align 4
+00 align 4
+0004Number of stylesets
+0005 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+0000fe1d PictureBaseNoEntry
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000032 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+0000fe1d PictureBaseNoEntry
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000046 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000007 State Id
+00000008 Frame
+0000004d Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+0000fe1d PictureBaseNoEntry
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+0000003c Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000007 State Id
+00000034 Frame
+00000039 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+0000fe1d PictureBaseNoEntry
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+00000050 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000007 State Id
+00000034 Frame
+0000004d Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+0040 Command size 
+437572736f724f766572 Component name (CursorOver)
+0000 align 4
+0005Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+0000000f Styleset id
+0000000f Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+00000034 Styleset id
+00000034 Frame
+ca01 Create component
+02bc Command size 
+45646974426f784d61736b6564 Component name (EditBoxMasked)
+0000 align 4
+00 align 4
+000cNumber of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000032 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000006f Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000033 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000070 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000034 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000071 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000035 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000072 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000036 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000073 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000037 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000082 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000046 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000083 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000047 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000084 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000048 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000085 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000049 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000086 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+0000004a Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000087 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+0000004b Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+ca01 Create component
+02c0 Command size 
+45646974426f784d756c74694c696e65 Component name (EditBoxMultiLine)
+0000 align 4
+00 align 4
+00 align 4
+000cNumber of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000032 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000006f Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000033 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000070 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000034 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000071 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000035 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000072 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000036 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000073 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000037 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000082 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000046 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000083 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000047 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000084 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000048 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000085 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+00000049 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000086 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+0000004a Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000087 Styleset id
+42700000 Border
+00000001 State Id
+0000000a Frame
+0000004b Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+ca01 Create component
+02ec Command size 
+45646974426f784e756d65726963 Component name (EditBoxNumeric)
+0000 align 4
+000cNumber of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000033 Legend
+00000001 State Id
+0000000a Frame
+00000032 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000006f Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000033 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000070 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000034 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000071 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000035 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000072 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000036 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000073 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000037 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000082 Styleset id
+42c80000 Border
+00000047 Legend
+00000001 State Id
+0000000a Frame
+00000046 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000083 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000047 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000084 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000048 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000085 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000049 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000086 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+0000004a Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000087 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+0000004b Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+ca01 Create component
+02f0 Command size 
+45646974426f784e756d65726963424344 Component name (EditBoxNumericBCD)
+0000 align 4
+00 align 4
+000cNumber of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000033 Legend
+00000001 State Id
+0000000a Frame
+00000032 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000006f Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000033 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000070 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000034 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000071 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000035 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000072 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000036 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000073 Styleset id
+42c80000 Border
+00000032 Legend
+00000001 State Id
+0000000a Frame
+00000037 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000082 Styleset id
+42c80000 Border
+00000047 Legend
+00000001 State Id
+0000000a Frame
+00000046 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000083 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000047 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000084 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000048 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000085 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+00000049 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000086 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+0000004a Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000087 Styleset id
+42c80000 Border
+00000046 Legend
+00000001 State Id
+0000000a Frame
+0000004b Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+ca01 Create component
+02b8 Command size 
+45646974426f7854657874 Component name (EditBoxText)
+00000cNumber of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000032 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+0000006f Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000033 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000070 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000034 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000071 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000035 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000072 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000036 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000073 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000037 Text
+00000002 State Id
+00000007 Frame
+00000038 Text
+00000003 State Id
+0000000b Frame
+0000003c Text
+00000007 State Id
+00000008 Frame
+00000039 Text
+00000082 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000046 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000083 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000047 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000084 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000048 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000085 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+00000049 Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000086 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+0000004a Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+00000087 Styleset id
+42c80000 Border
+00000001 State Id
+0000000a Frame
+0000004b Text
+00000002 State Id
+00000007 Frame
+0000004c Text
+00000003 State Id
+0000000b Frame
+00000050 Text
+00000007 State Id
+00000008 Frame
+0000004d Text
+ca01 Create component
+0040 Command size 
+45787465726e616c536f75726365 Component name (ExternalSource)
+0000 align 4
+0003Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+42200000 Border
+00000028 Frame
+00000014 Styleset id
+42200000 Border
+00000014 Frame
+00000015 Styleset id
+42200000 Border
+00000015 Frame
+ca01 Create component
+00f0 Command size 
+4770417263436972636c65 Component name (GpArcCircle)
+000009Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000004 Styleset id
+00000002 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+0000000a Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000001 FillColor
+0000000b Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000007 FillColor
+0000000c Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000015 FillColor
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 OutlineColor
+fffffffe FillColor
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 OutlineColor
+fffffffe FillColor
+ca01 Create component
+00f4 Command size 
+4770417263456c6c69707365 Component name (GpArcEllipse)
+0000 align 4
+00 align 4
+00 align 4
+0009Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+0000000a Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000001 FillColor
+0000000b Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000007 FillColor
+0000000c Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000015 FillColor
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 OutlineColor
+fffffffe FillColor
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 OutlineColor
+fffffffe FillColor
+ca01 Create component
+00ec Command size 
+477043726f776e Component name (GpCrown)
+000009Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+0000000a Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000001 FillColor
+0000000b Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000007 FillColor
+0000000c Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000015 FillColor
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 OutlineColor
+fffffffe FillColor
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 OutlineColor
+fffffffe FillColor
+ca01 Create component
+00a0 Command size 
+47704c696e65 Component name (GpLine)
+0000 align 4
+0007Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 ColorIndex
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 ColorIndex
+00000016 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000029 ColorIndex
+ca01 Create component
+00a4 Command size 
+47704c696e65506f6c6172 Component name (GpLinePolar)
+000007Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 ColorIndex
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 ColorIndex
+00000016 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000029 ColorIndex
+ca01 Create component
+00a4 Command size 
+4770506f6c796c696e65 Component name (GpPolyline)
+0000 align 4
+0007Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe ColorIndex
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 ColorIndex
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 ColorIndex
+00000016 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000029 ColorIndex
+ca01 Create component
+00f0 Command size 
+477052656374616e676c65 Component name (GpRectangle)
+000009Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+0000000a Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000001 FillColor
+0000000b Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000007 FillColor
+0000000c Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000015 FillColor
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 OutlineColor
+fffffffe FillColor
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 OutlineColor
+fffffffe FillColor
+ca01 Create component
+00f0 Command size 
+4770547269616e676c65 Component name (GpTriangle)
+0000 align 4
+0009Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000002 Styleset id
+00000000 OutlineStipple
+00000004 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000003 Styleset id
+00000003 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+00000004 Styleset id
+00000001 OutlineStipple
+00000001 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+fffffffe FillColor
+0000000a Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000002 FillColor
+0000000b Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000007 FillColor
+0000000c Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+fffffffe OutlineColor
+00000015 FillColor
+00000014 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000001 OutlineColor
+fffffffe FillColor
+00000015 Styleset id
+00000000 OutlineStipple
+00000000 OutlineWidth
+00000000 HaloColor
+00000007 OutlineColor
+fffffffe FillColor
+ca01 Create component
+00ec Command size 
+4c6162656c Component name (Label)
+0000 align 4
+00 align 4
+0012Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000064 Text
+00000002 Styleset id
+01 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000064 Text
+00000003 Styleset id
+00 BoundingRotate
+00 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000064 Text
+00000004 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+01 BoundingOutlined
+00 align 4
+00000064 Text
+00000032 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000032 Text
+00000033 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000033 Text
+00000034 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000034 Text
+00000035 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000035 Text
+00000036 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000036 Text
+00000037 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000037 Text
+00000038 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000038 Text
+00000046 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000046 Text
+00000047 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000047 Text
+00000048 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000048 Text
+00000049 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000049 Text
+0000004a Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004a Text
+0000004b Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004b Text
+0000004c Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004c Text
+ca01 Create component
+00c4 Command size 
+4c6162656c436f6d706c6578 Component name (LabelComplex)
+0000 align 4
+00 align 4
+00 align 4
+000eNumber of stylesets
+0000 Number of states
+0032 Default styleset
+0000 padding
+00000032 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000032 Text
+00000033 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000033 Text
+00000034 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000034 Text
+00000035 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000035 Text
+00000036 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000036 Text
+00000037 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000037 Text
+00000038 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000038 Text
+00000046 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000046 Text
+00000047 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000047 Text
+00000048 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000048 Text
+00000049 Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+00000049 Text
+0000004a Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+0000004a Text
+0000004b Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+0000004b Text
+0000004c Styleset id
+01 BoundingClipped
+00 align 4
+00 align 4
+00 align 4
+0000004c Text
+ca01 Create component
+0044 Command size 
+4d6170486f727a5f50616e656c Component name (MapHorz_Panel)
+0000 align 4
+00 align 4
+0005Number of stylesets
+0000 Number of states
+0064 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+00000064 Styleset id
+00000001 Frame
+000000c8 Styleset id
+00000033 Frame
+ca01 Create component
+011c Command size 
+4e756d65726963526561646f7574 Component name (NumericReadout)
+0000 align 4
+0010Number of stylesets
+0000 Number of states
+0032 Default styleset
+0000 padding
+00000032 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000032 Text
+00000033 Legend
+00000033 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000033 Text
+00000032 Legend
+00000034 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000034 Text
+00000032 Legend
+00000035 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000035 Text
+00000032 Legend
+00000036 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000036 Text
+00000032 Legend
+00000037 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000037 Text
+00000032 Legend
+00000038 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000038 Text
+00000032 Legend
+00000039 Styleset id
+01 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000032 Text
+00000033 Legend
+00000046 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000046 Text
+00000047 Legend
+00000047 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000047 Text
+00000046 Legend
+00000048 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000048 Text
+00000046 Legend
+00000049 Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000049 Text
+00000046 Legend
+0000004a Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004a Text
+00000046 Legend
+0000004b Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004b Text
+00000046 Legend
+0000004c Styleset id
+00 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+0000004c Text
+00000046 Legend
+0000004d Styleset id
+01 BoundingRotate
+01 BoundingClipped
+00 BoundingOutlined
+00 align 4
+00000046 Text
+00000047 Legend
+ca01 Create component
+0080 Command size 
+506167696e67436f6e7461696e6572 Component name (PagingContainer)
+000005Number of stylesets
+0000 Number of states
+0064 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+01 PageVisible
+00 align 4
+00 align 4
+00 align 4
+43fa0000 Thickness
+42480000 Margin
+00000064 Styleset id
+00000001 Frame
+01 PageVisible
+00 align 4
+00 align 4
+00 align 4
+43fa0000 Thickness
+42480000 Margin
+00000065 Styleset id
+00000001 Frame
+00 PageVisible
+00 align 4
+00 align 4
+00 align 4
+43fa0000 Thickness
+42480000 Margin
+000000c8 Styleset id
+00000033 Frame
+01 PageVisible
+00 align 4
+00 align 4
+00 align 4
+43fa0000 Thickness
+42480000 Margin
+000000c9 Styleset id
+00000033 Frame
+00 PageVisible
+00 align 4
+00 align 4
+00 align 4
+43fa0000 Thickness
+42480000 Margin
+ca01 Create component
+003c Command size 
+50616e656c Component name (Panel)
+0000 align 4
+00 align 4
+0005Number of stylesets
+0000 Number of states
+0064 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+00000064 Styleset id
+00000001 Frame
+000000c8 Styleset id
+00000033 Frame
+ca01 Create component
+002c Command size 
+50696374757265 Component name (Picture)
+000003Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+ca01 Create component
+0034 Command size 
+50696374757265416e696d61746564 Component name (PictureAnimated)
+000003Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+ca01 Create component
+06e0 Command size 
+5069637475726550757368427574746f6e Component name (PicturePushButton)
+0000 align 4
+00 align 4
+0012Number of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000078 Styleset id
+42c80000 Border
+00000001 PictureSizeLink
+3f000000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000dc Styleset id
+42c80000 Border
+00000001 PictureSizeLink
+3f000000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+ca01 Create component
+09b0 Command size 
+50696374757265546f67676c65427574746f6e Component name (PictureToggleButton)
+000012Number of stylesets
+0006 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000078 Styleset id
+42c80000 Border
+00000001 PictureSizeLink
+3f000000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000dc Styleset id
+42c80000 Border
+00000001 PictureSizeLink
+3f000000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000002 PictureSizeLink
+3f800000 PictureSizePercent
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+0048 Command size 
+506f7055704d656e75 Component name (PopUpMenu)
+0000 align 4
+00 align 4
+0002Number of stylesets
+0000 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42200000 PopUpBorder
+00000001 PopUpFrame
+00000032 PopUpEnableEntry
+0000003b PopUpDisableEntry
+00000001 PopUpSeparatorStyle
+000000d2 Styleset id
+42200000 PopUpBorder
+00000033 PopUpFrame
+0000003c PopUpEnableEntry
+0000003a PopUpDisableEntry
+00000002 PopUpSeparatorStyle
+ca01 Create component
+017c Command size 
+506f7055704d656e75427574746f6e Component name (PopUpMenuButton)
+000004Number of stylesets
+0003 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000001 PopUpFrame
+00000032 PopUpEnableEntry
+0000003b PopUpDisableEntry
+00000001 PopUpSeparatorStyle
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000001 PopUpFrame
+00000032 PopUpEnableEntry
+0000003b PopUpDisableEntry
+00000001 PopUpSeparatorStyle
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000033 PopUpFrame
+0000003c PopUpEnableEntry
+0000003a PopUpDisableEntry
+00000002 PopUpSeparatorStyle
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000033 PopUpFrame
+0000003c PopUpEnableEntry
+0000003a PopUpDisableEntry
+00000002 PopUpSeparatorStyle
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+ca01 Create component
+0040 Command size 
+506f70557050616e656c Component name (PopUpPanel)
+0000 align 4
+0005Number of stylesets
+0000 Number of states
+0064 Default styleset
+0000 padding
+00000000 Styleset id
+00000028 Frame
+00000014 Styleset id
+00000014 Frame
+00000015 Styleset id
+00000015 Frame
+00000064 Styleset id
+00000001 Frame
+000000c8 Styleset id
+00000033 Frame
+ca01 Create component
+0140 Command size 
+506f70557050616e656c427574746f6e Component name (PopUpPanelButton)
+0000 align 4
+00 align 4
+00 align 4
+0004Number of stylesets
+0003 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000001 PopUpFrame
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000001 PopUpFrame
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000033 PopUpFrame
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000033 PopUpFrame
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+ca01 Create component
+0598 Command size 
+50757368427574746f6e Component name (PushButton)
+0000 align 4
+0010Number of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+ca01 Create component
+0048 Command size 
+5363726f6c6c4c697374 Component name (ScrollList)
+0000 align 4
+0002Number of stylesets
+0000 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42200000 Border
+00000001 ColorSelection
+00000001 Frame
+00000032 EnableEntry
+0000003b DisableEntry
+000000d2 Styleset id
+42200000 Border
+00000007 ColorSelection
+00000033 Frame
+0000003c EnableEntry
+0000003a DisableEntry
+ca01 Create component
+0030 Command size 
+5363726f6c6c50616e656c Component name (ScrollPanel)
+000002Number of stylesets
+0000 Number of states
+006e Default styleset
+0000 padding
+00000000 Styleset id
+ffffffff OutlineColor
+ffffffff ScrollBackColor
+0000006e Styleset id
+00000009 OutlineColor
+0000000b ScrollBackColor
+ca01 Create component
+0200 Command size 
+53656c656374696f6e4c697374427574746f6e Component name (SelectionListButton)
+000004Number of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000032 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+0000000f PopUpFrame
+00000032 PopUpText
+00000001 PopUpSelectedEntryColor
+00000001 State Id
+00000001 Frame
+00000046 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+0000003c Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+42200000 PopUpBorder
+00000010 PopUpFrame
+0000003c PopUpText
+00000007 PopUpSelectedEntryColor
+00000001 State Id
+00000033 Frame
+00000050 Text
+0000fe1a PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+0000fe1a PictureBase
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+0000fe1d PictureBase
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+0044 Command size 
+53687566666c65546f466974436f6e7461696e6572 Component name (ShuffleToFitContainer)
+0000 align 4
+00 align 4
+0004Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00 FitOppositeSize
+00 FitOppositePos
+00 align 4
+00 align 4
+00000002 Styleset id
+00 FitOppositeSize
+01 FitOppositePos
+00 align 4
+00 align 4
+00000003 Styleset id
+01 FitOppositeSize
+00 FitOppositePos
+00 align 4
+00 align 4
+00000004 Styleset id
+01 FitOppositeSize
+01 FitOppositePos
+00 align 4
+00 align 4
+ca01 Create component
+0040 Command size 
+53697a65546f466974436f6e7461696e6572 Component name (SizeToFitContainer)
+0000 align 4
+0004Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00 FitOppositeSize
+00 FitOppositePos
+00 align 4
+00 align 4
+00000002 Styleset id
+00 FitOppositeSize
+01 FitOppositePos
+00 align 4
+00 align 4
+00000003 Styleset id
+01 FitOppositeSize
+00 FitOppositePos
+00 align 4
+00 align 4
+00000004 Styleset id
+01 FitOppositeSize
+01 FitOppositePos
+00 align 4
+00 align 4
+ca01 Create component
+00bc Command size 
+536c69646572 Component name (Slider)
+0000 align 4
+0003Number of stylesets
+0003 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+00000001 Shape
+3e800000 ScalePercent
+3e800000 HeightPercent
+43480000 ThumbWidth
+00000001 State Id
+0000000b OutlineColor
+00000005 FillColor
+00000002 State Id
+0000000b OutlineColor
+00000006 FillColor
+00000003 State Id
+0000000b OutlineColor
+00000006 FillColor
+00000002 Styleset id
+00000001 Shape
+00000000 ScalePercent
+3e800000 HeightPercent
+43480000 ThumbWidth
+00000001 State Id
+0000000b OutlineColor
+00000005 FillColor
+00000002 State Id
+0000000b OutlineColor
+00000006 FillColor
+00000003 State Id
+0000000b OutlineColor
+00000006 FillColor
+00000003 Styleset id
+00000002 Shape
+00000000 ScalePercent
+00000000 HeightPercent
+43480000 ThumbWidth
+00000001 State Id
+0000000c OutlineColor
+00000033 FillColor
+00000002 State Id
+0000000c OutlineColor
+00000033 FillColor
+00000003 State Id
+0000000c OutlineColor
+00000033 FillColor
+ca01 Create component
+00bc Command size 
+53796d626f6c Component name (Symbol)
+0000 align 4
+0007Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000000 LineWidth
+00000000 Font
+00000002 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000005 LineWidth
+00000000 Font
+00000003 Styleset id
+fffffffe ColorIndex
+00000001 Halo
+00000003 LineStipple
+00000003 LineWidth
+00000000 Font
+00000004 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000001 LineStipple
+00000002 LineWidth
+00000000 Font
+00000014 Styleset id
+00000001 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+00000015 Styleset id
+00000007 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+00000016 Styleset id
+00000029 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+ca01 Create component
+00c4 Command size 
+53796d626f6c416e696d61746564 Component name (SymbolAnimated)
+0000 align 4
+0007Number of stylesets
+0000 Number of states
+0001 Default styleset
+0000 padding
+00000001 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000000 LineWidth
+00000000 Font
+00000002 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000005 LineWidth
+00000000 Font
+00000003 Styleset id
+fffffffe ColorIndex
+00000001 Halo
+00000003 LineStipple
+00000003 LineWidth
+00000000 Font
+00000004 Styleset id
+fffffffe ColorIndex
+00000000 Halo
+00000001 LineStipple
+00000002 LineWidth
+00000000 Font
+00000014 Styleset id
+00000001 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+00000015 Styleset id
+00000007 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+00000016 Styleset id
+00000029 ColorIndex
+00000000 Halo
+00000000 LineStipple
+00000002 LineWidth
+00000000 Font
+ca01 Create component
+0848 Command size 
+53796d626f6c50757368427574746f6e Component name (SymbolPushButton)
+0000 align 4
+00 align 4
+00 align 4
+0012Number of stylesets
+0004 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000078 Styleset id
+42c80000 Border
+00000001 SymbolSizeLink
+3f000000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000dc Styleset id
+42c80000 Border
+00000001 SymbolSizeLink
+3f000000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+ca01 Create component
+0b18 Command size 
+53796d626f6c546f67676c65427574746f6e Component name (SymbolToggleButton)
+0000 align 4
+0012Number of stylesets
+0006 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000078 Styleset id
+42c80000 Border
+00000001 SymbolSizeLink
+3f000000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000dc Styleset id
+42c80000 Border
+00000001 SymbolSizeLink
+3f000000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000002 SymbolSizeLink
+3f800000 SymbolSizePercent
+00000001 SymbolColor
+00000000 SymbolHalo
+00000000 SymbolLineStipple
+00000001 SymbolLineWidth
+00000000 SymbolFont
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+ca01 Create component
+01bc Command size 
+54616262656450616e656c Component name (TabbedPanel)
+000003Number of stylesets
+0006 Number of states
+0064 Default styleset
+0000 padding
+00000000 Styleset id
+42c80000 Border
+00000028 PanelFrame
+00000002 ButtonPictureSizeLink
+3f800000 ButtonPictureSizePercent
+00000001 State Id
+00000003 ButtonFrame
+00000032 ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000002 State Id
+00000003 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000003 State Id
+00000001 ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000004 State Id
+00000001 ButtonFrame
+00000032 ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000005 State Id
+00000001 ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000006 State Id
+00000003 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000064 Styleset id
+42c80000 Border
+0000000f PanelFrame
+00000002 ButtonPictureSizeLink
+3f800000 ButtonPictureSizePercent
+00000001 State Id
+00000003 ButtonFrame
+00000032 ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000002 State Id
+00000003 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000003 State Id
+0000000f ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000004 State Id
+0000000f ButtonFrame
+00000032 ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000005 State Id
+0000000f ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000006 State Id
+00000003 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+000000c8 Styleset id
+42c80000 Border
+00000010 PanelFrame
+00000002 ButtonPictureSizeLink
+3f800000 ButtonPictureSizePercent
+00000001 State Id
+00000035 ButtonFrame
+0000003c ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000002 State Id
+00000035 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+00000003 State Id
+00000010 ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000004 State Id
+00000010 ButtonFrame
+0000003c ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000005 State Id
+00000010 ButtonFrame
+0000003a ButtonText
+41a00000 ButtonTextOffsetX
+c1a00000 ButtonTextOffsetY
+00000006 State Id
+00000035 ButtonFrame
+0000003a ButtonText
+00000000 ButtonTextOffsetX
+00000000 ButtonTextOffsetY
+ca01 Create component
+0050 Command size 
+54616262656450616e656c47726f7570 Component name (TabbedPanelGroup)
+0000 align 4
+00 align 4
+00 align 4
+0003Number of stylesets
+0000 Number of states
+0000 Default styleset
+0000 padding
+00000000 Styleset id
+447a0000 TabDefaultHeight
+00 TabDefaultHeightIsPercent
+00 align 4
+00 align 4
+00 align 4
+00000028 Frame
+00000014 Styleset id
+447a0000 TabDefaultHeight
+00 TabDefaultHeightIsPercent
+00 align 4
+00 align 4
+00 align 4
+00000014 Frame
+00000028 Styleset id
+3e4ccccd TabDefaultHeight
+01 TabDefaultHeightIsPercent
+00 align 4
+00 align 4
+00 align 4
+00000028 Frame
+ca01 Create component
+081c Command size 
+546f67676c65427574746f6e Component name (ToggleButton)
+0000 align 4
+00 align 4
+00 align 4
+0010Number of stylesets
+0006 Number of states
+006e Default styleset
+0000 padding
+0000006e Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000032 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000032 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+0000006f Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000033 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000033 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000070 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000034 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000034 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000071 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000035 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000035 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000072 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000036 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000036 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000073 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000037 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000037 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+00000038 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+00000038 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000082 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000046 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000046 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000083 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000047 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000047 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000084 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000048 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000048 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000085 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+00000049 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+00000049 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000086 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+0000004a Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004a Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000087 Styleset id
+42c80000 Border
+00000001 State Id
+00000001 Frame
+0000004b Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000004 Frame
+0000004b Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000006 Frame
+0000004c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000003 Frame
+0000004c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d2 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000d3 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+0000003d Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+0000003d Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+0000003c Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+0000003c Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e6 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+000000e7 Styleset id
+42c80000 Border
+00000001 State Id
+00000033 Frame
+00000051 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000002 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+00000003 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000004 State Id
+00000034 Frame
+00000051 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000005 State Id
+00000036 Frame
+00000050 Text
+41a00000 TextOffsetX
+c1a00000 TextOffsetY
+00000006 State Id
+00000035 Frame
+00000050 Text
+00000000 TextOffsetX
+00000000 TextOffsetY
+d0 End of Block
+00
+0000
+e0 A661_DF_FOOTER
+00
+0000
