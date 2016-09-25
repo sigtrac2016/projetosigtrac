@@ -12,9 +12,9 @@ parameters = [
              ]
 
 
-pairwise = all_pairs( parameters )
+pairwise = all_pairs( parameters, n=3 )
 
 print "PAIRWISE:"
 for i, v in enumerate(pairwise):
     # print "%i:\t%s" % (i, str(v))
-    print ",".join(v)
+    print "\t".join(v)

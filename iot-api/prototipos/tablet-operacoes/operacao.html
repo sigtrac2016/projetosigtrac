@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app="SigTrac">
+
+    <head>
+        <meta charset='utf-8'>
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="fireDept.css">
+
+        <title>Mapa de Operações de Busca e Resgate</title>
+    </head>
+
+    <body>
+
+        <div class="google-map-container">
+            <div class="google-map"
+                operacao-map>
+            </div>
+        </div>
+
+        <script type="text/html"
+            id="operacoesControlTemplate">
+            <section class="pure-u-1-6 map-control">
+                <header>
+                    <h3>Mapa de Operações de Busca e Resgate</h3>
+                    <small>Dê dois cliques no título ou marco no mapa para editar.</small>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/'}">
+                                <a href="#/"
+                                    class="pure-menu-link">Todos</a></li>
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/active'}">
+                                <a href="#/active"
+                                    class="pure-menu-link">Abertos</a></li>
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/completed'}">
+                                <a href="#/completed"
+                                    class="pure-menu-link">Encerrados</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <section ng-show="operacoes.filtered().length">
+                    <ul>
+                        <li ng-repeat="operacao in operacoes.filtered()"
+                            ng-class="{completed: operacao.completed}">
+                            <div>
+                                <input type="checkbox"
+                                    ng-model="operacao.completed"
+                                    disabled>
+                                <label ng-click="controls.openInfoWindowByOperacaoId(operacao.id)"
+                                    ng-dblclick="controls.editOperacaoById(operacao.id)">{{operacao.title}}</label>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <footer>
+                    <span ng-show="operacoes.remainingCount()">
+                        <strong>{{operacoes.remainingCount()}}</strong>
+                        <span ng-pluralize count="operacoes.remainingCount()" when="{ one: 'operações restante', other: 'operação restantes' }"></span>
+                    </span>
+                    <hr />
+                    <button class="pure-button"
+                        ng-click="operacoes.prune()"
+                        ng-show="operacoes.remainingCount() < operacoes.rows.length">Apagar encerrados ({{operacoes.rows.length - operacoes.remainingCount()}})
+                    </button>
+                    <button class="pure-button pure-button-success"
+                        ng-click="controls.newOperacao()"
+                        ng-hide="controls.editOperacao">Novo Operação
+                    </button>
+                </footer>
+            </section>
+        </script>
+
+        <script type="text/html"
+            id="infoWindowTemplate">
+            <div class="info-window">
+                <h3>{{infow.data.title}}</h3>
+                <p ng-show="infow.data.desc">{{infow.data.desc}}</p>
+                <small ng-show="infow.data.operacaoInicio">Período:</small>
+                <p ng-show="infow.data.operacaoInicio">{{infow.data.operacaoInicio}} <small>até</small> {{infow.data.operacaoTermino}}</p>
+                <div style="clear: both;"></div>
+            </div>
+        </script>
+
+        <script type="text/html"
+            id="editSearchControlTemplate">
+            <input id="searchInput"
+                class="controls"
+                type="text"
+                placeholder="Pesquisar">
+        </script>
+
+        <script type="text/html"
+            id="editOperacaoControlTemplate">
+            <div class="pure-u-1-6 map-control"
+                ng-show="controls.editOperacao"
+                ng-controller="operacaoMapCtrl">
+                <form name="editOperacaoForm"
+                    class="pure-form"
+                    ng-submit="submitOperacao()">
+                    <fieldset>
+                        <label for="title">Título:</label>
+                        <input id="title"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.title"
+                            ng-maxlength="30"
+                            required>
+                        <label for="description">Descrição:</label>
+                        <input id="description"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.desc">
+                        <label for="operacaoInicio">Início do operação:</label>
+                        <input id="operacaoInicio"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.operacaoInicio">
+                        <label for="operacaoTermino">Término do operação:</label>
+                        <input id="operacaoTermino"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.operacaoTermino">
+                        <small>Clique e arraste o marcador para mudar a localização.</small>
+                        <label for="longitude">Longitude:</label>
+                        <input id="longitude"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.lng">
+                        <label for="latitude">Latitude:</label>
+                        <input id="latitude"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.lat">
+                        <label for
+                            "radius">Raio:</label>
+                        <input id="radius"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editOperacao.radius">
+                        <div ng-show="editOperacao.id !== -1">
+                            <label for="completed">Encerrado:</label>
+                            <input id="completed"
+                                type="checkbox"
+                                ng-model="editOperacao.comp">
+                        </div>
+                        <button class="pure-button pure-button-primary pure-input-1"
+                            type="submit">{{editOperacao.saveMsg}}
+                        </button>
+                        <button class="pure-button pure-input-1"
+                            ng-click="resetCloseOperacaoForm()">{{editOperacao.cancelMsg}}
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </script>
+
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyAgHmjHxtdzsXUzU2DhyUVKHOttWGZKk6g&libraries=places"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+        <script>
+            angular.module('SigTrac', []);
+        </script>
+
+        <script src="map.service.js"></script>
+        <script src="operacao/operacao.service.js"></script>
+        <script src="operacao/operacao.controller.js"></script>
+        <script src="operacao/operacaoMap.directive.js"></script>
+
+    </body>
+
+</html>
