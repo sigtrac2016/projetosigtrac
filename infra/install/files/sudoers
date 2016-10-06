@@ -1,0 +1,22 @@
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+
+Defaults        env_reset
+Defaults        env_keep -= "HOME"
+Defaults        logfile = /var/log/sudo.log
+
+@TIMES 
+
+Cmnd_Alias      SHELL = /bin/bash, /bin/bsh, /bin/csh, /bin/tcsh, /bin/zsh, /bin/ksh
+Cmnd_Alias      INITD = /etc/init.d/[a-z]*
+Cmnd_Alias      COMANDOS = /bin/*, /sbin/*, /usr/bin/*, /usr/sbin/*, /etc/init.d/*, /usr/local/bin/*, /usr/local/cups-1.7.5/*
+Cmnd_Alias      COMANDOS_NEGADOS = /bin/login, /usr/bin/visudo, /sbin/sulogin, /bin/su, /usr/bin/sudo -s, SHELL
+
+TIMES	        ALL = SHELL, INITD, COMANDOS, CMD_REDES, !COMANDOS_NEGADOS  NOPASSWD: ALL
+root            ALL = (ALL) ALL
