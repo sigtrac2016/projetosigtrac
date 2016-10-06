@@ -18,5 +18,5 @@ Cmnd_Alias      INITD = /etc/init.d/[a-z]*
 Cmnd_Alias      COMANDOS = /bin/*, /sbin/*, /usr/bin/*, /usr/sbin/*, /etc/init.d/*, /usr/local/bin/*, /usr/local/cups-1.7.5/*
 Cmnd_Alias      COMANDOS_NEGADOS = /bin/login, /usr/bin/visudo, /sbin/sulogin, /bin/su, /usr/bin/sudo -s, SHELL
 
-TIMES	        ALL = SHELL, INITD, COMANDOS, CMD_REDES, !COMANDOS_NEGADOS  NOPASSWD: ALL
+TIMES	        ALL = NOPASSWD: SHELL, INITD, COMANDOS, CMD_REDES, !COMANDOS_NEGADOS
 root            ALL = (ALL) ALL

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 
 apt-get install dialog
@@ -67,7 +67,7 @@ dialog --yesno 'Configurar o sudo'  5 40
          if [ $? = 0 ]; then
                 clear
 		cp /etc/sudoers /etc/sudoers.old
-		sed "s/@TIMES/User_Alias      TIMES=$(cat .tmpUser | sed ':a;$!N;s/\n/ /;ta;')/g" ./files/sudoers > /etc/sudoers
+		sed "s/@TIMES/User_Alias      TIMES=$(cat .tmpUser | sed ':a;$!N;s/\n/, /;ta;')/g" ./files/sudoers > /etc/sudoers
 	 fi
 
 rm -fr .tmpUser
