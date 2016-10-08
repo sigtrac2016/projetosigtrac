@@ -2,6 +2,11 @@ body {
     font-family: 'Roboto';
 }
 
+.segmentos a,
+.segmentos span {
+    font-size: .8em;
+}
+
 h1,
 h2,
 h3,

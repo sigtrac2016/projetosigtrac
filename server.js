@@ -13,6 +13,7 @@ var ccc = require('./web/server/ccc');
 app.use(express.static(__dirname + '/web/views'));
 // Store all JS in Scripts folder.
 app.use(express.static(__dirname + '/web/script'));
+app.use(express.static(__dirname + '/web/client'));
 // Store all CSS in style folder.
 app.use(express.static(__dirname + '/web/style'));
 // Store all static files
