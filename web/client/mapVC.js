@@ -4,178 +4,72 @@
 ===========================================================================
 */
 
-app.controller("mapVC", function($scope, $http) {
-    // Initializes the map
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: my_position,
-        zoom: 14
-    }
-    var contentString, infoWindow;
-    var map, selection, coor;
-
-    // Mock variables
-    var marker, marker_1, marker_2, marker_3, marker_4, marker_5, marker_6;
-
-    var markers = [];
-
+app.controller("mapVC", function($scope, $http, $compile) {
     /***********************************************
                 Initializes map and stuff
     ***********************************************/
     // Initializes map
-    map = new google.maps.Map(mapCanvas, mapOptions);
-
-    // Initializes a marker
-    marker = new google.maps.Marker({
-        position: my_position,
-        map: map,
-        draggable: true,
-        icon: pinSymbol("#aaa")
+    $scope.map = new google.maps.Map(document.getElementById("map"), {
+        center: my_position,
+        zoom: 14
     });
-    markers.push(marker);
 
-    // Initializes mock marker
-    marker_1 = new google.maps.Marker({
-        position: position_1,
-        map: map,
-        draggable: true,
-        icon: pinSymbol("#0000ff")
-    });
-    markers.push(marker_1);
+    $scope.markers = [];
+    $scope.contentString = "<div id='infowindow'></div>";
 
-    marker_2 = new google.maps.Marker({
-        position: position_2,
-        map: map,
-        draggable: true,
-        // Color red
-        icon: pinSymbol("#ff0000")
-    });
-    markers.push(marker_2);
+    $scope.createMarker = function() {
+        var marker = new google.maps.Marker({
+            position: positions[i],
+            map: $scope.map,
+            draggable: true,
+            icon: pinSymbol(colors[i])
+        });
+        marker.addListener('click', function(event) {
+            $scope.genContentString(event.latLng);
+            $scope.map.setCenter(marker.getPosition());
+            $scope.selection = marker;
+            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
+            $scope.infowindow.open($scope.map, marker);
+            $("#infowindow").html($compile($scope.contentString)($scope));
+        });
+        $scope.markers.push(marker);
+    }
 
-    marker_3 = new google.maps.Marker({
-        position: position_3,
-        map: map,
-        draggable: true,
-        icon: pinSymbol("#008000")
-    });
-    markers.push(marker_3);
-
-    marker_4 = new google.maps.Marker({
-        position: position_4,
-        map: map,
-        draggable: true,
-        icon: pinSymbol("##000000")
-    });
-    markers.push(marker_4);
-
-    marker_5 = new google.maps.Marker({
-        position: position_5,
-        map: map,
-        draggable: true,
-        // Color red
-        icon: pinSymbol("#ff0000")
-    });
-    markers.push(marker_5);
-
-    marker_6 = new google.maps.Marker({
-        position: position_6,
-        map: map,
-        draggable: true,
-        // Color red
-        icon: pinSymbol("#ff0000")
-    });
-    markers.push(marker_6);
+    for (var i = 0; i < 7; i++) {
+        $scope.createMarker();
+    }
 
     // Initializes infowindow
-    infowindow = new google.maps.InfoWindow({
-        content: contentString
+    $scope.infowindow = new google.maps.InfoWindow({
+        content: $scope.contentString
     })
 
     /***********************************************
-                Creates new markers
+                Creates new $scope.markers
     ***********************************************/
 
     // Event to create a new marker
-    google.maps.event.addListener(map, 'click', function(event) {
+    google.maps.event.addListener($scope.map, 'click', function(event) {
         var new_marker = new google.maps.Marker({
             position: event.latLng,
-            map: map,
+            map: $scope.map,
             draggable: true,
             icon: pinSymbol(fillMarker())
         });
         new_marker.addListener('click', function(event) {
-            genContentString(event.latLng);
-            map.setCenter(new_marker.getPosition());
-            selection = new_marker;
-            infowindow.setContent(contentString);
-            infowindow.open(map, new_marker);
+            $scope.genContentString(event.latLng);
+            $scope.map.setCenter(new_marker.getPosition());
+            $scope.selection = new_marker;
+            $scope.infowindow.setContent("<div id=\'infowindow\'></div>");
+            $scope.infowindow.open($scope.map, new_marker);
+            $("#infowindow").html($compile($scope.contentString)($scope));
         });
-        markers.push(new_marker);
+        $scope.markers.push(new_marker);
     });
 
     /***********************************************
                 Displays alert information
     ***********************************************/
-
-    // Function for displaying alert information.
-    marker.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker.getPosition());
-        selection = marker;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker);
-    });
-
-    marker_1.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_1.getPosition());
-        selection = marker_1;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_1);
-    });
-
-    marker_2.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_2.getPosition());
-        selection = marker_2;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_2);
-    });
-
-    marker_3.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_3.getPosition());
-        selection = marker_3;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_3);
-    });
-
-    marker_4.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_4.getPosition());
-        selection = marker_4;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_4);
-    });
-
-    marker_5.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_5.getPosition());
-        selection = marker_5;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_5);
-    });
-
-    marker_6.addListener('click', function(event) {
-        genContentString(event.latLng);
-        map.setCenter(marker_6.getPosition());
-        selection = marker_6;
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker_6);
-    });
-
-    // Função para ajudar o Mock
-    //deleteMarkers(markers);
 
     // Creates a custom color pin
     function pinSymbol(color) {
@@ -189,40 +83,56 @@ app.controller("mapVC", function($scope, $http) {
         };
     }
 
-    function colorMarker(color) {
-        selection.setIcon(pinSymbol(color));
+    $scope.colorMarker = function(color) {
+        $scope.selection.setIcon(pinSymbol(color));
     }
 
-    function deleteMarker(param) {
-        selection.setMap(null);
+    $scope.deleteMarker = function(param) {
+        $scope.selection.setMap(null);
         // Remove o marcador e salva os dados
-        markers.splice(markers.indexOf(selection), 1);
+        $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
     }
 
-    function genContentString(coor) {
-        contentString = '<div id="content">' +
+    $scope.genContentString = function(coor) {
+        $scope.contentString = '<div id="content">' +
             '<h1 >Alerta de Incêndio</h1>' +
             '<div>' +
             '<p><b>Horário de ocorrência: </b> 13:30h</p>' +
             '<p><b>Coordenadas: </b>' + coor + '</p>' +
-            '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ' +
+            '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
+        if (segmento == 'global')
+            $scope.contentString +=
             '<h4>Delegar segmento</h4>' +
-            '<button class="btn btn-primary" onclick="colorMarker(\'blue\')">Segmento 1</button> ' +
-            '<button class="btn btn-danger" onclick="colorMarker(\'red\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" onclick="colorMarker(\'black\')">Segmento 3</button> ' +
-            '<button class="btn btn-success" onclick="colorMarker(\'green\')">Segmento 4</button> ' +
+            '<button class="btn btn-primary" ng-click="colorMarker(\'blue\')">Segmento 1</button> ' +
+            '<button class="btn btn-danger" ng-click="colorMarker(\'red\')">Segmento 2</button> ' +
+            '<button class="btn btn-default" ng-click="colorMarker(\'black\')">Segmento 3</button> ' +
+            '<button class="btn btn-success" ng-click="colorMarker(\'green\')">Segmento 4</button> ';
+        $scope.contentString +=
             '<hr>' +
             '<h4>Comandos:</h4>' +
-            '<button class="btn btn-warning" onclick="deleteMarker()">Alerta falso</button> ' +
-            '<button class="btn btn-default" onclick="deleteMarker()">Alerta de Reforços</button>' +
-            '<button class="btn btn-danger" onclick="deleteMarker()">Finalizar alerta</button> ' +
+            '<button class="btn btn-warning" ng-click="deleteMarker()">Alerta falso</button> ' +
+            '<button class="btn btn-default" ng-click="deleteMarker()">Alerta de Reforços</button>' +
+            '<button class="btn btn-danger" ng-click="deleteMarker()">Finalizar alerta</button> ' +
             '</div>' +
             '</div>';
     }
 
-    function deleteMarkers(markers) {}
+    $scope.deleteMarkers = function() {
+        if (segmento != 'global') {
+            for (var i = 0; i < $scope.markers.length; i++) {
+                if ($scope.markers[i].icon.fillColor != "#f00") {
+                    $scope.markers[i].setMap(null);
+                }
+            }
+        }
+    }
+
+    // Função para ajudar o Mock
+    $scope.deleteMarkers();
 
     function fillMarker() {
+        if (segmento == 'health')
+            return "#f00";
         return "#aaa";
     }
 
@@ -230,39 +140,21 @@ app.controller("mapVC", function($scope, $http) {
 
 function loadMap() {}
 
+var colors = [
+    "#aaa", "#00f", "#f00", "#080", "#000", "#f00", "#f00"
+]
+var positions = [
+    { lat: -23.21, lng: -45.87 },
+    { lat: -23.20, lng: -45.87 },
+    { lat: -23.22, lng: -45.87 },
+    { lat: -23.20, lng: -45.88 },
+    { lat: -23.22, lng: -45.86 },
+    { lat: -23.20, lng: -45.89 },
+    { lat: -23.21, lng: -45.89 }
+]
+
 // ITA position
 var my_position = {
     lat: -23.21,
     lng: -45.87
-};
-
-// Mock positions
-var position_1 = {
-    lat: -23.20,
-    lng: -45.87
-};
-
-var position_2 = {
-    lat: -23.22,
-    lng: -45.87
-};
-
-var position_3 = {
-    lat: -23.20,
-    lng: -45.88
-};
-
-var position_4 = {
-    lat: -23.22,
-    lng: -45.86
-};
-
-var position_5 = {
-    lat: -23.20,
-    lng: -45.89
-};
-
-var position_6 = {
-    lat: -23.205,
-    lng: -45.89
 };
