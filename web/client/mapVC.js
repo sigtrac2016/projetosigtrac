@@ -120,7 +120,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.deleteMarkers = function() {
         if (segmento != 'global') {
             for (var i = 0; i < $scope.markers.length; i++) {
-                if ($scope.markers[i].icon.fillColor != "#f00") {
+                if ($scope.markers[i].icon.fillColor != segmentoColor(segmento)) {
                     $scope.markers[i].setMap(null);
                 }
             }
@@ -131,9 +131,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.deleteMarkers();
 
     function fillMarker() {
-        if (segmento == 'health')
-            return "#f00";
-        return "#aaa";
+        return segmentoColor(segmento);
     }
 
 });
@@ -141,7 +139,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
 function loadMap() {}
 
 var colors = [
-    "#aaa", "#00f", "#f00", "#080", "#000", "#f00", "#f00"
+    "#aaa", "blue", "red", "green", "black", "red", "red"
 ]
 var positions = [
     { lat: -23.21, lng: -45.87 },

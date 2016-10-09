@@ -17,13 +17,18 @@
 
     <!-- Include Bind-Component Js -->
     <script src="/components/bind-components.js"></script>
+    <script src="/util.js"></script>
     <!-- Include Style Css -->
     <link href='/style.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/ccs.css">
     <!-- Include Script Js -->
     <script src='/ccsVC.js'></script>
     <script src='/mapVC.js'></script>
     <title>SIG-TRAC-2016</title>
+    <style>
+        .navbar-inverse .navbar-nav>li>a {
+            color: #ddd;
+        }
+    </style>
 </head>
 
 <div id="navigation"></div>
@@ -39,8 +44,12 @@
                 <img src="img/healthcare.png" alt="Smiley face">
             </div>
             <ul class="list-group">
-                <li class="list-group-item">
-                    <i class="fa fa-map-marker" style="color:red;"></i> Segmento 2</li>
+                <div class="segmentos">
+                    <li class="list-group-item">
+                        <i class="fa fa-map-marker" style="color:{{segmento.color}};"></i>
+                        <strong> {{segmento.name}}</strong>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
