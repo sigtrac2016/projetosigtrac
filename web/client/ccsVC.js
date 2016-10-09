@@ -15,7 +15,7 @@ app.controller("ccsVC", function($scope, $http) {
             if (seg.url.indexOf(segmento) != -1)
                 $scope.segmento = seg;
         });
-        $(".navbar-inverse").css('background-color', $scope.segmento.navcolor);
+        $("#segmentoImg").attr("src", $scope.segmento.img);
         $scope.$apply();
     });
 });

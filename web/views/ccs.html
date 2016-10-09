@@ -34,14 +34,15 @@
 <div id="navigation"></div>
 
 <body>
-    <h2>Central de Controle de Segmento</h2>
+    <h2 style="color: {{segmento.navcolor}};" ng-controller="ccsVC">
+        Central de Controle de Segmento - {{segmento.name}}</h2>
     <div class="row">
         <div class="col-sm-10" id="mapVC" ng-controller="mapVC">
             <div id="map"></div>
         </div>
         <div class="col-sm-2" id="ccsVC" ng-controller="ccsVC">
             <div class="thumbnail">
-                <img src="img/healthcare.png" alt="Smiley face">
+                <img id="segmentoImg" alt="Segmento Icon">
             </div>
             <ul class="list-group">
                 <div class="segmentos">
