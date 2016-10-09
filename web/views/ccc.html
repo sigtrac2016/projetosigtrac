@@ -17,22 +17,24 @@
 
     <!-- Include Bind-Component Js -->
     <script src="/components/bind-components.js"></script>
+    <script src="/util.js"></script>
     <!-- Include Style Css -->
     <link href='/style.css' rel='stylesheet' type='text/css'>
     <!-- Include Script Js -->
-    <script src='/ccc.js'></script>
+    <script src='/cccVC.js'></script>
+    <script src='/mapVC.js'></script>
     <title>SIG-TRAC-2016</title>
 </head>
 
 <div id="navigation"></div>
 
-<body ng-controller="cccVC">
+<body>
     <h2>Central de Comando e Controle</h2>
     <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-10" id="mapVC" ng-controller="mapVC">
             <div id="map"></div>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2" id="cccVC" ng-controller="cccVC">
             <div class="thumbnail">
                 <img src="img/monitor.png" alt="Smiley face">
             </div>
@@ -44,11 +46,8 @@
                         <span ng-if="segmento.url == ''">{{segmento.name}}</span></strong></li>
                 </div>
             </ul>
-
         </div>
     </div>
-    <script src="maps-scripts/load.js"></script>
-    <script src="maps-scripts/ccc.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6R4XKuh5N6ZoQ1DvFSjUxi0Yo5fSse1c&callback=loadMap"></script>
 </body>
 
