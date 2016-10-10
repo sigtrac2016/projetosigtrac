@@ -3,6 +3,8 @@ package com.takeiji.takamura.sigtrac;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 
@@ -14,6 +16,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -69,6 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         mPasswordField = (TextInputLayout) findViewById(R.id.passwordViewID);
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     /**
@@ -82,6 +87,17 @@ public class LoginActivity extends AppCompatActivity {
             mPasswordField.setVisibility(View.INVISIBLE);
     }
 
+    /**
+     *  Life cycle method. Every time the user returns to the login page,
+     * the user must do the login again.
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.mAuthTask = null;
+        if(mCheckBox.isChecked())
+            mPasswordField.setVisibility(View.VISIBLE);
+    }
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -130,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new UserLoginTask(cpf, password);
+            mAuthTask = new UserLoginTask(cpf, password, this);
             mAuthTask.execute((Void) null);
         }
     }
@@ -266,8 +282,10 @@ public class LoginActivity extends AppCompatActivity {
         private final String mCPF;
         private final String mPassword;
         private String mName;
+        private Context mContext;
 
-        UserLoginTask(String cpf, String password) {
+        UserLoginTask(String cpf, String password, Context context) {
+            mContext = context;
             mCPF = cpf;
             mPassword = password;
             Log.v("LOGIN", "I am receiving " + mCPF + " and " + mPassword);
@@ -303,9 +321,11 @@ public class LoginActivity extends AppCompatActivity {
             showProgress(false);
 
             if (success) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado! " + mName , Toast.LENGTH_SHORT);
-                toast.show();
-                // New screen
+                // start Restricted users activity
+                Intent intent = new Intent(this.mContext, RestrictUserActivity.class);
+                intent.putExtra("CPF", this.mCPF);
+                intent.putExtra("NOME", this.mName);
+                startActivity(intent);
             } else {
                 // Restrict access
                 if(mCheckBox.isChecked()) {
@@ -316,8 +336,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 // General access
                 else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Acesso Liberado! Usuario Comum", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Intent intent = new Intent(this.mContext, CommonUserActivity.class);
+                    startActivity(intent);
                 }
             }
         }
