@@ -1,7 +1,9 @@
 package com.takeiji.takamura.sigtrac;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -45,12 +47,28 @@ public class RestrictUserActivity extends AppCompatActivity {
 
     // It sends the CPF, phone number, position and a flag (restricted user/common user)
     public void emitAlertSignal(View view) {
-        // TODO: ...
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Deseja enviar sinal de pânico?").setTitle("Emergencia");
+        builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.e("TEST", "SIM");
+                // TODO: ...
+            }
+        });
+        builder.setNegativeButton("Nao", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 
     public void verificarAlertas(View view) {
-
+        // TODO: ...
     }
 
     public void enviarAlerta(View view) {

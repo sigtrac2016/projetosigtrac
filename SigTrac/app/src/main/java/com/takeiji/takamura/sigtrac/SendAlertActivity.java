@@ -1,5 +1,7 @@
 package com.takeiji.takamura.sigtrac;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -50,6 +53,15 @@ public class SendAlertActivity extends AppCompatActivity {
     private final String M4_AMBULANCIA = "Ambuläncia";
     private final String M4_ACIDENTE = "Acidente";
     private final String M4_OUTRO = "Outro";
+
+    // Menu 5
+    private final String M5_RIO = "Nivel de água: Rio";
+    private final String M5_MAR = "Nível de água: Mar";
+    private final String M5_CHUVA = "Nível de água: Chuva";
+    private final String M5_REPRESA = "Nivel de água: Represa";
+    private final String M5_AGUAOUTRA = "Nível de água: Outro";
+    private final String M5_DESABAMENTO = "Desabamento";
+    private final String M5_OUTRO = "Outro";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +121,14 @@ public class SendAlertActivity extends AppCompatActivity {
                 mListElements.add(M4_ACIDENTE);
                 mListElements.add(M4_OUTRO);
                 break;
+            case M1_DEFESA_CIVIL:
+                mListElements.add(M5_RIO);
+                mListElements.add(M5_MAR);
+                mListElements.add(M5_CHUVA);
+                mListElements.add(M5_REPRESA);
+                mListElements.add(M5_AGUAOUTRA);
+                mListElements.add(M5_DESABAMENTO);
+                mListElements.add(M5_OUTRO);
         }
         mAdapter.notifyDataSetChanged();
     }
@@ -127,13 +147,43 @@ public class SendAlertActivity extends AppCompatActivity {
                         break;
                     default:
                         type = mListElements.get(position);
-                        sendAlert();
+                        createDialogBox();
                 }
             }
         };
     }
 
-    public void sendAlert() {
+    private void createDialogBox() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Dep.: " + this.departament + "\nTipo: " + this.type + "\nDeseja enviar este alerta?").setTitle("Alerta");
+        builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sendAlert();
+                Toast.makeText(SendAlertActivity.this, "Alerta enviado para a central de comando.", Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
+        builder.setNegativeButton("Nao", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void sendAlert() {
         //TODO: ...
+    }
+
+    /**
+     * Life Cycle
+     * */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }
