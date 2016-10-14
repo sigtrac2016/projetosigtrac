@@ -134,7 +134,38 @@ app.controller("mapVC", function($scope, $http, $compile) {
         return segmentoColor(segmento);
     }
 
+    /* Método para invocar FullScreen */
+    $scope.fullscreen = function() {
+        if (!screenfull.isFullscreen) {
+            $("#map").css("height", "100%");
+            $("#mapVC").css("height", "100%");
+            $("#mapVC").css("width", "100%");
+        } else {
+            $("#map").css("height", "500px");
+            $("#mapVC").css("height", "");
+            $("#mapVC").css("width", "");
+        }
+        screenfull.toggle($("#mapVC")[0]);
+    }
+
 });
+
+/* Detecta Esc para sair de FullScreen*/
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+        $("#map").css("height", "500px");
+        $("#mapVC").css("height", "");
+        $("#mapVC").css("width", "");
+        screenfull.toggle($("#mapVC")[0]);
+        screenfull.exit($("#mapVC")[0]);
+    }
+});
+
+
+function reload_js(src) {
+    $('script[src="' + src + '"]').remove();
+    $('<script>').attr('src', src).appendTo('head');
+}
 
 function loadMap() {}
 

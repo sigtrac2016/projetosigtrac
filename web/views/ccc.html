@@ -14,6 +14,7 @@
     <script src='/js/jquery-2.1.4.min.js'></script>
     <!-- Include Angular Js -->
     <script src="/js/angular.min.js"></script>
+    <script src="/js/screenfull.js"></script>
 
     <!-- Include Bind-Component Js -->
     <script src="/components/bind-components.js"></script>
@@ -33,6 +34,7 @@
     <div class="row">
         <div class="col-sm-10" id="mapVC" ng-controller="mapVC">
             <div id="map"></div>
+            <i id="fullscreen" class="fa fa-expand fa-4x" ng-click="fullscreen()"></i>
         </div>
         <div class="col-sm-2" id="cccVC" ng-controller="cccVC">
             <div class="thumbnail">

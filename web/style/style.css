@@ -54,3 +54,10 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+#fullscreen {
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    left: 95%;
+}
