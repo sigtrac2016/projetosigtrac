@@ -9,7 +9,7 @@ $(document).ready(function() {
                     '<li><a href="' + seg.url + '">' +
                     seg.name.split(" ")[0] + '</a></li></ul>';
                 $("#navlinks").append(link);
-                if (segmento != undefined && seg.url.indexOf(segmento) != -1)
+                if (typeof segmento != 'undefined' && seg.url.indexOf(segmento) != -1)
                     $("#nav").css('background-color', seg.navcolor);
             }
         });
