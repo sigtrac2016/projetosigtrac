@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
   software-properties-common \
   && rm -rf /var/lib/apt/lists/*
 
-# Add Mosquitto PPA Repository
+# Add Mosquittdocker run -d -h mqtt --name mqtt -p 1883:1883 projetosigtrac/mosquittoo PPA Repository
 RUN apt-add-repository -y ppa:mosquitto-dev/mosquitto-ppa
 
 # Install Mosquitto
@@ -18,6 +18,10 @@ RUN apt-get update && apt-get install -y \
   mosquitto-clients \
   && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 1883
+ADD etc/mosquitto.conf /etc/mosquitto/mosquitto.conf
+
+VOLUME ["/etc/mosquitto"]
+
+EXPOSE 1883 9883
 
 CMD ["/usr/sbin/mosquitto", "-c", "/etc/mosquitto/mosquitto.conf"]
