@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
   git \
   build-essential \
   python2.7 \
+  kafkacat \
   && rm -rf /var/lib/apt/lists/*
 
 # Add NodeJS Repository
