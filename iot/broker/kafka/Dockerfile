@@ -13,9 +13,10 @@ RUN mkdir -p /usr/local/kafka \
   && rm -rf kafka_*
 
 ADD config /usr/local/kafka/config
+ADD bin/kafka-start.sh /usr/local/kafka/bin/kafka-start.sh
 
 VOLUME [ "/usr/local/kafka/config" ]
 
 EXPOSE 9092
 
-CMD ["/usr/local/kafka/bin/kafka-server-start.sh", "/usr/local/kafka/config/server.properties"]
+CMD ["/usr/local/kafka/bin/kafka-start.sh"]
