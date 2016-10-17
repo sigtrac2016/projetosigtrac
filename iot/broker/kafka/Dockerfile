@@ -14,6 +14,7 @@ RUN mkdir -p /usr/local/kafka \
 
 ADD config /usr/local/kafka/config
 ADD bin/kafka-start.sh /usr/local/kafka/bin/kafka-start.sh
+RUN chmod 755 /usr/local/kafka/bin/kafka-start.sh
 
 VOLUME [ "/usr/local/kafka/config" ]
 
