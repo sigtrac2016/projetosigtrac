@@ -6,6 +6,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +17,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -52,8 +56,9 @@ public class RestrictUserActivity extends AppCompatActivity {
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.e("TEST", "SIM");
-                // TODO: ...
+                Location location = getLocation();
+                SinalDePanico sinal = new SinalDePanico(getApplicationContext(), CPF, location, true);
+                sinal.enviar();
             }
         });
         builder.setNegativeButton("Nao", new DialogInterface.OnClickListener() {
@@ -68,11 +73,37 @@ public class RestrictUserActivity extends AppCompatActivity {
 
 
     public void verificarAlertas(View view) {
-        // TODO: ...
+        // TODO: Abrir uma nova tela, requerir os alertas da central, mostrar eles
     }
 
     public void enviarAlerta(View view) {
         Intent intent = new Intent(this, SendAlertActivity.class);
         startActivity(intent);
+    }
+
+    private Location getLocation() {
+
+        LocationListener locationListener = null;
+        Location currentLocation = null;
+
+        try {
+            Context context = getApplicationContext();
+
+            if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
+                locationListener = new AlertaLocationListener(context);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+
+                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            }
+        } catch (Exception ex) {
+            Toast.makeText(getApplicationContext(), "Serviço GPS indisponivel", Toast.LENGTH_SHORT).show();
+        }
+
+        if(currentLocation == null) {
+            Toast.makeText(getApplicationContext(), "Serviço GPS indisponivel", Toast.LENGTH_SHORT);
+        }
+        return currentLocation;
     }
 }
