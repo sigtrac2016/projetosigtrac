@@ -1,7 +1,13 @@
-## Running
+Run
+---
 
-``docker run -d -h mqtt --name mqtt -p 1883:1883 projetosigtrac/mosquitto``
+```bash
+docker run -d -h mqtt --name mqtt -p 1883:1883 projetosigtrac/mosquitto
+```
 
-## Logging
+View Log
+---
 
-``docker logs -f mqtt``
+```bash
+docker logs -f mqtt
+```
