@@ -28,7 +28,7 @@ function saveModel(object, res){
 	});
 }
 
-function findObject(Model, param, uniqueIdentifier, cb){
+function findObject(Model, param, uniqueIdentifier, res, cb){
 	var returnObject;
 	if (_.isUndefined(uniqueIdentifier)){
 		Model.findById(param, function(err, object){
@@ -98,7 +98,7 @@ module.exports = function(router, route, ModelPath, config) {
 	
 	//READ
 	router.get(route + '/:UniqueIdentifier', function(req, res){
-		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, function(object){	
+		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, res, function(object){	
 			if (securityFilter(object, req, "GET")){
 				res.send(object);
 			}
@@ -113,7 +113,7 @@ module.exports = function(router, route, ModelPath, config) {
 
 	//UPDATE
 	router.patch(route + '/:UniqueIdentifier', function(req, res){
-		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, function(object){
+		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, res, function(object){
 			if (securityFilter(object, req, "PATCH")){
 				object = readRequest(object, Model, req);
 				saveModel(object, res);
@@ -127,7 +127,7 @@ module.exports = function(router, route, ModelPath, config) {
 
 	//DELETE
 	router.delete(route + '/:UniqueIdentifier', function(req,res){
-		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, function(object){
+		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, res, function(object){
 			if (securityFilter(req, "DELETE")){
 				object.remove(function(err) {
 					if(err) {
