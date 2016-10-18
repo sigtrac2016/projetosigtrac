@@ -31,6 +31,11 @@ var apiDefinition = [
 		"route": "/usuarios",
 		"model": '../models/usuario',
 		"config": {"security": "./security/defaultSecurity"}		
+	},
+	{	
+		"route": "/paciente",
+		"model": '../models/paciente',
+		"config": {"uniqueIdentifier": "alias"}
 	}
 ];
 
