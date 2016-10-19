@@ -17,10 +17,9 @@ RUN apt-get update && apt-get install -y \
   mosquitto \
   && rm -rf /var/lib/apt/lists/*
 
+# Add service config file
 ADD config/mosquitto.conf /etc/mosquitto/mosquitto.conf
 
-VOLUME ["/etc/mosquitto"]
-
-EXPOSE 1883 9883
+EXPOSE 1883
 
 CMD ["/usr/sbin/mosquitto", "-c", "/etc/mosquitto/mosquitto.conf"]
