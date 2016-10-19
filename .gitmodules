@@ -1,3 +1,6 @@
 [submodule "CrisisDetection"]
 	path = CrisisDetection
 	url = https://github.com/lucianohgo/CrisisDetection.git
+[submodule "ArDroneMiddleware"]
+	path = ArDroneMiddleware
+	url = https://github.com/rjanuzi/ArDroneMiddleware.git
