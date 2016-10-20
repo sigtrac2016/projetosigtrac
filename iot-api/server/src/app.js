@@ -1,8 +1,8 @@
 var Express = require('express');
-var _ = require ("underscore");
+//var _ = require ("lodash");
 var bodyParser = require ("body-parser");
 var logger = require('morgan');
-var routes = require('./routes/index')
+var routes = require('./routes/index');
 var mongoose = require('mongoose');
 
 //Setting up the app
@@ -10,8 +10,9 @@ var app = new Express();
 var router = Express.Router();
 
 //Database settings
+var config = require('../config');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1/Firefighter');/*,function(){
+mongoose.connect(config.db[app.settings.env]);/*,function(){
     mongoose.connection.db.dropDatabase();
  });*/
 

@@ -1,6 +1,3 @@
-Projeto do Yano
-
-
 Para executar use:
 -----------------
 

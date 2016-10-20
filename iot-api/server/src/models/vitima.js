@@ -21,31 +21,31 @@ var VitimaSchema = new Schema({
 VitimaSchema
 .virtual('START')
 .get(function(){
-	if (this.deambulando == true){
-		return "Verde"
+	if (this.deambulando === true){
+		return "Verde";
 	}
 
-	if (this.respiracao == 0){
-		if(this.respiraViasAereas == false){
-			return "Preto"
+	if (this.respiracao === 0){
+		if(this.respiraViasAereas === false){
+			return "Preto";
 		}
 		else{
-			return "Vermelho"
+			return "Vermelho";
 		}
 	}
 	else if (this.respiracao > 30){
-		return "Vermelho"
+		return "Vermelho";
 	}
 	else{
-		if (this.reenchimentoCapilar > 2 || this.pulsoRadial == false){
-			return "Vermelho"
+		if (this.reenchimentoCapilar > 2 || this.pulsoRadial === false){
+			return "Vermelho";
 		}
 		else{
-			if (this.cumpreOrdens == false){
-				return "Vermelho"
+			if (this.cumpreOrdens === false){
+				return "Vermelho";
 			}
 			else{
-				return "Amarelo"
+				return "Amarelo";
 			}
 		}
 	}

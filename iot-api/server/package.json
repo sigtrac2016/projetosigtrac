@@ -1,23 +1,15 @@
 {
-  "name": "yano",
+  "name": "API",
   "version": "1.0.0",
-  "description": "Projeto do yano",
+  "description": "Servidor da API",
   "main": "src/app.js",
   "scripts": {
     "mutate": "node node_modules/stryker/bin/stryker -c test/stryker.conf.js",
     "test": "./node_modules/.bin/mocha",
     "start": "node src/app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lucasmullerm/yano.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lucasmullerm/yano/issues"
-  },
-  "homepage": "https://github.com/lucasmullerm/yano#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
