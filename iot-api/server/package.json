@@ -6,6 +6,7 @@
   "scripts": {
     "mutate": "node node_modules/stryker/bin/stryker -c test/stryker.conf.js",
     "test": "./node_modules/.bin/mocha",
+    "dev": "set NODE_ENV=development && set MONGODB_ADDRESS=127.0.0.1 && npm start",
     "start": "node src/app"
   },
   "author": "",

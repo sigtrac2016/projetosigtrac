@@ -3,4 +3,6 @@
 ```bash
 docker-compose build
 docker-compose up
+# Ou
+npm run docker
 ```
