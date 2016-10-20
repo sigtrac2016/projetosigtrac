@@ -2,15 +2,16 @@ var request = require("request");
 var mqtt = require("mqtt");
 var _ = require("lodash");
 
-var config = require("../config");
+var config = require("./config");
 
-var MQTT_URL = config.mqtt.getUrl();
-var API_URL = config.api.getUrl();
+var MQTT_URL = config.mqtt[process.env.NODE_ENV];
+var API_URL = config.api[process.env.NODE_ENV];
 
 var sub  = mqtt.connect(MQTT_URL);
 
 var channels = {
   "new-sensor": function(message) {
+    console.log("Making Request");
     request.post({
       url: API_URL + "sensores",
       json: JSON.parse(message.toString()),

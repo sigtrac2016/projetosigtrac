@@ -5,11 +5,12 @@ var SensorSchema = new Schema({
 	alias: String,
 	name: String,
 	timeCreated: Date,
-	value: Number,
+	value: Schema.Types.Mixed,
 	type: String,
 	location: {
 		latitude: Number,
-		longitude: Number
+		longitude: Number,
+		altitude: Number
 	}
 });
 

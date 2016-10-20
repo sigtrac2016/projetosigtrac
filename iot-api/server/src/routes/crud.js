@@ -1,12 +1,12 @@
 //Basic Crud template
 var _ = require('lodash');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 function readRequest(object, Model, req) {
 	var Attributes = _.keys(Model.schema.paths);
-	
+
 	_.forEach(Attributes, function(path){
-		value = _.get(req.body, path);
+		var value = _.get(req.body, path);
 		if(!_.isUndefined(value)){
 			_.set(object, path, value);
 		}
@@ -16,9 +16,9 @@ function readRequest(object, Model, req) {
 }
 
 function saveModel(object, res){
-	object.save(function(err, saved) {
+	object.save(function(err/*, saved*/) {
 		if(err){
-			console.log(err)
+			console.log(err);
 			res.send(err);
 		}
 		else {
@@ -29,7 +29,6 @@ function saveModel(object, res){
 }
 
 function findObject(Model, param, uniqueIdentifier, res, cb){
-	var returnObject;
 	if (_.isUndefined(uniqueIdentifier)){
 		Model.findById(param, function(err, object){
 			if (err)
@@ -51,14 +50,14 @@ function findObject(Model, param, uniqueIdentifier, res, cb){
 }
 
 module.exports = function(router, route, ModelPath, config) {
-	
+
 	//Initial configurations
 	var Model = require(ModelPath);
 	var securityFilter;
 	if (_.isUndefined(config.security)){
-		securityFilter = function(req, MethodType){
+		securityFilter = function(/*req, MethodType*/){
 			return true;
-		}
+		};
 	}
 	else{
 		securityFilter = require(config.security);
@@ -82,12 +81,12 @@ module.exports = function(router, route, ModelPath, config) {
 
 	//CREATE
 	router.post(route, function(req, res) {
-	
+
 		var object = new Model();
-	
+
 		object = readRequest(object, Model, req);
-		
-		if (securityFilter(object, req, "POST")){	
+
+		if (securityFilter(object, req, "POST")){
 			saveModel(object, res);
 		}
 		else {
@@ -95,10 +94,10 @@ module.exports = function(router, route, ModelPath, config) {
 			res.send('Acesso não autorizado');
 		}
 	});
-	
+
 	//READ
 	router.get(route + '/:UniqueIdentifier', function(req, res){
-		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, res, function(object){	
+		findObject(Model, req.params.UniqueIdentifier, config.uniqueIdentifier, res, function(object){
 			if (securityFilter(object, req, "GET")){
 				res.send(object);
 			}
@@ -108,7 +107,7 @@ module.exports = function(router, route, ModelPath, config) {
 			}
 
 		});
-	});	
+	});
 
 
 	//UPDATE
@@ -147,4 +146,4 @@ module.exports = function(router, route, ModelPath, config) {
 	});
 
 	return router;
-}
+};

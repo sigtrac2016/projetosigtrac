@@ -1,5 +1,5 @@
 var mqtt = require('mqtt');
-var MQTT_URL = require("../config").mqtt.getUrl();
+var MQTT_URL = require("../../config").mqtt.getUrl();
 
 var pub  = mqtt.connect(MQTT_URL);
 
@@ -9,9 +9,12 @@ messageName = process.argv[3];
 message = JSON.stringify({
   "name": "Sensor de Test",
   "alias": messageName,
+  "type": "HumTemp",
+  "value": {"temperature":40, "humidity": 30},
   "location": {
   	"latitude": 230.12,
-  	"longitude": 85
+  	"longitude": 85,
+    "altitude": 10,
   }
 });
 

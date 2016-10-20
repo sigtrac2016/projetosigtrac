@@ -9,7 +9,7 @@ var router = Express.Router();
 
 /*config:{
 	//Se quiser pesquisar por outro uniqueIdentifier do objeto
-	//Se não passar, todo o crud será feito procurando pelo id dado pela DB 
+	//Se não passar, todo o crud será feito procurando pelo id dado pela DB
 	"uniqueIdentifier": "NameOfSchemaAttribute"
 	//Segurança. Pode passar um arquivo com a função de segurança
 	//Path da pasta do arquivo com a função de verificação. Ela receberá como parâmetro:
@@ -22,17 +22,17 @@ var router = Express.Router();
 */
 
 var apiDefinition = [
-	{	
+	{
 		"route": "/sensores",
 		"model": '../models/sensor',
 		"config": {"uniqueIdentifier": "alias"}
 	},
 	{
-		"route": "/usuarios",
-		"model": '../models/usuario',
-		"config": {"security": "./security/defaultSecurity"}		
+		"route": "/vitimas",
+		"model": '../models/vitima',
+		"config": {"uniqueIdentifier": "alias"}
 	},
-	{	
+	{
 		"route": "/paciente",
 		"model": '../models/paciente',
 		"config": {"uniqueIdentifier": "alias"}
