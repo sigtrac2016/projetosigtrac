@@ -1,5 +1,5 @@
 var mqtt = require('mqtt');
-var MQTT_URL = require("../config").mqtt.getUrl();
+var MQTT_URL = require("../../config").mqtt.getUrl();
 
 var pub  = mqtt.connect(MQTT_URL);
 

@@ -1,0 +1,26 @@
+{
+  "name": "api-iot",
+  "version": "1.0.0",
+  "description": "IoT API integrating Mosca and Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start node server/app.js && start node mqtt/Broker && node mqtt/Client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghust1995/iot-api.git"
+  },
+  "dependencies": {
+    "api-view": "./api-view",
+    "api-server": "./server",
+    "mqtt-broker": "./mqtt/Broker",
+    "mqtt-client": "./mqtt/Client"    
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghust1995/iot-api/issues"
+  },
+  "homepage": "https://github.com/Ghust1995/iot-api#readme"
+}

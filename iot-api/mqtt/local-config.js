@@ -5,11 +5,27 @@ function buildUrl(obj) {
 
 config.mqtt = {
   port: 1883,
-  ip: "192.168.99.100",
+  ip: "localhost",
   protocol: "mqtt",
   postfix: "",
   getUrl: function() { return buildUrl(this); },
   channels: ["update-sensor", "new-sensor", "test"]
+};
+
+config.api = {
+  port: 8080,
+  ip: "localhost",
+  protocol: "http",
+  postfix: "api/",
+  getUrl: function() { return buildUrl(this); },
+};
+
+config.mongo = {
+  port: 27017,
+  ip: "localhost",
+  protocol: "mongodb",
+  postfix: "",
+  getUrl: function() { return buildUrl(this); },
 };
 
 module.exports = config;
