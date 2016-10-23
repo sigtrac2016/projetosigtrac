@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserActivity" />
-        <activity android:name=".SendAlertActivity"></activity>
+        <activity android:name=".SendAlertActivity" />
+        <activity android:name=".AlertsListActivity"></activity>
     </application>
 
 </manifest>

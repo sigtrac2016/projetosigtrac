@@ -9,20 +9,12 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -36,7 +28,7 @@ public class UserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restrict_user);
+        setContentView(R.layout.activity_user);
         getSupportActionBar().hide();
 
         // Getting the name and CPF
@@ -81,7 +73,8 @@ public class UserActivity extends AppCompatActivity {
 
 
     public void verificarAlertas(View view) {
-        // TODO: Abrir uma nova tela, requerir os alertas da central, mostrar eles
+        Intent intent = new Intent(this, AlertsListActivity.class);
+        startActivity(intent);
     }
 
     public void enviarAlerta(View view) {
