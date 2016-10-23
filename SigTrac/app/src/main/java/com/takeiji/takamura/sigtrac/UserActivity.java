@@ -24,7 +24,9 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestrictUserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
+
+    private boolean usuarioRestrito = true;
 
     private String CPF;
     private String Name;
@@ -42,11 +44,17 @@ public class RestrictUserActivity extends AppCompatActivity {
         CPF = intent.getStringExtra("CPF");
         Name = intent.getStringExtra("NOME");
 
+        if(CPF.equals("-1") && Name.equals("-1"))
+            usuarioRestrito = false;
+
         // Loading UI elements
         mTitle = (TextView) findViewById(R.id.title_restrictedUsers);
 
         // Setting welcome text
-        mTitle.setText("Bem-vindo " + this.Name);
+        if(usuarioRestrito)
+            mTitle.setText("Bem-vindo " + this.Name);
+        else
+            mTitle.setText("Bem-vindo");
     }
 
     // It sends the CPF, phone number, position and a flag (restricted user/common user)
@@ -57,7 +65,7 @@ public class RestrictUserActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Location location = getLocation();
-                SinalDePanico sinal = new SinalDePanico(getApplicationContext(), CPF, location, true);
+                SinalDePanico sinal = new SinalDePanico(getApplicationContext(), CPF, location, usuarioRestrito);
                 sinal.enviar();
             }
         });
@@ -105,5 +113,14 @@ public class RestrictUserActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Serviço GPS indisponivel", Toast.LENGTH_SHORT);
         }
         return currentLocation;
+    }
+
+    // Life Cycle methods
+
+    // If the user exits the current activity, it is destroyed.
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

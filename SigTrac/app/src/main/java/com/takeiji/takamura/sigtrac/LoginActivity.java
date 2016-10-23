@@ -83,8 +83,10 @@ public class LoginActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
         if(checked)
             mPasswordField.setVisibility(View.VISIBLE);
-        else
+        else {
             mPasswordField.setVisibility(View.INVISIBLE);
+            mPasswordView.setText("");
+        }
     }
 
     /**
@@ -94,7 +96,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        this.mAuthTask = null;
         if(mCheckBox.isChecked())
             mPasswordField.setVisibility(View.VISIBLE);
     }
@@ -279,8 +280,8 @@ public class LoginActivity extends AppCompatActivity {
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        private final String mCPF;
-        private final String mPassword;
+        private String mCPF;
+        private String mPassword;
         private String mName;
         private Context mContext;
 
@@ -288,7 +289,11 @@ public class LoginActivity extends AppCompatActivity {
             mContext = context;
             mCPF = cpf;
             mPassword = password;
-            Log.v("LOGIN", "I am receiving " + mCPF + " and " + mPassword);
+        }
+
+        public void reset() {
+            this.mCPF = "";
+            this.mPassword = "";
         }
 
         @Override
@@ -322,7 +327,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (success) {
                 // start Restricted users activity
-                Intent intent = new Intent(this.mContext, RestrictUserActivity.class);
+                Intent intent = new Intent(this.mContext, UserActivity.class);
                 intent.putExtra("CPF", this.mCPF);
                 intent.putExtra("NOME", this.mName);
                 startActivity(intent);
@@ -336,7 +341,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 // General access
                 else {
-                    Intent intent = new Intent(this.mContext, CommonUserActivity.class);
+                    Intent intent = new Intent(this.mContext, UserActivity.class);
+                    intent.putExtra("CPF", "-1");
+                    intent.putExtra("NOME", "-1");
                     startActivity(intent);
                 }
             }

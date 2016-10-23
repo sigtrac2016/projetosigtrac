@@ -23,8 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RestrictUserActivity" />
-        <activity android:name=".CommonUserActivity" />
+        <activity android:name=".UserActivity" />
         <activity android:name=".SendAlertActivity"></activity>
     </application>
 
