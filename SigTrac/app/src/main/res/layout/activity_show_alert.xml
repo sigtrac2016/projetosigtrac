@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.takeiji.takamura.sigtrac.ShowAlert">
+
+    <TextView
+        android:id="@+id/showAlertTitleID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Mensagem da Central de Comando"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/alertaTituloID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afogamento"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:layout_below="@id/showAlertTitleID"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/alertaDataID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="23/06/2015"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:layout_below="@id/alertaTituloID"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/alertaDescricaoID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Bla bla bla bla bla testando"
+        android:layout_below="@id/alertaDataID"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

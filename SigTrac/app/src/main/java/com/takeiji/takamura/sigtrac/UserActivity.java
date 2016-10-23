@@ -107,13 +107,5 @@ public class UserActivity extends AppCompatActivity {
         }
         return currentLocation;
     }
-
-    // Life Cycle methods
-
-    // If the user exits the current activity, it is destroyed.
-    @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
+    
 }

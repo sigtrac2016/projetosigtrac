@@ -25,7 +25,8 @@
         </activity>
         <activity android:name=".UserActivity" />
         <activity android:name=".SendAlertActivity" />
-        <activity android:name=".AlertsListActivity"></activity>
+        <activity android:name=".AlertsListActivity" />
+        <activity android:name=".ShowAlert"></activity>
     </application>
 
 </manifest>
