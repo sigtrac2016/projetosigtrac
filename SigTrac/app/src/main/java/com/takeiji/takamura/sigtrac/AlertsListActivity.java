@@ -17,6 +17,7 @@ public class AlertsListActivity extends AppCompatActivity {
 
     // Context
     private Context context;
+    private String usuario;
 
     // Alerts
     private List<Alerta> alertas;
@@ -32,6 +33,8 @@ public class AlertsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_alerts_list);
+
+        this.usuario = getIntent().getStringExtra("TIPO");
 
         // Loading UI elements
         mListView = (ListView) findViewById(R.id.alertsListID);
@@ -87,6 +90,7 @@ public class AlertsListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Alerta alerta = alertas.get(position);
                 Intent intent = new Intent(context, ShowAlert.class);
+                intent.putExtra("USUARIO", usuario);
                 intent.putExtra("TITULO", alerta.titulo);
                 intent.putExtra("DESCRICAO", alerta.descricao);
                 intent.putExtra("DATA", alerta.data);

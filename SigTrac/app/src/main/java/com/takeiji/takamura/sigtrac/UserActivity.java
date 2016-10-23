@@ -74,6 +74,10 @@ public class UserActivity extends AppCompatActivity {
 
     public void verificarAlertas(View view) {
         Intent intent = new Intent(this, AlertsListActivity.class);
+        if(usuarioRestrito)
+            intent.putExtra("TIPO", "restrito");
+        else
+            intent.putExtra("TIPO", "comum");
         startActivity(intent);
     }
 
@@ -107,5 +111,5 @@ public class UserActivity extends AppCompatActivity {
         }
         return currentLocation;
     }
-    
+
 }

@@ -51,4 +51,37 @@
         android:layout_below="@id/alertaDataID"
         android:layout_marginTop="20dp"/>
 
+    <TextView
+        android:id="@+id/resolverTitleID"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/alertaDescricaoID"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Solução para o alerta:"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/resolverAlertaBtnID"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Resolver alerta"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="resolverAlerta"
+        />
+
+    <EditText
+        android:id="@+id/editAlertaID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Digite aqui a solucão do problema"
+        android:gravity="top"
+        android:layout_below="@id/resolverTitleID"
+        android:layout_above="@id/resolverAlertaBtnID"
+        android:layout_marginTop="20dp"/>
+
 </RelativeLayout>
