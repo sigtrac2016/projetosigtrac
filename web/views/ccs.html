@@ -41,6 +41,11 @@
         <div class="col-sm-10" id="mapVC" ng-controller="mapVC">
             <div id="map"></div>
             <i id="fullscreen" class="fa fa-expand fa-4x" ng-click="fullscreen()"></i>
+            <div class="buttons">
+                <button class="btn btn-danger" ng-click="toggleHeatmap()">Heatmap</button>
+                <button class="btn btn-default" ng-click="changeRadius()">Radius</button>
+                <button class="btn btn-default" ng-click="changeOpacity()">Opacity</button>
+            </div>
         </div>
         <div class="col-sm-2" id="ccsVC" ng-controller="ccsVC">
             <div class="thumbnail">

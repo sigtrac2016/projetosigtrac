@@ -44,7 +44,11 @@ body {
 }
 
 #map {
-    height: 500px
+    height: 450px
+}
+
+.buttons {
+    text-align: center;
 }
 
 footer {
