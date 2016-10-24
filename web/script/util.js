@@ -32,3 +32,6 @@ var segmentoColor = function segmentoColor(segmento) {
             return "#aaa";
     }
 }
+
+exports.segmentoColor = segmentoColor;
+exports.getUrlParameter = getUrlParameter;

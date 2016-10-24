@@ -13,4 +13,8 @@ app.controller("cccVC", function($scope, $http) {
         $scope.segmentos = data;
         $scope.$apply();
     });
+
+    $scope.ok = function ok() {
+        return "ok";
+    }
 });
