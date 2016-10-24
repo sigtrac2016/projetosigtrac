@@ -13,6 +13,55 @@ app.controller("mapVC", function($scope, $http, $compile) {
         zoom: 14
     });
 
+    $scope.heatmap = new google.maps.visualization.HeatmapLayer({
+        data: getPoints(),
+        map: null,
+        radius: 60
+    });
+
+
+    /***********************************************
+                    Toggle Heatmap
+    ***********************************************/
+
+    /* Atualiza o Heatmap quando array de marcadores mudar */
+    $scope.updateHeatmap = function() {
+        $scope.heatmap.setMap(null);
+        $scope.heatmap = new google.maps.visualization.HeatmapLayer({
+            data: getPoints(),
+            map: $scope.map,
+            radius: 60
+        });
+    }
+    $scope.updateHeatmap();
+
+    function getPoints() {
+        var points = [];
+        if ($scope.markers == undefined) return [];
+        $scope.markers.forEach(function(marker) {
+            points.push(new google.maps.LatLng(
+                marker.position.lat(), marker.position.lng()));
+        });
+        return points;
+    }
+
+    $scope.toggleHeatmap = function() {
+        $scope.heatmap.setMap($scope.heatmap.getMap() ? null : $scope.map);
+    }
+
+    $scope.changeRadius = function() {
+        $scope.heatmap.set('radius', $scope.heatmap.get('radius') ? null : 60);
+    }
+
+    $scope.changeOpacity = function() {
+        $scope.heatmap.set('opacity', $scope.heatmap.get('opacity') ? null : 0.2);
+    }
+
+
+    /***********************************************
+                Creates new $scope.markers
+    ***********************************************/
+
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
@@ -32,6 +81,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $("#infowindow").html($compile($scope.contentString)($scope));
         });
         $scope.markers.push(marker);
+        $scope.updateHeatmap();
     }
 
     for (var i = 0; i < 7; i++) {
@@ -42,38 +92,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.infowindow = new google.maps.InfoWindow({
         content: $scope.contentString
     })
-
-
-    /***********************************************
-                    Toggle Heatmap
-    ***********************************************/
-
-    $scope.heatmap = new google.maps.visualization.HeatmapLayer({
-        data: getPoints(),
-        map: null,
-        radius: 60
-    });
-
-    function getPoints() {
-        var points = [];
-        $scope.markers.forEach(function(marker) {
-            points.push(new google.maps.LatLng(
-                marker.position.lat(), marker.position.lng()));
-        });
-        return points;
-    }
-
-    $scope.toggleHeatmap = function() {
-        $scope.heatmap.setMap($scope.heatmap.getMap() ? null : $scope.map);
-    }
-
-    $scope.changeRadius = function() {
-        $scope.heatmap.set('radius', $scope.heatmap.get('radius') ? null : 60);
-    }
-
-    $scope.changeOpacity = function() {
-        $scope.heatmap.set('opacity', $scope.heatmap.get('opacity') ? null : 0.2);
-    }
 
     /***********************************************
                 Creates new $scope.markers
@@ -96,6 +114,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $("#infowindow").html($compile($scope.contentString)($scope));
         });
         $scope.markers.push(new_marker);
+        $scope.updateHeatmap();
     });
 
     /***********************************************
@@ -122,6 +141,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.selection.setMap(null);
         // Remove o marcador e salva os dados
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
+        $scope.updateHeatmap();
     }
 
     $scope.genContentString = function(coor) {
