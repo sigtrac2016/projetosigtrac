@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_victim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ts02.sigtrac.healthcare.VictimActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/code_victim"
+            android:hint="Código da Vítima"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="Detalhe do Atendimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="Cabeca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_head"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="Tronco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_body"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="MSE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_mse"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="MSD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_msd"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="MIE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_mie"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:text="MID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_mid"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:text="Próximo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/callMedia"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>
