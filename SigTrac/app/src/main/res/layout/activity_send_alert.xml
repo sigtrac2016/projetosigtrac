@@ -34,6 +34,28 @@
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/departmentTitle"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/buttonAlertaEnviarID"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Enviar Alerta"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="createDialogBox"
         />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/departmentTitle"
+        android:layout_above="@id/buttonAlertaEnviarID"
+        android:hint="Digite aqui a descrição"
+        android:gravity="top|left"
+        android:visibility="invisible"
+        />
+
 
 </RelativeLayout>

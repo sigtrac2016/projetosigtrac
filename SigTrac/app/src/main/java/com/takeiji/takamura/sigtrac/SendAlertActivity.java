@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +23,11 @@ public class SendAlertActivity extends AppCompatActivity {
     // ToSend
     private String departament = "";
     private String type = "";
+    private String descricao = "";
+
+    // Descricao do alerta
+    private EditText mEditText;
+    private Button mButton;
 
     // ListView
     private TextView mTitle;
@@ -73,6 +80,8 @@ public class SendAlertActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.listAlert);
         mTitle = (TextView) findViewById(R.id.alertTitle);
         mDepartmentName = (TextView) findViewById(R.id.departmentTitle);
+        mEditText = (EditText) findViewById(R.id.editTextID);
+        mButton = (Button) findViewById(R.id.buttonAlertaEnviarID);
 
         // Creating the list that will be used to populate the list view
         mListElements = new ArrayList<>();
@@ -147,20 +156,20 @@ public class SendAlertActivity extends AppCompatActivity {
                         break;
                     default:
                         type = mListElements.get(position);
-                        createDialogBox();
+                        setView("DESC");
                 }
             }
         };
     }
 
-    private void createDialogBox() {
+    public void createDialogBox(View view) {
+        this.descricao = mEditText.getText().toString();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Dep.: " + this.departament + "\nTipo: " + this.type + "\nDeseja enviar este alerta?").setTitle("Alerta");
+        builder.setMessage("Dep.: " + this.departament + "\nTipo: " + this.type + "\nDesc.: " + this.descricao + "\nDeseja enviar este alerta?").setTitle("Alerta");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 sendAlert();
-                Toast.makeText(SendAlertActivity.this, "Alerta enviado para a central de comando.", Toast.LENGTH_LONG).show();
                 finish();
             }
         });
@@ -174,7 +183,25 @@ public class SendAlertActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    private void setView(String view) {
+        switch(view) {
+            case "LISTA":
+                mDepartmentName.setText(this.departament);
+                mEditText.setVisibility(View.INVISIBLE);
+                mListView.setVisibility(View.VISIBLE);
+                mButton.setVisibility(View.INVISIBLE);
+                break;
+            case "DESC":
+                mDepartmentName.setText("Descricao:");
+                mEditText.setVisibility(View.VISIBLE);
+                mListView.setVisibility(View.INVISIBLE);
+                mButton.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
     private void sendAlert() {
+        Toast.makeText(SendAlertActivity.this, "Alerta enviado para a central de comando.", Toast.LENGTH_LONG).show();
         //TODO: ...
     }
 
@@ -185,5 +212,11 @@ public class SendAlertActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setView("LISTA");
     }
 }
