@@ -3,7 +3,7 @@
 node ./Client/dummies/update.js [channel] [alias] [new-value]
 node ./Client/dummies/create.js [channel] [alias]
 
-# Current Channels:
+# Current Channels
 
 new-sensor: redirects the message as a POST call to api/sensores
 
