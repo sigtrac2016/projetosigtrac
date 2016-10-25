@@ -6,8 +6,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.HttpResponse;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+//import com.google.gson.Gson;
+//import com.google.gson.GsonBuilder;
 
 import java.io.InputStream;
 import java.io.Reader;
@@ -41,8 +41,8 @@ public class JsonHTTP {
                     // Aqui vamos utilizar a Biblioteca Gson para transformar o Json recebido em Objeto JAVA
                     // Instanciamos o objeto Gson e em seguida utilizamos o método fromJson() passando
                     // como parâmetro o Reader instanciado e o tipo do Objeto que será retornado.
-                    Gson gson = new Gson();
-                    retorno = gson.fromJson(reader, JsonModel.class);
+                    //Gson gson = new Gson();
+                    //retorno = gson.fromJson(reader, JsonModel.class);
 
                     content.close();
 

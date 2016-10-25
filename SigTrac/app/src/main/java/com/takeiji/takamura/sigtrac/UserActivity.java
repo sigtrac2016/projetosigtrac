@@ -36,7 +36,7 @@ public class UserActivity extends AppCompatActivity {
         CPF = intent.getStringExtra("CPF");
         Name = intent.getStringExtra("NOME");
 
-        if(CPF.equals("-1") && Name.equals("-1"))
+        if(Name.equals("-1"))
             usuarioRestrito = false;
 
         // Loading UI elements

@@ -342,7 +342,7 @@ public class LoginActivity extends AppCompatActivity {
                 // General access
                 else {
                     Intent intent = new Intent(this.mContext, UserActivity.class);
-                    intent.putExtra("CPF", "-1");
+                    intent.putExtra("CPF", this.mCPF);
                     intent.putExtra("NOME", "-1");
                     startActivity(intent);
                 }
