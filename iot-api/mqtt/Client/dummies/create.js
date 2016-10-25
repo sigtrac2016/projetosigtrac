@@ -3,9 +3,9 @@ var MQTT_URL = require("../../config").mqtt.getUrl();
 
 var pub  = mqtt.connect(MQTT_URL);
 
-channel = process.argv[2];
+channel = "new-sensor";
 
-messageName = process.argv[3];
+messageName = process.argv[2];
 message = JSON.stringify({
   "name": "Sensor de Test",
   "alias": messageName,
