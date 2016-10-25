@@ -9,4 +9,4 @@ new-sensor: redirects the message as a POST call to api/sensores
 
 update-sensor: redirects the message as a PATCH call to api/sensores/:alias
 
-### see [Schema](../server/src/models/sensor) of api/sensores
+### see [Schema](../server/src/models/sensor.js) of api/sensores
