@@ -1,9 +1,9 @@
 {
-  "name": "dht11",
+  "name": "rc522",
   "version": "1.0.0",
-  "description": "Mock of the dht11 sensor",
+  "description": "Mock of the rc522 sensor",
   "author": "Luiz Coura <luizcoura@gmail.com>",
-  "main": "dht11.js",
+  "main": "rc522.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
