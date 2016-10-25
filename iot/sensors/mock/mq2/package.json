@@ -1,9 +1,9 @@
 {
-  "name": "dht11",
+  "name": "mq2",
   "version": "1.0.0",
-  "description": "Mock of the dht11 sensor",
+  "description": "Mock of the mq2 sensor",
   "author": "Luiz Coura <luizcoura@gmail.com>",
-  "main": "dht11.js",
+  "main": "mq2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
