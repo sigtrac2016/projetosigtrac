@@ -1,0 +1,14 @@
+{
+  "name": "rc522",
+  "version": "1.0.0",
+  "description": "Mock of the rc522 sensor",
+  "author": "Luiz Coura <luizcoura@gmail.com>",
+  "main": "rc522.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"mqtt": "latest",
+  	"moment": "latest"
+  }
+}

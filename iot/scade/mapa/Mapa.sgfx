@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?dom version="R16" ?>
+
+<?scade_release version="R17" ?>
+
+<specification>
+    <IDE>
+        <project path="Mapa FIRE DEPARTMENT.etp"/>
+        <ratio horizontal="20" vertical="20"/>
+    </IDE>
+    <symbology>
+        <dimension height="768" width="768"/>
+    </symbology>
+    <A661 library_version="1" supp_version="5">
+        <intprop name="ApplicationId">1</intprop>
+    </A661>
+    <children>
+        <A661Layer name="a661_layer" oid="f580f415-267e-463a-8df9-c4a22aab8e22">
+            <IDE>
+                <ratio horizontal="20" vertical="20"/>
+            </IDE>
+            <model>
+                <intprop name="LayerId">1</intprop>
+                <intprop name="ContextNumber">0</intprop>
+                <intprop name="Width">15360</intprop>
+                <intprop name="Height">15360</intprop>
+            </model>
+            <runtime/>
+            <events/>
+            <children>
+                <widget name="TbGas1" oid="7084d95d-77e6-412f-a8a3-25ce7be9559d" type="ToggleButton">
+                    <model>
+                        <intprop name="WidgetIdent">2</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">1050</intprop>
+                        <intprop name="PosY">10300</intprop>
+                        <intprop name="SizeX">2360</intprop>
+                        <intprop name="SizeY">840</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                        <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Aberto</stringprop>
+                        <stringprop name="AlternateLabelString">Fechado</stringprop>
+                    </model>
+                    <runtime/>
+                    <events>
+                        <connect msg_id="A661_EVT_STATE_CHANGE" name="TbGas1_A661_EVT_STATE_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="LbGas1" oid="08b7e202-5fc7-4eb7-b2e0-c976c5927785" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">4</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">1300</intprop>
+                        <intprop name="PosY">11000</intprop>
+                        <intprop name="SizeX">2660</intprop>
+                        <intprop name="SizeY">960</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Gasoduto 1</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="LbGas2" oid="7ec82b29-006e-490f-9cb1-2355e56a5ede" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">7</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4800</intprop>
+                        <intprop name="PosY">11000</intprop>
+                        <intprop name="SizeX">2660</intprop>
+                        <intprop name="SizeY">960</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Gasoduto 2</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="TbGas2" oid="b54db60a-3b4f-4673-9d73-a60461723caf" type="ToggleButton">
+                    <model>
+                        <intprop name="WidgetIdent">8</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4550</intprop>
+                        <intprop name="PosY">10300</intprop>
+                        <intprop name="SizeX">2360</intprop>
+                        <intprop name="SizeY">840</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                        <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Aberto</stringprop>
+                        <stringprop name="AlternateLabelString">Fechado</stringprop>
+                    </model>
+                    <runtime/>
+                    <events>
+                        <connect msg_id="A661_EVT_STATE_CHANGE" name="TbGas2_A661_EVT_STATE_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="TbOleo1" oid="78a4c73f-1c12-40ca-b3c5-2973a4ce7932" type="ToggleButton">
+                    <model>
+                        <intprop name="WidgetIdent">9</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">8050</intprop>
+                        <intprop name="PosY">10300</intprop>
+                        <intprop name="SizeX">2360</intprop>
+                        <intprop name="SizeY">840</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                        <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Aberto</stringprop>
+                        <stringprop name="AlternateLabelString">Fechado</stringprop>
+                    </model>
+                    <runtime/>
+                    <events>
+                        <connect msg_id="A661_EVT_STATE_CHANGE" name="TbOleo1_A661_EVT_STATE_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="TbOleo2" oid="4dc2cee5-09a5-4b45-8faa-1ee5d7e92a5b" type="ToggleButton">
+                    <model>
+                        <intprop name="WidgetIdent">10</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">11550</intprop>
+                        <intprop name="PosY">10300</intprop>
+                        <intprop name="SizeX">2360</intprop>
+                        <intprop name="SizeY">840</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                        <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Aberto</stringprop>
+                        <stringprop name="AlternateLabelString">Fechado</stringprop>
+                    </model>
+                    <runtime/>
+                    <events>
+                        <connect msg_id="A661_EVT_STATE_CHANGE" name="TbOleo2_A661_EVT_STATE_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="LbOleo1" oid="2874c243-9633-4995-b16e-18f5983956b3" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">11</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">8300</intprop>
+                        <intprop name="PosY">11000</intprop>
+                        <intprop name="SizeX">2660</intprop>
+                        <intprop name="SizeY">960</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Oleoduto 1</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="LbOleo2" oid="269174e3-ab3c-49ca-870e-ea652f8c74b1" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">12</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">11800</intprop>
+                        <intprop name="PosY">11000</intprop>
+                        <intprop name="SizeX">2660</intprop>
+                        <intprop name="SizeY">960</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Oleoduto 2</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+            </children>
+        </A661Layer>
+    </children>
+</specification>
+
+<!-- crc32 : 2845263359 -->
+
