@@ -39,8 +39,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         var points = [];
         if ($scope.markers == undefined) return [];
         $scope.markers.forEach(function(marker) {
-            points.push(new google.maps.LatLng(
-                marker.position.lat(), marker.position.lng()));
+            if (marker.icon.fillColor == segmentoColor(segmento) ||
+                segmento == "global")
+                points.push(new google.maps.LatLng(
+                    marker.position.lat(), marker.position.lng()));
         });
         return points;
     }

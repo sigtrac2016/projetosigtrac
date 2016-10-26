@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require("fs");
 
 router.get('/', function(req, res) {
-    res.send(fs.readFileSync("web/views/about.html", "utf8"));
+    res.send(fs.readFileSync("web/web/views/about.html", "utf8"));
 })
 
 module.exports = router;
