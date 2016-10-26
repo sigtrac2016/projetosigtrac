@@ -1,0 +1,27 @@
+
+CREATE TABLE [Cadastro]
+( 
+	[Login]              varchar(20)  NOT NULL ,
+	[CPF]                integer  NULL 
+)
+go
+
+ALTER TABLE [Cadastro]
+	ADD CONSTRAINT [XPKCadastro] PRIMARY KEY  CLUSTERED ([Login] ASC)
+go
+
+CREATE TABLE [Evento]
+( 
+	[ID]                 integer  NOT NULL ,
+	[Latitude]           float  NULL ,
+	[Longitude]          float  NULL ,
+	[Data]               datetime  NULL ,
+	[Hora]               datetime  NULL ,
+	[Status]             varchar(20)  NULL ,
+	[Seg_Acionado]       varchar(20)  NULL 
+)
+go
+
+ALTER TABLE [Evento]
+	ADD CONSTRAINT [XPKEvento] PRIMARY KEY  CLUSTERED ([ID] ASC)
+go

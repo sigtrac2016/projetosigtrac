@@ -1,0 +1,47 @@
+[{
+        "name": "POLICE DEPARTMENT",
+        "color": "blue",
+        "navcolor": "#339",
+        "icon": "fa fa-map-marker",
+        "url": "/ccs?segmento=police",
+        "img": "img/policedepartment.png"
+    },
+    {
+        "name": "HEALTH CARE",
+        "color": "red",
+        "navcolor": "#933",
+        "icon": "fa fa-map-marker",
+        "url": "/ccs?segmento=health",
+        "img": "img/healthcare.png"
+    },
+    {
+        "name": "FIRE DEPARTMENT",
+        "color": "black",
+        "navcolor": "#333",
+        "icon": "fa fa-map-marker",
+        "url": "/ccs?segmento=fire",
+        "img": "img/firedepartment.png"
+    },
+    {
+        "name": "CIVIL DEFENSE",
+        "color": "green",
+        "navcolor": "#393",
+        "icon": "fa fa-map-marker",
+        "url": "/ccs?segmento=civil",
+        "img": "img/civildefense.png"
+    },
+    {
+        "name": "Não designado",
+        "color": "gray",
+        "navcolor": "#933",
+        "icon": "fa fa-map-marker",
+        "url": ""
+    },
+    {
+        "name": "Sensor",
+        "color": "red",
+        "navcolor": "#933",
+        "icon": "fa fa-heartbeat",
+        "url": ""
+    }
+]

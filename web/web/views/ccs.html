@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="ccs">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include Bootstrap Css -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Font-awesome Css -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Include Jquery Js -->
+    <script src='/js/jquery-2.1.4.min.js'></script>
+    <!-- Include Angular Js -->
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/screenfull.js"></script>
+
+    <!-- Include Bind-Component Js -->
+    <script src="/components/bind-components.js"></script>
+    <script src="/util.js"></script>
+    <!-- Include Style Css -->
+    <link href='/style.css' rel='stylesheet' type='text/css'>
+    <!-- Include Script Js -->
+    <script src='/ccsVC.js'></script>
+    <script src='/mapVC.js'></script>
+    <title>SIG-TRAC-2016</title>
+    <style>
+        .navbar-inverse .navbar-nav>li>a {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<div id="navigation"></div>
+
+<body>
+    <h2 style="color: {{segmento.navcolor}};" ng-controller="ccsVC">
+        Central de Controle de Segmento - {{segmento.name}}</h2>
+    <div class="row">
+        <div class="col-sm-10" id="mapVC" ng-controller="mapVC">
+            <div id="map"></div>
+            <i id="fullscreen" class="fa fa-expand fa-4x" ng-click="fullscreen()"></i>
+            <div class="buttons">
+                <button class="btn btn-danger" ng-click="toggleHeatmap()">Heatmap</button>
+                <button class="btn btn-default" ng-click="changeRadius()">Radius</button>
+                <button class="btn btn-default" ng-click="changeOpacity()">Opacity</button>
+            </div>
+        </div>
+        <div class="col-sm-2" id="ccsVC" ng-controller="ccsVC">
+            <div class="thumbnail">
+                <img id="segmentoImg" alt="Segmento Icon">
+            </div>
+            <ul class="list-group">
+                <div class="segmentos">
+                    <li class="list-group-item">
+                        <i class="fa fa-map-marker" style="color:{{segmento.color}};"></i>
+                        <strong> {{segmento.name}}</strong>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6R4XKuh5N6ZoQ1DvFSjUxi0Yo5fSse1c&libraries=visualization&callback=loadMap"></script>
+</body>
+
+<div id="footer"></div>
+
+</html>

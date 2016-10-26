@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto';
+}
+
+.segmentos a,
+.segmentos span {
+    font-size: .8em;
+}
+
+.segmentos li {
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+body {
+    background-color: #eee;
+}
+
+.row {
+    width: 100%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
+.fa {
+    font-size: 24px;
+}
+
+#map {
+    height: 475px
+}
+
+.buttons {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+#fullscreen {
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    left: 95%;
+}
