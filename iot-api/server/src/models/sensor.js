@@ -5,6 +5,7 @@ var SensorSchema = new Schema({
 	alias: String,
 	name: String,
 	timeCreated: Date,
+	timeLastUpdated: Date,
 	value: Schema.Types.Mixed,
 	type: String,
 	location: {
