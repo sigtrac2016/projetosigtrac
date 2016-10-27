@@ -1,6 +1,5 @@
 
 """
- Counts words in UTF8 encoded, '\n' delimited text directly received from Kafka in every 2 seconds.
  Usage: streaming.py <broker_list> <topic>
  
  To run this on your local machine, you need to setup Kafka and create a producer first, see
