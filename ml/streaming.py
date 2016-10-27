@@ -62,7 +62,7 @@ if __name__ == "__main__":
     lines = kvs.map(lambda x: x[1])
 
     def pacientProcessor(line):
-        tokens = line.split(" ")
+        tokens = line.split(",")
         id = tokens[0]
         name = tokens[1]
 
