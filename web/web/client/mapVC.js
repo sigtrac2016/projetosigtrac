@@ -158,7 +158,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             '<h4>Delegar segmento</h4>' +
             '<button class="btn btn-primary" ng-click="colorMarker(\'blue\')">Segmento 1</button> ' +
             '<button class="btn btn-danger" ng-click="colorMarker(\'red\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" ng-click="colorMarker(\'black\')">Segmento 3</button> ' +
+            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker(\'black\')">Segmento 3</button> ' +
             '<button class="btn btn-success" ng-click="colorMarker(\'green\')">Segmento 4</button> ';
         $scope.contentString +=
             '<hr>' +
