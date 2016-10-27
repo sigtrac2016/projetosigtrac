@@ -1,0 +1,117 @@
+
+<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDWDKZiSTARk_gbCzcKsqiktgKCZe90e24",
+		authDomain: "sigtrac-ml.firebaseapp.com",
+		databaseURL: "https://sigtrac-ml.firebaseio.com",
+		storageBucket: "sigtrac-ml.appspot.com",
+		messagingSenderId: "392417460659"
+	};
+	firebase.initializeApp(config);
+
+	firebase.database().ref("user_name").on("value", function(data) {
+		console.log(data.val());
+		document.getElementById('user_name').innerHTML = "Paciente: " + data.val();
+	});
+	firebase.database().ref("status").on("value", function(data) {
+		console.log(data.val());
+		status = data.val();
+		status_name = "Não urgente";
+		switch(status) {
+			case '1': 
+				status_name = "Pouco urgente";
+				break;
+			case '2':
+				status_name = "Potencialmente urgente";
+				break;
+			case '3':
+				status_name = "Muito urgente";
+				break;
+			case '4':
+				status_name = "EMERGÊNCIA";
+				break;
+			default:
+				status = '0';
+				break;
+		}
+		var svg = document.getElementsByTagName('svg')[0];
+		var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+		circle.setAttribute("cx", 100);
+		circle.setAttribute("cy", 100);
+		circle.setAttribute("r", 100);
+		circle.style.fill = "url(#grad"+status+")";
+		svg.append(circle);
+		document.getElementById('status-name').innerHTML = status_name;
+	});
+</script>
+
+<style>
+body {
+	 background-image: url('pattern.gif'); 
+	 background-repeat: repeat;
+}
+#container {
+	width:100%;
+}
+#status-name {
+	padding-top: 130px; 
+	margin: 0 auto; 
+	font-size: 50px;
+	text-align: center; 
+	font-family: Verdana;
+	color: #ddd;
+}
+#status {
+	padding-top: 20px; 
+	max-width: 300px; 
+	margin: 0 auto;
+}
+#user_name {
+	padding-top: 40px; 
+	margin: 0 auto; 
+	text-align: center; 
+	font-size: 20px; 
+	font-family: Verdana;
+	color: #ddd;
+}
+</style>
+<div id="container">  
+	<div id="status-name"></div>
+	<div id="status">
+		<svg id="statusbox" viewBox='0 0 200 200'>
+			<defs>
+				<radialGradient id="grad0" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(153,204,255);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(0,89,179);stop-opacity:1" />
+				</radialGradient>
+			</defs>
+			<defs>
+				<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(153,255,153);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(0,128,0);stop-opacity:1" />
+				</radialGradient>
+			</defs>
+			<defs>
+				<radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="5%" style="stop-color:rgb(255,255,153);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(255,204,0);stop-opacity:1" />
+				</radialGradient>
+			</defs>
+			<defs>
+				<radialGradient id="grad3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(255,204,153);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(230,115,0);stop-opacity:1" />
+				</radialGradient>
+			</defs>
+			<defs>
+				<radialGradient id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(255,153,129);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(255,51,0);stop-opacity:1" />
+				</radialGradient>
+			</defs>
+		</svg>
+	</div>
+	<div id="user_name" ></div>
+</div>
