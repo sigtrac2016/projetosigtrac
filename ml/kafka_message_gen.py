@@ -29,9 +29,9 @@ while (True):
 	id =r.randint(1, 6)
 	name = peopleMap[id]
 
-	respR = r.gauss(respRateMean, respRateStd)
-	heartR = r.gauss(heartRateMean, heartRateStd)
-	temp = r.gauss(tempMean, tempStd)
+	respR = r.gauss(respRateMean, 3*respRateStd)
+	heartR = r.gauss(heartRateMean, 3*heartRateStd)
+	temp = r.gauss(tempMean, 3*tempStd)
 	oxy = r.gauss(oxyMean, oxyStd)
 
 	command = ",".join([str(id), name, str(respR), str(heartR), str(temp), str(oxy)])
@@ -39,4 +39,4 @@ while (True):
 	print (command)
 	os.system("echo " + command + " | ~/Apps/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test")
 
-	time.sleep(1)
+	time.sleep(2)

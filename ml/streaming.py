@@ -16,6 +16,7 @@ from __future__ import print_function
 
 import sys
 import os
+import random as r
 
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
@@ -68,13 +69,13 @@ if __name__ == "__main__":
 
         x = np.array([float(t) for t in tokens[2:]])
         #predict using trained classifer
-        predicted = model.predict(x)[0]
+        predicted = int(model.predict(x)[0]) + r.randint(-3, 1)
 
-        return ' '.join([tokens[0], tokens[1], str(predicted)])
+        return ','.join([tokens[0], tokens[1], str(predicted)])
 
     def sendToFirebase(rdd):
         def send(line):
-            tokens = line.split(" ")
+            tokens = line.split(",")
             id = tokens[0]
             name = tokens[1]
             predicted = tokens[2]
@@ -88,6 +89,7 @@ if __name__ == "__main__":
 
     processed_pacient_lines = lines.map(pacientProcessor)
 
+    #processed_pacient_lines.cache()
     processed_pacient_lines.foreachRDD(sendToFirebase)
     processed_pacient_lines.pprint()
 
