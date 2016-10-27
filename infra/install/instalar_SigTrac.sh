@@ -1,5 +1,6 @@
-#!/bin/bash
+!/bin/bash
 
+clear
 
 apt-get install dialog
 
@@ -14,7 +15,7 @@ dialog --yesno 'Atualizar o Linux?' 5 40
 dialog --yesno 'Instalar Standard system utilities?'  5 40 
 	 if [ $? = 0 ]; then 
 		clear;
-        	apt-get install aptitude vim manpages dnsutils bsdmainutils psmisc python3-gdbm ufw dosfstools ed telnet powermgmt-base ntfs-3g ubuntu-release-upgrader-core iputils-tracepath groff-base bind9-host mtr-tiny bash-completion mlocate tcpdump geoip-database install-info irqbalance language-selector-common friendly-recovery command-not-found info hdparm man-db lshw update-manager-core apt-transport-https accountsservice command-not-found-data time ltrace parted popularity-contest strace ftp ubuntu-standard lsof glances ssh-keygen
+        	apt-get install aptitude vim manpages dnsutils bsdmainutils psmisc python3-gdbm ufw dosfstools ed telnet powermgmt-base ntfs-3g ubuntu-release-upgrader-core iputils-tracepath groff-base bind9-host mtr-tiny bash-completion mlocate tcpdump geoip-database install-info irqbalance language-selector-common friendly-recovery command-not-found info hdparm man-db lshw update-manager-core apt-transport-https accountsservice command-not-found-data time ltrace parted popularity-contest strace ftp ubuntu-standard lsof glances  python-software-properties nodejs
 	 fi
 
 SERVER=$( dialog --stdout --title 'Qual Servidor'        \
@@ -25,19 +26,17 @@ SERVER=$( dialog --stdout --title 'Qual Servidor'        \
         BANCO_DADOS    'SERVIDOR 3 - BANCO DE DADOS' \
         PROCESSAMENTO  'SERVIDOR 4 - PROCESSAMENTO ' ) 
 
-
-
 users=$( dialog --stdout --separate-output --title 'Criar Usuários'        \
    	--checklist '\nQuais Usuários deseja criar?\n\n'  \
    	0 0 0                                    \
    	1  'Time Scrum 01 - ts01'      off    \
 	2  'Time Scrum 02 - ts02'      off    \
 	3  'Time Scrum 03 - ts03'      off    \
-	5  'Time Scrum 05 - ts04'      off    \
-	6  'Time Scrum 06 - ts05'      off    \
-	7  'Time Scrum 07 - ts06'      off    \
-	8  'Time Scrum 08 - ts07'      off    )
-
+	4  'Time Scrum 04 - ts04'      off    \
+	5  'Time Scrum 05 - ts05'      off    \
+	6  'Time Scrum 06 - ts06'      off    \
+	7  'Time Scrum 07 - ts07'      off    \
+	8  'Time Scrum 08 - ts08'      off    )
 
 echo "$users" | while read USERID
 do
@@ -72,3 +71,42 @@ dialog --yesno 'Configurar o sudo'  5 40
 
 rm -fr .tmpUser
 
+
+if [ $SERVER = "BANCO_DADOS" ];then
+
+
+	ip=$(ifconfig | sed -n '/inet addr:/{p;q;}' | sed 's/ [^ ]\+ *$//g' | sed 's/ [^ ]\+ *$//g' | sed 's/^.*://')
+  	clear
+	echo "instalando Mysql"
+	apt-get install mysql-server
+	mysql_secure_installation
+	sudo service mysql stop
+	mv /etc/mysql/my.cnf /etc/mysql/my.cnf.old 
+	cat /etc/mysql/my.cnf.old  | sed "s/127.0.0.1/$ip/g" > /etc/mysql/my.cnf
+	sudo service mysql start
+
+	clear
+        echo "instalando Cassandra"	
+	aptitude install python-software-properties
+	add-apt-repository ppa:webupd8team/java
+	echo "deb http://www.apache.org/dist/cassandra/debian 36x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+	curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+	aptitude update
+	aptitude install oracle-java8-installer oracle-java8-set-default
+	echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/environment
+	source /etc/environment 
+	aptitude install cassandra
+	service cassandra stop
+	cp /etc/cassandra/cassandra.yaml  /etc/cassandra/cassandra.yaml.old
+	cat /etc/cassandra/cassandra.yaml.old | sed "s/localhost/$ip/g" | sed "s/127.0.0.1/$ip/g" > /etc/cassandra/cassandra.yaml
+	service cassandra start
+
+	clear
+	echo "instalando MongoDB"
+	aptitude install mongodb
+	service mongodb stop
+	cp /etc/mongodb.conf  /etc/mongodb.conf.old
+	cat /etc/mongodb.conf.old | sed "s/127.0.0.1/$ip/g" > /etc/mongodb.conf
+	service mongodb start
+
+fi
