@@ -1,0 +1,42 @@
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-10-27T16:38:04
+** Command: scade -code "C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\ControleFontesDeRisco.etp" -root Operator1 -conf KCG
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg_trace.xml
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_metrics.txt, line 0, character 0
+ ~Operator1.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\Operator1.c, line 0, character 0
+ ~Operator1.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\Operator1.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_sensors.h, line 0, character 0
+ ~kcg_imported_functions.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_imported_functions.h, line 0, character 0
+ ~kcg_types.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_consts.c, line 0, character 0
+ ~kcg_xml_filter_out.scade
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_xml_filter_out.scade, line 0, character 0
+ ~config.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\config.txt, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\KCG\sc2c_integration_files.txt, line 0, character 0
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-10-27T16:38:08
+** sc2c.log
+*************************************************************$

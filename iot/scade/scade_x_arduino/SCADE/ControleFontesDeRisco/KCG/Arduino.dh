@@ -1,0 +1,35 @@
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Users/SHIGEMURA-PC/SCADE/ControleFontesDeRisco/KCG/config.txt
+** Generation date: 2016-10-27T15:44:29
+*************************************************************$ */
+#ifndef _Arduino_H_
+#define _Arduino_H_
+
+#include "kcg_types.h"
+
+/* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
+
+/* ========================  context type  ========================= */
+typedef struct {
+  /* --------------------- no memorised outputs  --------------------- */
+  /* -------------  insert eventual inits and memories  -------------- */
+} outC_Arduino;
+
+/* ===========  node initialization and cycle functions  =========== */
+/* Arduino */
+extern void Arduino(/* Arduino::Input1 */ kcg_int Input1, outC_Arduino *outC);
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
+extern void Arduino_reset(outC_Arduino *outC);
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+extern void Arduino_init(outC_Arduino *outC);
+
+#endif /* _Arduino_H_ */
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Arduino.dh
+** Generation date: 2016-10-27T15:44:29
+*************************************************************$ */
+

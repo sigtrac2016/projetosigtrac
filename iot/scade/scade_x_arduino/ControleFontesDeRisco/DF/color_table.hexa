@@ -1,0 +1,396 @@
+a661 A661_DF_MAGIC_NUMBER
+01 Library version
+05 Supplement version
+0000 App ID (unused)
+0000 Size of OEM free data
+62 Begin block
+00 padding
+0080 Table Size
+00000208 Command size
+
+003f Number of elements specified below
+0000
+00 Index
+000000
+00 Red
+00 Green
+00 Blue
+ff Alpha
+01 Index
+000000
+ff Red
+ff Green
+ff Blue
+ff Alpha
+02 Index
+000000
+f9 Red
+f9 Green
+f9 Blue
+ff Alpha
+03 Index
+000000
+f2 Red
+f2 Green
+f2 Blue
+ff Alpha
+04 Index
+000000
+ec Red
+ec Green
+ec Blue
+ff Alpha
+05 Index
+000000
+e6 Red
+e6 Green
+e6 Blue
+ff Alpha
+06 Index
+000000
+cc Red
+cc Green
+cc Blue
+ff Alpha
+07 Index
+000000
+b3 Red
+b3 Green
+b3 Blue
+ff Alpha
+08 Index
+000000
+99 Red
+99 Green
+99 Blue
+ff Alpha
+09 Index
+000000
+80 Red
+80 Green
+80 Blue
+ff Alpha
+0a Index
+000000
+66 Red
+66 Green
+66 Blue
+ff Alpha
+0b Index
+000000
+4d Red
+4d Green
+4d Blue
+ff Alpha
+0c Index
+000000
+33 Red
+33 Green
+33 Blue
+ff Alpha
+0d Index
+000000
+1a Red
+1a Green
+1a Blue
+ff Alpha
+15 Index
+000000
+ff Red
+00 Green
+00 Blue
+ff Alpha
+16 Index
+000000
+ff Red
+d5 Green
+d5 Blue
+ff Alpha
+17 Index
+000000
+ff Red
+aa Green
+aa Blue
+ff Alpha
+18 Index
+000000
+ff Red
+55 Green
+55 Blue
+ff Alpha
+19 Index
+000000
+d4 Red
+00 Green
+00 Blue
+ff Alpha
+1a Index
+000000
+aa Red
+00 Green
+00 Blue
+ff Alpha
+1b Index
+000000
+80 Red
+00 Green
+00 Blue
+ff Alpha
+1f Index
+000000
+ff Red
+80 Green
+00 Blue
+ff Alpha
+20 Index
+000000
+ff Red
+e6 Green
+d5 Blue
+ff Alpha
+21 Index
+000000
+ff Red
+cc Green
+aa Blue
+ff Alpha
+22 Index
+000000
+ff Red
+99 Green
+55 Blue
+ff Alpha
+23 Index
+000000
+d4 Red
+55 Green
+00 Blue
+ff Alpha
+24 Index
+000000
+aa Red
+44 Green
+00 Blue
+ff Alpha
+25 Index
+000000
+80 Red
+33 Green
+00 Blue
+ff Alpha
+29 Index
+000000
+ff Red
+ff Green
+00 Blue
+ff Alpha
+2a Index
+000000
+ff Red
+f6 Green
+d5 Blue
+ff Alpha
+2b Index
+000000
+ff Red
+ee Green
+aa Blue
+ff Alpha
+2c Index
+000000
+ff Red
+dd Green
+55 Blue
+ff Alpha
+2d Index
+000000
+ff Red
+cc Green
+00 Blue
+ff Alpha
+2e Index
+000000
+d4 Red
+aa Green
+00 Blue
+ff Alpha
+2f Index
+000000
+aa Red
+88 Green
+00 Blue
+ff Alpha
+33 Index
+000000
+00 Red
+ff Green
+00 Blue
+ff Alpha
+34 Index
+000000
+d5 Red
+ff Green
+d5 Blue
+ff Alpha
+35 Index
+000000
+aa Red
+ff Green
+aa Blue
+ff Alpha
+36 Index
+000000
+55 Red
+ff Green
+55 Blue
+ff Alpha
+37 Index
+000000
+00 Red
+d4 Green
+00 Blue
+ff Alpha
+38 Index
+000000
+00 Red
+aa Green
+00 Blue
+ff Alpha
+39 Index
+000000
+00 Red
+80 Green
+00 Blue
+ff Alpha
+3d Index
+000000
+00 Red
+ff Green
+ff Blue
+ff Alpha
+3e Index
+000000
+d5 Red
+ff Green
+f6 Blue
+ff Alpha
+3f Index
+000000
+aa Red
+ff Green
+ee Blue
+ff Alpha
+40 Index
+000000
+55 Red
+ff Green
+dd Blue
+ff Alpha
+41 Index
+000000
+00 Red
+d4 Green
+aa Blue
+ff Alpha
+42 Index
+000000
+00 Red
+aa Green
+88 Blue
+ff Alpha
+43 Index
+000000
+00 Red
+66 Green
+66 Blue
+ff Alpha
+47 Index
+000000
+00 Red
+00 Green
+ff Blue
+ff Alpha
+48 Index
+000000
+d5 Red
+d5 Green
+ff Blue
+ff Alpha
+49 Index
+000000
+aa Red
+aa Green
+ff Blue
+ff Alpha
+4a Index
+000000
+55 Red
+55 Green
+ff Blue
+ff Alpha
+4b Index
+000000
+00 Red
+00 Green
+d4 Blue
+ff Alpha
+4c Index
+000000
+00 Red
+00 Green
+aa Blue
+ff Alpha
+4d Index
+000000
+00 Red
+00 Green
+80 Blue
+ff Alpha
+51 Index
+000000
+ff Red
+00 Green
+ff Blue
+ff Alpha
+52 Index
+000000
+ff Red
+d5 Green
+f6 Blue
+ff Alpha
+53 Index
+000000
+ff Red
+aa Green
+ee Blue
+ff Alpha
+56 Index
+000000
+d4 Red
+00 Green
+aa Blue
+ff Alpha
+57 Index
+000000
+80 Red
+00 Green
+66 Blue
+ff Alpha
+65 Index
+000000
+1a Red
+92 Green
+ff Blue
+ff Alpha
+66 Index
+000000
+ff Red
+00 Green
+33 Blue
+ff Alpha
+d0 End of Block
+00
+0000
+e0 A661_DF_FOOTER
+00
+0000

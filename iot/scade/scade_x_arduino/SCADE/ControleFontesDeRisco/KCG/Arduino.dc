@@ -1,0 +1,33 @@
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Users/SHIGEMURA-PC/SCADE/ControleFontesDeRisco/KCG/config.txt
+** Generation date: 2016-10-27T15:44:29
+*************************************************************$ */
+
+#include "kcg_consts.h"
+#include "kcg_sensors.h"
+#include "Arduino.h"
+
+void Arduino_init(outC_Arduino *outC)
+{
+  /* The body of this function must be provided */
+}
+
+
+#ifndef KCG_NO_EXTERN_CALL_TO_RESET
+void Arduino_reset(outC_Arduino *outC)
+{
+  /* The body of this function must be provided */
+}
+#endif /* KCG_NO_EXTERN_CALL_TO_RESET */
+
+/* Arduino */
+void Arduino(/* Arduino::Input1 */ kcg_int Input1, outC_Arduino *outC)
+{
+  /* The body of this function must be provided */
+}
+
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Arduino.dc
+** Generation date: 2016-10-27T15:44:29
+*************************************************************$ */
+
