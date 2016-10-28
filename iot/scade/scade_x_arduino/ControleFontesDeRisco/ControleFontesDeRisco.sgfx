@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?dom version="R16" ?>
+
+<?scade_release version="R17" ?>
+
+<specification>
+    <IDE>
+        <project path="ControleFontesDeRisco.etp"/>
+        <ratio horizontal="20" vertical="20"/>
+    </IDE>
+    <symbology>
+        <dimension height="256" width="256"/>
+    </symbology>
+    <A661 library_version="1" supp_version="5">
+        <intprop name="ApplicationId">1</intprop>
+    </A661>
+    <children>
+        <A661Layer name="a661_layer" oid="8b56b202-68f5-4f77-8c46-3aeed77288ec">
+            <IDE>
+                <ratio horizontal="20" vertical="20"/>
+            </IDE>
+            <model>
+                <intprop name="LayerId">1</intprop>
+                <intprop name="ContextNumber">0</intprop>
+                <intprop name="Width">5120</intprop>
+                <intprop name="Height">5120</intprop>
+            </model>
+            <runtime>
+                <connect msg_id="A661_UA_CONTEXT_NUMBER" name="a661_layer_A661_UA_CONTEXT_NUMBER"/>
+                <connect msg_id="A661_REQ_LAYER_ACTIVE" name="a661_layer_A661_REQ_LAYER_ACTIVE"/>
+                <connect msg_id="A661_REQ_LAYER_INACTIVE" name="a661_layer_A661_REQ_LAYER_INACTIVE"/>
+                <connect msg_id="A661_REQ_LAYER_VISIBLE" name="a661_layer_A661_REQ_LAYER_VISIBLE"/>
+            </runtime>
+            <events/>
+            <children>
+                <widget name="Label" oid="55621abf-f419-4c51-a901-22ad91153788" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">1</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">880</intprop>
+                        <intprop name="PosY">4100</intprop>
+                        <intprop name="SizeX">3500</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">SIG-TRAC - TS#07</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="Label" oid="e5e58cda-63b4-4dde-abea-7366d2174569" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">2</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">1080</intprop>
+                        <intprop name="PosY">3320</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Gerenciamento</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="Label" oid="cb8be0ca-716d-4cc0-8214-40d78d89a90d" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">3</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">560</intprop>
+                        <intprop name="PosY">2860</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">0</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">de Fontes de Risco</stringprop>
+                    </model>
+                    <runtime/>
+                </widget>
+                <widget name="GpArcCircle" oid="ad15a3ca-c6cc-4da9-8c02-c5c901e8dabd" type="GpArcCircle">
+                    <model>
+                        <intprop name="WidgetIdent">4</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">2560</intprop>
+                        <intprop name="PosY">880</intprop>
+                        <intprop name="StartAngle">-2147483648</intprop>
+                        <intprop name="EndAngle">2147483647</intprop>
+                        <intprop name="Radius">500</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">21</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="GpArcCircle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="GpArcCircle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="GpArcCircle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="GpArcCircle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="GpArcCircle_A661_POS_Y"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="GpArcCircle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="GpArcCircle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_RADIUS" name="GpArcCircle_A661_RADIUS"/>
+                        <connect msg_id="A661_START_ANGLE" name="GpArcCircle_A661_START_ANGLE"/>
+                        <connect msg_id="A661_END_ANGLE" name="GpArcCircle_A661_END_ANGLE"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="GpArcCircle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="GpArcCircle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="PushButton" oid="77c8f562-6008-4938-970a-3fb22a2066f2" type="PushButton">
+                    <model>
+                        <intprop name="WidgetIdent">5</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">1020</intprop>
+                        <intprop name="PosY">1700</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Abrir/Fechar</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="PushButton_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="PushButton_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="PushButton_A661_STRING"/>
+                        <connect msg_id="A661_STYLE_SET" name="PushButton_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="PushButton_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="PushButton_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="PushButton_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="PushButton_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="PushButton_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SELECTION" name="PushButton_A661_EVT_SELECTION"/>
+                    </events>
+                </widget>
+            </children>
+        </A661Layer>
+    </children>
+</specification>
+
+<!-- crc32 : 3505531402 -->
+
