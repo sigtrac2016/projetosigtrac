@@ -1,9 +1,8 @@
-!/bin/bash
+#!/bin/bash
 
 clear
 
 apt-get install dialog
-
 
 dialog --yesno 'Atualizar o Linux?' 5 40 
 	 if [ $? = 0 ]; then 
@@ -108,9 +107,7 @@ if [ $SERVER = "BANCO_DADOS" ];then
 	cp /etc/mongodb.conf  /etc/mongodb.conf.old
 	cat /etc/mongodb.conf.old | sed "s/127.0.0.1/$ip/g" > /etc/mongodb.conf
 	service mongodb start
-
 fi
-
 
 
 if [ $SERVER = "BROKER" ] || [ $SERVER = "API_WEB" ] ;then
@@ -118,6 +115,26 @@ if [ $SERVER = "BROKER" ] || [ $SERVER = "API_WEB" ] ;then
 	apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 	echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
 	aptitude update
-	aptitude install docker-engine docker.io
+	aptitude install docker.io
 fi
+
+
+if [ $SERVER = "PROCESSAMENTO" ];then
+	clear
+	echo "instalando Spark"
+	aptitude install python-software-properties
+	add-apt-repository ppa:webupd8team/java
+	aptitude update
+	aptitude install oracle-java8-installer oracle-java8-set-default
+        echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/environment
+        source /etc/environment
+	cd /opt/
+	wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.1-bin-hadoop2.6.tgz
+	tar -xzvf spark-1.6.1-bin-hadoop2.6.tgz
+	ln -s spark-1.6.1-bin-hadoop2.6  spark
+	echo "SPARK_HOME=/opt/spark" >> /etc/environment
+	echo 'PATH=$PATH:/opt/spark/bin/' >> /etc/environment
+	source /etc/environment
+fi 
+
 
