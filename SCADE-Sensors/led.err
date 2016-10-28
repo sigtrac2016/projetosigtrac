@@ -1,0 +1,5 @@
+*** Type Warning (WAR_151): Internal state expected
+  at file C:\Users\Piterson\AppData\Local\Temp\ScadeChecker\12864\checker_file.scade, line 76, character 0
+  at path Operator1/
+ Node Operator1 has no internal state
+ (it should probably be declared as a function)

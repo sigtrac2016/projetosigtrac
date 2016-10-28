@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="Operator1" oid="!ed/3c31/552B/F90/580599b247a8">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="Emit" type="bool" oid="!ed/3c65/575A/3010/580b8e446e26" instancepath="Operator1/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="NumericReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Output3" type="real" oid="!ed/3ca0/575A/3010/580b9407362"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="NumericReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="Operator3" oid="!ed/3c8d/7987/3240/5810f64a6c31">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="Emit" type="bool" oid="!ed/3cba/7987/3240/5810fabf5863" instancepath="Operator3/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="NumericReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Output1" type="real" oid="!ed/3ca7/7987/3240/5810f7ae29bd" instancepath="Operator3/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="tela.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="NumericReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

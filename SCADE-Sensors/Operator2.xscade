@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2" xmlns:asammcd2mc="unknown_address">
+	<declarations>
+		<Operator kind="function" external="imported" name="Operator2">
+			<outputs>
+				<Variable name="BPM">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c77/7987/3240/5810f226286e"/>
+						<asammcd2mc:Pragma>
+							Measurement:&#xA;Meas=0&#xA;MeasConversion=NO_COMPU_METHOD
+						</asammcd2mc:Pragma>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<pragmas>
+				<ed:Operator oid="!ed/3c75/7987/3240/5810f0bc3a02"/>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>
