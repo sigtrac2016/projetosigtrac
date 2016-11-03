@@ -1,1 +1,5 @@
 include ':app'
+//include ':libraries:tess-two'
+//include ':libs:google-api-java-client-dev'
+//include ':libs:PagerSlidingTabStrip'
+//project(':PagerSlidingTabStrip').projectDir = new File('libs/PagerSlidingTabStrip')
