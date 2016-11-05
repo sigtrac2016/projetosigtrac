@@ -20,13 +20,11 @@ public class SinalDePanico {
     }
 
     public void enviar() {
-        String l = "Lat: -1 Long: -1";
+        String l = "Lat: indisponivel\nLong: indisponivel";
         if(this.location != null) {
-            l = "Lat: " + String.valueOf(location.getLatitude()) + " Long: " + String.valueOf(location.getLongitude());
+            l = "Lat: " + String.valueOf(location.getLatitude()) + "\nLong: " + String.valueOf(location.getLongitude());
         }
         String example = "CPF: " + this.CPF + "\nLocalizacao: " + l + (usuarioRestrito ? "\nRESTRITO" : "\nCOMUM");
         Toast.makeText(context, example, Toast.LENGTH_LONG).show();
-
-        // TODO: montar o JSON e mandar ele
     }
 }

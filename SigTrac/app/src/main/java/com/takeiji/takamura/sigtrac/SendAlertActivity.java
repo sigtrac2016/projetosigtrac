@@ -1,7 +1,14 @@
 package com.takeiji.takamura.sigtrac;
 
+import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +31,7 @@ public class SendAlertActivity extends AppCompatActivity {
     private String departament = "";
     private String type = "";
     private String descricao = "";
+    private Location localizacao = null;
 
     // Descricao do alerta
     private EditText mEditText;
@@ -163,9 +171,16 @@ public class SendAlertActivity extends AppCompatActivity {
     }
 
     public void createDialogBox(View view) {
+        // Pegando localizacao
+        this.localizacao = getLocation();
+        String l = "Lat: indisponivel\nLong: indisponivel";
+        if(this.localizacao != null) {
+            l = "Lat: " + String.valueOf(localizacao.getLatitude()) + "\nLong: " + String.valueOf(localizacao.getLongitude());
+        }
+
         this.descricao = mEditText.getText().toString();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Dep.: " + this.departament + "\nTipo: " + this.type + "\nDesc.: " + this.descricao + "\nDeseja enviar este alerta?").setTitle("Alerta");
+        builder.setMessage("Dep.: " + this.departament + "\nTipo: " + this.type + "\nDesc.: " + this.descricao + "\nLocalizacao:\n" + l +"\nDeseja enviar este alerta?").setTitle("Alerta");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -202,7 +217,35 @@ public class SendAlertActivity extends AppCompatActivity {
 
     private void sendAlert() {
         Toast.makeText(SendAlertActivity.this, "Alerta enviado para a central de comando.", Toast.LENGTH_LONG).show();
+        // Criando o alerta: departamento, tipo, descricao e localizacao
+
         //TODO: ...
+    }
+
+    private Location getLocation() {
+
+        LocationListener locationListener = null;
+        Location currentLocation = null;
+
+        try {
+            Context context = getApplicationContext();
+
+            if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
+                locationListener = new AlertaLocationListener(context);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+
+                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            }
+        } catch (Exception ex) {
+            Toast.makeText(getApplicationContext(), "Serviço GPS indisponivel", Toast.LENGTH_SHORT).show();
+        }
+
+        if(currentLocation == null) {
+            Toast.makeText(getApplicationContext(), "Serviço GPS indisponivel", Toast.LENGTH_SHORT);
+        }
+        return currentLocation;
     }
 
     /**
