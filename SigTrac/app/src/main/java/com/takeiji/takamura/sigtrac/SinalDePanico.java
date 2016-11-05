@@ -2,6 +2,7 @@ package com.takeiji.takamura.sigtrac;
 
 import android.content.Context;
 import android.location.Location;
+import android.util.Log;
 import android.widget.Toast;
 
 public class SinalDePanico {
@@ -26,5 +27,11 @@ public class SinalDePanico {
         }
         String example = "CPF: " + this.CPF + "\nLocalizacao: " + l + (usuarioRestrito ? "\nRESTRITO" : "\nCOMUM");
         Toast.makeText(context, example, Toast.LENGTH_LONG).show();
+
+
+        // Teste
+        Log.v("TESTE", "TESTEAPI");
+        CallAPI api = new CallAPI();
+        api.execute("http://takeiji.netsoc.ie/sigtrac.json");
     }
 }
