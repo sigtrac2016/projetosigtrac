@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -36,6 +37,7 @@ public class SendAlertActivity extends AppCompatActivity {
     // Descricao do alerta
     private EditText mEditText;
     private Button mButton;
+    private Button mFotoButton;
 
     // ListView
     private TextView mTitle;
@@ -90,6 +92,7 @@ public class SendAlertActivity extends AppCompatActivity {
         mDepartmentName = (TextView) findViewById(R.id.departmentTitle);
         mEditText = (EditText) findViewById(R.id.editTextID);
         mButton = (Button) findViewById(R.id.buttonAlertaEnviarID);
+        mFotoButton = (Button) findViewById(R.id.buttonTirarFotoID);
 
         // Creating the list that will be used to populate the list view
         mListElements = new ArrayList<>();
@@ -205,14 +208,21 @@ public class SendAlertActivity extends AppCompatActivity {
                 mEditText.setVisibility(View.INVISIBLE);
                 mListView.setVisibility(View.VISIBLE);
                 mButton.setVisibility(View.INVISIBLE);
+                mFotoButton.setVisibility(View.INVISIBLE);
                 break;
             case "DESC":
                 mDepartmentName.setText("Descricao:");
                 mEditText.setVisibility(View.VISIBLE);
                 mListView.setVisibility(View.INVISIBLE);
                 mButton.setVisibility(View.VISIBLE);
+                mFotoButton.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    public void abrirTelaFoto(View view) {
+        Intent intent = new Intent(this.getApplicationContext(), EnviarFotoActivity.class);
+        startActivity(intent);
     }
 
     private void sendAlert() {
