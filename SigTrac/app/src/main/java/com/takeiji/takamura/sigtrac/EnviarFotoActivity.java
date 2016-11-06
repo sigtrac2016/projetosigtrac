@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class EnviarFotoActivity extends AppCompatActivity {
 
     ImageView result;
     static final int REQUEST_IMAGE_CAPTURE = 1;
