@@ -41,4 +41,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('C:/dev/appHealthCare/projetosigtrac/HealthCare/libs/google-api-client-1.4.1-beta.jar')
     compile files('C:/dev/appHealthCare/projetosigtrac/HealthCare/libs/google-api-client-googleapis-1.4.1-beta.jar')
+    compile files('C:/dev/appHealthCare/projetosigtrac/HealthCare/libs/com.google.guava_1.6.0.jar')
+    compile files('C:/dev/appHealthCare/projetosigtrac/HealthCare/libs/jackson-all-1.9.0.jar')
 }

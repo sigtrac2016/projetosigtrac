@@ -67,10 +67,10 @@ public class MediaActivity extends AppCompatActivity {
 
         myAudioRecorder=new MediaRecorder();
 
-        //myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        //myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        //myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        //myAudioRecorder.setOutputFile(outputFile);
+//        myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+      //  myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+      //  myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+      //  myAudioRecorder.setOutputFile(outputFile);
 
         record.setOnClickListener(new View.OnClickListener() {
             @Override
