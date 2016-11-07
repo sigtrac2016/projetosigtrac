@@ -3,6 +3,47 @@
 ===========================================================================
 */
 
+
+function getSegmentColorByChar(c){
+    switch (c){
+        case 'p':
+            return "blue";
+        case 'h':
+            return "red";
+        case 'f':
+            return "black";
+        case 'c':
+            return "green";
+        default:
+            return "#aaaa";
+    }
+}
+function getJsonOfJsons(){    
+    var json1={
+       "id": 1, // gerado pelo BD
+       "titulo": "titulo1", // string vazia ou não
+       "segmento": 'p', // char com a letra referente ao segmento
+       "descricao": "descricao1", // string vazia ou não
+       "lat": -23.21, //latitude
+       "long": -45.87, //longitude
+       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+       "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+       "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp
+    };
+    var json2={
+       "id": 2, // gerado pelo BD
+       "titulo": "titulo2", // string vazia ou não
+       "segmento": 'h', // char com a letra referente ao segmento
+       "descricao": "descricao2", // string vazia ou não
+       "lat": -23.208, //latitude
+       "long": -45.87, //longitude
+       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+       "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+       "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp
+    };
+    jsonOfJsons={"1":json1,"2":json2};
+    return jsonOfJsons;
+}
 app.controller("mapVC", function($scope, $http, $compile) {
     /***********************************************
                 Initializes map and stuff
@@ -67,12 +108,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
-    $scope.createMarker = function() {
+    $scope.createMarker = function() {        
+        var json=jsonOfJsons[i.toString()];
+        var pos = {lat: json.lat , lng: json.long};
         var marker = new google.maps.Marker({
-            position: positions[i],
+            position: pos,
             map: $scope.map,
             draggable: true,
-            icon: pinSymbol(colors[i])
+            obj: jsonOfJsons[i.toString()],
+            icon: pinSymbol(getSegmentColorByChar(json.segmento))
         });
         marker.addListener('click', function(event) {
             $scope.genContentString(event.latLng);
@@ -85,8 +129,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.push(marker);
         $scope.updateHeatmap();
     }
-
-    for (var i = 0; i < 7; i++) {
+    var jsonOfJsons=getJsonOfJsons();
+    var len=Object.keys(jsonOfJsons).length;
+    for (var i = 1; i <= len; i++) {
         $scope.createMarker();
     }
 
@@ -137,6 +182,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.colorMarker = function(color) {
         $scope.selection.setIcon(pinSymbol(color));
+        var idSelected=();
+        
     }
 
     $scope.deleteMarker = function(param) {
@@ -221,7 +268,7 @@ function reload_js(src) {
 }
 
 function loadMap() {}
-
+/*
 var colors = [
     "#aaa", "blue", "red", "green", "black", "red", "red", "red", "red"
 ]
@@ -236,7 +283,7 @@ var positions = [
     { lat: -23.20, lng: -45.89 },
     { lat: -23.21, lng: -45.89 }
 ]
-
+*/
 // ITA position
 var my_position = {
     lat: -23.21,
