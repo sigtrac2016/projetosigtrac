@@ -18,9 +18,37 @@ function getSegmentColorByChar(c){
             return "#aaaa";
     }
 }
+function getNewId(){
+    var max=1;
+    for (var key in jsonOfJsons) {
+      if (jsonOfJsons.hasOwnProperty(key)) {        
+        var json=jsonOfJsons[key];
+        if(json.id>max)
+            max=json.id;
+      }
+    }    
+    return max+1;
+}
+function newJson(id, lat, lng){
+    var dt=new Date();
+    var date=dt.getFullYear()+"-"+dt.getMonth()+"-"+dt.getDay()+" "+
+        dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+    var json={
+       "id": id, // gerado pelo BD
+       "titulo": "titulo1", // string vazia ou não
+       "segmento": 'p', // char com a letra referente ao segmento
+       "descricao": "descricao1", // string vazia ou não
+       "lat": lat, //latitude
+       "long": lng, //longitude
+       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+       "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+       "data_hora": date // formato padrão de timestamp
+    };
+    return json;
+}
 function getJsonOfJsons(){    
     var json1={
-       "id": 1, // gerado pelo BD
+       "id": 5, // gerado pelo BD
        "titulo": "titulo1", // string vazia ou não
        "segmento": 'p', // char com a letra referente ao segmento
        "descricao": "descricao1", // string vazia ou não
@@ -31,7 +59,7 @@ function getJsonOfJsons(){
        "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp
     };
     var json2={
-       "id": 2, // gerado pelo BD
+       "id": 6, // gerado pelo BD
        "titulo": "titulo2", // string vazia ou não
        "segmento": 'h', // char com a letra referente ao segmento
        "descricao": "descricao2", // string vazia ou não
@@ -41,7 +69,7 @@ function getJsonOfJsons(){
        "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
        "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp
     };
-    jsonOfJsons={"1":json1,"2":json2};
+    jsonOfJsons={"5":json1,"6":json2};
     return jsonOfJsons;
 }
 app.controller("mapVC", function($scope, $http, $compile) {
@@ -108,18 +136,16 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
-    $scope.createMarker = function() {        
-        var json=jsonOfJsons[i.toString()];
-        var pos = {lat: json.lat , lng: json.long};
+    $scope.createMarker = function(indexString, pos,color) {        
         var marker = new google.maps.Marker({
             position: pos,
             map: $scope.map,
             draggable: true,
-            obj: jsonOfJsons[i.toString()],
-            icon: pinSymbol(getSegmentColorByChar(json.segmento))
+            obj: jsonOfJsons[indexString],
+            icon: pinSymbol(color)
         });
         marker.addListener('click', function(event) {
-            $scope.genContentString(event.latLng);
+            $scope.genContentString(marker.obj);
             $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
             $scope.infowindow.setContent("<div id=\'infowindow'></div>");
@@ -130,10 +156,23 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.updateHeatmap();
     }
     var jsonOfJsons=getJsonOfJsons();
-    var len=Object.keys(jsonOfJsons).length;
-    for (var i = 1; i <= len; i++) {
-        $scope.createMarker();
+
+    for (var key in jsonOfJsons) {
+      if (jsonOfJsons.hasOwnProperty(key)) {        
+        var json=jsonOfJsons[key];
+        var pos = {lat: json.lat , lng: json.long};        
+        var color =getSegmentColorByChar(json.segmento)
+        $scope.createMarker(key,pos, color);
+      }
     }
+    /*
+    for (var i = 1; i <= len; i++) {
+        var indexString=i.toString();
+        var json=jsonOfJsons[indexString];
+        var pos = {lat: json.lat , lng: json.long};        
+        var color =getSegmentColorByChar(json.segmento)
+        $scope.createMarker(indexString,pos, color);
+    }*/
 
     // Initializes infowindow
     $scope.infowindow = new google.maps.InfoWindow({
@@ -146,22 +185,13 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-        var new_marker = new google.maps.Marker({
-            position: event.latLng,
-            map: $scope.map,
-            draggable: true,
-            icon: pinSymbol(fillMarker())
-        });
-        new_marker.addListener('click', function(event) {
-            $scope.genContentString(event.latLng);
-            $scope.map.setCenter(new_marker.getPosition());
-            $scope.selection = new_marker;
-            $scope.infowindow.setContent("<div id=\'infowindow\'></div>");
-            $scope.infowindow.open($scope.map, new_marker);
-            $("#infowindow").html($compile($scope.contentString)($scope));
-        });
-        $scope.markers.push(new_marker);
-        $scope.updateHeatmap();
+        var newId=getNewId();
+        var indexString=newId.toString();
+        var lat=event.latLng.lat();
+        var lng=event.latLng.lng();                
+        jsonOfJsons[indexString]=newJson(newId,lat,lng);
+
+        $scope.createMarker(indexString,event.latLng, fillMarker());
     });
 
     /***********************************************
@@ -180,10 +210,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
         };
     }
 
-    $scope.colorMarker = function(color) {
+    $scope.colorMarker = function(id,color, segment) {
         $scope.selection.setIcon(pinSymbol(color));
-        var idSelected=();
-        
+        jsonOfJsons[id].segmento=segment;
     }
 
     $scope.deleteMarker = function(param) {
@@ -192,21 +221,22 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
         $scope.updateHeatmap();
     }
-
-    $scope.genContentString = function(coor) {
+    $scope.genContentString = function(obj) {
+        var coor= {lat: obj.lat, lng: obj.long};
+        var id=obj.id.toString();
         $scope.contentString = '<div id="content">' +
-            '<h1 >Alerta de Incêndio</h1>' +
+            '<h1 >'+obj.titulo+'</h1>' +
             '<div>' +
-            '<p><b>Horário de ocorrência: </b> 13:30h</p>' +
-            '<p><b>Coordenadas: </b>' + coor + '</p>' +
+            '<p><b>Horário de ocorrência: </b>'+ obj.data_hora  + '</p>' +
+            '<p><b>Coordenadas: </b>{' + coor.lat+', '+coor.lng + '}</p>' +
             '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
         if (segmento == 'global')
             $scope.contentString +=
             '<h4>Delegar segmento</h4>' +
-            '<button class="btn btn-primary" ng-click="colorMarker(\'blue\')">Segmento 1</button> ' +
-            '<button class="btn btn-danger" ng-click="colorMarker(\'red\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker(\'black\')">Segmento 3</button> ' +
-            '<button class="btn btn-success" ng-click="colorMarker(\'green\')">Segmento 4</button> ';
+            '<button class="btn btn-primary" ng-click="colorMarker('+id+',\'blue\',\'p\')">Segmento 1</button> ' +
+            '<button class="btn btn-danger" ng-click="colorMarker('+id+',\'red\',\'h\')">Segmento 2</button> ' +
+            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker('+id+',\'black\',\'f\')">Segmento 3</button> ' +
+            '<button class="btn btn-success" ng-click="colorMarker('+id+',\'green\',\'c\')">Segmento 4</button> ';
         $scope.contentString +=
             '<hr>' +
             '<h4>Comandos:</h4>' +
