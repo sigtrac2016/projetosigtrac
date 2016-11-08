@@ -1,0 +1,15 @@
+{
+  "name": "bridge",
+  "version": "1.0.0",
+  "description": "Bridge between mqtt and kafka brokers",
+  "author": "Luiz Coura <luizcoura@gmail.com>",
+  "main": "bridge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"mqtt": "latest",
+    "moment": "latest",
+    "kafka-node": "latest"
+  }
+}
