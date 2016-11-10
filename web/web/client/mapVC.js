@@ -151,17 +151,18 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 lng: position.coords.longitude
             };
 
-            var infoWindow = new google.maps.InfoWindow({ map: map });
-            infowindow.setPosition(pos);
-            infowindow.setContent('Sua localização.');
-            $scope.map.setCenter(pos);
-
             var marker = new google.maps.Marker({
                 position: pos,
                 map: $scope.map,
                 draggable: false,
                 icon: pinSymbol('white')
             });
+
+            $scope.infowindow.setPosition(pos);
+            $scope.infowindow.setContent('Sua localização.');
+            $scope.infowindow.open($scope.map, marker);
+            $scope.map.setCenter(pos);
+
         });
     }
 
