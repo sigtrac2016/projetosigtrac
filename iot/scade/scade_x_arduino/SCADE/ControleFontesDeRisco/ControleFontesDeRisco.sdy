@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="Operator1" oid="!ed/3c31/5CA6/CFC/581227bc328e">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\ControleFontesDeRisco\ControleFontesDeRisco.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalFromButton" type="bool" oid="!ed/3cb2/5CA6/CFC/58122c4b6e05" instancepath="Operator1/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ReqLayerActive" type="bool" oid="!ed/3caa/5CA6/CFC/58122c346396" instancepath="Operator1/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\ControleFontesDeRisco\ControleFontesDeRisco.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ReqLayerVisible" type="bool" oid="!ed/3ca2/5CA6/CFC/58122c2cf16" instancepath="Operator1/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\ControleFontesDeRisco\ControleFontesDeRisco.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="EmitToCDS" type="bool" oid="!ed/3d26/5CA6/CFC/58122d451079" instancepath="Operator1/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\ControleFontesDeRisco\ControleFontesDeRisco.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SignalToLed" type="int" oid="!ed/3d08/5CA6/CFC/58122d2c1763" instancepath="Operator1/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\..\ControleFontesDeRisco\ControleFontesDeRisco.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="4" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

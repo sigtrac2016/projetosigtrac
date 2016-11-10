@@ -1,0 +1,64 @@
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-10-27T19:29:55
+** Command: scade -code "C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\ControleFontesDeRisco.etp" -root Operator1 -conf Simulation -build -all
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg_trace.xml
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_metrics.txt, line 0, character 0
+ ~Operator1.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1.c, line 0, character 0
+ ~Operator1.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_sensors.h, line 0, character 0
+ ~kcg_imported_functions.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_imported_functions.h, line 0, character 0
+ ~kcg_types.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_consts.c, line 0, character 0
+ ~config.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\config.txt, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\sc2c_integration_files.txt, line 0, character 0
+*** Generated Files Information (GENFIL): Glue Code Generated files
+ ~Operator1_standalone_exec.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_standalone_exec.c, line 0, character 0
+*** Generated Files Information (GENFIL): Standalone Executable Generated files
+ ~standalone
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\standalone, line 0, character 0
+*** Generated Files Information (GENFIL): SCADE UA Adaptor Generated files
+ ~Operator1_UA_1.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1.h, line 0, character 0
+ ~Operator1_UA_1.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1.c, line 0, character 0
+ ~Operator1_UA_1_constants.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1_constants.h, line 0, character 0
+ ~Operator1_UA_1_private.h
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1_private.h, line 0, character 0
+ ~Operator1_UA_1_private.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1_private.c, line 0, character 0
+ ~Operator1_UA_1_LAY_1.c
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1_LAY_1.c, line 0, character 0
+ ~Operator1_UA_1_uaadaptor.log
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Operator1_UA_1_uaadaptor.log, line 0, character 0
+*** Generated Files Information (GENFIL): Build Generated files
+ ~Makefile
+  at file C:\Users\SHIGEMURA-PC\SCADE\ControleFontesDeRisco\Simulation\Makefile, line 0, character 0
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-10-27T19:30:43
+** sc2c.log
+*************************************************************$
