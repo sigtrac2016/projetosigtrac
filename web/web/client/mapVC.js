@@ -4,8 +4,8 @@
 */
 
 
-function getSegmentColorByChar(c){
-    switch (c){
+function getSegmentColorByChar(c) {
+    switch (c) {
         case 'p':
             return "blue";
         case 'h':
@@ -18,58 +18,61 @@ function getSegmentColorByChar(c){
             return "#aaaa";
     }
 }
-function getNewId(){
-    var max=1;
+
+function getNewId() {
+    var max = 1;
     for (var key in jsonOfJsons) {
-      if (jsonOfJsons.hasOwnProperty(key)) {        
-        var json=jsonOfJsons[key];
-        if(json.id>max)
-            max=json.id;
-      }
-    }    
-    return max+1;
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            if (json.id > max)
+                max = json.id;
+        }
+    }
+    return max + 1;
 }
-function newJson(id, lat, lng){
-    var dt=new Date();
-    var date=dt.getFullYear()+"-"+dt.getMonth()+"-"+dt.getDay()+" "+
-        dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
-    var json={
-       "id": id, // gerado pelo BD
-       "titulo": "titulo1", // string vazia ou não
-       "segmento": 'p', // char com a letra referente ao segmento
-       "descricao": "descricao1", // string vazia ou não
-       "lat": lat, //latitude
-       "long": lng, //longitude
-       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
-       "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
-       "data_hora": date // formato padrão de timestamp
+
+function newJson(id, lat, lng) {
+    var dt = new Date();
+    var date = dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDay() + " " +
+        dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    var json = {
+        "id": id, // gerado pelo BD
+        "titulo": "titulo1", // string vazia ou não
+        "segmento": 'p', // char com a letra referente ao segmento
+        "descricao": "descricao1", // string vazia ou não
+        "lat": lat, //latitude
+        "long": lng, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": date // formato padrão de timestamp
     };
     return json;
 }
-function getJsonOfJsons(){    
-    var json1={
-       "id": 5, // gerado pelo BD
-       "titulo": "titulo1", // string vazia ou não
-       "segmento": 'p', // char com a letra referente ao segmento
-       "descricao": "descricao1", // string vazia ou não
-       "lat": -23.21, //latitude
-       "long": -45.87, //longitude
-       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
-       "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
-       "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp
+
+function getJsonOfJsons() {
+    var json1 = {
+        "id": 5, // gerado pelo BD
+        "titulo": "titulo1", // string vazia ou não
+        "segmento": 'p', // char com a letra referente ao segmento
+        "descricao": "descricao1", // string vazia ou não
+        "lat": -23.21, //latitude
+        "long": -45.87, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp
     };
-    var json2={
-       "id": 6, // gerado pelo BD
-       "titulo": "titulo2", // string vazia ou não
-       "segmento": 'h', // char com a letra referente ao segmento
-       "descricao": "descricao2", // string vazia ou não
-       "lat": -23.208, //latitude
-       "long": -45.87, //longitude
-       "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
-       "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
-       "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp
+    var json2 = {
+        "id": 6, // gerado pelo BD
+        "titulo": "titulo2", // string vazia ou não
+        "segmento": 'h', // char com a letra referente ao segmento
+        "descricao": "descricao2", // string vazia ou não
+        "lat": -23.208, //latitude
+        "long": -45.87, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp
     };
-    jsonOfJsons={"5":json1,"6":json2};
+    jsonOfJsons = { "5": json1, "6": json2 };
     return jsonOfJsons;
 }
 app.controller("mapVC", function($scope, $http, $compile) {
@@ -136,7 +139,21 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
-    $scope.createMarker = function(indexString, pos,color) {        
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            $scope.infowindow.setPosition(pos);
+            $scope.infowindow.setContent('Sua localização.');
+            $scope.map.setCenter(pos);
+        });
+    }
+
+    $scope.createMarker = function(indexString, pos, color) {
         var marker = new google.maps.Marker({
             position: pos,
             map: $scope.map,
@@ -155,15 +172,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.push(marker);
         $scope.updateHeatmap();
     }
-    var jsonOfJsons=getJsonOfJsons();
+    var jsonOfJsons = getJsonOfJsons();
 
     for (var key in jsonOfJsons) {
-      if (jsonOfJsons.hasOwnProperty(key)) {        
-        var json=jsonOfJsons[key];
-        var pos = {lat: json.lat , lng: json.long};        
-        var color =getSegmentColorByChar(json.segmento)
-        $scope.createMarker(key,pos, color);
-      }
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            var pos = { lat: json.lat, lng: json.long };
+            var color = getSegmentColorByChar(json.segmento)
+            $scope.createMarker(key, pos, color);
+        }
     }
     /*
     for (var i = 1; i <= len; i++) {
@@ -185,13 +202,13 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-        var newId=getNewId();
-        var indexString=newId.toString();
-        var lat=event.latLng.lat();
-        var lng=event.latLng.lng();                
-        jsonOfJsons[indexString]=newJson(newId,lat,lng);
+        var newId = getNewId();
+        var indexString = newId.toString();
+        var lat = event.latLng.lat();
+        var lng = event.latLng.lng();
+        jsonOfJsons[indexString] = newJson(newId, lat, lng);
 
-        $scope.createMarker(indexString,event.latLng, fillMarker());
+        $scope.createMarker(indexString, event.latLng, fillMarker());
     });
 
     /***********************************************
@@ -210,9 +227,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
         };
     }
 
-    $scope.colorMarker = function(id,color, segment) {
+    $scope.colorMarker = function(id, color, segment) {
         $scope.selection.setIcon(pinSymbol(color));
-        jsonOfJsons[id].segmento=segment;
+        jsonOfJsons[id].segmento = segment;
     }
 
     $scope.deleteMarker = function(param) {
@@ -222,21 +239,21 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.updateHeatmap();
     }
     $scope.genContentString = function(obj) {
-        var coor= {lat: obj.lat, lng: obj.long};
-        var id=obj.id.toString();
+        var coor = { lat: obj.lat, lng: obj.long };
+        var id = obj.id.toString();
         $scope.contentString = '<div id="content">' +
-            '<h1 >'+obj.titulo+'</h1>' +
+            '<h1 >' + obj.titulo + '</h1>' +
             '<div>' +
-            '<p><b>Horário de ocorrência: </b>'+ obj.data_hora  + '</p>' +
-            '<p><b>Coordenadas: </b>{' + coor.lat+', '+coor.lng + '}</p>' +
+            '<p><b>Horário de ocorrência: </b>' + obj.data_hora + '</p>' +
+            '<p><b>Coordenadas: </b>{' + coor.lat + ', ' + coor.lng + '}</p>' +
             '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
         if (segmento == 'global')
             $scope.contentString +=
             '<h4>Delegar segmento</h4>' +
-            '<button class="btn btn-primary" ng-click="colorMarker('+id+',\'blue\',\'p\')">Segmento 1</button> ' +
-            '<button class="btn btn-danger" ng-click="colorMarker('+id+',\'red\',\'h\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker('+id+',\'black\',\'f\')">Segmento 3</button> ' +
-            '<button class="btn btn-success" ng-click="colorMarker('+id+',\'green\',\'c\')">Segmento 4</button> ';
+            '<button class="btn btn-primary" ng-click="colorMarker(' + id + ',\'blue\',\'p\')">Segmento 1</button> ' +
+            '<button class="btn btn-danger" ng-click="colorMarker(' + id + ',\'red\',\'h\')">Segmento 2</button> ' +
+            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker(' + id + ',\'black\',\'f\')">Segmento 3</button> ' +
+            '<button class="btn btn-success" ng-click="colorMarker(' + id + ',\'green\',\'c\')">Segmento 4</button> ';
         $scope.contentString +=
             '<hr>' +
             '<h4>Comandos:</h4>' +
