@@ -91,6 +91,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         radius: 60
     });
 
+    // Initializes infowindow
+    $scope.infowindow = new google.maps.InfoWindow({
+        content: $scope.contentString
+    })
 
     /***********************************************
                     Toggle Heatmap
@@ -147,9 +151,17 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 lng: position.coords.longitude
             };
 
-            $scope.infowindow.setPosition(pos);
-            $scope.infowindow.setContent('Sua localização.');
+            var infoWindow = new google.maps.InfoWindow({ map: map });
+            infowindow.setPosition(pos);
+            infowindow.setContent('Sua localização.');
             $scope.map.setCenter(pos);
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: $scope.map,
+                draggable: false,
+                icon: pinSymbol('white')
+            });
         });
     }
 
@@ -190,11 +202,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
         var color =getSegmentColorByChar(json.segmento)
         $scope.createMarker(indexString,pos, color);
     }*/
-
-    // Initializes infowindow
-    $scope.infowindow = new google.maps.InfoWindow({
-        content: $scope.contentString
-    })
 
     /***********************************************
                 Creates new $scope.markers
