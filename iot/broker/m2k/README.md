@@ -2,7 +2,14 @@ Run
 ---
 
 ```
-docker run -it -h m2k --name m2k -e 'KAFKA=IP_ZOOKEEPER' -e 'MQTT=IP_MQTT' -d m2k
+docker run -it -h m2k --name m2k -e 'KAFKA=IP_ZOOKEEPER' -e 'MQTT=IP_MQTT' -d projetosigtrac/m2k
+```
+
+View Log
+---
+
+```
+docker logs -f mqtt
 ```
 
 Re-build
