@@ -96,6 +96,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
         content: $scope.contentString
     })
 
+    // Routes API
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    directionsDisplay.setMap($scope.map);
+
     /***********************************************
                     Toggle Heatmap
     ***********************************************/
@@ -185,6 +190,33 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }*/
 
     /***********************************************
+                    Routes Service
+    ***********************************************/
+    $scope.displayRoute = function() {
+        directionsService.route({
+            origin: $scope.my_position_marker.getPosition(),
+            destination: $scope.selection.getPosition(),
+            travelMode: google.maps.TravelMode.DRIVING
+        }, function(response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+                var route = response.routes[0];
+                var routeHTML = '';
+                // For each route, display summary information.
+                for (var i = 0; i < route.legs.length; i++) {
+                    var routeSegment = i + 1;
+                    routeHTML +=
+                        '<h4>Route Segment: ' + routeSegment + ' - ' +
+                        route.legs[i].distance.text + '</h4>' +
+                        '<b>From: </b>' + route.legs[i].start_address + '<br>' +
+                        '<b>To: </b>' + route.legs[i].end_address + '<br>';
+                }
+                $scope.infowindow.setContent(routeHTML);
+            } else window.alert('Directions request failed due to ' + status);
+        });
+    }
+
+    /***********************************************
                 Getting my position
     ***********************************************/
     // Try HTML5 geolocation.
@@ -201,6 +233,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 draggable: true,
                 icon: pinSymbol('white')
             });
+            $scope.my_position_marker = marker;
             $scope.openMyPosition(marker);
 
             marker.addListener('click', function(event) {
@@ -279,7 +312,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
             '<p><b>Horário de ocorrência: </b>' + obj.data_hora + '</p>' +
             '<p><b>Coordenadas: </b>{' + coor.lat.toFixed(3) + ', ' + coor.lng.toFixed(3) + '}    ' +
             '<b>Distância: </b>' + distance + ' km</p>' +
-            '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
+            '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a>' +
+            '<button class="btn btn-default" ng-click="displayRoute()">Calcular Rota</button></p>';
         if (segmento == 'global')
             $scope.contentString +=
             '<h4>Delegar segmento</h4>' +
@@ -288,10 +322,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
             '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker(' + id + ',\'black\',\'f\')">Segmento 3</button> ' +
             '<button class="btn btn-success" ng-click="colorMarker(' + id + ',\'green\',\'c\')">Segmento 4</button> ';
         $scope.contentString +=
-            '<hr>' +
             '<h4>Comandos:</h4>' +
             '<button class="btn btn-warning" ng-click="deleteMarker()">Alerta falso</button> ' +
-            '<button class="btn btn-default" ng-click="deleteMarker()">Alerta de Reforços</button>' +
+            '<button class="btn btn-default" ng-click="deleteMarker()">Reforços</button>' +
             '<button class="btn btn-danger" ng-click="deleteMarker()">Finalizar alerta</button> ' +
             '</div>' +
             '</div>';
