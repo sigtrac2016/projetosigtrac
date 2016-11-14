@@ -143,45 +143,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            $scope.my_position = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            var marker = new google.maps.Marker({
-                position: $scope.my_position,
-                map: $scope.map,
-                draggable: true,
-                icon: pinSymbol('white')
-            });
-            $scope.openMyPosition(marker);
-
-            marker.addListener('click', function(event) {
-                $scope.map.setCenter(marker.getPosition());
-                $scope.openMyPosition(marker);
-            });
-
-            google.maps.event.addListener(marker, 'dragend', function() {
-                $scope.my_position = {
-                    'lat': marker.getPosition().lat(),
-                    'lng': marker.getPosition().lng()
-                }
-                $scope.openMyPosition(marker);
-            });
-        });
-    }
-
-    $scope.openMyPosition = function(marker) {
-        $scope.infowindow.setPosition($scope.my_position);
-        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
-            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
-        $scope.infowindow.open($scope.map, marker);
-        $scope.map.setCenter($scope.my_position);
-    }
-
     $scope.createMarker = function(indexString, pos, color) {
         var marker = new google.maps.Marker({
             position: pos,
@@ -222,6 +183,48 @@ app.controller("mapVC", function($scope, $http, $compile) {
         var color =getSegmentColorByChar(json.segmento)
         $scope.createMarker(indexString,pos, color);
     }*/
+
+    /***********************************************
+                Getting my position
+    ***********************************************/
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.my_position = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var marker = new google.maps.Marker({
+                position: $scope.my_position,
+                map: $scope.map,
+                draggable: true,
+                icon: pinSymbol('white')
+            });
+            $scope.openMyPosition(marker);
+
+            marker.addListener('click', function(event) {
+                $scope.map.setCenter(marker.getPosition());
+                $scope.openMyPosition(marker);
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function() {
+                $scope.my_position = {
+                    'lat': marker.getPosition().lat(),
+                    'lng': marker.getPosition().lng()
+                }
+                $scope.openMyPosition(marker);
+            });
+        });
+    }
+
+    $scope.openMyPosition = function(marker) {
+        $scope.infowindow.setPosition($scope.my_position);
+        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
+            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
+        $scope.infowindow.open($scope.map, marker);
+        $scope.map.setCenter($scope.my_position);
+    }
 
     /***********************************************
                 Creates new $scope.markers
