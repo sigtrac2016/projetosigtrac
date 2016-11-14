@@ -9,7 +9,7 @@ View Log
 ---
 
 ```
-docker logs -f mqtt
+docker logs -f m2k
 ```
 
 Re-build
