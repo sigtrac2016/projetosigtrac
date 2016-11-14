@@ -1,0 +1,15 @@
+{
+  "name": "m2k",
+  "version": "1.0.0",
+  "description": "Bridge from mqtt to kafka brokers",
+  "author": "Luiz Coura <luizcoura@gmail.com>",
+  "main": "m2k.js",
+  "scripts": {
+    "start": "node m2k.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"mqtt": "latest",
+    "kafka-node": "latest"
+  }
+}
