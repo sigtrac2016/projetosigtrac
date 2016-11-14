@@ -191,12 +191,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
             icon: pinSymbol(color)
         });
         marker.addListener('click', function(event) {
-            $scope.genContentString(marker.obj);
+            $scope.genContentString(marker);
             $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
             $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile($scope.contentString)($scope));
+        });
+        google.maps.event.addListener(marker, 'dragend', function() {
+            $scope.updateHeatmap();
         });
         $scope.markers.push(marker);
         $scope.updateHeatmap();
@@ -262,8 +265,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
         $scope.updateHeatmap();
     }
-    $scope.genContentString = function(obj) {
-        var coor = { lat: obj.lat, lng: obj.long };
+    $scope.genContentString = function(marker) {
+        var coor = { lat: marker.position.lat(), lng: marker.position.lng() };
+        var obj = marker.obj;
         var id = obj.id.toString();
         var distance = getDistance($scope.my_position, coor).toFixed(2);
         $scope.contentString = '<div id="content">' +
