@@ -3,6 +3,78 @@
 ===========================================================================
 */
 
+
+function getSegmentColorByChar(c) {
+    switch (c) {
+        case 'p':
+            return "blue";
+        case 'h':
+            return "red";
+        case 'f':
+            return "black";
+        case 'c':
+            return "green";
+        default:
+            return "#aaaa";
+    }
+}
+
+function getNewId() {
+    var max = 1;
+    for (var key in jsonOfJsons) {
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            if (json.id > max)
+                max = json.id;
+        }
+    }
+    return max + 1;
+}
+
+function newJson(id, lat, lng) {
+    var dt = new Date();
+    var date = dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDay() + " " +
+        dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    var json = {
+        "id": id, // gerado pelo BD
+        "titulo": "titulo1", // string vazia ou não
+        "segmento": 'p', // char com a letra referente ao segmento
+        "descricao": "descricao1", // string vazia ou não
+        "lat": lat, //latitude
+        "long": lng, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": date // formato padrão de timestamp
+    };
+    return json;
+}
+
+function getJsonOfJsons() {
+    var json1 = {
+        "id": 5, // gerado pelo BD
+        "titulo": "titulo1", // string vazia ou não
+        "segmento": 'p', // char com a letra referente ao segmento
+        "descricao": "descricao1", // string vazia ou não
+        "lat": -23.21, //latitude
+        "long": -45.87, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp
+    };
+    var json2 = {
+        "id": 6, // gerado pelo BD
+        "titulo": "titulo2", // string vazia ou não
+        "segmento": 'h', // char com a letra referente ao segmento
+        "descricao": "descricao2", // string vazia ou não
+        "lat": -23.208, //latitude
+        "long": -45.87, //longitude
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+        "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+        "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp
+    };
+    jsonOfJsons = { "5": json1, "6": json2 };
+    return jsonOfJsons;
+}
 app.controller("mapVC", function($scope, $http, $compile) {
     /***********************************************
                 Initializes map and stuff
@@ -19,6 +91,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         radius: 60
     });
 
+    // Initializes infowindow
+    $scope.infowindow = new google.maps.InfoWindow({
+        content: $scope.contentString
+    })
 
     /***********************************************
                     Toggle Heatmap
@@ -67,33 +143,88 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.markers = [];
     $scope.contentString = "<div id='infowindow'></div>";
 
-    $scope.createMarker = function() {
+    $scope.createMarker = function(indexString, pos, color) {
         var marker = new google.maps.Marker({
-            position: positions[i],
+            position: pos,
             map: $scope.map,
             draggable: true,
-            icon: pinSymbol(colors[i])
+            obj: jsonOfJsons[indexString],
+            icon: pinSymbol(color)
         });
         marker.addListener('click', function(event) {
-            $scope.genContentString(event.latLng);
+            $scope.genContentString(marker);
             $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
             $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile($scope.contentString)($scope));
         });
+        google.maps.event.addListener(marker, 'dragend', function() {
+            $scope.updateHeatmap();
+        });
         $scope.markers.push(marker);
         $scope.updateHeatmap();
     }
+    var jsonOfJsons = getJsonOfJsons();
 
-    for (var i = 0; i < 7; i++) {
-        $scope.createMarker();
+    for (var key in jsonOfJsons) {
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            var pos = { lat: json.lat, lng: json.long };
+            var color = getSegmentColorByChar(json.segmento)
+            $scope.createMarker(key, pos, color);
+        }
+    }
+    /*
+    for (var i = 1; i <= len; i++) {
+        var indexString=i.toString();
+        var json=jsonOfJsons[indexString];
+        var pos = {lat: json.lat , lng: json.long};        
+        var color =getSegmentColorByChar(json.segmento)
+        $scope.createMarker(indexString,pos, color);
+    }*/
+
+    /***********************************************
+                Getting my position
+    ***********************************************/
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.my_position = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var marker = new google.maps.Marker({
+                position: $scope.my_position,
+                map: $scope.map,
+                draggable: true,
+                icon: pinSymbol('white')
+            });
+            $scope.openMyPosition(marker);
+
+            marker.addListener('click', function(event) {
+                $scope.map.setCenter(marker.getPosition());
+                $scope.openMyPosition(marker);
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function() {
+                $scope.my_position = {
+                    'lat': marker.getPosition().lat(),
+                    'lng': marker.getPosition().lng()
+                }
+                $scope.openMyPosition(marker);
+            });
+        });
     }
 
-    // Initializes infowindow
-    $scope.infowindow = new google.maps.InfoWindow({
-        content: $scope.contentString
-    })
+    $scope.openMyPosition = function(marker) {
+        $scope.infowindow.setPosition($scope.my_position);
+        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
+            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
+        $scope.infowindow.open($scope.map, marker);
+        $scope.map.setCenter($scope.my_position);
+    }
 
     /***********************************************
                 Creates new $scope.markers
@@ -101,22 +232,13 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-        var new_marker = new google.maps.Marker({
-            position: event.latLng,
-            map: $scope.map,
-            draggable: true,
-            icon: pinSymbol(fillMarker())
-        });
-        new_marker.addListener('click', function(event) {
-            $scope.genContentString(event.latLng);
-            $scope.map.setCenter(new_marker.getPosition());
-            $scope.selection = new_marker;
-            $scope.infowindow.setContent("<div id=\'infowindow\'></div>");
-            $scope.infowindow.open($scope.map, new_marker);
-            $("#infowindow").html($compile($scope.contentString)($scope));
-        });
-        $scope.markers.push(new_marker);
-        $scope.updateHeatmap();
+        var newId = getNewId();
+        var indexString = newId.toString();
+        var lat = event.latLng.lat();
+        var lng = event.latLng.lng();
+        jsonOfJsons[indexString] = newJson(newId, lat, lng);
+
+        $scope.createMarker(indexString, event.latLng, fillMarker());
     });
 
     /***********************************************
@@ -135,8 +257,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
         };
     }
 
-    $scope.colorMarker = function(color) {
+    $scope.colorMarker = function(id, color, segment) {
         $scope.selection.setIcon(pinSymbol(color));
+        jsonOfJsons[id].segmento = segment;
     }
 
     $scope.deleteMarker = function(param) {
@@ -145,21 +268,25 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
         $scope.updateHeatmap();
     }
-
-    $scope.genContentString = function(coor) {
+    $scope.genContentString = function(marker) {
+        var coor = { lat: marker.position.lat(), lng: marker.position.lng() };
+        var obj = marker.obj;
+        var id = obj.id.toString();
+        var distance = getDistance($scope.my_position, coor).toFixed(2);
         $scope.contentString = '<div id="content">' +
-            '<h1 >Alerta de Incêndio</h1>' +
+            '<h1 >' + obj.titulo + '</h1>' +
             '<div>' +
-            '<p><b>Horário de ocorrência: </b> 13:30h</p>' +
-            '<p><b>Coordenadas: </b>' + coor + '</p>' +
+            '<p><b>Horário de ocorrência: </b>' + obj.data_hora + '</p>' +
+            '<p><b>Coordenadas: </b>{' + coor.lat.toFixed(3) + ', ' + coor.lng.toFixed(3) + '}    ' +
+            '<b>Distância: </b>' + distance + ' km</p>' +
             '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
         if (segmento == 'global')
             $scope.contentString +=
             '<h4>Delegar segmento</h4>' +
-            '<button class="btn btn-primary" ng-click="colorMarker(\'blue\')">Segmento 1</button> ' +
-            '<button class="btn btn-danger" ng-click="colorMarker(\'red\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" ng-click="colorMarker(\'black\')">Segmento 3</button> ' +
-            '<button class="btn btn-success" ng-click="colorMarker(\'green\')">Segmento 4</button> ';
+            '<button class="btn btn-primary" ng-click="colorMarker(' + id + ',\'blue\',\'p\')">Segmento 1</button> ' +
+            '<button class="btn btn-danger" ng-click="colorMarker(' + id + ',\'red\',\'h\')">Segmento 2</button> ' +
+            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker(' + id + ',\'black\',\'f\')">Segmento 3</button> ' +
+            '<button class="btn btn-success" ng-click="colorMarker(' + id + ',\'green\',\'c\')">Segmento 4</button> ';
         $scope.contentString +=
             '<hr>' +
             '<h4>Comandos:</h4>' +
@@ -221,7 +348,7 @@ function reload_js(src) {
 }
 
 function loadMap() {}
-
+/*
 var colors = [
     "#aaa", "blue", "red", "green", "black", "red", "red", "red", "red"
 ]
@@ -236,7 +363,7 @@ var positions = [
     { lat: -23.20, lng: -45.89 },
     { lat: -23.21, lng: -45.89 }
 ]
-
+*/
 // ITA position
 var my_position = {
     lat: -23.21,
