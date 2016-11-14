@@ -146,24 +146,40 @@ app.controller("mapVC", function($scope, $http, $compile) {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
+            $scope.my_position = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
             var marker = new google.maps.Marker({
-                position: pos,
+                position: $scope.my_position,
                 map: $scope.map,
-                draggable: false,
+                draggable: true,
                 icon: pinSymbol('white')
             });
+            $scope.openMyPosition(marker);
 
-            $scope.infowindow.setPosition(pos);
-            $scope.infowindow.setContent('Sua localização.');
-            $scope.infowindow.open($scope.map, marker);
-            $scope.map.setCenter(pos);
+            marker.addListener('click', function(event) {
+                $scope.map.setCenter(marker.getPosition());
+                $scope.openMyPosition(marker);
+            });
 
+            google.maps.event.addListener(marker, 'dragend', function() {
+                $scope.my_position = {
+                    'lat': marker.getPosition().lat(),
+                    'lng': marker.getPosition().lng()
+                }
+                $scope.openMyPosition(marker);
+            });
         });
+    }
+
+    $scope.openMyPosition = function(marker) {
+        $scope.infowindow.setPosition($scope.my_position);
+        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
+            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
+        $scope.infowindow.open($scope.map, marker);
+        $scope.map.setCenter($scope.my_position);
     }
 
     $scope.createMarker = function(indexString, pos, color) {
@@ -249,11 +265,13 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $scope.genContentString = function(obj) {
         var coor = { lat: obj.lat, lng: obj.long };
         var id = obj.id.toString();
+        var distance = getDistance($scope.my_position, coor).toFixed(2);
         $scope.contentString = '<div id="content">' +
             '<h1 >' + obj.titulo + '</h1>' +
             '<div>' +
             '<p><b>Horário de ocorrência: </b>' + obj.data_hora + '</p>' +
-            '<p><b>Coordenadas: </b>{' + coor.lat + ', ' + coor.lng + '}</p>' +
+            '<p><b>Coordenadas: </b>{' + coor.lat.toFixed(3) + ', ' + coor.lng.toFixed(3) + '}    ' +
+            '<b>Distância: </b>' + distance + ' km</p>' +
             '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
         if (segmento == 'global')
             $scope.contentString +=
