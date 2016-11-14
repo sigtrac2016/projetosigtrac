@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "39079933813:123456:Milton", "04117674374:111111:Jose"
+            "39079933813:123456:Milton:true", "04117674374:111111:Jose:false"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -283,6 +283,7 @@ public class LoginActivity extends AppCompatActivity {
         private String mCPF;
         private String mPassword;
         private String mName;
+        private boolean bombeiros = false;
         private Context mContext;
 
         UserLoginTask(String cpf, String password, Context context) {
@@ -312,6 +313,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (pieces[0].equals(mCPF)) {
                     // Account exists, return true if the password matches.
                     mName = pieces[2];
+                    bombeiros = pieces[3].equals("true");
                     return pieces[1].equals(mPassword);
                 }
             }
@@ -330,6 +332,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(this.mContext, UserActivity.class);
                 intent.putExtra("CPF", this.mCPF);
                 intent.putExtra("NOME", this.mName);
+                intent.putExtra("BOMBEIROS", String.valueOf(bombeiros));
                 startActivity(intent);
             } else {
                 // Restrict access
@@ -344,6 +347,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(this.mContext, UserActivity.class);
                     intent.putExtra("CPF", this.mCPF);
                     intent.putExtra("NOME", "-1");
+                    intent.putExtra("BOMBEIROS", "false");
                     startActivity(intent);
                 }
             }

@@ -13,6 +13,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +23,10 @@ public class UserActivity extends AppCompatActivity {
 
     private String CPF;
     private String Name;
+    private boolean bombeiros;
 
     private TextView mTitle;
+    private Button mBuscaButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +38,20 @@ public class UserActivity extends AppCompatActivity {
         Intent intent = getIntent();
         CPF = intent.getStringExtra("CPF");
         Name = intent.getStringExtra("NOME");
+        bombeiros = intent.getStringExtra("BOMBEIROS").equals("true");
 
         if(Name.equals("-1"))
             usuarioRestrito = false;
 
         // Loading UI elements
         mTitle = (TextView) findViewById(R.id.title_restrictedUsers);
+        mBuscaButton = (Button) findViewById(R.id.buscaButton);
+
+        if(bombeiros) {
+            mBuscaButton.setVisibility(View.VISIBLE);
+        } else {
+            mBuscaButton.setVisibility(View.INVISIBLE);
+        }
 
         // Setting welcome text
         if(usuarioRestrito)
@@ -83,6 +94,11 @@ public class UserActivity extends AppCompatActivity {
 
     public void enviarAlerta(View view) {
         Intent intent = new Intent(this, SendAlertActivity.class);
+        startActivity(intent);
+    }
+
+    public void buscaClicked(View view) {
+        Intent intent = new Intent(this, RegistroVitimaActivity.class);
         startActivity(intent);
     }
 

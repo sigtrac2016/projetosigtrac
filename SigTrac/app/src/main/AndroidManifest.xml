@@ -27,7 +27,9 @@
         <activity android:name=".SendAlertActivity" />
         <activity android:name=".AlertsListActivity" />
         <activity android:name=".ShowAlert" />
-        <activity android:name=".EnviarFotoActivity"></activity>
+        <activity android:name=".EnviarFotoActivity" />
+        <activity android:name=".RegistroVitimaActivity" />
+        <activity android:name=".RegistroVitima2Activity"></activity>
     </application>
 
 </manifest>
