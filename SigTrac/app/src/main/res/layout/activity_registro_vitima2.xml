@@ -35,25 +35,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableRight="@drawable/estado_black"/>
+            android:drawableRight="@drawable/estado_black"
+            android:onClick="corPreta"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableRight="@drawable/estado_verde"/>
+            android:drawableRight="@drawable/estado_verde"
+            android:onClick="corVerde"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableRight="@drawable/estado_amarelo"/>
+            android:drawableRight="@drawable/estado_amarelo"
+            android:onClick="corAmarela"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableRight="@drawable/estado_vermelho"/>
+            android:drawableRight="@drawable/estado_vermelho"
+            android:onClick="corVermelha"/>
 
     </RadioGroup>
 

@@ -35,13 +35,15 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Sim"/>
+            android:text="Sim"
+            android:onClick="deambulandoSim"/>
 
         <RadioButton
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Não"/>
+            android:text="Não"
+            android:onClick="deambulandoNao"/>
 
     </RadioGroup>
 
@@ -54,6 +56,7 @@
         android:text="Respiraçao em RPM"/>
 
     <EditText
+        android:id="@+id/vitimaRespiracao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -76,13 +79,15 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Sim"/>
+            android:text="Sim"
+            android:onClick="viasAereasSim"/>
 
         <RadioButton
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Não"/>
+            android:text="Não"
+            android:onClick="viasAereasNao"/>
 
     </RadioGroup>
 
@@ -95,6 +100,7 @@
         android:text="Reenchimento Capilar"/>
 
     <EditText
+        android:id="@+id/vitimaCapilar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -116,17 +122,19 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Sim"/>
+            android:text="Sim"
+            android:onClick="pulsoSim"/>
 
         <RadioButton
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="Não"/>
+            android:text="Não"
+            android:onClick="pulsoNao"/>
 
     </RadioGroup>
 
-    <!-- Pulso Radial -->
+    <!-- Cumpre Ordens -->
 
     <TextView
         android:layout_height="wrap_content"
