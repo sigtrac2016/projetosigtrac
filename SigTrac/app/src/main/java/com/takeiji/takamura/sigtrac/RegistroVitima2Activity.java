@@ -156,6 +156,9 @@ public class RegistroVitima2Activity extends AppCompatActivity {
         } catch (JSONException er) {
             Log.v("REGISTRO", "ERRO na criacao do JSON");
         }
+
+        Toast.makeText(RegistroVitima2Activity.this, "Vítima registrada", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     public void cancelar(View view) {
