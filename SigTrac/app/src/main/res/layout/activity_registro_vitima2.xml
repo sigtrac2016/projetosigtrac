@@ -71,32 +71,137 @@
         android:textSize="15dp"/>
 
     <EditText
+        android:id="@+id/vitimaRFID"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" />
 
     <!-- DATA e HORARIO -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Data"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/quandoTEXT"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:onClick="quandoClicked"
+                android:editable="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Hora"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/horaTEXT"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:onClick="horaClicked"
+                android:editable="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Localizacao -->
+
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Quando"
+        android:text="Localização"
         android:textSize="15dp"/>
 
-    <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
-
-    <!-- DATA e HORARIO -->
-
-    <TextView
+    <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Onde"
-        android:textSize="15dp"/>
+        android:orientation="horizontal">
 
-    <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Latitude"
+                android:textSize="10dp"/>
+
+            <EditText
+                android:id="@+id/vitimaLatitude"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Longitude"
+                android:textSize="10dp"/>
+
+            <EditText
+                android:id="@+id/vitimaLongitude"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="Posiçao Atual"
+                android:textSize="10dp"/>
+
+            <CheckBox
+                android:id="@+id/vitimaCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setarPosicaoAtual"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <!--Comentario -->
 
@@ -107,6 +212,7 @@
         android:textSize="15dp"/>
 
     <EditText
+        android:id="@+id/vitimaComentario"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" />
 

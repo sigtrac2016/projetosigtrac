@@ -9,10 +9,10 @@ import android.widget.EditText;
 public class RegistroVitimaActivity extends AppCompatActivity {
 
     // parte do REGISTRO que sera enviado na proxima tela
-    private boolean deambulando;
-    private boolean viasAereas;
-    private boolean pulsoRadial;
-    private boolean cumpreOrdens;
+    private boolean deambulando = false;
+    private boolean viasAereas = false;
+    private boolean pulsoRadial = false;
+    private boolean cumpreOrdens = false;
 
     // UI
     private EditText mRespiracao;
