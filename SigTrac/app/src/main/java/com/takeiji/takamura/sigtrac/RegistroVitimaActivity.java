@@ -80,9 +80,10 @@ public class RegistroVitimaActivity extends AppCompatActivity {
         intent.putExtra("ORDENS", String.valueOf(cumpreOrdens));
 
         startActivity(intent);
+        finish();
     }
 
     public void cancelar(View view) {
-
+        finish();
     }
 }

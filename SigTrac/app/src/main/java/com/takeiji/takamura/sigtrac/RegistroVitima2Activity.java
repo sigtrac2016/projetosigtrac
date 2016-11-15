@@ -159,7 +159,7 @@ public class RegistroVitima2Activity extends AppCompatActivity {
     }
 
     public void cancelar(View view) {
-
+        finish();
     }
 
     // GPS
