@@ -1,0 +1,1 @@
+*/1 * * * * root /usr/local/bin/node /lm35/lm35.js > /var/log/cron.log 2>&1

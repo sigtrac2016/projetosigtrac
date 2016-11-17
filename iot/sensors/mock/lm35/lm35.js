@@ -38,16 +38,15 @@ var sensors = [
   ["68a599c2-ac5b-11e6-80f5-76304dec7eb7",-23.20521609,-45.90796705,572.93,1]
 ]
 
-var DHT11 = function(uuid, timestamp, value, location) {
+var LM35 = function(uuid, timestamp, value, location) {
   this.uuid = uuid
   this.timestamp = timestamp
   this.value = value
   this.location = location
 }
 
-var Value = function(temperature, humidity) {
+var Value = function(temperature) {
   this.temperature = temperature
-  this.humidity = humidity
 }
 
 var Location = function(latitude, longitude, altidude) {
@@ -63,9 +62,9 @@ var random = function(min, max) {
 var timestamp = moment().valueOf()
 
 sensors.forEach(function(entry) {
-  var value = new Value(random((20 * entry[4]), (21 * entry[4])), random((10 * entry[4]), (11 * entry[4])))
+  var value = new Value(random((20 * entry[4]), (21 * entry[4])))
   var location = new Location(entry[1], entry[2], entry[3])
-  var sensor = new DHT11(entry[0], timestamp, value, location)
+  var sensor = new LM35(entry[0], timestamp, value, location)
 
   client.publish(sensor.uuid, JSON.stringify(sensor))
 })
