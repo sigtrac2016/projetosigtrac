@@ -26,6 +26,10 @@ public class RegistroVitimaActivity extends AppCompatActivity {
 
         mRespiracao = (EditText) findViewById(R.id.vitimaRespiracao);
         mCapilar = (EditText) findViewById(R.id.vitimaCapilar);
+
+        // Default
+        mRespiracao.setText("30");
+        mCapilar.setText("Normal");
     }
 
     // DEAMBULANDO
