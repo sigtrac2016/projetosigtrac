@@ -5,7 +5,6 @@ api:
     - "8080:8080"
   links:
     - mongodb
-    - mongodb:mongodb.cloud66.local
   environment:
     - NODE_ENV=development
     - MONGODB_ADDRESS=mongodb
@@ -14,14 +13,9 @@ mqtt-client:
   command: npm start
   links:
     - api
-    - mqtt-broker
   environment:
     - NODE_ENV=development
     - API_ADDRESS=api
-    - MQTT_ADDRESS=mqtt-broker
-mqtt-broker:
-  image: projetosigtrac/mosquitto
-  ports:
-    - "1883:1883"
+    - MQTT_ADDRESS=52.67.204.136
 mongodb:
   image: mongo
