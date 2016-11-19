@@ -37,7 +37,13 @@ var rad = function(x) {
     return x * Math.PI / 180;
 };
 
+var checkUndefined = function(p1, p2) {
+    return p1 == undefined || p2 == undefined ||
+        p1.lat == undefined || p1.lng == undefined ||
+        p2.lat == undefined || p2.lng == undefined;
+}
 var getDistance = function(p1, p2) {
+    if (checkUndefined(p1, p2)) return 0;
     var R = 6378137; // Earth’s mean radius in meter
     var dLat = rad(p2.lat - p1.lat);
     var dLong = rad(p2.lng - p1.lng);
