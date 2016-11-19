@@ -2,12 +2,13 @@ api:
   build: ./server
   command: npm start
   ports:
-    - "8080:8080"
+    - "80:8080"
   links:
     - mongodb
   environment:
     - NODE_ENV=development
     - MONGODB_ADDRESS=mongodb
+  restart: always
 mqtt-client:
   build: ./mqtt/Client
   command: npm start
@@ -17,5 +18,7 @@ mqtt-client:
     - NODE_ENV=development
     - API_ADDRESS=api
     - MQTT_ADDRESS=52.67.204.136
+  restart: always
 mongodb:
   image: mongo
+  restart: always
