@@ -1,0 +1,63 @@
+<html>
+  <head>
+  	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <title>Lista de pacientes</title>
+  </head>
+  <body>
+    <h1>Lista de pacientes</h1>
+    <div>
+    	<table>
+    		<thead>
+		        <tr>
+		          <th>Nome</th>
+		          <th>Manchester</th>
+		          <th>Pressão<br>sistólica</th>
+		          <th>Pressão<br>diastólica</th>
+		          <th>Oximetria</th>
+		          <th>Frequência<br>Respiratória</th>
+		          <th>Frequência<br>Cardíaca</th>
+		          <th>Temperatura<br>Corporal</th>
+		        </tr>    			
+    		</thead>
+    		<tbody>
+		    {% for pacient in pacients %}
+		    	<tr>
+			    	<td>{{ pacient.name }}</td>
+			    	<td>{{ pacient.manchester }}</td>
+			    	<td>
+				    	{% for pressao in pacient.pressaoSistolica %}
+				    		{{ pressao }}, 
+				    	{% endfor %}
+				    </td>
+			    	<td>
+				    	{% for pressao in pacient.pressaoDiastolica %}
+				    		{{ pressao }}, 
+				    	{% endfor %}
+				    </td>
+			    	<td>
+				    	{% for oximetria in pacient.oximetria %}
+				    		{{ oximetria }}, 
+				    	{% endfor %}
+				    </td>
+			    	<td>
+				    	{% for frequencia in pacient.frequenciaRespiratoria %}
+				    		{{ frequencia }}, 
+				    	{% endfor %}
+				    </td>
+			    	<td>
+				    	{% for frequencia in pacient.frequenciaCardiaca %}
+				    		{{ frequencia }}, 
+				    	{% endfor %}
+				    </td>
+			    	<td>
+				    	{% for temperatura in pacient.temperaturaCorporal %}
+				    		{{ temperatura }}, 
+				    	{% endfor %}
+				    </td>
+		    	</tr>
+		    {% endfor %}
+		    </tbody>
+    	</table>
+    </div>
+  </body>
+</html>
