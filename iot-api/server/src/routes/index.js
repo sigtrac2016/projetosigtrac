@@ -20,6 +20,7 @@ var router = Express.Router();
 	}
 }
 */
+index = [];
 
 var apiDefinition = [
 	{
@@ -46,7 +47,20 @@ var apiDefinition = [
 
 
 _.forEach(apiDefinition, function(api){
+	var Model = require(api.model);
+	attributes = {}
+	paths = Model.schema.paths
+	_.forEach(paths, function(path){
+		attributes[path.path] = {"instance": path.instance, "options": path.options} 
+	})
+	index.push({	"route": api.route,
+					"model": attributes
+				});
 	crud(router, api.route, api.model, api.config);
+});
+
+router.get('/', function(req, res){
+	res.send(index);
 });
 
 

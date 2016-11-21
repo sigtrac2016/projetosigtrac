@@ -15,7 +15,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.db[app.settings.env]);/*,function(){
     mongoose.connection.db.dropDatabase();
  });*/
-
+/*mongoose.connect("mongodb://sigadmin:sigadmin@ds159527.mlab.com:59527/sig-trac_dev");*/
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
