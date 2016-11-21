@@ -3,6 +3,7 @@ package com.ts02.sigtrac.healthcare;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -27,7 +28,6 @@ import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestFactory;
 import com.google.api.client.http.HttpRequestInitializer;
-import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpResponseException;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.apache.ApacheHttpTransport;
@@ -38,7 +38,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     //private static final String API_KEY = "AIzaSyDirNigz--247ox9psR7SJad_WK3Hd1Z48";
-    private static final String API_KEY = "AIzaSyB3pm2cjHzqA6cv9-r0MnQWjUZ1sYyvHm0";
+    private static final String API_KEY = "AIzaSyA1zhIj-Eze7ts6K8AsNPBk2mxI8jbbObM";
     private static final String PLACES_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/search/json?";
     private static final boolean PRINT_AS_STRING = false;
     private static final HttpTransport transport = new ApacheHttpTransport();
@@ -56,6 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         try {
             performSearch();
@@ -94,13 +95,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             HttpRequest request = httpRequestFactory.buildGetRequest(new GenericUrl(PLACES_SEARCH_URL));
             request.url.put("key", API_KEY);
 
-
-            request.url.put("location", -23.2106637 + "," + -45.8778349);
+            double lat = -23.210664;
+            double lng = -45.875646;
+            request.url.put("location", String.valueOf(lat) + "," +  String.valueOf(lng) );
             request.url.put("radius", 500);
             request.url.put("sensor", "false");
-            AsyncTask<HttpRequest, Void, HttpResponse> response = new RetrieveFeedTask().execute(request);
+            Log.d("API CLIENT", request.url.toString());
+            AsyncTask<HttpRequest, Void, PlacesList> response = new RetrieveFeedTask().execute(request);
+            for (int i = 0 ; i < 10000000 ; i++){
 
-            if (PRINT_AS_STRING) {
+            }
+            response.get();
+            //Toast.makeText(this , response.toString() , Toast.LENGTH_LONG);
+
+            //if ( response == null) {
+            //    Log.d("GOOGLE API","NAO ESTA RESPONDENDO");
+            //}
+            /*if (PRINT_AS_STRING) {
+                Log.d("API CLIENT", response.get().statusMessage);
                 Log.d("API CLIENT", response.get().parseAsString());
             } else {
 
@@ -109,7 +121,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 for (Object place : places.results) {
                     Log.d("API CLIENT", (String) place);
                 }
-            }
+            }*/
 
 
         } catch (HttpResponseException e) {
@@ -150,11 +162,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //if (location != null) {
         //   onLocationChanged(location);
         //}
-        locationManager.requestLocationUpdates(bestProvider, 20000, 0, (android.location.LocationListener) this);
+        locationManager.requestLocationUpdates(bestProvider, 20000, 0, new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                LatLng ita = new LatLng(location.getLatitude(), location.getLongitude());
+                //double lat = -23.210664;
+                //double lng = -45.875646;
+                //LatLng ita = new LatLng(-23.2106637, -45.8778349);
+                mMap.addMarker(new MarkerOptions().position(ita).title("Localização atual"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(ita));
+                mMap.getMaxZoomLevel();
+            }
+
+            @Override
+            public void onStatusChanged(String s, int i, Bundle bundle) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String s) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String s) {
+
+            }
+        });
         // Add a marker in Sydney and move the camera
-        LatLng current = new LatLng(location.getLatitude(), location.getLongitude());
-        mMap.addMarker(new MarkerOptions().title("Localização atual"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(current));
+        LatLng ita = new LatLng(location.getLatitude(), location.getLongitude());
+        //double lat = -23.210664;
+        //double lng = -45.875646;
+        //LatLng ita = new LatLng(-23.2106637, -45.8778349);
+        mMap.addMarker(new MarkerOptions().position(ita).title("Localização atual"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(ita));
         mMap.getMaxZoomLevel();
 
     }
