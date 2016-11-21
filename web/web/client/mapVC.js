@@ -222,16 +222,16 @@ app.controller("mapVC", function($scope, $http, $compile) {
     /*********************************************** 
                 Getting my position 
     ***********************************************/
-    // Try HTML5 geolocation. 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            $scope.myPositionMarker({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            });
-        });
-    } else $scope.myPositionMarker(my_position);
 
+    $scope.openMyPosition = function(marker) {
+        $scope.infowindow.setPosition($scope.my_position);
+        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
+            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
+        $scope.infowindow.open($scope.map, marker);
+        $scope.map.setCenter($scope.my_position);
+    }
+
+    // My position marker
     $scope.myPositionMarker = function(my_position) {
         $scope.my_position = my_position;
         var marker = new google.maps.Marker({
@@ -257,13 +257,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
         });
     }
 
-    $scope.openMyPosition = function(marker) {
-        $scope.infowindow.setPosition($scope.my_position);
-        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
-            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
-        $scope.infowindow.open($scope.map, marker);
-        $scope.map.setCenter($scope.my_position);
-    }
+    // Try HTML5 geolocation. 
+    if (navigator.geolocation && Object.keys(navigator.geolocation).length > 0) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.myPositionMarker({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            });
+        });
+    } else $scope.myPositionMarker(my_position);
 
     /***********************************************/
 
@@ -563,6 +565,6 @@ var positions2 = [
 
 // ITA position
 var my_position = {
-    lat: -23.21,
-    lng: -45.87
+    lat: -23.20,
+    lng: -45.86
 };
