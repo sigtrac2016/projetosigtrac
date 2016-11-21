@@ -83,6 +83,13 @@ app.directive('menu', function() {
     };
 });
 
+app.directive('menugen', function() {
+    return {
+        restrict: "E",
+        templateUrl: "menuGen.html"
+    };
+});
+
 app.controller("mapVC", function($scope, $http, $compile) {
 
     /***********************************************
@@ -406,43 +413,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
 
     $scope.genContentString2 = function(coor) {
-        var coor = { lat: coor.lat(), lng: coor.lng() };
-        var distance = getDistance($scope.my_position, coor).toFixed(2);
-        $scope.contentString = '<div id="content">' +
-            '<h4>{{ genericPointModel.titulo }}' +
-            '<button ng-if="genericPointModel.segmento==\'P\'" class="btn btn-primary">POLICE DEPARTMENT</button>' +
-            '<button ng-if="genericPointModel.segmento==\'H\'" class="btn btn btn-danger">HEALTH CARE</button>' +
-            '<button ng-if="genericPointModel.segmento==\'F\'" class="btn btn btn-default">FIRE DEPARTMENT</button>' +
-            '<button ng-if="genericPointModel.segmento==\'C\'" class="btn btn btn-success">CIVIL DEFENSE</button>' +
-            '</h4>' +
-            '<textarea readonly ng-model="ocurrenceModel.descricao" rows="2" cols="90">' +
-            '</textarea>' +
-            '<p><b>Horário de ocorrência: </b> 13:30h&nbsp;&nbsp' +
-            '<b>Coordenadas: </b>{' + coor.lat.toFixed(3) + ', ' + coor.lng.toFixed(3) + '}    ' +
-            '<b>Distância: </b>' + distance + ' km</p>' +
-            '<p><a href="{{ocurrenceModel.foto}}">Fotos do alerta</a> ' +
-            '<button class="btn btn-default" ng-click="displayRoute()">Calcular Rota</button></p>';;
-        if (segmento == 'global')
-            $scope.contentString +=
-            '<p><b>Entrada Operador:</b></p>' +
-            '<textarea ng-model="ocurrenceModel.feedback" rows="2" cols="90">' +
-            '</textarea>' +
-            '<h4>Comandos:</h4>' +
-            '<b>Status:</b>&nbsp;&nbsp;&nbsp;&nbsp' +
-            '<select class="selectpicker" ng-model="ocurrenceModel.status">' +
-            '<option value="nao-iniciado">Não Iniciado</option>' +
-            '<option value="iniciado">Iniciado</option>' +
-            '<option value="cancelado">Cancelado</option>' +
-            '<option value="reforcos">Reforços</option>' +
-            '<option value="finalizado">Finalizadp</option>' +
-            '</select>';
-        $scope.contentString +=
-            //'<button class="btn btn-warning" ng-click="deleteMarker()">Alerta falso</button> ' +
-            //'<button class="btn btn-default" ng-click="deleteMarker()">Alerta de Reforços</button>' +
-            '&nbsp;&nbsp;&nbsp;&nbsp<button class="btn btn-default" ng-click="sendOccurrence()">Salvar</button> ' +
-            '<button class="btn btn-danger" ng-click="deleteMarker()">Finalizar alerta</button> ' +
-            '</div>' +
-            '</div>';
+        $scope.coor = { lat: coor.lat(), lng: coor.lng() };
+        $scope.distance = getDistance($scope.my_position, $scope.coor).toFixed(2);
+        $scope.segmento = segmento;
+        $scope.contentString = '<menugen/>';
     }
 
 
