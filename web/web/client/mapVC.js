@@ -147,10 +147,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         });
         marker.addListener('click', function(event) {
             $scope.getDistance(marker.position);
-            $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile('<menu/>')($scope));
+            $scope.map.setCenter(marker.getPosition());
         });
         google.maps.event.addListener(marker, 'dragend', function() {
             $scope.updateHeatmap();
@@ -190,8 +190,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
             if (status === google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(response);
                 $scope.route = response.routes[0].legs;
-                $scope.map.setCenter($scope.selection.getPosition());
                 $("#infowindow").html($compile('<route/>')($scope));
+                $scope.map.setCenter($scope.selection.getPosition());
             } else alert('Directions request failed due to ' + status);
         });
     }
@@ -202,7 +202,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.openMyPosition = function(marker) {
         $scope.getDistance(marker.position);
-        $scope.infowindow.setPosition(marker.getPosition());
         $scope.infowindow.open($scope.map, marker);
         $("#infowindow").html($compile('<position/>')($scope));
         $scope.map.setCenter(marker.getPosition());
@@ -221,7 +220,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.openMyPosition(marker);
 
         marker.addListener('click', function(event) {
-            $scope.map.setCenter(marker.getPosition());
             $scope.openMyPosition(marker);
         });
 
@@ -278,10 +276,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         });
         marker.addListener('click', function(event) {
             $scope.getDistance(event.latLng);
-            $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile('<menugen/>')($scope));
+            $scope.map.setCenter(marker.getPosition());
         });
         $scope.markers.push(marker);
     }
@@ -308,11 +306,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
         });
         new_marker.addListener('click', function(event) {
             $scope.getDistance(new_marker.position);
-            $scope.map.setCenter(new_marker.getPosition());
             $scope.selection = new_marker;
             $scope.infowindow.setContent("<div id='infowindow'></div>");
             $scope.infowindow.open($scope.map, new_marker);
             $("#infowindow").html($compile('<menu/>')($scope));
+            $scope.map.setCenter(new_marker.getPosition());
         });
         $scope.markers.push(new_marker);
         google.maps.event.addListener(new_marker, 'dragend', function() {
