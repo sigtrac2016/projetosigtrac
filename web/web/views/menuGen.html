@@ -11,7 +11,7 @@
         <b>Coordenadas: </b>{ {{coor.lat.toFixed(3)}} , {{coor.lng.toFixed(3)}} }
         <b>Distância: </b> {{distance}} km</p>
     <p><a href="{{ocurrenceModel.foto}}">Fotos do alerta</a>
-        <button class="btn btn-default" ng-click="displayRoute()">Calcular Rota</button></p>;;
+        <button class="btn btn-default" ng-click="displayRoute()">Calcular Rota</button></p>
 
     <span ng-if="segmento=='global'">
             <p><b>Entrada Operador:</b></p> 
@@ -24,7 +24,7 @@
             <option value="iniciado">Iniciado</option> 
             <option value="cancelado">Cancelado</option> 
             <option value="reforcos">Reforços</option> 
-            <option value="finalizado">Finalizadp</option> 
+            <option value="finalizado">Finalizado</option> 
             </select>;
         </span> &nbsp;&nbsp;&nbsp;&nbsp
     <button class="btn btn-default" ng-click="sendOccurrence()">Salvar</button>
