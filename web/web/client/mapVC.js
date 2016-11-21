@@ -8,6 +8,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
     /***********************************************
                 Initializes map and stuff
     ***********************************************/
+	
+	
     // Initializes map
     $scope.map = new google.maps.Map(document.getElementById("map"), {
         center: my_position,
