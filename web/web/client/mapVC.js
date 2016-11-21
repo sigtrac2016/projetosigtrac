@@ -4,32 +4,7 @@
 ===========================================================================
 */
 
-function getSegmentColorByChar(c) {
-    switch (c) {
-        case 'p':
-            return "blue";
-        case 'h':
-            return "red";
-        case 'f':
-            return "black";
-        case 'c':
-            return "green";
-        default:
-            return "#aaaa";
-    }
-}
 
-function getNewId() {
-    var max = 1;
-    for (var key in jsonOfJsons) {
-        if (jsonOfJsons.hasOwnProperty(key)) {
-            var json = jsonOfJsons[key];
-            if (json.id > max)
-                max = json.id;
-        }
-    }
-    return max + 1;
-}
 
 function newJson(id, lat, lng) {
     var dt = new Date();
@@ -76,26 +51,19 @@ function getJsonOfJsons() {
     return jsonOfJsons;
 }
 
-app.directive('menu', function() {
-    return {
-        restrict: "E",
-        templateUrl: "menu.html"
-    };
-});
+/* Templates used to render HTML */
 
-app.directive('menugen', function() {
-    return {
-        restrict: "E",
-        templateUrl: "menuGen.html"
-    };
-});
-
+app.directive('menu', function() { return { restrict: "E", templateUrl: "menu.html" }; });
+app.directive('menugen', function() { return { restrict: "E", templateUrl: "menuGen.html" }; });
+app.directive('position', function() { return { restrict: "E", templateUrl: "position.html" }; });
+app.directive('route', function() { return { restrict: "E", templateUrl: "route.html" }; });
 app.controller("mapVC", function($scope, $http, $compile) {
 
     /***********************************************
                 Initializes map and stuff
     ***********************************************/
 
+    $scope.segmento = segmento;
 
     // Initializes map
     $scope.map = new google.maps.Map(document.getElementById("map"), {
@@ -111,13 +79,18 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     // Initializes infowindow 
     $scope.infowindow = new google.maps.InfoWindow({
-        content: $scope.contentString
-    })
+        content: "<div id='infowindow'></div>"
+    });
 
     // Routes API 
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
     directionsDisplay.setMap($scope.map);
+
+    $scope.getDistance = function(coor) {
+        $scope.coor = { lat: coor.lat(), lng: coor.lng() };
+        $scope.distance = getDistance($scope.my_position, $scope.coor).toFixed(2);
+    }
 
     /*********************************************** 
                     Toggle Heatmap 
@@ -164,7 +137,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
     ***********************************************/
 
     $scope.markers = [];
-    $scope.contentString = "<div id='infowindow'></div>";
 
     $scope.createMarker = function() {
         var marker = new google.maps.Marker({
@@ -174,12 +146,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
             icon: pinSymbol(colors[i])
         });
         marker.addListener('click', function(event) {
-            $scope.genContentString(marker);
+            $scope.getDistance(marker.position);
             $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
-            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, marker);
-            $("#infowindow").html($compile($scope.contentString)($scope));
+            $("#infowindow").html($compile('<menu/>')($scope));
         });
         google.maps.event.addListener(marker, 'dragend', function() {
             $scope.updateHeatmap();
@@ -218,19 +189,10 @@ app.controller("mapVC", function($scope, $http, $compile) {
         }, function(response, status) {
             if (status === google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(response);
-                var route = response.routes[0];
-                var routeHTML = '';
-                // For each route, display summary information. 
-                for (var i = 0; i < route.legs.length; i++) {
-                    var routeSegment = i + 1;
-                    routeHTML +=
-                        '<h4>Route Segment: ' + routeSegment + ' - ' +
-                        route.legs[i].distance.text + '</h4>' +
-                        '<b>From: </b>' + route.legs[i].start_address + '<br>' +
-                        '<b>To: </b>' + route.legs[i].end_address + '<br>';
-                }
-                $scope.infowindow.setContent(routeHTML);
-            } else window.alert('Directions request failed due to ' + status);
+                $scope.route = response.routes[0].legs;
+                $scope.map.setCenter($scope.selection.getPosition());
+                $("#infowindow").html($compile('<route/>')($scope));
+            } else alert('Directions request failed due to ' + status);
         });
     }
 
@@ -239,11 +201,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
     ***********************************************/
 
     $scope.openMyPosition = function(marker) {
-        $scope.infowindow.setPosition($scope.my_position);
-        $scope.infowindow.setContent('<h3>Sua localização</h3><p><b>Coordenadas: </b>{' +
-            $scope.my_position.lat.toFixed(3) + ', ' + $scope.my_position.lng.toFixed(3) + '}');
+        $scope.getDistance(marker.position);
+        $scope.infowindow.setPosition(marker.getPosition());
         $scope.infowindow.open($scope.map, marker);
-        $scope.map.setCenter($scope.my_position);
+        $("#infowindow").html($compile('<position/>')($scope));
+        $scope.map.setCenter(marker.getPosition());
     }
 
     // My position marker
@@ -272,15 +234,20 @@ app.controller("mapVC", function($scope, $http, $compile) {
         });
     }
 
-    // Try HTML5 geolocation. 
-    if (navigator.geolocation && Object.keys(navigator.geolocation).length > 0) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            $scope.myPositionMarker({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
+    // Espera a tela carregar o infowindow
+    setTimeout(function() { $scope.pickPosition(); }, 1000);
+
+    $scope.pickPosition = function() {
+        // Try HTML5 geolocation. 
+        if (navigator.geolocation && Object.keys(navigator.geolocation).length > 0) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                $scope.myPositionMarker({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                });
             });
-        });
-    } else $scope.myPositionMarker(my_position);
+        } else $scope.myPositionMarker(my_position);
+    }
 
     /***********************************************/
 
@@ -310,12 +277,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
             icon: imageIconModel
         });
         marker.addListener('click', function(event) {
-            $scope.genContentString2(event.latLng);
+            $scope.getDistance(event.latLng);
             $scope.map.setCenter(marker.getPosition());
             $scope.selection = marker;
-            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, marker);
-            $("#infowindow").html($compile($scope.contentString)($scope));
+            $("#infowindow").html($compile('<menugen/>')($scope));
         });
         $scope.markers.push(marker);
     }
@@ -327,13 +293,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
     for (var i = 0; i < 1; i++) {
         $scope.createGenericPoint();
     }
-
-
-
-    // Initializes infowindow
-    $scope.infowindow = new google.maps.InfoWindow({
-        content: $scope.contentString
-    })
 
     /***********************************************
                 Creates new $scope.markers
@@ -348,12 +307,12 @@ app.controller("mapVC", function($scope, $http, $compile) {
             icon: pinSymbol(fillMarker())
         });
         new_marker.addListener('click', function(event) {
-            $scope.genContentString(new_marker);
+            $scope.getDistance(new_marker.position);
             $scope.map.setCenter(new_marker.getPosition());
             $scope.selection = new_marker;
-            $scope.infowindow.setContent("<div id=\'infowindow\'></div>");
+            $scope.infowindow.setContent("<div id='infowindow'></div>");
             $scope.infowindow.open($scope.map, new_marker);
-            $("#infowindow").html($compile($scope.contentString)($scope));
+            $("#infowindow").html($compile('<menu/>')($scope));
         });
         $scope.markers.push(new_marker);
         google.maps.event.addListener(new_marker, 'dragend', function() {
@@ -403,22 +362,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
         "status": "reforcos", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
         "data_hora": "" // formato padrão de timestamp
     }
-
-    $scope.genContentString = function(marker) {
-        $scope.coor = { lat: marker.position.lat(), lng: marker.position.lng() };
-        $scope.distance = getDistance($scope.my_position, $scope.coor).toFixed(2);
-        $scope.segmento = segmento;
-        $scope.contentString = '<menu/>';
-    }
-
-
-    $scope.genContentString2 = function(coor) {
-        $scope.coor = { lat: coor.lat(), lng: coor.lng() };
-        $scope.distance = getDistance($scope.my_position, $scope.coor).toFixed(2);
-        $scope.segmento = segmento;
-        $scope.contentString = '<menugen/>';
-    }
-
 
     $scope.deleteMarkers = function() {
         if (segmento != 'global') {

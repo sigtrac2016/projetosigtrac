@@ -15,6 +15,33 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+function getSegmentColorByChar(c) {
+    switch (c) {
+        case 'p':
+            return "blue";
+        case 'h':
+            return "red";
+        case 'f':
+            return "black";
+        case 'c':
+            return "green";
+        default:
+            return "#aaaa";
+    }
+}
+
+function getNewId() {
+    var max = 1;
+    for (var key in jsonOfJsons) {
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            if (json.id > max)
+                max = json.id;
+        }
+    }
+    return max + 1;
+}
+
 /*
  *   Determina a cor padrão de um dado segmento
  */

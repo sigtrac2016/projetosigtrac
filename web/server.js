@@ -11,6 +11,7 @@ var ccc = require('./web/server/ccc');
 
 // Store all HTML files in view folder.
 app.use(express.static(__dirname + '/web/views'));
+app.use(express.static(__dirname + '/web/views/menus'));
 // Store all JS in Scripts folder.
 app.use(express.static(__dirname + '/web/script'));
 app.use(express.static(__dirname + '/web/client'));
