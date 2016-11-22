@@ -233,7 +233,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }
 
     // Espera a tela carregar o infowindow
-    setTimeout(function() { $scope.pickPosition(); }, 1000);
+    setTimeout(function() { $scope.pickPosition(); }, 2000);
 
     $scope.pickPosition = function() {
         // Try HTML5 geolocation. 
