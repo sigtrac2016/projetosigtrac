@@ -150,6 +150,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.selection = marker;
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile('<menu/>')($scope));
+            $scope.infowindow.setPosition(marker.getPosition());
             $scope.map.setCenter(marker.getPosition());
         });
         google.maps.event.addListener(marker, 'dragend', function() {
@@ -191,6 +192,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 directionsDisplay.setDirections(response);
                 $scope.route = response.routes[0].legs;
                 $("#infowindow").html($compile('<route/>')($scope));
+                $scope.infowindow.setPosition($scope.selection.getPosition());
                 $scope.map.setCenter($scope.selection.getPosition());
             } else alert('Directions request failed due to ' + status);
         });
@@ -204,6 +206,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.getDistance(marker.position);
         $scope.infowindow.open($scope.map, marker);
         $("#infowindow").html($compile('<position/>')($scope));
+        $scope.infowindow.setPosition(marker.getPosition());
         $scope.map.setCenter(marker.getPosition());
     }
 
@@ -279,6 +282,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.selection = marker;
             $scope.infowindow.open($scope.map, marker);
             $("#infowindow").html($compile('<menugen/>')($scope));
+            $scope.infowindow.setPosition(marker.getPosition());
             $scope.map.setCenter(marker.getPosition());
         });
         $scope.markers.push(marker);
@@ -310,6 +314,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.infowindow.setContent("<div id='infowindow'></div>");
             $scope.infowindow.open($scope.map, new_marker);
             $("#infowindow").html($compile('<menu/>')($scope));
+            $scope.infowindow.setPosition(new_marker.getPosition());
             $scope.map.setCenter(new_marker.getPosition());
         });
         $scope.markers.push(new_marker);
