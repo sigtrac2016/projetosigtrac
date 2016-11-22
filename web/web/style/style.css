@@ -65,3 +65,8 @@ footer {
     bottom: 25%;
     left: 95%;
 }
+
+.btn-black {
+    color: white;
+    background-color: black;
+}
