@@ -11,10 +11,10 @@
 
         <span ng-if="segmento=='global'">
             <h4>Delegar segmento</h4>
-            <button class="btn btn-primary" ng-click="colorMarker(\blue\, \P\)">POLICE DEPARTMENT</button>
-            <button class="btn btn-danger" ng-click="colorMarker(\red\, \H\)">HEALTH CARE</button>
-            <button class="btn btn-default" ng-click="colorMarker(\black\, \F\)">FIRE DEPARTMENT</button>
-            <button class="btn btn-success" ng-click="colorMarker(\green\, \C\)">CIVIL DEFENSE</button>
+            <button class="btn btn-primary" ng-click="colorMarker('blue', 'P')">POLICE DEPARTMENT</button>
+            <button class="btn btn-danger" ng-click="colorMarker('red', 'H')">HEALTH CARE</button>
+            <button class="btn btn-default" ng-click="colorMarker('black', 'F')">FIRE DEPARTMENT</button>
+            <button class="btn btn-success" ng-click="colorMarker('green', 'C')">CIVIL DEFENSE</button>
             <h4>Comandos:</h4>
             <b>Status:</b>&nbsp;&nbsp;&nbsp;&nbsp
             <select class="selectpicker" ng-model="ocurrenceModel.status"> 

@@ -1,9 +1,9 @@
 <div id="content">
     <h4>{{ genericPointModel.titulo }}
-        <button ng-if="genericPointModel.segmento==\P\" class="btn btn-primary">POLICE DEPARTMENT</button>
-        <button ng-if="genericPointModel.segmento==\H\" class="btn btn btn-danger">HEALTH CARE</button>
-        <button ng-if="genericPointModel.segmento==\F\" class="btn btn btn-default">FIRE DEPARTMENT</button>
-        <button ng-if="genericPointModel.segmento==\C\" class="btn btn btn-success">CIVIL DEFENSE</button>
+        <button ng-if="genericPointModel.segmento=='P'" class="btn btn-primary">POLICE DEPARTMENT</button>
+        <button ng-if="genericPointModel.segmento=='H'" class="btn btn btn-danger">HEALTH CARE</button>
+        <button ng-if="genericPointModel.segmento=='F'" class="btn btn btn-default">FIRE DEPARTMENT</button>
+        <button ng-if="genericPointModel.segmento=='C'" class="btn btn btn-success">CIVIL DEFENSE</button>
     </h4>
     <textarea readonly ng-model="ocurrenceModel.descricao" rows="2" cols="90"> 
             </textarea>
