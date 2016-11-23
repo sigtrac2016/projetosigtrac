@@ -286,6 +286,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.map.setCenter(marker.getPosition());
         });
         $scope.markers.push(marker);
+        $scope.updateHeatmap();
     }
 
     for (var i = 0; i < 6; i++) {
@@ -350,6 +351,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.selection.setMap(null);
         // Remove o marcador e salva os dados
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
+        $scope.updateHeatmap();
     }
 
 
