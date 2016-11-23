@@ -42,6 +42,16 @@ var apiDefinition = [
 		"route": "/chamados",
 		"model": '../models/chamado',
 		"config": {}
+	},
+	{
+		"route": "/policia/boletimocorrencias",
+		"model": '../models/boletimocorrencia',
+		"config": {}	
+	},
+	{
+		"route": "/policia/pedidoreforcos",
+		"model": '../models/pedidoreforco',
+		"config": {}	
 	}
 ];
 
