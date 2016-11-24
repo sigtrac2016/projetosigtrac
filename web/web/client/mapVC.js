@@ -12,13 +12,13 @@ function newJson(id, lat, lng) {
         dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
     var json = {
         "id": id, // gerado pelo BD 
-        "titulo": "titulo1", // string vazia ou não 
+        "titulo": "title3", // string vazia ou não 
         "segmento": 'p', // char com a letra referente ao segmento 
-        "descricao": "descricao1", // string vazia ou não 
+        "descricao": "description3", // string vazia ou não 
         "lat": lat, //latitude 
         "long": lng, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
         "data_hora": date // formato padrão de timestamp 
     };
     return json;
@@ -27,24 +27,24 @@ function newJson(id, lat, lng) {
 function getJsonOfJsons() {
     var json1 = {
         "id": 5, // gerado pelo BD 
-        "titulo": "titulo1", // string vazia ou não 
+        "titulo": "title1", // string vazia ou não 
         "segmento": 'p', // char com a letra referente ao segmento 
-        "descricao": "descricao1", // string vazia ou não 
+        "descricao": "description1", // string vazia ou não 
         "lat": -23.21, //latitude 
         "long": -45.87, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
         "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp 
     };
     var json2 = {
         "id": 6, // gerado pelo BD 
-        "titulo": "titulo2", // string vazia ou não 
+        "titulo": "title2", // string vazia ou não 
         "segmento": 'h', // char com a letra referente ao segmento 
-        "descricao": "descricao2", // string vazia ou não 
+        "descricao": "description2", // string vazia ou não 
         "lat": -23.208, //latitude 
         "long": -45.87, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "started", // not started, started, canceled, reinforcements, finished ** 
         "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp 
     };
     jsonOfJsons = { "5": json1, "6": json2 };
@@ -255,15 +255,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.genericPointModel = {
         "id": "", // gerado pelo BD
-        "titulo": "Ambulância 386", // string vazia ou nao
-        "segmento": "F", // char com a letra referente ao segmento
-        "descricao": "Princípio de Incêndio", // string vazia ou nao
-        "feedback": "Princípio de Incêndio", // string vazia ou nao
+        "titulo": "Colinas's Shopping", // string vazia ou nao
+        "segmento": "C", // char com a letra referente ao segmento
+        "descricao": "After a tempest [...]", // string vazia ou nao
+        "feedback": "Please, add an information here...", // string vazia ou nao
         "url_icone": "https://maxcdn.icons8.com/iOS7/PNG/50/Users/fireman-50.png", // array de strings, vazio ou contendo URL das fotos        "lat": "", //latitude
         "long": "", //longitude
         "endereco": "",
         "foto": "http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg", // array de strings, vazio ou contendo URL das fotos
-        "status": "reforcos", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
+        "status": "reinforcements", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
         "data_hora": "" // formato padrão de timestamp
     }
 
@@ -357,9 +357,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.ocurrenceModel = {
         "id": "", // gerado pelo BD
-        "titulo": "Alerta de Incendio ", // string vazia ou nao
-        "segmento": "P", // char com a letra referente ao segmento
-        "descricao": "Princípio de Incêndio", // string vazia ou nao
+        "titulo": "Fireman Alert", // string vazia ou nao
+        "segmento": "F", // char com a letra referente ao segmento
+        "descricao": "", // string vazia ou nao
         "lat": "", //latitude
         "long": "", //longitude
         "endereco": "",

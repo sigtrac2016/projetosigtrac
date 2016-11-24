@@ -1,31 +1,30 @@
 <div id="content">
     <h4>{{ ocurrenceModel.titulo }}</h4>
     <div>
-        <textarea readonly ng-model="ocurrenceModel.descricao" rows="2" cols="80"> 
-            </textarea>
-        <p><b>Horário de ocorrência: </b> 13:30h&nbsp;&nbsp
-            <b>Coordenadas: </b>{ {{coor.lat.toFixed(3)}} , {{coor.lng.toFixed(3)}} }
-            <b>Distância: </b> {{distance}} km</p>
-        <p><a href="{{ocurrenceModel.foto}}">Fotos do alerta</a>
-            <button class="btn btn-default" ng-click="displayRoute()">Calcular Rota</button></p>
+        <p ng-model="ocurrenceModel.descricao"></p>
+        <p><b>Datetime: </b> 13:30h&nbsp;&nbsp
+            <b>Coordenates: </b>{ {{coor.lat.toFixed(3)}} , {{coor.lng.toFixed(3)}} }
+            <b>Distance: </b> {{distance}} km</p>
+        <p><a href="{{ocurrenceModel.foto}}">Alert photographs</a>
+            <button class="btn btn-default" ng-click="displayRoute()">Calculte Route</button></p>
 
         <span ng-if="segmento=='global'">
-            <h4>Delegar segmento</h4>
+            <h4>Set a segment</h4>
             <button class="btn btn-primary" ng-click="colorMarker('blue', 'P')">POLICE DEPARTMENT</button>
             <button class="btn btn-danger" ng-click="colorMarker('red', 'H')">HEALTH CARE</button>
             <button class="btn btn-black" ng-click="colorMarker('black', 'F')">FIRE DEPARTMENT</button>
             <button class="btn btn-success" ng-click="colorMarker('green', 'C')">CIVIL DEFENSE</button>
-            <h4>Comandos:</h4>
+            <h4>Commands:</h4>
             <b>Status:</b>&nbsp;&nbsp;&nbsp;&nbsp
             <select class="selectpicker" ng-model="ocurrenceModel.status"> 
-                <option value="nao-iniciado">Não Iniciado</option> 
-                <option value="iniciado">Iniciado</option> 
-                <option value="cancelado">Cancelado</option> 
-                <option value="reforcos">Reforços</option> 
-                <option value="finalizado">Finalizado</option> 
+                <option value="not started">Not Started</option> 
+                <option value="started">Started</option> 
+                <option value="canceled">Canceled</option> 
+                <option value="reinforcements">Reinforcements</option> 
+                <option value="finished">Finished</option> 
                 </select>
         </span>
-        <button class="btn btn-default" ng-click="sendOccurrence()">Salvar</button>
-        <button class="btn btn-danger" ng-click="deleteMarker()">Finalizar alerta</button>
+        <button class="btn btn-default" ng-click="sendOccurrence()">Save</button>
+        <button class="btn btn-danger" ng-click="deleteMarker()">Finish</button>
     </div>
 </div>
