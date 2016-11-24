@@ -3,8 +3,12 @@ var moment = require('moment')
 
 require('events').EventEmitter.prototype._maxListeners = 100
 
-var client  = mqtt.connect('mqtt://52.67.204.136')
+var client  = mqtt.connect('mqtt://virtual10-147.cptec.inpe.br')
 
+var sensors = [
+  ["68a560c4-ac5b-11e6-80f5-76304dec7eb7",-23.20389472,-45.90955491,574.785,5]
+]
+/*
 var sensors = [
   ["68a560c4-ac5b-11e6-80f5-76304dec7eb7",-23.20389472,-45.90955491,574.785,5],
   ["68a563b2-ac5b-11e6-80f5-76304dec7eb7",-23.20359643,-45.90915258,572.124,5],
@@ -37,6 +41,7 @@ var sensors = [
   ["68a596c0-ac5b-11e6-80f5-76304dec7eb7",-23.20509776,-45.90773369,571.79,1],
   ["68a599c2-ac5b-11e6-80f5-76304dec7eb7",-23.20521609,-45.90796705,572.93,1]
 ]
+*/
 
 var LM35 = function(uuid, timestamp, value, location) {
   this.uuid = uuid
@@ -66,6 +71,7 @@ sensors.forEach(function(entry) {
   var location = new Location(entry[1], entry[2], entry[3])
   var sensor = new LM35(entry[0], timestamp, value, location)
 
+  console.log(JSON.stringify(sensor)+',');
   client.publish(sensor.uuid, JSON.stringify(sensor))
 })
 

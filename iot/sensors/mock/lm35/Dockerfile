@@ -16,6 +16,6 @@ RUN npm install
 
 ADD crontab /etc/cron.d/ts07-mock
 
-RUN touch /var/log/cron.log
+VOLUME ["/var/log"]
 
-CMD cron && tail -f /var/log/cron.log
+CMD ["cron", "-f"]
