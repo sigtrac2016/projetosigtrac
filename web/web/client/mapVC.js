@@ -159,6 +159,36 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.markers.push(marker);
         $scope.updateHeatmap();
     }
+	
+	/***********************************************/
+	function airDrone()
+    {
+		var endereco = 'http://52.67.201.69:5001/ardroneMiddleware/tm';
+        $.ajax({
+            type: "GET",
+            url: endereco
+        }).done(function (data) {
+            var marker = new google.maps.Marker({
+                    position: {lat: data['lat'], lng: data['lon']},
+                    map: $scope.map,
+                    icon: 'https://cdn3.iconfinder.com/data/icons/faticons/32/send-01-48.png',
+                    title: 'drone',
+            });
+
+            var content = "<h1>Imagem do drone</h1><img src='http://52.67.201.69:5001/ardroneMiddleware/photo' heigth='250px' width='250px'>";
+
+            var infowindow = new google.maps.InfoWindow();
+
+            google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
+                return function () {
+                    infowindow.setContent(content);
+                    infowindow.open($scope.map, marker);
+                };
+            })(marker, content, infowindow));
+        });
+//                
+    }
+	/***********************************************/
 
     var jsonOfJsons = getJsonOfJsons();
 
