@@ -251,7 +251,37 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }
 
     /***********************************************/
+    $scope.openMyDronePosition = function(marker) {
+        $scope.getDistance(marker.position);
+        $scope.infowindow.open($scope.map, marker);
+        $("#infowindow").html($compile('<position/>')($scope));
+        $scope.infowindow.setPosition(marker.getPosition());
+        $scope.map.setCenter(marker.getPosition());
+    }
+    // My position marker
+    $scope.myDroneMarker = function() {
+        var marker = new google.maps.Marker({
+            position: { lat: -23.3, lng: -45.89 },
+            map: $scope.map,
+            draggable: true,
+            icon: pinSymbol('yellow')
+        });
+        $scope.my_drone_marker = marker;
+        $scope.openMyDronePosition(marker);
 
+        marker.addListener('click', function(event) {
+            $scope.openMyDronePosition(marker);
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function() {
+            $scope.my_position = {
+                'lat': marker.getPosition().lat(),
+                'lng': marker.getPosition().lng()
+            }
+            $scope.openMyDronePosition(marker);
+        });
+    }
+    /***********************************************/
 
     $scope.genericPointModel = {
         "id": "", // gerado pelo BD
