@@ -1,8 +1,8 @@
 /*
-===========================================================================
-                    Mapa - Controller AngularJS
-===========================================================================
-*/
+ ===========================================================================
+ Mapa - Controller AngularJS
+ ===========================================================================
+ */
 
 
 
@@ -12,13 +12,13 @@ function newJson(id, lat, lng) {
         dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
     var json = {
         "id": id, // gerado pelo BD 
-        "titulo": "titulo1", // string vazia ou não 
+        "titulo": "title3", // string vazia ou não 
         "segmento": 'p', // char com a letra referente ao segmento 
-        "descricao": "descricao1", // string vazia ou não 
+        "descricao": "description3", // string vazia ou não 
         "lat": lat, //latitude 
         "long": lng, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
         "data_hora": date // formato padrão de timestamp 
     };
     return json;
@@ -27,24 +27,24 @@ function newJson(id, lat, lng) {
 function getJsonOfJsons() {
     var json1 = {
         "id": 5, // gerado pelo BD 
-        "titulo": "titulo1", // string vazia ou não 
+        "titulo": "title1", // string vazia ou não 
         "segmento": 'p', // char com a letra referente ao segmento 
-        "descricao": "descricao1", // string vazia ou não 
+        "descricao": "description1", // string vazia ou não 
         "lat": -23.21, //latitude 
         "long": -45.87, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
         "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp 
     };
     var json2 = {
         "id": 6, // gerado pelo BD 
-        "titulo": "titulo2", // string vazia ou não 
+        "titulo": "title2", // string vazia ou não 
         "segmento": 'h', // char com a letra referente ao segmento 
-        "descricao": "descricao2", // string vazia ou não 
+        "descricao": "description2", // string vazia ou não 
         "lat": -23.208, //latitude 
         "long": -45.87, //longitude 
         "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
-        "status": "iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "status": "started", // not started, started, canceled, reinforcements, finished ** 
         "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp 
     };
     jsonOfJsons = { "5": json1, "6": json2 };
@@ -53,15 +53,26 @@ function getJsonOfJsons() {
 
 /* Templates used to render HTML */
 
-app.directive('menu', function() { return { restrict: "E", templateUrl: "menu.html" }; });
-app.directive('menugen', function() { return { restrict: "E", templateUrl: "menuGen.html" }; });
-app.directive('position', function() { return { restrict: "E", templateUrl: "position.html" }; });
-app.directive('route', function() { return { restrict: "E", templateUrl: "route.html" }; });
+app.directive('menu', function() {
+    return { restrict: "E", templateUrl: "menu.html" };
+});
+app.directive('menugen', function() {
+    return { restrict: "E", templateUrl: "menuGen.html" };
+});
+app.directive('position', function() {
+    return { restrict: "E", templateUrl: "position.html" };
+});
+app.directive('route', function() {
+    return { restrict: "E", templateUrl: "route.html" };
+});
+app.directive('drone', function() {
+    return { restrict: "E", templateUrl: "drone.html" };
+});
 app.controller("mapVC", function($scope, $http, $compile) {
 
     /***********************************************
-                Initializes map and stuff
-    ***********************************************/
+     Initializes map and stuff
+     ***********************************************/
 
     $scope.segmento = segmento;
 
@@ -93,8 +104,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }
 
     /*********************************************** 
-                    Toggle Heatmap 
-    ***********************************************/
+     Toggle Heatmap 
+     ***********************************************/
 
     /* Atualiza o Heatmap quando array de marcadores mudar */
     $scope.updateHeatmap = function() {
@@ -109,7 +120,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     function getPoints() {
         var points = [];
-        if ($scope.markers == undefined) return [];
+        if ($scope.markers == undefined)
+            return [];
         $scope.markers.forEach(function(marker) {
             if (marker.icon.fillColor == segmentoColor(segmento) ||
                 segmento == "global" && marker.position != undefined)
@@ -133,8 +145,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
 
     /*********************************************** 
-                Creates new $scope.markers 
-    ***********************************************/
+     Creates new $scope.markers 
+     ***********************************************/
 
     $scope.markers = [];
 
@@ -170,18 +182,18 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.createMarker(key, pos, color);
         }
         /* 
-        for (var i = 1; i <= len; i++) { 
-            var indexString=i.toString(); 
-            var json=jsonOfJsons[indexString]; 
-            var pos = {lat: json.lat , lng: json.long};         
-            var color =getSegmentColorByChar(json.segmento) 
-            $scope.createMarker(indexString,pos, color); 
-        }*/
+         for (var i = 1; i <= len; i++) { 
+         var indexString=i.toString(); 
+         var json=jsonOfJsons[indexString]; 
+         var pos = {lat: json.lat , lng: json.long};         
+         var color =getSegmentColorByChar(json.segmento) 
+         $scope.createMarker(indexString,pos, color); 
+         }*/
     }
 
     /*********************************************** 
-                    Routes Service 
-    ***********************************************/
+     Routes Service 
+     ***********************************************/
     $scope.displayRoute = function() {
         directionsService.route({
             origin: $scope.my_position_marker.getPosition(),
@@ -194,13 +206,14 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 $("#infowindow").html($compile('<route/>')($scope));
                 $scope.infowindow.setPosition($scope.selection.getPosition());
                 $scope.map.setCenter($scope.selection.getPosition());
-            } else alert('Directions request failed due to ' + status);
+            } else
+                alert('Directions request failed due to ' + status);
         });
     }
 
     /*********************************************** 
-                Getting my position 
-    ***********************************************/
+     Getting my position 
+     ***********************************************/
 
     $scope.openMyPosition = function(marker) {
         $scope.getDistance(marker.position);
@@ -210,7 +223,7 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.map.setCenter(marker.getPosition());
     }
 
-    // My position marker
+    // My position marker 
     $scope.myPositionMarker = function(my_position) {
         $scope.my_position = my_position;
         var marker = new google.maps.Marker({
@@ -236,7 +249,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }
 
     // Espera a tela carregar o infowindow
-    setTimeout(function() { $scope.pickPosition(); }, 1000);
+    setTimeout(function() {
+        $scope.pickPosition();
+    }, 1000);
 
     $scope.pickPosition = function() {
         // Try HTML5 geolocation. 
@@ -247,7 +262,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
                     lng: position.coords.longitude
                 });
             });
-        } else $scope.myPositionMarker(my_position);
+        } else
+            $scope.myPositionMarker(my_position);
     }
 
     /***********************************************/
@@ -255,15 +271,15 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.genericPointModel = {
         "id": "", // gerado pelo BD
-        "titulo": "Ambulância 386", // string vazia ou nao
-        "segmento": "F", // char com a letra referente ao segmento
-        "descricao": "Princípio de Incêndio", // string vazia ou nao
-        "feedback": "Princípio de Incêndio", // string vazia ou nao
+        "titulo": "Colinas's Shopping", // string vazia ou nao
+        "segmento": "C", // char com a letra referente ao segmento
+        "descricao": "After a tempest [...]", // string vazia ou nao
+        "feedback": "Please, add an information here...", // string vazia ou nao
         "url_icone": "https://maxcdn.icons8.com/iOS7/PNG/50/Users/fireman-50.png", // array de strings, vazio ou contendo URL das fotos        "lat": "", //latitude
         "long": "", //longitude
         "endereco": "",
         "foto": "http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg", // array de strings, vazio ou contendo URL das fotos
-        "status": "reforcos", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
+        "status": "reinforcements", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
         "data_hora": "" // formato padrão de timestamp
     }
 
@@ -298,8 +314,38 @@ app.controller("mapVC", function($scope, $http, $compile) {
     }
 
     /***********************************************
-                Creates new $scope.markers
-    ***********************************************/
+     Creates new air drone
+     ***********************************************/
+    $http.get('/airDrone')
+        .then(function success(data) {
+            data = data.data;
+            var marker = new google.maps.Marker({
+                position: { lat: data['lat'], lng: data['lon'] },
+                map: $scope.map,
+                icon: 'https://cdn3.iconfinder.com/data/icons/faticons/32/send-01-48.png',
+                title: 'drone',
+            });
+
+            marker.addListener('click', function(event) {
+                $scope.getDistance(marker.position);
+                $scope.selection = marker;
+                $scope.infowindow.open($scope.map, marker);
+                $("#infowindow").html($compile("<drone\>")($scope));
+                $scope.infowindow.setPosition(marker.getPosition());
+                $scope.map.setCenter(marker.getPosition());
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function() {
+                $scope.updateHeatmap();
+            });
+
+            $scope.markers.push(marker);
+            $scope.updateHeatmap();
+
+        });
+    /***********************************************
+     Creates new $scope.markers
+     ***********************************************/
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
@@ -327,8 +373,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
     });
 
     /***********************************************
-                Displays alert information
-    ***********************************************/
+     Displays alert information
+     ***********************************************/
 
     // Creates a custom color pin
     function pinSymbol(color) {
@@ -357,9 +403,9 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
     $scope.ocurrenceModel = {
         "id": "", // gerado pelo BD
-        "titulo": "Alerta de Incendio ", // string vazia ou nao
-        "segmento": "P", // char com a letra referente ao segmento
-        "descricao": "Princípio de Incêndio", // string vazia ou nao
+        "titulo": "Fireman Alert", // string vazia ou nao
+        "segmento": "F", // char com a letra referente ao segmento
+        "descricao": "", // string vazia ou nao
         "lat": "", //latitude
         "long": "", //longitude
         "endereco": "",
@@ -387,8 +433,8 @@ app.controller("mapVC", function($scope, $http, $compile) {
 
 
     /***********************************************
-                Envio de Upload ocorrencia
-    ***********************************************/
+     Envio de Upload ocorrencia
+     ***********************************************/
     $scope.sendOccurrence = function() {
 
         $http.post('/api/v0/upload-ocorrencia', $scope.ocurrenceModel, success, failure);
