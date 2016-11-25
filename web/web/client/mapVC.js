@@ -65,6 +65,9 @@ app.directive('position', function() {
 app.directive('route', function() {
     return { restrict: "E", templateUrl: "route.html" };
 });
+app.directive('drone', function() {
+    return { restrict: "E", templateUrl: "drone.html" };
+});
 app.controller("mapVC", function($scope, $http, $compile) {
 
     /***********************************************
@@ -316,7 +319,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
     $http.get('/airDrone')
         .then(function success(data) {
             data = data.data;
-            alert(JSON.stringify(data));
             var marker = new google.maps.Marker({
                 position: { lat: data['lat'], lng: data['lon'] },
                 map: $scope.map,
@@ -324,13 +326,11 @@ app.controller("mapVC", function($scope, $http, $compile) {
                 title: 'drone',
             });
 
-            var content = "<h1>Imagem do drone</h1><img src='http://52.67.201.69:5001/ardroneMiddleware/photo' heigth='250px' width='250px'>";
-
             marker.addListener('click', function(event) {
                 $scope.getDistance(marker.position);
                 $scope.selection = marker;
                 $scope.infowindow.open($scope.map, marker);
-                $("#infowindow").html($compile(content)($scope));
+                $("#infowindow").html($compile("<drone\>")($scope));
                 $scope.infowindow.setPosition(marker.getPosition());
                 $scope.map.setCenter(marker.getPosition());
             });
@@ -342,8 +342,6 @@ app.controller("mapVC", function($scope, $http, $compile) {
             $scope.markers.push(marker);
             $scope.updateHeatmap();
 
-        }).catch(function error(err) {
-            alert(JSON.stringify(err));
         });
     /***********************************************
      Creates new $scope.markers
