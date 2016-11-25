@@ -10,10 +10,14 @@ client.on('connect', function(){
 })
 
 app.get('/', function(req, res){
+  res.sendFile(__dirname + '/sensors.html')
+})
+
+app.get('/live', function(req, res){
   res.sendFile(__dirname + '/lm35.html')
 })
 
-app.get('/static', function(req, res){
+app.get('/heat', function(req, res){
   res.sendFile(__dirname + '/static.html')
 })
 
