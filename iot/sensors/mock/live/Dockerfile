@@ -8,14 +8,12 @@ RUN apt-get update && apt-get install -y \
   cron \
   && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /lm35
-WORKDIR /lm35
+RUN mkdir /live
+WORKDIR /live
+ADD . /live
 
-ADD . /lm35
 RUN npm install
 
-ADD crontab /etc/cron.d/ts07-mock
+EXPOSE 3888
 
-VOLUME ["/var/log"]
-
-CMD ["cron", "-f"]
+CMD ["npm", "start"]
