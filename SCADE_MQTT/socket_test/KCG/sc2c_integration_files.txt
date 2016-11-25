@@ -1,0 +1,39 @@
+*****************************
+*** Generated KCG H/Ads files ***
+*****************************
+test.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+kcg_imported_functions.h
+
+*****************************
+*** Generated KCG C/Adb files ***
+*****************************
+test.c
+kcg_types.c
+kcg_consts.c
+
+*****************************
+*** External C Files ***
+*****************************
+..\Socket\tcpserver.c
+
+*****************************
+*** Generated SC2C Files ***
+*****************************
+user_macros.h
+kcg_imported_types.h
+
+*****************************
+*** Include Directories ***
+*****************************
+.
+$(SCADE)
+$(SCADE)\include
+$(SCADE)\include\C
+$(SCADE)\include\Ada
+$(SCADE)\lib\Ada
+..\Socket
+..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\libraries\libmathext
+

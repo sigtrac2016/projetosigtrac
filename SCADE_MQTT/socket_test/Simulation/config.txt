@@ -1,0 +1,3 @@
+-target_dir "C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation" -expall -target C -O 0 -name_length 200 -significance_length 31 -user_config "./user_macros.h" -input_threshold 10 -probes -debug 
+-node test
+"C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade"

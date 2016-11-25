@@ -1,0 +1,12 @@
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:\Users\Julhio\AppData\Local\Temp\ScadeChecker\10008\test.scade, line 627, character 0
+  at path test/Notification/
+ The input variable Notification is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:\Users\Julhio\AppData\Local\Temp\ScadeChecker\10008\test.scade, line 639, character 0
+  at path test/Latitude/
+ The input variable Latitude is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:\Users\Julhio\AppData\Local\Temp\ScadeChecker\10008\test.scade, line 643, character 0
+  at path test/Longitude/
+ The input variable Longitude is never used

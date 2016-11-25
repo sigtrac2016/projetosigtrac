@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/config.txt
+** Generation date: 2016-11-24T23:28:50
+*************************************************************$-->
+<Model date="2016-11-24T23:28:50" commandLine="kcg64.exe -config C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/config.txt">
+  <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+  <Option name="xml_filter" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="input_file"
+      value="C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade"/>
+  <Option name="probes" value="#on#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="debug" value="#on#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="input_threshold" value="10"/>
+  <Option name="header" value="#off#"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="name_length" value="200"/>
+  <Option name="globals_prefix" value="#off#"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="target_dir" value="C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation"/>
+  <Option name="target" value="C"/>
+  <Option name="node" value="test"/>
+  <Option name="auth" value="#off#"/>
+  <Constant scadeName="DEPARTMENT" scadeType="char" targetName="DEPARTMENT" targetType="kcg_char" macroDef="true"/>
+  <Constant scadeName="LATITUDE" scadeType="real" targetName="LATITUDE" targetType="kcg_real" macroDef="true"/>
+  <Constant scadeName="LONGITUDE" scadeType="real" targetName="LONGITUDE" targetType="kcg_real" macroDef="true"/>
+  <Constant scadeName="TITLE_THEFT" scadeType="char^(50)" targetName="TITLE_THEFT" targetType="array_char_50"/>
+  <Constant scadeName="TITLE_THEFT_ATTEMPT" scadeType="char^(50)" targetName="TITLE_THEFT_ATTEMPT"
+      targetType="array_char_50"/>
+  <Constant scadeName="TITLE_ROBBERY" scadeType="char^(50)" targetName="TITLE_ROBBERY" targetType="array_char_50"/>
+  <Constant scadeName="TITLE_ROBBERY_ATTEMPT" scadeType="char^(50)" targetName="TITLE_ROBBERY_ATTEMPT"
+      targetType="array_char_50"/>
+  <Constant scadeName="STATUS_NAO_INICIADO" scadeType="char^(16)" targetName="STATUS_NAO_INICIADO"
+      targetType="array_char_16"/>
+  <Constant scadeName="STATUS_INICIADO" scadeType="char^(16)" targetName="STATUS_INICIADO" targetType="array_char_16"/>
+  <Constant scadeName="STATUS_CANCELADO" scadeType="char^(16)" targetName="STATUS_CANCELADO"
+      targetType="array_char_16"/>
+  <Constant scadeName="STATUS_REFORCOS" scadeType="char^(16)" targetName="STATUS_REFORCOS" targetType="array_char_16"/>
+  <Constant scadeName="STATUS_FINALIZADO" scadeType="char^(16)" targetName="STATUS_FINALIZADO"
+      targetType="array_char_16"/>
+  <Constant scadeName="GREEN" scadeType="int" targetName="GREEN" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="RED" scadeType="int" targetName="RED" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="TITLE_DEFAULT" scadeType="char^(50)" targetName="TITLE_DEFAULT" targetType="array_char_50"/>
+  <Constant scadeName="STATUS_DEFAULT" scadeType="char^(16)" targetName="STATUS_DEFAULT" targetType="array_char_16"/>
+  <RootNode scadeName="test" headerFile="test.h" targetCycleFct="test" targetInitFct="test_reset"
+      targetInitializationFct="test_init">
+    <Input scadeName="Description" scadeType="char^(150)" targetName="Description" targetType="array_char_150"
+        inCtx="true"/>
+    <Input scadeName="Notification" scadeType="bool" targetName="Notification" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SignalFromButton" scadeType="bool" targetName="SignalFromButton" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="Title" scadeType="int" targetName="Title" targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="Latitude" scadeType="real" targetName="Latitude" targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="Longitude" scadeType="real" targetName="Longitude" targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="Status" scadeType="int" targetName="Status" targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="NotifyFromOcurrenceType" scadeType="bool" targetName="NotifyFromOcurrenceType"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="Emit" scadeType="bool" targetName="Emit" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="LEDReportRegisted" scadeType="int" targetName="LEDReportRegisted" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="LEDReportDispatched" scadeType="int" targetName="LEDReportDispatched" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="SelectedOcurrenceType" scadeType="int" targetName="SelectedOcurrenceType" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="EmitToOcurrenceType" scadeType="bool" targetName="EmitToOcurrenceType" targetType="kcg_bool"
+        inCtx="true"/>
+    <Local scadeName="aqui" scadeType="char^(50)" targetName="aqui" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L9" scadeType="char^(150)" targetName="_L9" targetType="array_char_150" inCtx="true"/>
+    <Local scadeName="_L15" scadeType="int" targetName="_L15" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L48" scadeType="bool" targetName="_L48" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L47" scadeType="bool" targetName="_L47" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L46" scadeType="bool" targetName="_L46" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L44" scadeType="bool" targetName="_L44" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L50" scadeType="char" targetName="_L50" targetType="kcg_char" inCtx="true"/>
+    <Local scadeName="_L52" scadeType="real" targetName="_L52" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L53" scadeType="real" targetName="_L53" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L55" scadeType="int" targetName="_L55" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L56" scadeType="char^(50)" targetName="_L56" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L57" scadeType="char^(50)" targetName="_L57" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L58" scadeType="char^(50)" targetName="_L58" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L59" scadeType="char^(50)" targetName="_L59" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L62" scadeType="char^(50)" targetName="_L62" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L63" scadeType="char^(16)" targetName="_L63" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L64" scadeType="int" targetName="_L64" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L65" scadeType="char^(16)" targetName="_L65" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L66" scadeType="char^(16)" targetName="_L66" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L67" scadeType="char^(16)" targetName="_L67" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L68" scadeType="char^(16)" targetName="_L68" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L69" scadeType="char^(16)" targetName="_L69" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L71" scadeType="int" targetName="_L71" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L72" scadeType="int" targetName="_L72" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L73" scadeType="int" targetName="_L73" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L74" scadeType="int" targetName="_L74" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L76" scadeType="int" targetName="_L76" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L77" scadeType="int" targetName="_L77" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L78" scadeType="int" targetName="_L78" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L80" scadeType="char^(50)" targetName="_L80" targetType="array_char_50" inCtx="true"/>
+    <Local scadeName="_L81" scadeType="char^(16)" targetName="_L81" targetType="array_char_16" inCtx="true"/>
+    <Local scadeName="_L82" scadeType="bool" targetName="_L82" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="PublishMQTT" instName="1" refName="PublishMQTT"/>
+    <NodeInstance scadeName="if" instName="5"/>
+    <NodeInstance scadeName="if" instName="7"/>
+    <OutCtxType targetName="outC_test"/>
+    <InCtxType targetName="inC_test"/>
+  </RootNode>
+  <NoExpNode scadeName="PublishMQTT" headerFile="kcg_imported_functions.h" targetCycleFct="PublishMQTT" imported="true">
+    <Input scadeName="Send" scadeType="bool" targetName="Send" targetType="kcg_bool"/>
+    <Input scadeName="Titulo" scadeType="char^(50)" targetName="Titulo" targetType="array_char_50"/>
+    <Input scadeName="Segmento" scadeType="char" targetName="Segmento" targetType="kcg_char"/>
+    <Input scadeName="Descricao" scadeType="char^(150)" targetName="Descricao" targetType="array_char_150"/>
+    <Input scadeName="Latitude" scadeType="real" targetName="Latitude" targetType="kcg_real"/>
+    <Input scadeName="Longitude" scadeType="real" targetName="Longitude" targetType="kcg_real"/>
+    <Input scadeName="Status" scadeType="char^(16)" targetName="Status" targetType="array_char_16"/>
+    <Output scadeName="Mqttstatus" scadeType="int" targetType="kcg_int"/>
+  </NoExpNode>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+  <ArrayType targetName="array_char_150" cellType="kcg_char" size="150" targetCopyFct="kcg_copy_array_char_150"
+      targetCompFct="kcg_comp_array_char_150"/>
+  <ArrayType targetName="array_char_50" cellType="kcg_char" size="50" targetCopyFct="kcg_copy_array_char_50"
+      targetCompFct="kcg_comp_array_char_50"/>
+  <ArrayType targetName="array_char_16" cellType="kcg_char" size="16" targetCopyFct="kcg_copy_array_char_16"
+      targetCompFct="kcg_comp_array_char_16"/>
+</Model>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** kcg_trace.xml
+** Generation date: 2016-11-24T23:28:50
+*************************************************************$-->

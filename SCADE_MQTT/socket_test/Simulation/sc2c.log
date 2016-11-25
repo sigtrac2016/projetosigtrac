@@ -1,0 +1,86 @@
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-11-24T23:28:47
+** Command: scade -code "C:\Dev\ces-65\Tmp\socket_test\socket_test\socket_test.etp" -root test -conf Simulation -build
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg_trace.xml
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_metrics.txt, line 0, character 0
+ ~test.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test.c, line 0, character 0
+ ~test.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_sensors.h, line 0, character 0
+ ~kcg_imported_functions.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_imported_functions.h, line 0, character 0
+ ~kcg_types.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_consts.c, line 0, character 0
+ ~config.txt
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\config.txt, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\sc2c_integration_files.txt, line 0, character 0
+*** Generated Files Information (GENFIL): Simulator Generated files
+ ~test_cosim.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_cosim.c, line 0, character 0
+ ~socket_test_interface.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_interface.h, line 0, character 0
+ ~socket_test_interface.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_interface.c, line 0, character 0
+ ~test_dll.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_dll.c, line 0, character 0
+*** Generated Files Information (GENFIL): Type Utils Generated files
+ ~socket_test_type.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_type.h, line 0, character 0
+ ~socket_test_type.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_type.c, line 0, character 0
+*** Generated Files Information (GENFIL): Snapshot API Generated files
+ ~socket_test_snapshot.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_snapshot.h, line 0, character 0
+ ~socket_test_snapshot.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_snapshot.c, line 0, character 0
+*** Generated Files Information (GENFIL): Mapping Utils Generated files
+ ~socket_test_mapping.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_mapping.h, line 0, character 0
+ ~socket_test_mapping.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\socket_test_mapping.c, line 0, character 0
+*** Generated Files Information (GENFIL): SCADE UA Adaptor Generated files
+ ~test_UA_1.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1.h, line 0, character 0
+ ~test_UA_1.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1.c, line 0, character 0
+ ~test_UA_1_constants.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1_constants.h, line 0, character 0
+ ~test_UA_1_private.h
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1_private.h, line 0, character 0
+ ~test_UA_1_private.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1_private.c, line 0, character 0
+ ~test_UA_1_LAY_1.c
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1_LAY_1.c, line 0, character 0
+ ~test_UA_1_uaadaptor.log
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test_UA_1_uaadaptor.log, line 0, character 0
+*** Generated Files Information (GENFIL): Build Generated files
+ ~Makefile
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\Makefile, line 0, character 0
+ ~test.dll
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test.dll, line 0, character 0
+ ~test.exe
+  at file C:\Dev\ces-65\Tmp\socket_test\socket_test\Simulation\test.exe, line 0, character 0
+$**************  SCADETOC Version R17 (build i15) **************
+** Generation date: 2016-11-24T23:29:49
+** sc2c.log
+*************************************************************$

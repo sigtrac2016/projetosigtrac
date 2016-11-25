@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="test" oid="!ed/3c33/784C/2124/582c46401f65">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="Emit" type="bool" oid="!ed/3c5b/784C/2124/582cb0624a4b" instancepath="test/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="Rep_reg_circle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="30" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="Rep_dis_circle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtString" type="str" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="7" ParameterIdent="A661_EVT_STRING_CONFIRMED" Size="20" WidgetType="EditBoxText" WidgetName="Victim_name_edit">
+							<A661Data>
+								<DataField value="EvtString"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Description" type="char^150" oid="!ed/3ca8/72EB/22E4/58339ff97283" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="7" ParameterIdent="A661_EVT_STRING_CONFIRMED" WidgetType="EditBoxText" WidgetName="Victim_name_edit">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Notification" type="bool" oid="!ed/3cdf/72EB/22E4/5833a51775f5" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Request_incident_button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalFromButton" type="bool" oid="!ed/4c22/1916/11B4/58357bf27df4" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="SelectionListButton" WidgetName="Occurrence_type_selection">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Title" type="int" oid="!ed/443a/5EC1/2B94/58362767786d" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="12" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="SelectionListButton" WidgetName="Status_type_selection">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Status" type="int" oid="!ed/4e49/6BC1/2718/5836599e68ad" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LEDReportRegisted" type="int" oid="!ed/51c4/6BC1/2718/58365d297519" instancepath="test/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="Rep_reg_circle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LEDReportDispatched" type="int" oid="!ed/5218/6BC1/2718/583664954b06" instancepath="test/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="30" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="Rep_dis_circle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="SelectionListButton" WidgetName="Occurrence_type_selection">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="NotifyFromOcurrenceType" type="bool" oid="!ed/48f6/14AD/15C0/5837785d3c9" instancepath="test/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="EmitToOcurrenceType" type="bool" oid="!ed/48f5/14AD/15C0/5837783c3901" instancepath="test/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_OPENING_ENTRY" WidgetType="SelectionListButton" WidgetName="Occurrence_type_selection">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SelectedOcurrenceType" type="int" oid="!ed/48ec/14AD/15C0/583778032ff3" instancepath="test/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="OpeningEntry" type="ushort" pathname="DisplaySCADE(nova versao)\DisplayTS04.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_OPENING_ENTRY" WidgetType="SelectionListButton" WidgetName="Occurrence_type_selection">
+							<A661Data>
+								<DataField value="OpeningEntry"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="PublishMQTT" oid="!ed/3c8f/6C6A/478/582ba4dc65d2"/>
+	</operatorMappings>
+</MappingFile>

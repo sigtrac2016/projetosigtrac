@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Dev/ces-65/socket_test/KCG/config.txt
+** Generation date: 2016-11-21T18:54:56
+*************************************************************$-->
+<Model date="2016-11-21T18:54:56" commandLine="kcg64.exe -config C:/Dev/ces-65/socket_test/KCG/config.txt">
+  <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+  <Option name="xml_filter" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libverif/libverif.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libpwlinear/lut.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libpwlinear/pwlinear.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libmathext/mathext.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libmath/math.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libmath/vect.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/liblinear/filters.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/liblinear/linear.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libdigital/TruthTables.xscade"/>
+  <Option name="input_file"
+      value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/libdigital/digital.xscade"/>
+  <Option name="input_file" value="C:/Dev/ces-65/socket_test/test.xscade"/>
+  <Option name="input_file" value="C:/Dev/ces-65/socket_test/Operator2.xscade"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="debug" value="#on#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="input_threshold" value="#off#"/>
+  <Option name="header" value="#off#"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="name_length" value="200"/>
+  <Option name="globals_prefix" value="#off#"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="target_dir" value="C:/Dev/ces-65/socket_test/KCG"/>
+  <Option name="target" value="C"/>
+  <Option name="node" value="test"/>
+  <Option name="auth" value="#off#"/>
+  <NoExpNode scadeName="Operator2" headerFile="kcg_imported_functions.h" targetCycleFct="Operator2" imported="true">
+    <Output scadeName="HWtest" scadeType="int" targetType="kcg_int"/>
+  </NoExpNode>
+  <RootNode scadeName="test" headerFile="test.h" targetCycleFct="test" targetInitFct="test_reset"
+      targetInitializationFct="test_init">
+    <Output scadeName="Output1" scadeType="int" targetName="Output1" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="Emit" scadeType="bool" targetName="Emit" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L2" scadeType="int" targetName="_L2" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="Operator2" instName="2" refName="Operator2"/>
+    <OutCtxType targetName="outC_test"/>
+  </RootNode>
+  <Package scadeName="digital"/>
+  <Package scadeName="truthtables">
+    <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+      <EnumVal scadeName="T" targetName="T_truthtables"/>
+      <EnumVal scadeName="F" targetName="F_truthtables"/>
+      <EnumVal scadeName="X" targetName="X_truthtables"/>
+    </EnumType>
+  </Package>
+  <Package scadeName="linear"/>
+  <Package scadeName="filters"/>
+  <Package scadeName="vect"/>
+  <Package scadeName="math"/>
+  <Package scadeName="mathext"/>
+  <Package scadeName="pwlinear"/>
+  <Package scadeName="lut">
+    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="LutIndex_lut"/>
+  </Package>
+  <Package scadeName="verif"/>
+  <StructType targetName="LutIndex_lut" targetCopyFct="kcg_copy_LutIndex_lut" targetCompFct="kcg_comp_LutIndex_lut">
+    <Field scadeName="k" scadeType="int" targetName="k" targetType="kcg_int"/>
+    <Field scadeName="f" scadeType="real" targetName="f" targetType="kcg_real"/>
+  </StructType>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+</Model>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** kcg_trace.xml
+** Generation date: 2016-11-21T18:54:56
+*************************************************************$-->
