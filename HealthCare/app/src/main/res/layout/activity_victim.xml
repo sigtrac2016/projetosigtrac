@@ -28,6 +28,24 @@
             android:hint="Código da Vítima"
             tools:ignore="HardcodedText" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/name_victim"
+            android:hint="Nome da Vítima"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/num_doc_victim"
+            android:hint="Número de Documento"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:text="Detalhe do Atendimento"
             android:layout_width="match_parent"
