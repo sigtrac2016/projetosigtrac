@@ -1,0 +1,27 @@
+$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/config.txt
+** Generation date: 2016-11-24T23:28:48
+*************************************************************$
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade, line 733, character 0
+  at path test/aqui/
+ The local variable aqui is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade, line 683, character 0
+  at path test/Notification/
+ The input variable Notification is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade, line 695, character 0
+  at path test/Latitude/
+ The input variable Latitude is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation/scade_model_without_unused.scade, line 699, character 0
+  at path test/Longitude/
+ The input variable Longitude is never used
+4 warnings were found
+No error was found
+No failure occurred
+$**************** KCG Version 6.4 (build i21) ****************
+** C:/Dev/ces-65/Tmp/socket_test/socket_test/Simulation\kcg.log
+** Generation date: 2016-11-24T23:28:50
+*************************************************************$

@@ -1,0 +1,106 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="Simulation" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Users\\Julhio\\Documents\\ITA\\EA-235\\socket_test\\socket_test.etp"="Simulation" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="Simulation" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Dashboard]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="DashBoard" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="DashBoard" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="DashBoard" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="HTML" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="HTML" 
+"C:\\Users\\Julhio\\Documents\\ITA\\EA-235\\socket_test\\socket_test.etp"="HTML" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="HTML" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Synchronization]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="Synchronization" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="Synchronization" 
+"C:\\Users\\Julhio\\Documents\\ITA\\EA-235\\socket_test\\socket_test.etp"="Synchronization" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="Synchronization" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Analysis Tools]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\DiffAnalyzer]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Users\\Julhio\\Documents\\ITA\\EA-235\\socket_test\\socket_test.etp"="KCG" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Instrumenter]
+
+"C:\\Dev\\ces-65\\socket_test\\socket_test.etp"="Coverage" 
+"C:\\Users\\Artur Pimentel\\Desktop\\socket_test\\socket_test.etp"="Coverage" 
+"C:\\Users\\Julhio\\Documents\\ITA\\EA-235\\socket_test\\socket_test.etp"="Coverage" 
+"C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp"="Coverage" 
+
+[STUDIO\Workspace]
+
+"ActiveProject"="C:\\Dev\\ces-65\\Tmp\\socket_test\\socket_test\\socket_test.etp" 
+
+[SCADE\Editor\Shortcut]
+
+"groupNb"="0" 
+
+[SCADE\Editor\Tool]
+
+"UsePolyline"="false" 
+"TransitionKind"="strong" 
+
+[SCADE\Diff\Tool]
+
+"LastProject1"="" 
+"LastProject2"="" 
+
+[SCADE\Generator\Tool]
+
+"PragmaTarget"="C" 
+
+[SCADE\Simulator\Simulation]
+
+"Latency"="200" 
+"RefreshRate"="1" 
+
+[SCADE\Simulator\BinaryDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\OctalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\HexadecimalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\Watch]
+
+"Count"="0" 
+
+[SCADE\Simulator\Graph]
+
+"Count"="0" 
+
+[SCADE\Simulator\ControlBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\DataBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\TclBreakpoint]
+
+"Count"="0" 

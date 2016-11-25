@@ -1,0 +1,41 @@
+a661 A661_DF_MAGIC_NUMBER
+01 Library version
+05 Supplement version
+0000 App ID (unused)
+0000 Size of OEM free data
+60 Begin block
+00 padding
+0010 Table Size
+00000028 Command size
+
+0005 Number of elements specified below
+0000
+00 Index
+00 Size
+0000
+01 Index
+02 Size
+0cStipple 
+0cStipple 
+02 Index
+02 Size
+08Stipple 
+08Stipple 
+03 Index
+02 Size
+01Stipple 
+06Stipple 
+04 Index
+04 Size
+01Stipple 
+08Stipple 
+08Stipple 
+08Stipple 
+00 align 4
+00 align 4
+d0 End of Block
+00
+0000
+e0 A661_DF_FOOTER
+00
+0000

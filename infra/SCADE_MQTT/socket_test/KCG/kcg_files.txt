@@ -1,0 +1,10 @@
+kcg_trace.xml
+kcg_metrics.txt
+test.c
+test.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+kcg_imported_functions.h
+kcg_types.c
+kcg_consts.c

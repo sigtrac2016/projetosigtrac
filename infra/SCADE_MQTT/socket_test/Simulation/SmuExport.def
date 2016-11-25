@@ -1,0 +1,257 @@
+EXPORTS
+    A661ConnectServer @1
+    A661GetLastError @2
+    A661KillServer @3
+    A661Receive @4
+    A661Send @5
+    A661SetLogFile @6
+    A661SetServerPath @7
+    AfterSimInit @8
+    AfterSimStep @9
+    BeforeSimInit @10
+    BeforeSimStep @11
+    EnumToString @12
+    ExtendedGatherDumpData @13
+    ExtendedGetDumpSize @14
+    ExtendedRestoreDumpData @15
+    ExtendedSimStop @16
+    GraphicalInputsConnected @17 DATA
+    OutputMessageCallback @18 DATA
+    PublishMQTT @19
+    READ_FLOAT @20
+    RefreshSimValues @21
+    STATUS_CANCELADO @22 DATA
+    STATUS_DEFAULT @23 DATA
+    STATUS_FINALIZADO @24 DATA
+    STATUS_INICIADO @25 DATA
+    STATUS_NAO_INICIADO @26 DATA
+    STATUS_REFORCOS @27 DATA
+    SimCustomInit @28
+    SimInit @29
+    SimRealloc @30
+    SimReset @31
+    SimStep @32
+    SimStop @33
+    SimStringAlloc @34
+    SimStringAllocEx @35
+    SimStringAppend @36
+    SimStringFree @37
+    SimStringGet @38
+    SimStringListAlloc @39
+    SimStringListAllocEx @40
+    SimStringListAppend @41
+    SimStringListFree @42
+    SimStringListGetCount @43
+    SimStringListGetData @44
+    SimStringListReset @45
+    SimStringReset @46
+    SsmConnectExternalInputs @47
+    SsmCustomInit @48
+    SsmGatherDumpData @49
+    SsmGetCheckSum @50
+    SsmGetConverter @51
+    SsmGetDefaultRealFormat @52
+    SsmGetDumpSize @53
+    SsmGetMapping @54
+    SsmGetSmuTypesCheckSum @55
+    SsmInit @56
+    SsmInitValues @57
+    SsmLoadSnapshot @58
+    SsmOutputMessage @59
+    SsmReset @60
+    SsmRestoreDumpData @61
+    SsmSaveSnapshot @62
+    SsmSetOutputMessageCallback @63
+    SsmSetUpdateCallback @64
+    SsmStep @65
+    SsmStop @66
+    SsmUpdateValues @67
+    StringToEnum @68
+    TITLE_DEFAULT @69 DATA
+    TITLE_ROBBERY @70 DATA
+    TITLE_ROBBERY_ATTEMPT @71 DATA
+    TITLE_THEFT @72 DATA
+    TITLE_THEFT_ATTEMPT @73 DATA
+    UpdateSimulatorValues @74
+    UpdateSimulatorValuesCallback @75 DATA
+    UpdateValues @76
+    VTable_to_double @77
+    VTable_to_long @78
+    WRITE_FLOAT @79
+    _SCSIM_CheckSum @80 DATA
+    _SCSIM_SmuTypesCheckSum @81 DATA
+    _Type_array_char_150_Utils @82 DATA
+    _Type_array_char_16_Utils @83 DATA
+    _Type_array_char_50_Utils @84 DATA
+    _Type_kcg_bool_Utils @85 DATA
+    _Type_kcg_char_Utils @86 DATA
+    _Type_kcg_int_Utils @87 DATA
+    _Type_kcg_real_Utils @88 DATA
+    a661_com_A661_CMD_UA_REQUEST_8 @89
+    a661_com_csp_widget_GpArcCircle @90
+    a661_com_csp_widget_SelectionListButton @91
+    a661_com_layer_1 @92
+    a661_com_msg_char @93
+    a661_com_msg_short @94
+    a661_msg_cmd_header @95
+    a661_msg_csp_header @96
+    any_true @97
+    array_char_150_to_double @98
+    array_char_150_to_long @99
+    array_char_150_to_string @100
+    array_char_16_to_double @101
+    array_char_16_to_long @102
+    array_char_16_to_string @103
+    array_char_50_to_double @104
+    array_char_50_to_long @105
+    array_char_50_to_string @106
+    buildJson @107
+    check_array_char_150_string @108
+    check_array_char_16_string @109
+    check_array_char_50_string @110
+    check_kcg_bool_string @111
+    check_kcg_char_string @112
+    check_kcg_int_string @113
+    check_kcg_real_string @114
+    check_string_access @115
+    client @116 DATA
+    closeClientMQTT @117
+    compare_array_char_150 @118
+    compare_array_char_16 @119
+    compare_array_char_50 @120
+    compare_kcg_bool @121
+    compare_kcg_char @122
+    compare_kcg_int @123
+    compare_kcg_real @124
+    conn_opts @125 DATA
+    descricao @126 DATA
+    get_array_char_150_signature @127
+    get_array_char_16_signature @128
+    get_array_char_50_signature @129
+    get_kcg_bool_signature @130
+    get_kcg_char_signature @131
+    get_kcg_int_signature @132
+    get_kcg_real_signature @133
+    id @134 DATA
+    inputs_ctx @135 DATA
+    is_VTable_double_conversion_allowed @136
+    is_VTable_long_conversion_allowed @137
+    is_array_char_150_double_conversion_allowed @138
+    is_array_char_150_long_conversion_allowed @139
+    is_array_char_16_double_conversion_allowed @140
+    is_array_char_16_long_conversion_allowed @141
+    is_array_char_50_double_conversion_allowed @142
+    is_array_char_50_long_conversion_allowed @143
+    is_kcg_bool_double_conversion_allowed @144
+    is_kcg_bool_long_conversion_allowed @145
+    is_kcg_char_double_conversion_allowed @146
+    is_kcg_char_long_conversion_allowed @147
+    is_kcg_int_double_conversion_allowed @148
+    is_kcg_int_long_conversion_allowed @149
+    is_kcg_real_double_conversion_allowed @150
+    is_kcg_real_long_conversion_allowed @151
+    iter_array_150 @152 DATA
+    iter_array_16 @153 DATA
+    iter_array_50 @154 DATA
+    kcg_bool_to_double @155
+    kcg_bool_to_long @156
+    kcg_bool_to_string @157
+    kcg_char_to_double @158
+    kcg_char_to_long @159
+    kcg_char_to_string @160
+    kcg_int_to_double @161
+    kcg_int_to_long @162
+    kcg_int_to_string @163
+    kcg_real_to_double @164
+    kcg_real_to_long @165
+    kcg_real_to_string @166
+    latitude @167 DATA
+    layerstring @168 DATA
+    load_inC_test @169
+    load_outC_test @170
+    load_snapshot @171
+    load_var @172
+    longitude @173 DATA
+    mqtt_inicializado @174 DATA
+    nSsmRtVersion @175 DATA
+    notvalid @176
+    openClientMQTT @177
+    outputs_ctx @178 DATA
+    pConverter @179 DATA
+    pSimBoolVTable @180 DATA
+    pSimCharVTable @181 DATA
+    pSimDoubleVTable @182 DATA
+    pSimLongVTable @183 DATA
+    pSimarray_char_150VTable @184 DATA
+    pSimarray_char_16VTable @185 DATA
+    pSimarray_char_50VTable @186 DATA
+    pSimoutC_testCIVTable @187 DATA
+    pSimulator @188 DATA
+    pTop @189 DATA
+    parameterstring @190 DATA
+    predef_compare_enum @191
+    predef_compare_kcg_bool @192
+    predef_compare_kcg_char @193
+    predef_compare_kcg_int @194
+    predef_compare_kcg_real @195
+    predef_kcg_bool_to_string @196
+    predef_kcg_char_to_string @197
+    predef_kcg_char_to_string_helper @198
+    predef_kcg_int_to_string @199
+    predef_kcg_real_to_string @200
+    predef_string_to_kcg_bool @201
+    predef_string_to_kcg_char @202
+    predef_string_to_kcg_char_helper @203
+    predef_string_to_kcg_int @204
+    predef_string_to_kcg_real @205
+    publishMQTT @206
+    pubmsg @207 DATA
+    read_line @208
+    rt_version @209 DATA
+    save_context @210
+    save_field @211
+    save_inC_test @212
+    save_outC_test @213
+    save_snapshot @214
+    save_var @215
+    scope_0 @216 DATA
+    scope_0_entries @217 DATA
+    scope_1 @218 DATA
+    scope_1_entries @219 DATA
+    scope_6 @220 DATA
+    scope_6_entries @221 DATA
+    scope_7 @222 DATA
+    scope_7_entries @223 DATA
+    scope_8 @224 DATA
+    scope_8_entries @225 DATA
+    segmento @226 DATA
+    set_array_char_150_default_value @227
+    set_array_char_16_default_value @228
+    set_array_char_50_default_value @229
+    set_kcg_bool_default_value @230
+    set_kcg_char_default_value @231
+    set_kcg_int_default_value @232
+    set_kcg_real_default_value @233
+    status @234 DATA
+    strDefaultRealFormat @235 DATA
+    strJson @236 DATA
+    string_to_VTable @237
+    string_to_array_char_150 @238
+    string_to_array_char_16 @239
+    string_to_array_char_50 @240
+    string_to_kcg_bool @241
+    string_to_kcg_char @242
+    string_to_kcg_int @243
+    string_to_kcg_real @244
+    szKcgTraceCheckSum @245 DATA
+    test @246
+    test_UA_1_receive @247
+    test_UA_1_receive_clear @248
+    test_UA_1_send @249
+    test_init @250
+    test_reset @251
+    titulo @252 DATA
+    token @253 DATA
+    updateCompareResult @254
+    valid @255
+    widgetstring @256 DATA

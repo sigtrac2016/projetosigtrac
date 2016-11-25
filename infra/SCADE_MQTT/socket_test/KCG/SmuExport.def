@@ -1,0 +1,207 @@
+EXPORTS
+    A661ConnectServer @1
+    A661GetLastError @2
+    A661KillServer @3
+    A661Receive @4
+    A661Send @5
+    A661SetLogFile @6
+    A661SetServerPath @7
+    AfterSimInit @8
+    AfterSimStep @9
+    BeforeSimInit @10
+    BeforeSimStep @11
+    EnumToString @12
+    ExtendedGatherDumpData @13
+    ExtendedGetDumpSize @14
+    ExtendedRestoreDumpData @15
+    ExtendedSimStop @16
+    GraphicalInputsConnected @17 DATA
+    LutIndex_lut_to_double @18
+    LutIndex_lut_to_long @19
+    LutIndex_lut_to_string @20
+    Operator2 @21
+    OutputMessageCallback @22 DATA
+    READ_FLOAT @23
+    RefreshSimValues @24
+    SimCustomInit @25
+    SimInit @26
+    SimRealloc @27
+    SimReset @28
+    SimStep @29
+    SimStop @30
+    SimStringAlloc @31
+    SimStringAllocEx @32
+    SimStringAppend @33
+    SimStringFree @34
+    SimStringGet @35
+    SimStringListAlloc @36
+    SimStringListAllocEx @37
+    SimStringListAppend @38
+    SimStringListFree @39
+    SimStringListGetCount @40
+    SimStringListGetData @41
+    SimStringListReset @42
+    SimStringReset @43
+    SsmConnectExternalInputs @44
+    SsmCustomInit @45
+    SsmGatherDumpData @46
+    SsmGetCheckSum @47
+    SsmGetConverter @48
+    SsmGetDefaultRealFormat @49
+    SsmGetDumpSize @50
+    SsmGetMapping @51
+    SsmGetSmuTypesCheckSum @52
+    SsmInit @53
+    SsmInitValues @54
+    SsmLoadSnapshot @55
+    SsmOutputMessage @56
+    SsmReset @57
+    SsmRestoreDumpData @58
+    SsmSaveSnapshot @59
+    SsmSetOutputMessageCallback @60
+    SsmSetUpdateCallback @61
+    SsmStep @62
+    SsmStop @63
+    SsmUpdateValues @64
+    StringToEnum @65
+    TruthTableValues_truthtables_nb_values @66 DATA
+    TruthTableValues_truthtables_to_double @67
+    TruthTableValues_truthtables_to_long @68
+    TruthTableValues_truthtables_to_string @69
+    UpdateSimulatorValues @70
+    UpdateSimulatorValuesCallback @71 DATA
+    UpdateValues @72
+    VTable_to_double @73
+    VTable_to_long @74
+    WRITE_FLOAT @75
+    _SCSIM_CheckSum @76 DATA
+    _SCSIM_SmuTypesCheckSum @77 DATA
+    _Type_LutIndex_lut_Utils @78 DATA
+    _Type_TruthTableValues_truthtables_Utils @79 DATA
+    _Type_kcg_bool_Utils @80 DATA
+    _Type_kcg_char_Utils @81 DATA
+    _Type_kcg_int_Utils @82 DATA
+    _Type_kcg_real_Utils @83 DATA
+    a661_com_A661_CMD_UA_REQUEST_8 @84
+    a661_com_csp_widget_Label @85
+    a661_com_layer_1 @86
+    a661_com_msg_structure_0 @87
+    a661_msg_cmd_header @88
+    a661_msg_csp_header @89
+    any_true @90
+    check_LutIndex_lut_string @91
+    check_TruthTableValues_truthtables_string @92
+    check_kcg_bool_string @93
+    check_kcg_char_string @94
+    check_kcg_int_string @95
+    check_kcg_real_string @96
+    check_string_access @97
+    compare_LutIndex_lut @98
+    compare_TruthTableValues_truthtables @99
+    compare_kcg_bool @100
+    compare_kcg_char @101
+    compare_kcg_int @102
+    compare_kcg_real @103
+    get_LutIndex_lut_signature @104
+    get_TruthTableValues_truthtables_signature @105
+    get_kcg_bool_signature @106
+    get_kcg_char_signature @107
+    get_kcg_int_signature @108
+    get_kcg_real_signature @109
+    insidetest @110
+    is_LutIndex_lut_double_conversion_allowed @111
+    is_LutIndex_lut_long_conversion_allowed @112
+    is_TruthTableValues_truthtables_double_conversion_allowed @113
+    is_TruthTableValues_truthtables_long_conversion_allowed @114
+    is_VTable_double_conversion_allowed @115
+    is_VTable_long_conversion_allowed @116
+    is_kcg_bool_double_conversion_allowed @117
+    is_kcg_bool_long_conversion_allowed @118
+    is_kcg_char_double_conversion_allowed @119
+    is_kcg_char_long_conversion_allowed @120
+    is_kcg_int_double_conversion_allowed @121
+    is_kcg_int_long_conversion_allowed @122
+    is_kcg_real_double_conversion_allowed @123
+    is_kcg_real_long_conversion_allowed @124
+    kcg_bool_to_double @125
+    kcg_bool_to_long @126
+    kcg_bool_to_string @127
+    kcg_char_to_double @128
+    kcg_char_to_long @129
+    kcg_char_to_string @130
+    kcg_int_to_double @131
+    kcg_int_to_long @132
+    kcg_int_to_string @133
+    kcg_real_to_double @134
+    kcg_real_to_long @135
+    kcg_real_to_string @136
+    layerstring @137 DATA
+    load_outC_test @138
+    load_snapshot @139
+    load_var @140
+    nSsmRtVersion @141 DATA
+    notvalid @142
+    outputs_ctx @143 DATA
+    pConverter @144 DATA
+    pSimBoolVTable @145 DATA
+    pSimCharVTable @146 DATA
+    pSimDoubleVTable @147 DATA
+    pSimLongVTable @148 DATA
+    pSimLutIndex_lutVTable @149 DATA
+    pSimTruthTableValues_truthtablesVTable @150 DATA
+    pSimoutC_testCIVTable @151 DATA
+    pSimulator @152 DATA
+    pTop @153 DATA
+    parameterstring @154 DATA
+    predef_compare_enum @155
+    predef_compare_kcg_bool @156
+    predef_compare_kcg_char @157
+    predef_compare_kcg_int @158
+    predef_compare_kcg_real @159
+    predef_kcg_bool_to_string @160
+    predef_kcg_char_to_string @161
+    predef_kcg_char_to_string_helper @162
+    predef_kcg_int_to_string @163
+    predef_kcg_real_to_string @164
+    predef_string_to_kcg_bool @165
+    predef_string_to_kcg_char @166
+    predef_string_to_kcg_char_helper @167
+    predef_string_to_kcg_int @168
+    predef_string_to_kcg_real @169
+    read_line @170
+    rt_version @171 DATA
+    save_context @172
+    save_field @173
+    save_outC_test @174
+    save_snapshot @175
+    save_var @176
+    scope_0 @177 DATA
+    scope_0_entries @178 DATA
+    scope_1 @179 DATA
+    scope_1_entries @180 DATA
+    scope_2 @181 DATA
+    scope_2_entries @182 DATA
+    set_LutIndex_lut_default_value @183
+    set_TruthTableValues_truthtables_default_value @184
+    set_kcg_bool_default_value @185
+    set_kcg_char_default_value @186
+    set_kcg_int_default_value @187
+    set_kcg_real_default_value @188
+    strDefaultRealFormat @189 DATA
+    string_to_LutIndex_lut @190
+    string_to_TruthTableValues_truthtables @191
+    string_to_VTable @192
+    string_to_kcg_bool @193
+    string_to_kcg_char @194
+    string_to_kcg_int @195
+    string_to_kcg_real @196
+    szKcgTraceCheckSum @197 DATA
+    test @198
+    test_UA_1_receive @199
+    test_UA_1_receive_clear @200
+    test_UA_1_send @201
+    test_init @202
+    test_reset @203
+    updateCompareResult @204
+    valid @205
+    widgetstring @206 DATA

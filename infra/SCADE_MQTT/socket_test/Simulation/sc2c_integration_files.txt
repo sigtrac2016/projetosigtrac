@@ -1,0 +1,48 @@
+*****************************
+*** Generated KCG H/Ads files ***
+*****************************
+test.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+kcg_imported_functions.h
+
+*****************************
+*** Generated KCG C/Adb files ***
+*****************************
+test.c
+kcg_types.c
+kcg_consts.c
+
+*****************************
+*** External C Files ***
+*****************************
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\lib\A661Cosim.c
+test_cosim.c
+socket_test_snapshot.c
+socket_test_type.c
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\lib\C\SmuPredefConv.c
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\lib\C\SmuTypes.c
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\lib\C\SmuLib.c
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\lib\C\SmuVTable.c
+socket_test_mapping.c
+..\IntegrationCode\ClientMQTT.c
+
+*****************************
+*** Generated SC2C Files ***
+*****************************
+user_macros.h
+kcg_imported_types.h
+
+*****************************
+*** Include Directories ***
+*****************************
+.
+$(SCADE)
+$(SCADE)\include
+$(SCADE)\include\C
+$(SCADE)\include\Ada
+$(SCADE)\lib\Ada
+..\IntegrationCode
+..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE\libraries\libmathext
+

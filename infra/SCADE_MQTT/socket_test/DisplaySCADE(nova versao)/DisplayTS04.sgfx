@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?dom version="R16" ?>
+
+<?scade_release version="R17" ?>
+
+<specification>
+    <IDE>
+        <project path="Display_SCADE.etp"/>
+        <ratio horizontal="20" vertical="20"/>
+    </IDE>
+    <symbology>
+        <dimension height="1024" width="1024"/>
+    </symbology>
+    <A661 library_version="1" supp_version="5">
+        <intprop name="ApplicationId">1</intprop>
+    </A661>
+    <children>
+        <A661Layer name="a661_layer" oid="cf257af4-4893-4646-8a69-99cafbf0b74b">
+            <IDE>
+                <ratio horizontal="20" vertical="20"/>
+            </IDE>
+            <model>
+                <intprop name="LayerId">1</intprop>
+                <intprop name="ContextNumber">0</intprop>
+                <intprop name="Width">20480</intprop>
+                <intprop name="Height">20480</intprop>
+            </model>
+            <runtime>
+                <connect msg_id="A661_UA_CONTEXT_NUMBER" name="a661_layer_A661_UA_CONTEXT_NUMBER"/>
+                <connect msg_id="A661_REQ_LAYER_ACTIVE" name="a661_layer_A661_REQ_LAYER_ACTIVE"/>
+                <connect msg_id="A661_REQ_LAYER_INACTIVE" name="a661_layer_A661_REQ_LAYER_INACTIVE"/>
+                <connect msg_id="A661_REQ_LAYER_VISIBLE" name="a661_layer_A661_REQ_LAYER_VISIBLE"/>
+            </runtime>
+            <events>
+                <connect msg_id="A661_SERVER_CONTEXT_NUMBER" name="a661_layer_A661_SERVER_CONTEXT_NUMBER"/>
+                <connect msg_id="A661_NOTE_REINIT_LAYER_DATA" name="a661_layer_A661_NOTE_REINIT_LAYER_DATA"/>
+                <connect msg_id="A661_NOTE_LAYER_IS_ACTIVE" name="a661_layer_A661_NOTE_LAYER_IS_ACTIVE"/>
+                <connect msg_id="A661_NOTE_LAYER_IS_INACTIVE" name="a661_layer_A661_NOTE_LAYER_IS_INACTIVE"/>
+                <connect msg_id="A661_NOTE_CYCLIC_ACTIVATION" name="a661_layer_A661_NOTE_CYCLIC_ACTIVATION"/>
+                <connect msg_id="A661_ERR_BAD_COMMAND" name="a661_layer_A661_ERR_BAD_COMMAND"/>
+                <connect msg_id="A661_ERR_CREATE_ABORTED" name="a661_layer_A661_ERR_CREATE_ABORTED"/>
+                <connect msg_id="A661_ERR_EXTEND_ABORTED" name="a661_layer_A661_ERR_EXTEND_ABORTED"/>
+                <connect msg_id="A661_ERR_SET_ABORTED" name="a661_layer_A661_ERR_SET_ABORTED"/>
+                <connect msg_id="A661_ERR_UA_REQUEST_ABORTED" name="a661_layer_A661_ERR_UA_REQUEST_ABORTED"/>
+                <connect msg_id="A661_ERR_MEMORY_OVERLOAD" name="a661_layer_A661_ERR_MEMORY_OVERLOAD"/>
+                <connect msg_id="A661_ERR_PROCESS_OVERLOAD" name="a661_layer_A661_ERR_PROCESS_OVERLOAD"/>
+                <connect msg_id="A661_ERR_RENDERING_OVERLOAD" name="a661_layer_A661_ERR_RENDERING_OVERLOAD"/>
+            </events>
+            <children>
+                <widget name="Middle_line" oid="3dd3fa76-f1ee-4314-a390-5829203f08b7" type="GpLine">
+                    <model>
+                        <intprop name="WidgetIdent">1</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosXStart">10200</intprop>
+                        <intprop name="PosYStart">0</intprop>
+                        <intprop name="PosXEnd">10200</intprop>
+                        <intprop name="PosYEnd">20480</intprop>
+                        <intprop name="StyleSet">2</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Middle_line_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Middle_line_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Middle_line_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Middle_line_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Middle_line_A661_POS_Y"/>
+                        <connect msg_id="A661_POS_XY2" name="Middle_line_A661_POS_XY2"/>
+                        <connect msg_id="A661_POS_X2" name="Middle_line_A661_POS_X2"/>
+                        <connect msg_id="A661_POS_Y2" name="Middle_line_A661_POS_Y2"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Middle_line_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Middle_line_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Middle_line_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Incident_info_label" oid="3d4164b1-c6a0-4c76-8e47-c59cd5ffe93e" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">2</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">2600</intprop>
+                        <intprop name="PosY">19380</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">3</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Incident Info</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Incident_info_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Incident_info_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Incident_info_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Incident_info_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Incident_info_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Incident_info_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Incident_info_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Incident_info_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Incident_info_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Incident_info_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Incident_info_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Incident_status_label" oid="500d01bb-71ba-4d67-8978-8537bcc3aa43" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">3</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">12520</intprop>
+                        <intprop name="PosY">19380</intprop>
+                        <intprop name="SizeX">6000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">3</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Incident Status</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Incident_status_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Incident_status_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Incident_status_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Incident_status_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Incident_status_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Incident_status_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Incident_status_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Incident_status_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Incident_status_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Incident_status_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Incident_status_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Title_line" oid="40981b97-fbae-475c-bf1b-f403756d0809" type="GpLine">
+                    <model>
+                        <intprop name="WidgetIdent">4</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosXStart">0</intprop>
+                        <intprop name="PosYStart">19000</intprop>
+                        <intprop name="PosXEnd">21000</intprop>
+                        <intprop name="PosYEnd">19000</intprop>
+                        <intprop name="StyleSet">2</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Title_line_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Title_line_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Title_line_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Title_line_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Title_line_A661_POS_Y"/>
+                        <connect msg_id="A661_POS_XY2" name="Title_line_A661_POS_XY2"/>
+                        <connect msg_id="A661_POS_X2" name="Title_line_A661_POS_X2"/>
+                        <connect msg_id="A661_POS_Y2" name="Title_line_A661_POS_Y2"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Title_line_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Title_line_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Title_line_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Send_report_button" oid="6ff32883-6815-480e-9662-42c927553b26" type="PushButton">
+                    <model>
+                        <intprop name="WidgetIdent">5</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">2000</intprop>
+                        <intprop name="PosY">2500</intprop>
+                        <intprop name="SizeX">6000</intprop>
+                        <intprop name="SizeY">2000</intprop>
+                        <intprop name="StyleSet">231</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Send Report</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Request_incident_button_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Request_incident_button_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Request_incident_button_A661_STRING"/>
+                        <connect msg_id="A661_STYLE_SET" name="Request_incident_button_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Request_incident_button_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Request_incident_button_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Request_incident_button_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Request_incident_button_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Request_incident_button_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SELECTION" name="Request_incident_button_A661_EVT_SELECTION"/>
+                    </events>
+                </widget>
+                <widget name="Description_label" oid="ad05ff83-991e-477e-8696-7cfe27cc0d88" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">6</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">80</intprop>
+                        <intprop name="PosY">17700</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Description</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Victim_name_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Victim_name_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Victim_name_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Victim_name_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Victim_name_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Victim_name_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Victim_name_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Victim_name_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Victim_name_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Victim_name_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Victim_name_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Description_edit" oid="c2822b8b-6bba-4b19-a683-d069dc81ec3a" type="EditBoxText">
+                    <model>
+                        <intprop name="WidgetIdent">7</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4000</intprop>
+                        <intprop name="PosY">15900</intprop>
+                        <intprop name="SizeX">6000</intprop>
+                        <intprop name="SizeY">2500</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="StartCursorPos">12</intprop>
+                        <intprop name="MaxStringLength">150</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">please type</stringprop>
+                    </model>
+                    <extensions>
+                        <extension type="CursorShapeExtension">
+                            <enumprop name="AllowChange">A661_TRUE</enumprop>
+                            <intprop name="CursorIndex">5</intprop>
+                        </extension>
+                    </extensions>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Description_edit_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Description_edit_A661_VISIBLE"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Description_edit_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_STRING" name="Description_edit_A661_STRING"/>
+                        <connect msg_id="A661_CURSOR_POS" name="Description_edit_A661_CURSOR_POS"/>
+                        <connect msg_id="A661_STYLE_SET" name="Description_edit_A661_STYLE_SET"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Description_edit_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Description_edit_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Description_edit_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Description_edit_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_STRING_CHANGE_ABORTED" name="Description_edit_A661_EVT_STRING_CHANGE_ABORTED"/>
+                        <connect msg_id="A661_EVT_STRING_CHANGE" name="Description_edit_A661_EVT_STRING_CHANGE"/>
+                        <connect msg_id="A661_EVT_STRING_CONFIRMED" name="Description_edit_A661_EVT_STRING_CONFIRMED"/>
+                        <connect msg_id="A661_EVT_EDITBOX_OPENED" name="Description_edit_A661_EVT_EDITBOX_OPENED"/>
+                    </events>
+                </widget>
+                <widget name="Occurrence_label" oid="a8b9df5f-10ac-493b-88e5-7efc4faf8059" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">8</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">120</intprop>
+                        <intprop name="PosY">14120</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Occurrence</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Blood_type_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Blood_type_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Blood_type_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Blood_type_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Blood_type_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Blood_type_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Blood_type_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Blood_type_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Blood_type_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Blood_type_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Blood_type_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Occurrence_group_selection" oid="1d06de2a-e5a9-4968-b621-56731af2e323" type="SelectionListButton">
+                    <model>
+                        <intprop name="WidgetIdent">9</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4040</intprop>
+                        <intprop name="PosY">14120</intprop>
+                        <intprop name="SizeX">5500</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="SelectingAreaWidth">5500</intprop>
+                        <intprop name="SelectingAreaHeight">4900</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxNumberOfEntries">16</intprop>
+                        <intprop name="NumberOfEntries">3</intprop>
+                        <intprop name="SelectedEntry">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <intprop name="OpeningEntry">3</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <enumprop name="OpeningMode">A661_OPEN_DOWN</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <stringprop name="LabelString">select</stringprop>
+                        <arrayprop name="EntryList">
+                            <stringprop name="1">Against Person</stringprop>
+                            <stringprop name="2">Against patrimony</stringprop>
+                            <stringprop name="3">Against Public Peace</stringprop>
+                        </arrayprop>
+                    </model>
+                    <extensions>
+                        <extension type="CursorShapeExtension">
+                            <enumprop name="AllowChange">A661_TRUE</enumprop>
+                            <intprop name="CursorIndex">5</intprop>
+                        </extension>
+                    </extensions>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Occurrence_group_selection_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Occurrence_group_selection_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Occurrence_group_selection_A661_STYLE_SET"/>
+                        <connect msg_id="A661_SELECTED_ENTRY" name="Occurrence_group_selection_A661_SELECTED_ENTRY"/>
+                        <connect msg_id="A661_OPENING_ENTRY" name="Occurrence_group_selection_A661_OPENING_ENTRY"/>
+                        <connect msg_id="A661_NUMBER_OF_ENTRIES" name="Occurrence_group_selection_A661_NUMBER_OF_ENTRIES"/>
+                        <connect msg_id="A661_STRING_ARRAY" name="Occurrence_group_selection_A661_STRING_ARRAY"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Occurrence_group_selection_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Occurrence_group_selection_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Occurrence_group_selection_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Occurrence_group_selection_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Occurrence_group_selection_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SEL_ENTRY_CHANGE" name="Occurrence_group_selection_A661_EVT_SEL_ENTRY_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="Occurrence_type_selection" oid="2f49445a-9567-4c4b-aeca-7c41e39162e7" type="SelectionListButton">
+                    <model>
+                        <intprop name="WidgetIdent">47</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4040</intprop>
+                        <intprop name="PosY">12900</intprop>
+                        <intprop name="SizeX">5500</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="SelectingAreaWidth">5500</intprop>
+                        <intprop name="SelectingAreaHeight">4900</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxNumberOfEntries">16</intprop>
+                        <intprop name="NumberOfEntries">4</intprop>
+                        <intprop name="SelectedEntry">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <intprop name="OpeningEntry">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <enumprop name="OpeningMode">A661_OPEN_DOWN</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <stringprop name="LabelString">select</stringprop>
+                        <arrayprop name="EntryList">
+                            <stringprop name="1">Theft</stringprop>
+                            <stringprop name="2">Theft Attempt</stringprop>
+                            <stringprop name="3">Robbery</stringprop>
+                            <stringprop name="4">Robbery Attempt</stringprop>
+                        </arrayprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Occurrence_type_selection_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Occurrence_type_selection_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Occurrence_type_selection_A661_STYLE_SET"/>
+                        <connect msg_id="A661_SELECTED_ENTRY" name="Occurrence_type_selection_A661_SELECTED_ENTRY"/>
+                        <connect msg_id="A661_OPENING_ENTRY" name="Occurrence_type_selection_A661_OPENING_ENTRY"/>
+                        <connect msg_id="A661_NUMBER_OF_ENTRIES" name="Occurrence_type_selection_A661_NUMBER_OF_ENTRIES"/>
+                        <connect msg_id="A661_STRING_ARRAY" name="Occurrence_type_selection_A661_STRING_ARRAY"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Occurrence_type_selection_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Occurrence_type_selection_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Occurrence_type_selection_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Occurrence_type_selection_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Occurrence_type_selection_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SEL_ENTRY_CHANGE" name="Occurrence_type_selection_A661_EVT_SEL_ENTRY_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="Status_type_label" oid="df1ec9d1-e2fb-4c37-9242-119808738953" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">11</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">120</intprop>
+                        <intprop name="PosY">11040</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Status</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Accident_type_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Accident_type_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Accident_type_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Accident_type_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Accident_type_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Accident_type_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Accident_type_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Accident_type_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Accident_type_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Accident_type_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Accident_type_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Status_type_selection" oid="9da1df97-9731-4f70-aeb9-5fe0f0cb5d59" type="SelectionListButton">
+                    <model>
+                        <intprop name="WidgetIdent">12</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4040</intprop>
+                        <intprop name="PosY">11040</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="SelectingAreaWidth">4000</intprop>
+                        <intprop name="SelectingAreaHeight">4900</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxNumberOfEntries">16</intprop>
+                        <intprop name="NumberOfEntries">5</intprop>
+                        <intprop name="SelectedEntry">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <intprop name="OpeningEntry">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <enumprop name="OpeningMode">A661_OPEN_DOWN</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <stringprop name="LabelString">select</stringprop>
+                        <arrayprop name="EntryList">
+                            <stringprop name="1">Not Initialized</stringprop>
+                            <stringprop name="2">Initialized</stringprop>
+                            <stringprop name="3">Canceled</stringprop>
+                            <stringprop name="4">Reinforcement</stringprop>
+                            <stringprop name="5">Finished</stringprop>
+                        </arrayprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Status_type_selection_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Status_type_selection_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Status_type_selection_A661_STYLE_SET"/>
+                        <connect msg_id="A661_SELECTED_ENTRY" name="Status_type_selection_A661_SELECTED_ENTRY"/>
+                        <connect msg_id="A661_OPENING_ENTRY" name="Status_type_selection_A661_OPENING_ENTRY"/>
+                        <connect msg_id="A661_NUMBER_OF_ENTRIES" name="Status_type_selection_A661_NUMBER_OF_ENTRIES"/>
+                        <connect msg_id="A661_STRING_ARRAY" name="Status_type_selection_A661_STRING_ARRAY"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Status_type_selection_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Status_type_selection_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Status_type_selection_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Status_type_selection_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Status_type_selection_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SEL_ENTRY_CHANGE" name="Status_type_selection_A661_EVT_SEL_ENTRY_CHANGE"/>
+                    </events>
+                </widget>
+                <widget name="Location_label" oid="88f68482-0f9b-4048-b35c-6c489c81886b" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">21</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">80</intprop>
+                        <intprop name="PosY">8500</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Location</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Location_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Location_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Location_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Location_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Location_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Location_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Location_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Location_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Location_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Location_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Location_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Coordinates_latitude" oid="554f6b23-2bfd-4451-b574-d1e3958fe8a7" type="EditBoxText">
+                    <model>
+                        <intprop name="WidgetIdent">22</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4000</intprop>
+                        <intprop name="PosY">8500</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="StartCursorPos">32</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">please type</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Coordinates_edit_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Coordinates_edit_A661_VISIBLE"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Coordinates_edit_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_STRING" name="Coordinates_edit_A661_STRING"/>
+                        <connect msg_id="A661_CURSOR_POS" name="Coordinates_edit_A661_CURSOR_POS"/>
+                        <connect msg_id="A661_STYLE_SET" name="Coordinates_edit_A661_STYLE_SET"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Coordinates_edit_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Coordinates_edit_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Coordinates_edit_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Coordinates_edit_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_STRING_CHANGE_ABORTED" name="Coordinates_edit_A661_EVT_STRING_CHANGE_ABORTED"/>
+                        <connect msg_id="A661_EVT_STRING_CHANGE" name="Coordinates_edit_A661_EVT_STRING_CHANGE"/>
+                        <connect msg_id="A661_EVT_STRING_CONFIRMED" name="Coordinates_edit_A661_EVT_STRING_CONFIRMED"/>
+                        <connect msg_id="A661_EVT_EDITBOX_OPENED" name="Coordinates_edit_A661_EVT_EDITBOX_OPENED"/>
+                    </events>
+                </widget>
+                <widget name="Coordinates_longitude" oid="9b794c5c-bc9f-4942-a199-30578d068f90" type="EditBoxText">
+                    <model>
+                        <intprop name="WidgetIdent">23</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4000</intprop>
+                        <intprop name="PosY">7400</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="StartCursorPos">32</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">please type</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Coordinates_edit2_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Coordinates_edit2_A661_VISIBLE"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Coordinates_edit2_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_STRING" name="Coordinates_edit2_A661_STRING"/>
+                        <connect msg_id="A661_CURSOR_POS" name="Coordinates_edit2_A661_CURSOR_POS"/>
+                        <connect msg_id="A661_STYLE_SET" name="Coordinates_edit2_A661_STYLE_SET"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Coordinates_edit2_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Coordinates_edit2_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Coordinates_edit2_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Coordinates_edit2_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_STRING_CHANGE_ABORTED" name="Coordinates_edit2_A661_EVT_STRING_CHANGE_ABORTED"/>
+                        <connect msg_id="A661_EVT_STRING_CHANGE" name="Coordinates_edit2_A661_EVT_STRING_CHANGE"/>
+                        <connect msg_id="A661_EVT_STRING_CONFIRMED" name="Coordinates_edit2_A661_EVT_STRING_CONFIRMED"/>
+                        <connect msg_id="A661_EVT_EDITBOX_OPENED" name="Coordinates_edit2_A661_EVT_EDITBOX_OPENED"/>
+                    </events>
+                </widget>
+                <widget name="Coordinates_button" oid="d8f480d5-c2d7-440b-9a8b-20e9ae75d7c8" type="PushButton">
+                    <model>
+                        <intprop name="WidgetIdent">24</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4000</intprop>
+                        <intprop name="PosY">6300</intprop>
+                        <intprop name="SizeX">4000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Get GPS Location</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_ENABLE" name="Coordinates_button_A661_ENABLE"/>
+                        <connect msg_id="A661_VISIBLE" name="Coordinates_button_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Coordinates_button_A661_STRING"/>
+                        <connect msg_id="A661_STYLE_SET" name="Coordinates_button_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ENTRY_VALID" name="Coordinates_button_A661_ENTRY_VALID"/>
+                        <connect msg_id="A661_NEXT_FOCUSED_WIDGET" name="Coordinates_button_A661_NEXT_FOCUSED_WIDGET"/>
+                        <connect msg_id="A661_AUTO_FOCUS_MOTION" name="Coordinates_button_A661_AUTO_FOCUS_MOTION"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Coordinates_button_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Coordinates_button_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                    <events>
+                        <connect msg_id="A661_EVT_SELECTION" name="Coordinates_button_A661_EVT_SELECTION"/>
+                    </events>
+                </widget>
+                <widget name="Progress_label" oid="4bb11818-b76b-4d15-b09f-fc963ea4c2a4" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">27</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10700</intprop>
+                        <intprop name="PosY">17700</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Progress</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Progress_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Progress_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Progress_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Progress_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Progress_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Progress_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Progress_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Progress_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Progress_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Progress_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Progress_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Progress_bar" oid="561dcdb7-38d2-45c7-910f-53470b4d7c52" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">28</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10500</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">9650</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">8</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Progress_bar_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Progress_bar_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Progress_bar_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Progress_bar_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Progress_bar_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Progress_bar_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Progress_bar_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Progress_bar_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Progress_bar_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Progress_bar_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Progress_bar_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Progress_bar_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Rep_dis_label" oid="93c22f4f-61b5-444c-994c-1479c6266a7b" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">29</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10800</intprop>
+                        <intprop name="PosY">14300</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Report dispatched</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Req_reg_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Req_reg_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Req_reg_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Req_reg_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Req_reg_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Req_reg_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Req_reg_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Req_reg_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Req_reg_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Req_reg_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Req_reg_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Rep_dis_circle" oid="e4c69aa4-6e8a-46a8-8a32-3361b226f2f5" type="GpArcCircle">
+                    <model>
+                        <intprop name="WidgetIdent">30</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">16500</intprop>
+                        <intprop name="PosY">14700</intprop>
+                        <intprop name="StartAngle">-2147483648</intprop>
+                        <intprop name="EndAngle">2147483647</intprop>
+                        <intprop name="Radius">400</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">21</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Req_reg_circle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Req_reg_circle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Req_reg_circle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Req_reg_circle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Req_reg_circle_A661_POS_Y"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Req_reg_circle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Req_reg_circle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_RADIUS" name="Req_reg_circle_A661_RADIUS"/>
+                        <connect msg_id="A661_START_ANGLE" name="Req_reg_circle_A661_START_ANGLE"/>
+                        <connect msg_id="A661_END_ANGLE" name="Req_reg_circle_A661_END_ANGLE"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Req_reg_circle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Req_reg_circle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Rep_reg_label" oid="dac3305e-4b01-4f23-b547-0105d7c31d7e" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">31</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10800</intprop>
+                        <intprop name="PosY">12800</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Report registered</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Help_dis_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Help_dis_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Help_dis_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Help_dis_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Help_dis_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Help_dis_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Help_dis_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Help_dis_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Help_dis_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Help_dis_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Help_dis_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Rep_reg_circle" oid="874b19d9-1dc6-4621-9e28-0b641d23fc1d" type="GpArcCircle">
+                    <model>
+                        <intprop name="WidgetIdent">32</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">16500</intprop>
+                        <intprop name="PosY">13200</intprop>
+                        <intprop name="StartAngle">-2147483648</intprop>
+                        <intprop name="EndAngle">2147483647</intprop>
+                        <intprop name="Radius">400</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">21</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Help_dis_circle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Help_dis_circle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Help_dis_circle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Help_dis_circle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Help_dis_circle_A661_POS_Y"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Help_dis_circle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Help_dis_circle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_RADIUS" name="Help_dis_circle_A661_RADIUS"/>
+                        <connect msg_id="A661_START_ANGLE" name="Help_dis_circle_A661_START_ANGLE"/>
+                        <connect msg_id="A661_END_ANGLE" name="Help_dis_circle_A661_END_ANGLE"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Help_dis_circle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Help_dis_circle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Help_site_label" oid="15e13ea5-2287-4522-8771-13b695d8e66c" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">33</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10800</intprop>
+                        <intprop name="PosY">11300</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Help on site</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Help_site_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Help_site_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Help_site_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Help_site_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Help_site_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Help_site_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Help_site_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Help_site_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Help_site_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Help_site_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Help_site_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Help_site_circle" oid="cfccfe0d-b696-4040-bb85-0624d4e8c880" type="GpArcCircle">
+                    <model>
+                        <intprop name="WidgetIdent">34</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">16500</intprop>
+                        <intprop name="PosY">11700</intprop>
+                        <intprop name="StartAngle">-2147483648</intprop>
+                        <intprop name="EndAngle">2147483647</intprop>
+                        <intprop name="Radius">400</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">21</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Help_site_circle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Help_site_circle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Help_site_circle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Help_site_circle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Help_site_circle_A661_POS_Y"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Help_site_circle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Help_site_circle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_RADIUS" name="Help_site_circle_A661_RADIUS"/>
+                        <connect msg_id="A661_START_ANGLE" name="Help_site_circle_A661_START_ANGLE"/>
+                        <connect msg_id="A661_END_ANGLE" name="Help_site_circle_A661_END_ANGLE"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Help_site_circle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Help_site_circle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Case_closed_label" oid="4a53e136-a955-43c3-9a4d-be6876d70259" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">37</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">10800</intprop>
+                        <intprop name="PosY">9900</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <stringprop name="LabelString">Case closed</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Case_closed_label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Case_closed_label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Case_closed_label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Case_closed_label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Case_closed_label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Case_closed_label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Case_closed_label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Case_closed_label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Case_closed_label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Case_closed_label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Case_closed_label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Case_closed_circle" oid="1a4d70e5-4b15-4ee8-8013-5e3e242dfb91" type="GpArcCircle">
+                    <model>
+                        <intprop name="WidgetIdent">38</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">16500</intprop>
+                        <intprop name="PosY">10300</intprop>
+                        <intprop name="StartAngle">-2147483648</intprop>
+                        <intprop name="EndAngle">2147483647</intprop>
+                        <intprop name="Radius">400</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">21</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Case_closed_circle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Case_closed_circle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Case_closed_circle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Case_closed_circle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Case_closed_circle_A661_POS_Y"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Case_closed_circle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Case_closed_circle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_RADIUS" name="Case_closed_circle_A661_RADIUS"/>
+                        <connect msg_id="A661_START_ANGLE" name="Case_closed_circle_A661_START_ANGLE"/>
+                        <connect msg_id="A661_END_ANGLE" name="Case_closed_circle_A661_END_ANGLE"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Case_closed_circle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Case_closed_circle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Label" oid="91c515b1-da57-477d-a9ea-0659a96ec827" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">39</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">12800</intprop>
+                        <intprop name="PosY">4560</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">3</intprop>
+                        <intprop name="ColorIndex">66</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">TS04 - Police</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Label_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Label_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Label_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Label_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Label_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Label_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Label_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Label_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Label_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Label_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Label_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Label2" oid="f026764c-3d46-4f7d-ab6f-255096f793e7" type="Label">
+                    <model>
+                        <intprop name="WidgetIdent">40</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">12800</intprop>
+                        <intprop name="PosY">3600</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="RotationAngle">0</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                        <intprop name="Font">3</intprop>
+                        <intprop name="ColorIndex">66</intprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Department</stringprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Label2_A661_VISIBLE"/>
+                        <connect msg_id="A661_STRING" name="Label2_A661_STRING"/>
+                        <connect msg_id="A661_POS_XY" name="Label2_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Label2_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Label2_A661_POS_Y"/>
+                        <connect msg_id="A661_STYLE_SET" name="Label2_A661_STYLE_SET"/>
+                        <connect msg_id="A661_ORIENTATION" name="Label2_A661_ORIENTATION"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Label2_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FONT" name="Label2_A661_FONT"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Label2_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Label2_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="GpRectangle" oid="3f8d0896-430b-401b-b5e6-4e66abe764d3" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">41</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">11800</intprop>
+                        <intprop name="PosY">2000</intprop>
+                        <intprop name="SizeX">7000</intprop>
+                        <intprop name="SizeY">5000</intprop>
+                        <intprop name="StyleSet">2</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_FALSE</enumprop>
+                        <intprop name="FillIndex">74</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="GpRectangle_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="GpRectangle_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="GpRectangle_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="GpRectangle_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="GpRectangle_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="GpRectangle_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="GpRectangle_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="GpRectangle_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="GpRectangle_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="GpRectangle_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="GpRectangle_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="GpRectangle_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Prog1" oid="6e054dc6-e8bc-4c96-85ac-21dea4c0dcf1" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">42</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">10500</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">1930</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">66</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Prog1_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Prog1_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Prog1_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Prog1_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Prog1_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Prog1_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Prog1_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Prog1_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Prog1_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Prog1_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Prog1_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Prog1_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Prog2" oid="fbb34d63-5e9d-4f9d-984c-d5204916ef2d" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">43</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">12430</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">1930</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">66</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Prog2_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Prog2_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Prog2_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Prog2_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Prog2_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Prog2_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Prog2_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Prog2_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Prog2_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Prog2_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Prog2_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Prog2_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Prog3" oid="807ff592-ae91-4e56-b3b2-0680a4d9e7ed" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">44</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">14360</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">1930</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">66</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Prog3_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Prog3_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Prog3_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Prog3_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Prog3_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Prog3_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Prog3_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Prog3_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Prog3_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Prog3_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Prog3_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Prog3_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Prog4" oid="dd521d8f-5455-410d-9282-c8bc70580210" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">45</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">16290</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">1930</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">66</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Prog4_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Prog4_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Prog4_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Prog4_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Prog4_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Prog4_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Prog4_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Prog4_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Prog4_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Prog4_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Prog4_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Prog4_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+                <widget name="Prog5" oid="540a867c-7585-4623-b2db-7a49bcea25c3" type="GpRectangle">
+                    <model>
+                        <intprop name="WidgetIdent">46</intprop>
+                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">18220</intprop>
+                        <intprop name="PosY">16400</intprop>
+                        <intprop name="SizeX">1930</intprop>
+                        <intprop name="SizeY">600</intprop>
+                        <intprop name="StyleSet">1</intprop>
+                        <intprop name="ColorIndex">1</intprop>
+                        <enumprop name="Filled">A661_TRUE</enumprop>
+                        <intprop name="FillIndex">66</intprop>
+                        <enumprop name="Halo">A661_FALSE</enumprop>
+                    </model>
+                    <runtime>
+                        <connect msg_id="A661_VISIBLE" name="Prog5_A661_VISIBLE"/>
+                        <connect msg_id="A661_STYLE_SET" name="Prog5_A661_STYLE_SET"/>
+                        <connect msg_id="A661_POS_XY" name="Prog5_A661_POS_XY"/>
+                        <connect msg_id="A661_POS_X" name="Prog5_A661_POS_X"/>
+                        <connect msg_id="A661_POS_Y" name="Prog5_A661_POS_Y"/>
+                        <connect msg_id="A661_SIZE_X" name="Prog5_A661_SIZE_X"/>
+                        <connect msg_id="A661_SIZE_Y" name="Prog5_A661_SIZE_Y"/>
+                        <connect msg_id="A661_SIZE_XY" name="Prog5_A661_SIZE_XY"/>
+                        <connect msg_id="A661_COLOR_INDEX" name="Prog5_A661_COLOR_INDEX"/>
+                        <connect msg_id="A661_FILL_INDEX" name="Prog5_A661_FILL_INDEX"/>
+                        <connect msg_id="A661_REQ_FOCUS_ON_WIDGET" name="Prog5_A661_REQ_FOCUS_ON_WIDGET"/>
+                        <connect msg_id="A661_REQ_CURSOR_ON_WIDGET" name="Prog5_A661_REQ_CURSOR_ON_WIDGET"/>
+                    </runtime>
+                </widget>
+            </children>
+        </A661Layer>
+    </children>
+</specification>
+
+<!-- crc32 : 2543799411 -->
+
