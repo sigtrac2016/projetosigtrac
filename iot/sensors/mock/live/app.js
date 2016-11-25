@@ -3,18 +3,18 @@ var http = require('http').Server(app)
 var io = require('socket.io')(http)
 var mqtt = require('mqtt')
 
-var client  = mqtt.connect('mqtt://virtual10-147.cptec.inpe.br')
+var client  = mqtt.connect('mqtt://52.67.204.136')
  
 client.on('connect', function(){
-    client.subscribe('#')
+    client.subscribe('live')
 })
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(__dirname + '/lm35.html')
 })
 
-app.get('/lm35', function(req, res){
-  res.sendFile(__dirname + '/map.html')
+app.get('/static', function(req, res){
+  res.sendFile(__dirname + '/static.html')
 })
 
 app.get('/data', function(req, res){

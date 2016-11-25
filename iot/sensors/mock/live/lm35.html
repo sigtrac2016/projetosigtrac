@@ -25,32 +25,27 @@
           center: {lat: -23.20440, lng: -45.9085},
           mapTypeId: 'roadmap'
         });
-
-        // Create a <script> tag and set the USGS URL as the source.
-        //var script = document.createElement('script');
-
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        //script.src = 'http://virtual10-147.cptec.inpe.br/data';
-        //document.getElementsByTagName('head')[0].appendChild(script);
       }
 
-      var heatmapData = [];
+      function eqfeed_callback(message) {
+        var heatmapData = [];
 
-      function eqfeed_callback(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var latLng = new google.maps.LatLng(results.features[i].location.latitude, results.features[i].location.longitude);
+        var sensor = JSON.parse(message);
 
-          var temp = results.features[i].value.temperature;
-          var weightedLoc = {
-            location: latLng,
-            weight: temp
-          };
-          heatmapData.push(weightedLoc);
-        }
+        var latLng = new google.maps.LatLng(sensor.location.latitude, sensor.location.longitude);
+        var temp = sensor.value.temperature;
+
+        weightedLoc = {
+          location: latLng,
+          weight: temp
+        };
+
+        heatmapData.push(weightedLoc);
+
         var heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatmapData,
           radius: 80,
+          opacity: 0.2,
           map: map
         });
       }
@@ -59,7 +54,6 @@
     <script>
       var socket = io();
       socket.on('message', function(message){
-        console.log(message);
         eqfeed_callback(message);
       });
     </script>
@@ -67,4 +61,3 @@
     </script>
   </body>
 </html>
-
