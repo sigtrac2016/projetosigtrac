@@ -5,7 +5,7 @@
  */
 
 var apiURL = "http://localhost:8080/api/chamados/";
-var nSeconds = 10;
+var nSeconds = 15;
 
 
 
@@ -26,6 +26,7 @@ app.directive('route', function() {
 app.directive('drone', function() {
     return { restrict: "E", templateUrl: "drone.html" };
 });
+
 app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     /***********************************************
@@ -69,22 +70,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
                 return "#aaa";
         }
     }
-    function newJson(lat, lng){
-        var dt=new Date();
-        var date=dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate()+" "+
-            dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
-        var json={
-        "titulo": "titulo1", // string vazia ou não
-        "segmento": 'n', // char com a letra referente ao segmento
-        "descricao": "descricao1", // string vazia ou não
-        "lat": lat, //latitude
-        "long": lng, //longitude
-        //"foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
-        "data_hora": date // formato padrão de timestamp
-        };
-        return json;
-    }
+    
     // Initializes map
     $scope.map = new google.maps.Map(document.getElementById("map"), {
         center: my_position,
@@ -198,8 +184,8 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         });
 
         marker.addListener('click', function(event) {
-        	$scope.genContentString(this.obj);
-        	$scope.map.setCenter(this.getPosition());
+            $scope.genContentString(this.obj);
+            $scope.map.setCenter(this.getPosition());
             $scope.selection = this;
             $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, this);
@@ -375,7 +361,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-    	$scope.updateArrayOfJsons(newJson(event.latLng.lat(), event.latLng.lng()));
+        $scope.updateArrayOfJsons(newJson(event.latLng.lat(), event.latLng.lng()));
         var new_marker = new google.maps.Marker({
             position: event.latLng,
             map: $scope.map,
@@ -450,7 +436,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     }
 
-    $scope.deleteMarker = function(param) {
+    $scope.deleteMarker = function() {
         var id=arrayOfJsons[$scope.markers.indexOf($scope.selection)]._id;
         console.log("id"+id);
         $scope.selection.setMap(null);
@@ -461,13 +447,9 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     }
     $scope.falseAlert = function(param){
         //TODO
-        //delete from map
-        //delete from database
-        $scope.selection.setMap(null);        
     }
     $scope.endAlert = function(param){
         //TODO
-        $scope.selection.setMap(null);
     }
     $scope.reinforcementAlert = function(param){
         //TODO
@@ -594,26 +576,28 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         });
         $scope.markers = [];
         for (i = 0; i < arrayOfJsons.length; i++){
-            var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
-            var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: $scope.map,
-                draggable: true,
-                obj: arrayOfJsons[i],
-                icon: pinSymbol(color)
-            });
-            marker.addListener('click', function(event) {
-                $scope.genContentString(this.obj);
-                $scope.map.setCenter(this.getPosition());
-                $scope.selection = this;
-                $scope.infowindow.setContent("<div id=\'infowindow'></div>");
-                $scope.infowindow.open($scope.map, this);
-                $("#infowindow").html($compile($scope.contentString)($scope));
-            });  
-            $scope.markers.push(marker);
-            $scope.updateHeatmap();
-            
+            if(getUrlParameter("segmento")==undefined || getUrlParameter("segmento")[0]==arrayOfJsons[i].segmento)
+            {
+                var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
+                var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: $scope.map,
+                    draggable: true,
+                    obj: arrayOfJsons[i],
+                    icon: pinSymbol(color)
+                });
+                marker.addListener('click', function(event) {
+                    $scope.genContentString(this.obj);
+                    $scope.map.setCenter(this.getPosition());
+                    $scope.selection = this;
+                    $scope.infowindow.setContent("<div id=\'infowindow'></div>");
+                    $scope.infowindow.open($scope.map, this);
+                    $("#infowindow").html($compile($scope.contentString)($scope));
+                });  
+                $scope.markers.push(marker);
+                $scope.updateHeatmap();
+            }
         }
     }     
     $scope.makeGetRequest = function(){
@@ -641,10 +625,66 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     );
     $scope.makeGetRequest();
     $scope.loadMarkers();
+    function fillMarker() {
+        return segmentoColor(segmento);
+    }
 
+    function serializeData( data ) {
+        var buffer = [];
+        // Serialize each key in the object.
+        for ( var name in data ) {
+            if ( ! data.hasOwnProperty( name ) ) {
+                continue;
+            }
+            var value = data[ name ];
+            buffer.push(
+                encodeURIComponent( name ) +
+                "=" +
+                encodeURIComponent( ( value == null ) ? "" : value )
+            );
+        }
+        // Serialize the buffer and clean it up for transportation.
+        var source = buffer
+            .join( "&" )
+            .replace( /%20/g, "+" )
+        ;
+        return( source );
+    }
+    function newJson(lat, lng){
+        var dt=new Date();
+        var date=dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate()+" "+
+            dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+        var json;
+        if(getUrlParameter("segmento")!=undefined)
+        {    
+            json={
+                "titulo": "titulo1", // string vazia ou não
+                "segmento": getUrlParameter("segmento")[0], // char com a letra referente ao segmento
+                "descricao": "descricao1", // string vazia ou não
+                "lat": lat, //latitude
+                "long": lng, //longitude
+                //"foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+                "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+                "data_hora": date // formato padrão de timestamp
+            };
+        }
+        else
+        {    
+            json={
+                "titulo": "titulo1", // string vazia ou não
+                "segmento": 'n', // char com a letra referente ao segmento
+                "descricao": "descricao1", // string vazia ou não
+                "lat": lat, //latitude
+                "long": lng, //longitude
+                //"foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
+                "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
+                "data_hora": date // formato padrão de timestamp
+            };
+        }
+        return json;
+    }
 
 });
-	
 
 
 /* Detecta Esc para sair de FullScreen*/
@@ -657,6 +697,9 @@ $(document).keyup(function(e) {
         screenfull.exit($("#mapVC")[0]);
     }
 });
+
+
+
 
 
 function reload_js(src) {
@@ -679,7 +722,16 @@ var positions = [
     { lat: -23.22, lng: -45.86 },
     { lat: -23.20, lng: -45.89 },
 ]
-
+function pinSymbol(color) {
+    return {
+        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+        fillColor: color,
+        fillOpacity: 1,
+        strokeColor: '#000',
+        strokeWeight: 2,
+        scale: 1,
+    };
+}
 var positions2 = [
 
     { lat: -23.21, lng: -45.89 }
