@@ -1,0 +1,30 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "description": "Servidor da API",
+  "main": "src/app.js",
+  "scripts": {
+    "mutate": "node node_modules/stryker/bin/stryker -c test/stryker.conf.js",
+    "test": "./node_modules/.bin/mocha",
+    "start": "node src/app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.15.0",
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0",
+    "request": "^2.75.0",
+    "underscore": "^1.8.3",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "stryker": "^0.4.3",
+    "stryker-api": "^0.2.0",
+    "stryker-mocha-runner": "^0.1.0"
+  }
+}

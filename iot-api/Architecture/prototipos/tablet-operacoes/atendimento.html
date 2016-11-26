@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html ng-app="SigTrac">
+
+    <head>
+        <meta charset='utf-8'>
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="fireDept.css">
+
+        <title>Mapa de Atendimento de Busca e Resgate</title>
+    </head>
+
+    <body>
+
+        <div class="google-map-container">
+            <div class="google-map"
+                atendimento-map>
+            </div>
+        </div>
+
+        <script type="text/html"
+            id="atendimentosControlTemplate">
+            <section class="pure-u-1-6 map-control">
+                <header>
+                    <h3>Mapa de Atendimento de Busca e Resgate</h3>
+                    <small>Dê dois cliques no título ou marco no mapa para editar.</small>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/'}">
+                                <a href="#/"
+                                    class="pure-menu-link">Todos</a></li>
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/bombeiros'}">
+                                <a href="#/bombeiros"
+                                    class="pure-menu-link">Bombeiros</a></li>
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/paramedicos'}">
+                                <a href="#/paramedicos"
+                                    class="pure-menu-link">Paramédicos</a></li>
+                            <li class="pure-menu-item"
+                                ng-class="{'pure-menu-selected': location.path() == '/vitimas'}">
+                                <a href="#/vitimas"
+                                    class="pure-menu-link">Vitimas</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <section ng-show="atendimentos.filtered().length">
+                    <ul>
+                        <li ng-repeat="atendimento in atendimentos.filtered()"
+                            ng-class="{completed: atendimento.completed}">
+                            <div>
+                                <input type="checkbox"
+                                    ng-model="atendimento.completed"
+                                    disabled>
+                                <label ng-click="controls.openInfoWindowByAtendimentoId(atendimento.id)"
+                                    ng-dblclick="controls.editAtendimentoById(atendimento.id)">{{atendimento.title}}</label>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <footer>
+                    <span ng-show="atendimentos.remainingCount()">
+                        <strong>{{atendimentos.remainingCount()}}</strong>
+                        <span ng-pluralize count="atendimentos.remainingCount()" when="{ one: 'atendimento restante', other: 'atendimentos restantes' }"></span>
+                    </span>
+                    <hr />
+                    <button class="pure-button"
+                        ng-click="atendimentos.prune()"
+                        ng-show="atendimentos.remainingCount() < atendimentos.rows.length">Apagar encerrados ({{atendimentos.rows.length - atendimentos.remainingCount()}})
+                    </button>
+                    <button class="pure-button pure-button-success"
+                        ng-click="controls.newAtendimento()"
+                        ng-hide="controls.editAtendimento">Novo Operação
+                    </button>
+                </footer>
+            </section>
+        </script>
+
+        <script type="text/html"
+            id="infoWindowTemplate">
+            <div class="info-window">
+                <h3>{{infow.data.title}}</h3>
+                <p ng-show="infow.data.desc">{{infow.data.desc}}</p>
+                <small ng-show="infow.data.atendimentoInicio">Período:</small>
+                <p ng-show="infow.data.atendimentoInicio">{{infow.data.atendimentoInicio}} <small>até</small> {{infow.data.atendimentoTermino}}</p>
+                <div style="clear: both;"></div>
+            </div>
+        </script>
+
+        <script type="text/html"
+            id="editSearchControlTemplate">
+            <input id="searchInput"
+                class="controls"
+                type="text"
+                placeholder="Pesquisar">
+        </script>
+
+        <script type="text/html"
+            id="editAtendimentoControlTemplate">
+            <div class="pure-u-1-6 map-control"
+                ng-show="controls.editAtendimento"
+                ng-controller="atendimentoMapCtrl">
+                <form name="editAtendimentoForm"
+                    class="pure-form"
+                    ng-submit="submitAtendimento()">
+                    <fieldset>
+                        <label for="title">Título:</label>
+                        <input id="title"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.title"
+                            ng-maxlength="30"
+                            required>
+                        <label for="description">Descrição:</label>
+                        <input id="description"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.desc">
+                        <label for="atendimentoInicio">Início do atendimento:</label>
+                        <input id="atendimentoInicio"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.atendimentoInicio">
+                        <label for="atendimentoTermino">Término do atendimento:</label>
+                        <input id="atendimentoTermino"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.atendimentoTermino">
+                        <div ng-show="editAtendimento.tipo == 4">
+                            <label for="deambulando">Deambulando:</label>
+                            <input id="deambulando"
+                                class="pure-input-1"
+                                type="checkbox"
+                                ng-model="editAtendimento.deambulando">
+                            <label for="cumpreOrdens">Cumpre ordens:</label>
+                            <input id="cumpreOrdens"
+                                class="pure-input-1"
+                                type="checkbox"
+                                ng-model="editAtendimento.cumpreOrdens">
+                            <label for="respiracaoViaAerea">Respiração via áreas:</label>
+                            <input id="respiracaoViaAerea"
+                                class="pure-input-1"
+                                type="checkbox"
+                                ng-model="editAtendimento.respiracaoViaAerea">
+                            <label for="reenchimentoCapilar">Reenchimento capilar:</label>
+                            <input id="reenchimentoCapilar"
+                                class="pure-input-1"
+                                type="text"
+                                ng-model="editAtendimento.reenchimentoCapilar">
+                            <label for="respiracao">Respiração:</label>
+                            <input id="respiracao"
+                                class="pure-input-1"
+                                type="text"
+                                ng-model="editAtendimento.respiracao">
+                        </div>
+                        <small>Clique e arraste o marcador para mudar a localização.</small>
+                        <label for="longitude">Longitude:</label>
+                        <input id="longitude"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.lng">
+                        <label for="latitude">Latitude:</label>
+                        <input id="latitude"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.lat">
+                        <label for
+                            "radius">Raio:</label>
+                        <input id="radius"
+                            class="pure-input-1"
+                            type="text"
+                            ng-model="editAtendimento.radius">
+                        <div ng-show="editAtendimento.id !== -1">
+                            <label for="completed">Encerrado:</label>
+                            <input id="completed"
+                                type="checkbox"
+                                ng-model="editAtendimento.comp">
+                        </div>
+                        <button class="pure-button pure-button-primary pure-input-1"
+                            type="submit">{{editAtendimento.saveMsg}}
+                        </button>
+                        <button class="pure-button pure-input-1"
+                            ng-click="resetCloseAtendimentoForm()">{{editAtendimento.cancelMsg}}
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </script>
+
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyAgHmjHxtdzsXUzU2DhyUVKHOttWGZKk6g&libraries=places"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="richMarker.js"></script>
+
+        <script>
+            angular.module('SigTrac', []);
+        </script>
+
+        <script src="map.service.js"></script>
+        <script src="atendimento/atendimento.service.js"></script>
+        <script src="atendimento/atendimento.controller.js"></script>
+        <script src="atendimento/atendimentoMap.directive.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo LANG="en_US.UTF-8" >> /etc/default/locale
+echo LC_ALL="en_US.UTF-8" >> /etc/default/locale
+
+
+echo vm.swappiness=10 >> /etc/sysctl.conf
+echo vm.vfs_cache_pressure=50 >> /etc/sysctl.conf
+echo fs.inotify.max_user_watches=524288 >> /etc/sysctl.conf
+sudo sysctl -p
+
+
+apt-get update
+apt-get -y upgrade
+
+
+apt-get -y install mongodb
+
+apt-get -y install curl git build-essential python2.7
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+
+
+apt-get install -y nodejs
+npm install -g npm
+npm install -g grunt
+
+cd /var/www/server
+
+npm cache clean
+npm install --no-bin-links
+
+mkdir spec

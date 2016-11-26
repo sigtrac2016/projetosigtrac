@@ -1,0 +1,14 @@
+{
+  "name": "mqtt-broker",
+  "version": "1.0.0",
+  "description": "mqtt broker for sig-trac project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Guimaraes",
+  "license": "ISC",
+  "dependencies": {
+    "mosca": "^2.1.0"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="SigTrac">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <title>Operações de Busca e Resgate</title>
+    </head>
+
+    <body>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="container">
+                    <div class="col">
+                         <div class="page-header">
+                            <h1>Busca e Resgate<br/><small>Corpo de Bombeiros</small></h1>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Informações da Vítima</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <input type="text" class="form-control" placeholder="Descrição" aria-describedby="basic-addon2">
+                                    <br/>
+                                    <input type="text" class="form-control" placeholder="Nome" aria-describedby="basic-addon2">
+                                    <br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon2">Deambulando</span>
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">Sim</button>
+                                            <button type="button" class="btn btn-default">Não</button>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Respiração" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">RPM</span>
+                                    </div>
+                                    <br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon2">Respira vias aéreas</span>
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">Sim</button>
+                                            <button type="button" class="btn btn-default">Não</button>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Reenchimento Capilar" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">segs.</span>
+                                    </div>
+                                    <br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon2">Pulso radial</span>
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">Sim</button>
+                                            <button type="button" class="btn btn-default">Não</button>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon2">Cumpre ordens</span>
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">Sim</button>
+                                            <button type="button" class="btn btn-default">Não</button>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <button type="submit" class="btn btn-default">Enviar</button>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+
+</html>
