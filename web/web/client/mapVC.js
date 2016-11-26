@@ -8,7 +8,6 @@ var apiURL = "http://localhost:8080/api/chamados/";
 var nSeconds = 15;
 
 
-
 /* Templates used to render HTML */
 
 app.directive('menu', function() {
@@ -180,7 +179,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
             map: $scope.map,
             draggable: true,
             obj: elem,
-            icon: pinSymbol(colors[i])
+            icon: imageIconModel
         });
 
         marker.addListener('click', function(event) {
@@ -294,11 +293,8 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         "status": "reinforcements", // nao-iniciado, iniciado, cancelado, reforcos, finalizado **
         "data_hora": "" // formato padrão de timestamp
     }
-
     var imageIconModel = $scope.genericPointModel.url_icone;
-
-
-    $scope.createGenericPoint = function() {
+    $scope.createGenericPoint = function(i) {
         var marker = new google.maps.Marker({
             position: positions2[i],
             map: $scope.map,
@@ -316,48 +312,6 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         $scope.markers.push(marker);
         $scope.updateHeatmap();
     }
-
-    for (var i = 0; i < 6; i++) {
-        $scope.createMarker(positions[i]);
-    }
-
-    for (var i = 0; i < 1; i++) {
-        $scope.createGenericPoint();
-    }
-
-    /***********************************************
-     Creates new air drone
-     ***********************************************/
-    $http.get('/airDrone')
-        .then(function success(data) {
-            data = data.data;
-            var marker = new google.maps.Marker({
-                position: { lat: data['lat'], lng: data['lon'] },
-                map: $scope.map,
-                icon: 'https://cdn3.iconfinder.com/data/icons/faticons/32/send-01-48.png',
-                title: 'drone',
-            });
-
-            marker.addListener('click', function(event) {
-                $scope.getDistance(marker.position);
-                $scope.selection = marker;
-                $scope.infowindow.open($scope.map, marker);
-                $("#infowindow").html($compile("<drone\>")($scope));
-                $scope.infowindow.setPosition(marker.getPosition());
-                $scope.map.setCenter(marker.getPosition());
-            });
-
-            google.maps.event.addListener(marker, 'dragend', function() {
-                $scope.updateHeatmap();
-            });
-
-            $scope.markers.push(marker);
-            $scope.updateHeatmap();
-
-        });
-    /***********************************************
-     Creates new $scope.markers
-     ***********************************************/
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
@@ -426,7 +380,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
         var idDB=arrayOfJsons[$scope.markers.indexOf($scope.selection)]._id;
         $scope.selection.setIcon(pinSymbol(color));
-        console.log("id"+id+" "+idDB)
+        //console.log("id"+id+" "+idDB)
         var json={
             "segmento":segment
         };
@@ -438,7 +392,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     $scope.deleteMarker = function() {
         var id=arrayOfJsons[$scope.markers.indexOf($scope.selection)]._id;
-        console.log("id"+id);
+        //console.log("id"+id);
         $scope.selection.setMap(null);
         // Remove o marcador e salva os dados
         $scope.deleteRequest(id);
@@ -616,6 +570,36 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         }, function errorCallback(response){
             console.log("Error")
         });
+        //  for (var i = 0; i < 1; i++) {
+        //      $scope.createGenericPoint(i);
+        // }
+        $http.get('/airDrone')
+        .then(function success(data) {
+            data = data.data;
+            var marker = new google.maps.Marker({
+                position: { lat: data['lat'], lng: data['lon'] },
+                map: $scope.map,
+                icon: 'https://cdn3.iconfinder.com/data/icons/faticons/32/send-01-48.png',
+                title: 'drone',
+            });
+
+            marker.addListener('click', function(event) {
+                $scope.getDistance(marker.position);
+                $scope.selection = marker;
+                $scope.infowindow.open($scope.map, marker);
+                $("#infowindow").html($compile("<drone\>")($scope));
+                $scope.infowindow.setPosition(marker.getPosition());
+                $scope.map.setCenter(marker.getPosition());
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function() {
+                $scope.updateHeatmap();
+            });
+
+            $scope.markers.push(marker);
+            $scope.updateHeatmap();
+
+        });
     }
     $interval(
         function(){
@@ -733,7 +717,6 @@ function pinSymbol(color) {
     };
 }
 var positions2 = [
-
     { lat: -23.21, lng: -45.89 }
 ]
 
