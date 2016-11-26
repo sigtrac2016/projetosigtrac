@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="DisplayOp" oid="!ed/3c35/67F6/18930/5837925642d5">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="temperature" type="real" oid="!ed/3c44/67F6/18930/5837928e6715" instancepath="DisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="temperature" type="real" oid="0b52014d-f997-4c28-9c19-a4f9c82a76d4" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="respiratory_rate" type="real" oid="!ed/3c9c/3E4F/2230/5838ed72f2e" instancepath="DisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="respiratory_rate" type="real" oid="5ed91a3a-d7f4-4e8d-8b7e-0447a28247db" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="oxygen_saturation" type="real" oid="!ed/3cbc/3E4F/2230/5838edb846fc" instancepath="DisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="oxygen_saturation" type="real" oid="79c23b7d-5536-429f-a083-6a0b72b456e0" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="heart_rate" type="real" oid="!ed/3ccb/3E4F/2230/5838ede3e05" instancepath="DisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="heart_rate" type="real" oid="c207274a-3379-4c90-bd25-49eb957e7253" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="TemperatureValueOp" oid="!ed/3c31/67F6/18930/58378faa1990"/>
+		<OperatorMapping name="RespiratoryRateDisplayOp" oid="!ed/3c66/3E4F/2230/5838c22a13a2">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="respiratory_rate" type="real" oid="!ed/3c6d/3E4F/2230/5838c22a77b4" instancepath="RespiratoryRateDisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="respiratory_rate" type="real" oid="5ed91a3a-d7f4-4e8d-8b7e-0447a28247db" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="OxygenSaturationDisplayOp" oid="!ed/3c49/3E4F/2230/5838c2204407">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="oxygen_saturation" type="real" oid="!ed/3c50/3E4F/2230/5838c220aba" instancepath="OxygenSaturationDisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="oxygen_saturation" type="real" oid="79c23b7d-5536-429f-a083-6a0b72b456e0" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="HeartRateDisplayOp" oid="!ed/3c7b/3E4F/2230/5838c22a27e9">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="heart_rate" type="real" oid="!ed/3c82/3E4F/2230/5838c22a21b6" instancepath="HeartRateDisplayOp/"/>
+					</output>
+					<inputs>
+						<Plug name="heart_rate" type="real" oid="c207274a-3379-4c90-bd25-49eb957e7253" pathname="..\..\tutorial-arduino-display\specification.sgfx" layer="symbology_layer"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

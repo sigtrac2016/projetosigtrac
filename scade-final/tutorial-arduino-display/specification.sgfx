@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?dom version="R16" ?>
+
+<?scade_release version="R17" ?>
+
+<specification>
+    <IDE>
+        <project path="tutorial-arduino-display.etp"/>
+        <ratio horizontal="1" vertical="1"/>
+    </IDE>
+    <symbology>
+        <colorMode value="RGBA"/>
+        <dimension height="768" width="768"/>
+    </symbology>
+    <children>
+        <layer oid="d5fabb97-8e60-4e84-86c6-7fdeb140f663">
+            <pathFromRoot value=""/>
+            <declaration>
+                <inputs>
+                    <input name="temperature" oid="0b52014d-f997-4c28-9c19-a4f9c82a76d4" type="real">
+                        <init>36.5</init>
+                    </input>
+                    <input name="oxygen_saturation" oid="79c23b7d-5536-429f-a083-6a0b72b456e0" type="real">
+                        <init>97.0</init>
+                    </input>
+                    <input name="respiratory_rate" oid="5ed91a3a-d7f4-4e8d-8b7e-0447a28247db" type="real">
+                        <init>18.0</init>
+                    </input>
+                    <input name="heart_rate" oid="c207274a-3379-4c90-bd25-49eb957e7253" type="real">
+                        <init>70.0</init>
+                    </input>
+                </inputs>
+            </declaration>
+            <properties name="symbology_layer">
+                <visible>
+                    <init>true</init>
+                </visible>
+                <origin>
+                    <x>
+                        <init>0.0</init>
+                    </x>
+                    <y>
+                        <init>0.0</init>
+                    </y>
+                </origin>
+                <id>
+                    <init>1</init>
+                </id>
+                <ratio horizontal="1" vertical="1"/>
+            </properties>
+            <children>
+                <referenceContainer oid="4dd33c00-2c2a-4244-bbd5-916d6a835acb">
+                    <pathFromRoot value="0"/>
+                    <properties modular="false" name="Gauge">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <origin>
+                            <x>
+                                <init>-310.0</init>
+                            </x>
+                            <y>
+                                <init>-287.0</init>
+                            </y>
+                        </origin>
+                        <scale>
+                            <x>
+                                <init>1.0</init>
+                            </x>
+                            <y>
+                                <init>1.0</init>
+                            </y>
+                        </scale>
+                        <rotate>
+                            <angle>
+                                <init>0.0</init>
+                            </angle>
+                        </rotate>
+                        <orientation clockwise="false"/>
+                        <file name="Gauge.ogfx" path="$(SCADEDISPLAY_HOME)\examples\objects\Widgets"/>
+                        <crc value="2262594954"/>
+                        <inputParameters>
+                            <parameter control="false" name="SizeX" oid="45d4cf7f-e024-41b5-83a9-84a92e7aa620" type="real">
+                                <init>250.0</init>
+                            </parameter>
+                            <parameter control="false" name="SizeY" oid="103e257b-3b48-40ee-baac-71e8678c71ed" type="real">
+                                <init>50.0</init>
+                            </parameter>
+                            <parameter control="false" name="Style" oid="f5c1daa7-19d2-419f-927d-db7833c23a63" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="BackColor" oid="3df8cd5e-e430-4bd3-928e-b74773b0ad8e" representation="color" type="int">
+                                <init>6</init>
+                            </parameter>
+                            <parameter control="false" name="FrontColor" oid="7c066c7f-ec2a-46c5-949e-68e8a83efff9" representation="color" type="int">
+                                <init>44</init>
+                            </parameter>
+                            <parameter control="false" name="Font" oid="bb0cf042-eef5-4803-9fa3-2e7c85ae21b3" representation="font" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="TextColor" oid="97660f81-528a-4a57-92b6-6fe673480ea4" representation="color" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="Value" oid="8adfe35c-90d6-4746-9a07-fd66eb0d3d76" type="real">
+                                <expr>oxygen_saturation</expr>
+                                <init>97.0</init>
+                            </parameter>
+                            <parameter control="false" name="MinValue" oid="f0090185-f195-4b87-96f1-e4882306f136" type="real">
+                                <init>0.0</init>
+                            </parameter>
+                            <parameter control="false" name="MaxValue" oid="4a42e74f-d11c-488f-abe2-4aa05393598d" type="real">
+                                <init>100.0</init>
+                            </parameter>
+                            <parameter control="false" name="Orientation" oid="d97c8e64-c266-43f7-85f5-ea5b5e5b589e" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="ShowGraduation" oid="bfa366b6-49ee-489a-a167-28e54ee27cbc" representation="index" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="ShowValue" oid="37cb13c1-dbcf-454d-88ae-0b8e0df3894f" type="bool">
+                                <init>true</init>
+                            </parameter>
+                            <parameter control="false" name="Legend" oid="c2ea84ed-d7c4-4a9f-9daa-7e55a6e624a0" representation="as_string" type="char^255">
+                                <init>[79, 120, 121, 103, 101, 110, 32, 115, 97, 116, 117, 114, 97, 116, 105, 111, 110, 0]</init>
+                            </parameter>
+                        </inputParameters>
+                    </properties>
+                    <children/>
+                </referenceContainer>
+                <referenceContainer oid="e7fb712f-68b7-4e5d-8cfe-692a853ba6a1">
+                    <pathFromRoot value="1"/>
+                    <properties modular="false" name="Gauge">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <origin>
+                            <x>
+                                <init>-310.0</init>
+                            </x>
+                            <y>
+                                <init>-120.0</init>
+                            </y>
+                        </origin>
+                        <scale>
+                            <x>
+                                <init>1.0</init>
+                            </x>
+                            <y>
+                                <init>1.0</init>
+                            </y>
+                        </scale>
+                        <rotate>
+                            <angle>
+                                <init>0.0</init>
+                            </angle>
+                        </rotate>
+                        <orientation clockwise="false"/>
+                        <file name="Gauge.ogfx" path="$(SCADEDISPLAY_HOME)\examples\objects\Widgets"/>
+                        <crc value="2262594954"/>
+                        <inputParameters>
+                            <parameter control="false" name="SizeX" oid="45d4cf7f-e024-41b5-83a9-84a92e7aa620" type="real">
+                                <init>250.0</init>
+                            </parameter>
+                            <parameter control="false" name="SizeY" oid="103e257b-3b48-40ee-baac-71e8678c71ed" type="real">
+                                <init>50.0</init>
+                            </parameter>
+                            <parameter control="false" name="Style" oid="f5c1daa7-19d2-419f-927d-db7833c23a63" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="BackColor" oid="3df8cd5e-e430-4bd3-928e-b74773b0ad8e" representation="color" type="int">
+                                <init>6</init>
+                            </parameter>
+                            <parameter control="false" name="FrontColor" oid="7c066c7f-ec2a-46c5-949e-68e8a83efff9" representation="color" type="int">
+                                <init>61</init>
+                            </parameter>
+                            <parameter control="false" name="Font" oid="bb0cf042-eef5-4803-9fa3-2e7c85ae21b3" representation="font" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="TextColor" oid="97660f81-528a-4a57-92b6-6fe673480ea4" representation="color" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="Value" oid="8adfe35c-90d6-4746-9a07-fd66eb0d3d76" type="real">
+                                <expr>respiratory_rate</expr>
+                                <init>18.0</init>
+                            </parameter>
+                            <parameter control="false" name="MinValue" oid="f0090185-f195-4b87-96f1-e4882306f136" type="real">
+                                <init>0.0</init>
+                            </parameter>
+                            <parameter control="false" name="MaxValue" oid="4a42e74f-d11c-488f-abe2-4aa05393598d" type="real">
+                                <init>80.0</init>
+                            </parameter>
+                            <parameter control="false" name="Orientation" oid="d97c8e64-c266-43f7-85f5-ea5b5e5b589e" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="ShowGraduation" oid="bfa366b6-49ee-489a-a167-28e54ee27cbc" representation="index" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="ShowValue" oid="37cb13c1-dbcf-454d-88ae-0b8e0df3894f" type="bool">
+                                <init>true</init>
+                            </parameter>
+                            <parameter control="false" name="Legend" oid="c2ea84ed-d7c4-4a9f-9daa-7e55a6e624a0" representation="as_string" type="char^255">
+                                <init>[82, 101, 115, 112, 105, 114, 97, 116, 111, 114, 121, 32, 114, 97, 116, 101, 0]</init>
+                            </parameter>
+                        </inputParameters>
+                    </properties>
+                    <children/>
+                </referenceContainer>
+                <referenceContainer oid="59b064a5-0e0b-49c9-97aa-df368685e318">
+                    <pathFromRoot value="2"/>
+                    <properties modular="false" name="Gauge">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <origin>
+                            <x>
+                                <init>-310.0</init>
+                            </x>
+                            <y>
+                                <init>77.0</init>
+                            </y>
+                        </origin>
+                        <scale>
+                            <x>
+                                <init>1.0</init>
+                            </x>
+                            <y>
+                                <init>1.0</init>
+                            </y>
+                        </scale>
+                        <rotate>
+                            <angle>
+                                <init>0.0</init>
+                            </angle>
+                        </rotate>
+                        <orientation clockwise="false"/>
+                        <file name="Gauge.ogfx" path="$(SCADEDISPLAY_HOME)\examples\objects\Widgets"/>
+                        <crc value="2262594954"/>
+                        <inputParameters>
+                            <parameter control="false" name="SizeX" oid="45d4cf7f-e024-41b5-83a9-84a92e7aa620" type="real">
+                                <init>250.0</init>
+                            </parameter>
+                            <parameter control="false" name="SizeY" oid="103e257b-3b48-40ee-baac-71e8678c71ed" type="real">
+                                <init>50.0</init>
+                            </parameter>
+                            <parameter control="false" name="Style" oid="f5c1daa7-19d2-419f-927d-db7833c23a63" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="BackColor" oid="3df8cd5e-e430-4bd3-928e-b74773b0ad8e" representation="color" type="int">
+                                <init>6</init>
+                            </parameter>
+                            <parameter control="false" name="FrontColor" oid="7c066c7f-ec2a-46c5-949e-68e8a83efff9" representation="color" type="int">
+                                <init>11</init>
+                            </parameter>
+                            <parameter control="false" name="Font" oid="bb0cf042-eef5-4803-9fa3-2e7c85ae21b3" representation="font" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="TextColor" oid="97660f81-528a-4a57-92b6-6fe673480ea4" representation="color" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="Value" oid="8adfe35c-90d6-4746-9a07-fd66eb0d3d76" type="real">
+                                <expr>heart_rate</expr>
+                                <init>70.0</init>
+                            </parameter>
+                            <parameter control="false" name="MinValue" oid="f0090185-f195-4b87-96f1-e4882306f136" type="real">
+                                <init>0.0</init>
+                            </parameter>
+                            <parameter control="false" name="MaxValue" oid="4a42e74f-d11c-488f-abe2-4aa05393598d" type="real">
+                                <init>250.0</init>
+                            </parameter>
+                            <parameter control="false" name="Orientation" oid="d97c8e64-c266-43f7-85f5-ea5b5e5b589e" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="ShowGraduation" oid="bfa366b6-49ee-489a-a167-28e54ee27cbc" representation="index" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="ShowValue" oid="37cb13c1-dbcf-454d-88ae-0b8e0df3894f" type="bool">
+                                <init>true</init>
+                            </parameter>
+                            <parameter control="false" name="Legend" oid="c2ea84ed-d7c4-4a9f-9daa-7e55a6e624a0" representation="as_string" type="char^255">
+                                <init>[72, 101, 97, 114, 116, 32, 114, 97, 116, 101, 0]</init>
+                            </parameter>
+                        </inputParameters>
+                    </properties>
+                    <children/>
+                </referenceContainer>
+                <referenceContainer oid="bd85fcda-a9cd-4e52-83d9-7ce1b54a8156">
+                    <pathFromRoot value="3"/>
+                    <properties modular="false" name="Gauge">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <origin>
+                            <x>
+                                <init>-310.0</init>
+                            </x>
+                            <y>
+                                <init>244.0</init>
+                            </y>
+                        </origin>
+                        <scale>
+                            <x>
+                                <init>1.0</init>
+                            </x>
+                            <y>
+                                <init>1.0</init>
+                            </y>
+                        </scale>
+                        <rotate>
+                            <angle>
+                                <init>0.0</init>
+                            </angle>
+                        </rotate>
+                        <orientation clockwise="false"/>
+                        <file name="Gauge.ogfx" path="$(SCADEDISPLAY_HOME)\examples\objects\Widgets"/>
+                        <crc value="2262594954"/>
+                        <inputParameters>
+                            <parameter control="false" name="SizeX" oid="45d4cf7f-e024-41b5-83a9-84a92e7aa620" type="real">
+                                <init>250.0</init>
+                            </parameter>
+                            <parameter control="false" name="SizeY" oid="103e257b-3b48-40ee-baac-71e8678c71ed" type="real">
+                                <init>50.0</init>
+                            </parameter>
+                            <parameter control="false" name="Style" oid="f5c1daa7-19d2-419f-927d-db7833c23a63" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="BackColor" oid="3df8cd5e-e430-4bd3-928e-b74773b0ad8e" representation="color" type="int">
+                                <init>6</init>
+                            </parameter>
+                            <parameter control="false" name="FrontColor" oid="7c066c7f-ec2a-46c5-949e-68e8a83efff9" representation="color" type="int">
+                                <init>31</init>
+                            </parameter>
+                            <parameter control="false" name="Font" oid="bb0cf042-eef5-4803-9fa3-2e7c85ae21b3" representation="font" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="TextColor" oid="97660f81-528a-4a57-92b6-6fe673480ea4" representation="color" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="Value" oid="8adfe35c-90d6-4746-9a07-fd66eb0d3d76" type="real">
+                                <expr>temperature</expr>
+                                <init>36.5</init>
+                            </parameter>
+                            <parameter control="false" name="MinValue" oid="f0090185-f195-4b87-96f1-e4882306f136" type="real">
+                                <init>30.0</init>
+                            </parameter>
+                            <parameter control="false" name="MaxValue" oid="4a42e74f-d11c-488f-abe2-4aa05393598d" type="real">
+                                <init>50.0</init>
+                            </parameter>
+                            <parameter control="false" name="Orientation" oid="d97c8e64-c266-43f7-85f5-ea5b5e5b589e" representation="index" type="int">
+                                <init>1</init>
+                            </parameter>
+                            <parameter control="false" name="ShowGraduation" oid="bfa366b6-49ee-489a-a167-28e54ee27cbc" representation="index" type="int">
+                                <init>2</init>
+                            </parameter>
+                            <parameter control="false" name="ShowValue" oid="37cb13c1-dbcf-454d-88ae-0b8e0df3894f" type="bool">
+                                <init>true</init>
+                            </parameter>
+                            <parameter control="false" name="Legend" oid="c2ea84ed-d7c4-4a9f-9daa-7e55a6e624a0" representation="as_string" type="char^255">
+                                <init>[66, 111, 100, 121, 32, 116, 101, 109, 112, 101, 114, 97, 116, 117, 114, 101, 0]</init>
+                            </parameter>
+                        </inputParameters>
+                    </properties>
+                    <children/>
+                </referenceContainer>
+                <textArea oid="19cce2bc-fd36-4339-a32c-dcbb72b3f2f5">
+                    <pathFromRoot value="4"/>
+                    <properties name="text area">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>320.0</init>
+                            </x>
+                            <y>
+                                <init>257.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>67.0</init>
+                            </x>
+                            <y>
+                                <init>283.0</init>
+                            </y>
+                        </thirdPoint>
+                        <maxLength>
+                            <init>255</init>
+                        </maxLength>
+                        <textValue type="char">
+                            <init>[80, 97, 99, 105, 101, 110, 116, 58, 32, 32, 74, 111, 104, 110, 32, 68, 111, 101, 0]</init>
+                        </textValue>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <lineWidth>
+                            <init>2</init>
+                        </lineWidth>
+                        <font>
+                            <init>0</init>
+                        </font>
+                        <horizAlign>
+                            <init>left</init>
+                        </horizAlign>
+                        <vertAlign>
+                            <init>top</init>
+                        </vertAlign>
+                    </properties>
+                </textArea>
+                <rectangle oid="be90505c-daf1-4d9f-8f56-a4a737529a3d">
+                    <pathFromRoot value="5"/>
+                    <properties name="rectangle">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>331.0</init>
+                            </x>
+                            <y>
+                                <init>254.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>51.0</init>
+                            </x>
+                            <y>
+                                <init>290.0</init>
+                            </y>
+                        </thirdPoint>
+                        <lineWidth>
+                            <init>0</init>
+                        </lineWidth>
+                        <lineStipple>
+                            <init>0</init>
+                        </lineStipple>
+                        <lineCap>
+                            <init>round</init>
+                        </lineCap>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <outlineOpacity>
+                            <init>255</init>
+                        </outlineOpacity>
+                        <fillColor>
+                            <init>-1</init>
+                        </fillColor>
+                        <fillOpacity>
+                            <init>255</init>
+                        </fillOpacity>
+                        <polygonSmooth>
+                            <init>true</init>
+                        </polygonSmooth>
+                        <textureControl>
+                            <init>false</init>
+                        </textureControl>
+                        <texture horizAlign="center" horizPattern="1.0" vertAlign="middle" vertPattern="1.0">
+                            <textureId>
+                                <init>-1</init>
+                            </textureId>
+                        </texture>
+                        <modulate>
+                            <init>false</init>
+                        </modulate>
+                        <tessellate>
+                            <init>false</init>
+                        </tessellate>
+                    </properties>
+                </rectangle>
+                <textArea oid="efd5c702-9bb8-4d70-8e42-a8bc616e2785">
+                    <pathFromRoot value="6"/>
+                    <properties name="text area">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>320.0</init>
+                            </x>
+                            <y>
+                                <init>180.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>67.0</init>
+                            </x>
+                            <y>
+                                <init>206.0</init>
+                            </y>
+                        </thirdPoint>
+                        <maxLength>
+                            <init>255</init>
+                        </maxLength>
+                        <textValue type="char">
+                            <init>[65, 103, 101, 58, 32, 32, 50, 55, 0]</init>
+                        </textValue>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <lineWidth>
+                            <init>2</init>
+                        </lineWidth>
+                        <font>
+                            <init>0</init>
+                        </font>
+                        <horizAlign>
+                            <init>left</init>
+                        </horizAlign>
+                        <vertAlign>
+                            <init>top</init>
+                        </vertAlign>
+                    </properties>
+                </textArea>
+                <rectangle oid="aac3c15f-cdff-4e5d-ae0e-1af4280ed763">
+                    <pathFromRoot value="7"/>
+                    <properties name="rectangle">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>331.0</init>
+                            </x>
+                            <y>
+                                <init>177.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>51.0</init>
+                            </x>
+                            <y>
+                                <init>213.0</init>
+                            </y>
+                        </thirdPoint>
+                        <lineWidth>
+                            <init>0</init>
+                        </lineWidth>
+                        <lineStipple>
+                            <init>0</init>
+                        </lineStipple>
+                        <lineCap>
+                            <init>round</init>
+                        </lineCap>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <outlineOpacity>
+                            <init>255</init>
+                        </outlineOpacity>
+                        <fillColor>
+                            <init>-1</init>
+                        </fillColor>
+                        <fillOpacity>
+                            <init>255</init>
+                        </fillOpacity>
+                        <polygonSmooth>
+                            <init>true</init>
+                        </polygonSmooth>
+                        <textureControl>
+                            <init>false</init>
+                        </textureControl>
+                        <texture horizAlign="center" horizPattern="1.0" vertAlign="middle" vertPattern="1.0">
+                            <textureId>
+                                <init>-1</init>
+                            </textureId>
+                        </texture>
+                        <modulate>
+                            <init>false</init>
+                        </modulate>
+                        <tessellate>
+                            <init>false</init>
+                        </tessellate>
+                    </properties>
+                </rectangle>
+                <textArea oid="b19e3821-dc9c-43fa-9a66-eafa3c75d716">
+                    <pathFromRoot value="8"/>
+                    <properties name="text area">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>219.0</init>
+                            </x>
+                            <y>
+                                <init>-300.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>167.0</init>
+                            </x>
+                            <y>
+                                <init>-276.0</init>
+                            </y>
+                        </thirdPoint>
+                        <maxLength>
+                            <init>255</init>
+                        </maxLength>
+                        <textValue type="char">
+                            <init>[65, 76, 65, 82, 77, 0]</init>
+                        </textValue>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <lineWidth>
+                            <init>2</init>
+                        </lineWidth>
+                        <font>
+                            <init>0</init>
+                        </font>
+                        <horizAlign>
+                            <init>left</init>
+                        </horizAlign>
+                        <vertAlign>
+                            <init>top</init>
+                        </vertAlign>
+                    </properties>
+                </textArea>
+                <rectangle oid="1350b17d-2b58-43a9-b971-09bbf8b82690">
+                    <pathFromRoot value="9"/>
+                    <properties name="rectangle">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <firstPoint>
+                            <x>
+                                <init>235.0</init>
+                            </x>
+                            <y>
+                                <init>-306.0</init>
+                            </y>
+                        </firstPoint>
+                        <thirdPoint>
+                            <x>
+                                <init>152.0</init>
+                            </x>
+                            <y>
+                                <init>-264.0</init>
+                            </y>
+                        </thirdPoint>
+                        <lineWidth>
+                            <init>0</init>
+                        </lineWidth>
+                        <lineStipple>
+                            <init>0</init>
+                        </lineStipple>
+                        <lineCap>
+                            <init>round</init>
+                        </lineCap>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <outlineOpacity>
+                            <init>255</init>
+                        </outlineOpacity>
+                        <fillColor>
+                            <init>-1</init>
+                        </fillColor>
+                        <fillOpacity>
+                            <init>255</init>
+                        </fillOpacity>
+                        <polygonSmooth>
+                            <init>true</init>
+                        </polygonSmooth>
+                        <textureControl>
+                            <init>false</init>
+                        </textureControl>
+                        <texture horizAlign="center" horizPattern="1.0" vertAlign="middle" vertPattern="1.0">
+                            <textureId>
+                                <init>-1</init>
+                            </textureId>
+                        </texture>
+                        <modulate>
+                            <init>false</init>
+                        </modulate>
+                        <tessellate>
+                            <init>false</init>
+                        </tessellate>
+                    </properties>
+                </rectangle>
+                <circle oid="b0629289-b28e-40fe-8bbb-c075a845d0cd">
+                    <pathFromRoot value="10"/>
+                    <properties name="circle">
+                        <visible>
+                            <init>true</init>
+                        </visible>
+                        <center>
+                            <x>
+                                <init>195.0</init>
+                            </x>
+                            <y>
+                                <init>-179.0</init>
+                            </y>
+                        </center>
+                        <radius>
+                            <init>38.013</init>
+                        </radius>
+                        <lineWidth>
+                            <init>0</init>
+                        </lineWidth>
+                        <lineStipple>
+                            <init>0</init>
+                        </lineStipple>
+                        <lineCap>
+                            <init>round</init>
+                        </lineCap>
+                        <haloing>
+                            <init>true</init>
+                        </haloing>
+                        <haloColor>
+                            <init>-1</init>
+                        </haloColor>
+                        <outlineColor>
+                            <init>32</init>
+                        </outlineColor>
+                        <outlineOpacity>
+                            <init>255</init>
+                        </outlineOpacity>
+                        <fillColor>
+                            <init>45</init>
+                        </fillColor>
+                        <fillOpacity>
+                            <init>255</init>
+                        </fillOpacity>
+                        <polygonSmooth>
+                            <init>true</init>
+                        </polygonSmooth>
+                        <texture horizAlign="center" horizPattern="1.0" vertAlign="middle" vertPattern="1.0">
+                            <textureId>
+                                <init>-1</init>
+                            </textureId>
+                        </texture>
+                        <modulate>
+                            <init>false</init>
+                        </modulate>
+                    </properties>
+                </circle>
+            </children>
+        </layer>
+    </children>
+</specification>
+
+<!-- crc32 : 4170726204 -->
+

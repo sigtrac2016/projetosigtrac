@@ -1,0 +1,84 @@
+
+C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display>"C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\bin\ScadeDisplayConsole.exe" batch generate "C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\tutorial-arduino-display.etp" -conf "Co-simulation" -source "specification.sgfx" -outdir "C:/Users/Bruna/Desktop/sp3/almost/SCADE/tutorial-arduino-display/KCG" -prefix SDY1_specification 
+C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\bin\ScadeDisplayConsole.exe
+Setting SCADEDISPLAY_HOME to C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display
+
+Generating code for specification...
+ScadeDisplayCGSimu.exe -outdir C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code -prefix SDY1_specification_ C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\specification.sgfx C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\texture_table.stt C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\font_table.sft C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\color_table.sct C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\line_width_table.swt C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\line_stipple_table.sst
+I0001: SCADE Display CG Simu Version 6.6.2 (build i15) (c) Esterel Technologies SAS 2006-2015 started at 2016-11-26T11:08:57.
+I0005: Command line: ScadeDisplayCGSimu.exe -outdir C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code -prefix SDY1_specification_ C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\specification.sgfx C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\texture_table.stt C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\font_table.sft C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\color_table.sct C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\line_width_table.swt C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\line_stipple_table.sst
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_2DBackground_alloc.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_SliderThumb_alloc.c
+I0013: C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\examples\objects\Widgets\Common\Graduation_element.ogfx:227: No code generated for object "line" statically invisible or inactive.
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Graduation_element_alloc.c
+I0013: C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\examples\objects\Widgets\Common\GaugeHorizontal.ogfx:153: No code generated for object "DisplayGraduation" statically invisible or inactive.
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeHorizontal_alloc.c
+I0013: C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\examples\objects\Widgets\Common\GaugeVertical.ogfx:178: No code generated for object "DisplayGraduation" statically invisible or inactive.
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_GaugeVertical_alloc.c
+I0013: C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\examples\objects\Widgets\Gauge.ogfx:129: No code generated for object "control" statically invisible or inactive.
+I0013: C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\examples\objects\Widgets\Gauge.ogfx:624: No code generated for object "Style" statically invisible or inactive.
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_Gauge_alloc.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer_draw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer_reset.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer_init.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer_predraw.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer_alloc.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_symbology_layer.h.cosimu
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_font_table.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_font_table.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_font_table1.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_texture_table.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_texture_table.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_color_table.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_color_table.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_line_stipple_table.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_line_stipple_table.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_line_width_table.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_line_width_table.c
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\SDY1_specification_imported_functions.h
+I0006: Generated file: C:\Users\Bruna\Desktop\sp3\almost\SCADE\tutorial-arduino-display\KCG\SDY1_specification\Code\ScadeDisplayCGSimu.log
+I0002: SCADE Display CG Simu finished with 0 error(s) at 2016-11-26T11:09:03.
+
+Generating interactivity code...
+Interactivity code generation finished.
+
+Building...
+"C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\bin\msysmake.bat" all
+/bin/rm -f *.o
+/bin/ls -Q ./Code/SDY1_specification_2DBackground_alloc.c ./Code/SDY1_specification_2DBackground_draw.c ./Code/SDY1_specification_2DBackground_init.c ./Code/SDY1_specification_2DBackground_predraw.c ./Code/SDY1_specification_2DBackground_reset.c ./Code/SDY1_specification_GaugeHorizontal_alloc.c ./Code/SDY1_specification_GaugeHorizontal_draw.c ./Code/SDY1_specification_GaugeHorizontal_init.c ./Code/SDY1_specification_GaugeHorizontal_predraw.c ./Code/SDY1_specification_GaugeHorizontal_reset.c ./Code/SDY1_specification_GaugeVertical_alloc.c ./Code/SDY1_specification_GaugeVertical_draw.c ./Code/SDY1_specification_GaugeVertical_init.c ./Code/SDY1_specification_GaugeVertical_predraw.c ./Code/SDY1_specification_GaugeVertical_reset.c ./Code/SDY1_specification_Gauge_alloc.c ./Code/SDY1_specification_Gauge_draw.c ./Code/SDY1_specification_Gauge_init.c ./Code/SDY1_specification_Gauge_predraw.c ./Code/SDY1_specification_Gauge_reset.c ./Code/SDY1_specification_Graduation_element_alloc.c ./Code/SDY1_specification_Graduation_element_draw.c ./Code/SDY1_specification_Graduation_element_init.c ./Code/SDY1_specification_Graduation_element_predraw.c ./Code/SDY1_specification_Graduation_element_reset.c ./Code/SDY1_specification_SliderThumb_alloc.c ./Code/SDY1_specification_SliderThumb_draw.c ./Code/SDY1_specification_SliderThumb_init.c ./Code/SDY1_specification_SliderThumb_predraw.c ./Code/SDY1_specification_SliderThumb_reset.c ./Code/SDY1_specification_color_table.c ./Code/SDY1_specification_font_table.c ./Code/SDY1_specification_font_table1.c ./Code/SDY1_specification_line_stipple_table.c ./Code/SDY1_specification_line_width_table.c ./Code/SDY1_specification_symbology_layer_alloc.c ./Code/SDY1_specification_symbology_layer_draw.c ./Code/SDY1_specification_symbology_layer_init.c ./Code/SDY1_specification_symbology_layer_predraw.c ./Code/SDY1_specification_symbology_layer_reset.c ./Code/SDY1_specification_texture_table.c ./Code/interactivity_mapping.c ./Specific/cosimu_interface.c  c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/wid_kcg_consts.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/wid_kcg_types.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/General.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/CursorBehavior.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/lib_unicode.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/wrapper_Scale.c c:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/Code/Scale.c | /bin/sed -e 's!"/\([A-Za-z]\)/!"\1:/!' >sources.lst
+/mingw_w64/bin/gcc -m32 -Ui386 -I./Include -I./Include/oglx -I./Code -I./Specific  -Ic:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE -Ic:/Program\ Files\ \(x86\)/Esterel\ Technologies/SCADE\ R17/SCADE\ Display/examples/objects/Widgets/include -DDLL_EXPORTS  @sources.lst -mwindows -mwin32 -shared -Wl,--output-def,../SDY1_specification.def,--out-implib,../SDY1_specification.a -o ../SDY1_specification.dll ./Lib/sdy.o ./Lib/sdy.a ./Lib/OGLX.lib -lopengl32 -lws2_32 -lkernel32 -luser32 -lgdi32
+
+================= END OF COMMAND: SIMULATION GENERATION SUCCESSFUL ================
+
+Status: 0

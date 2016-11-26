@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Esterel Technologies\SCADE R17\SCADE Display\bin\ScadeDisplayConsole.exe" batch generate "C:\Users\Bruna\Desktop\sp3\almost\tutorial-arduino-display\tutorial-arduino-display.etp" -conf "Co-simulation" -source "specification.sgfx" -outdir "C:/Users/Bruna/Desktop/sp3/almost/SCADE/tutorial-arduino-display/KCG" -prefix SDY1_specification

@@ -1,0 +1,8 @@
+EXPORTS
+    SDY1_specification_L_symbology_layer @1
+    SDY1_specification__cancelled @2
+    SDY1_specification__draw @3
+    SDY1_specification__init @4
+    SDY1_specification__lockio @5
+    SDY1_specification__refreshCallback @6
+    SDY1_specification__unlockio @7
