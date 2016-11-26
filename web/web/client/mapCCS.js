@@ -75,7 +75,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
             dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
         var json={
         "titulo": "titulo1", // string vazia ou não
-        "segmento": 'n', // char com a letra referente ao segmento
+        "segmento": getUrlParameter("segmento")[0], // char com a letra referente ao segmento
         "descricao": "descricao1", // string vazia ou não
         "lat": lat, //latitude
         "long": lng, //longitude
@@ -198,8 +198,8 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         });
 
         marker.addListener('click', function(event) {
-        	$scope.genContentString(this.obj);
-        	$scope.map.setCenter(this.getPosition());
+            $scope.genContentString(this.obj);
+            $scope.map.setCenter(this.getPosition());
             $scope.selection = this;
             $scope.infowindow.setContent("<div id=\'infowindow'></div>");
             $scope.infowindow.open($scope.map, this);
@@ -375,7 +375,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-    	$scope.updateArrayOfJsons(newJson(event.latLng.lat(), event.latLng.lng()));
+        $scope.updateArrayOfJsons(newJson(event.latLng.lat(), event.latLng.lng()));
         var new_marker = new google.maps.Marker({
             position: event.latLng,
             map: $scope.map,
@@ -596,27 +596,29 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         console.log("começo do for")
         console.log(arrayOfJsons.length)
         for (i = 0; i < arrayOfJsons.length; i++){
-            console.log("blabla")
-            var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
-            var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: $scope.map,
-                draggable: true,
-                obj: arrayOfJsons[i],
-                icon: pinSymbol(color)
-            });
-            marker.addListener('click', function(event) {
-                $scope.genContentString(this.obj);
-                $scope.map.setCenter(this.getPosition());
-                $scope.selection = this;
-                $scope.infowindow.setContent("<div id=\'infowindow'></div>");
-                $scope.infowindow.open($scope.map, this);
-                $("#infowindow").html($compile($scope.contentString)($scope));
-            });  
-            $scope.markers.push(marker);
-            $scope.updateHeatmap();
-            
+            if(getUrlParameter("segmento")[0]==arrayOfJsons[i].segmento)
+            {
+                console.log("blabla")
+                var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
+                var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: $scope.map,
+                    draggable: true,
+                    obj: arrayOfJsons[i],
+                    icon: pinSymbol(color)
+                });
+                marker.addListener('click', function(event) {
+                    $scope.genContentString(this.obj);
+                    $scope.map.setCenter(this.getPosition());
+                    $scope.selection = this;
+                    $scope.infowindow.setContent("<div id=\'infowindow'></div>");
+                    $scope.infowindow.open($scope.map, this);
+                    $("#infowindow").html($compile($scope.contentString)($scope));
+                });  
+                $scope.markers.push(marker);
+                $scope.updateHeatmap();
+            }
         }
     }     
     $scope.makeGetRequest = function(){
@@ -647,7 +649,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
 
 });
-	
+    
 
 
 /* Detecta Esc para sair de FullScreen*/

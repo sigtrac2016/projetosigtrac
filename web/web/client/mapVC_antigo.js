@@ -1,13 +1,47 @@
-/*
- ===========================================================================
- Mapa - Controller AngularJS
- ===========================================================================
- */
+function newJson(id, lat, lng) {
+    var dt = new Date();
+    var date = dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDay() + " " +
+        dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    var json = {
+        "id": id, // gerado pelo BD 
+        "titulo": "title3", // string vazia ou não 
+        "segmento": 'p', // char com a letra referente ao segmento 
+        "descricao": "description3", // string vazia ou não 
+        "lat": lat, //latitude 
+        "long": lng, //longitude 
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "data_hora": date // formato padrão de timestamp 
+    };
+    return json;
+}
 
-var apiURL = "http://localhost:8080/api/chamados/";
-var nSeconds = 10;
-
-
+function getJsonOfJsons() {
+    var json1 = {
+        "id": 5, // gerado pelo BD 
+        "titulo": "title1", // string vazia ou não 
+        "segmento": 'p', // char com a letra referente ao segmento 
+        "descricao": "description1", // string vazia ou não 
+        "lat": -23.21, //latitude 
+        "long": -45.87, //longitude 
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
+        "status": "not started", // não-iniciado, iniciado, cancelado, reforços, finalizado ** 
+        "data_hora": "2016-11-07 18:03:00" // formato padrão de timestamp 
+    };
+    var json2 = {
+        "id": 6, // gerado pelo BD 
+        "titulo": "title2", // string vazia ou não 
+        "segmento": 'h', // char com a letra referente ao segmento 
+        "descricao": "description2", // string vazia ou não 
+        "lat": -23.208, //latitude 
+        "long": -45.87, //longitude 
+        "foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos 
+        "status": "started", // not started, started, canceled, reinforcements, finished ** 
+        "data_hora": "2016-11-07 18:04:00" // formato padrão de timestamp 
+    };
+    jsonOfJsons = { "5": json1, "6": json2 };
+    return jsonOfJsons;
+}
 
 /* Templates used to render HTML */
 
@@ -26,96 +60,19 @@ app.directive('route', function() {
 app.directive('drone', function() {
     return { restrict: "E", templateUrl: "drone.html" };
 });
-app.controller("mapVC", function($scope, $http, $compile, $interval) {
+app.controller("mapVC", function($scope, $http, $compile) {
 
     /***********************************************
      Initializes map and stuff
      ***********************************************/
-    $scope.markers = [];
+
     $scope.segmento = segmento;
-    function serializeData( data ) {
-        var buffer = [];
-        // Serialize each key in the object.
-        for ( var name in data ) {
-            if ( ! data.hasOwnProperty( name ) ) {
-                continue;
-            }
-            var value = data[ name ];
-            buffer.push(
-                encodeURIComponent( name ) +
-                "=" +
-                encodeURIComponent( ( value == null ) ? "" : value )
-            );
-        }
-        // Serialize the buffer and clean it up for transportation.
-        var source = buffer
-            .join( "&" )
-            .replace( /%20/g, "+" )
-        ;
-        return( source );
-    }
-    arrayOfJsons = [];
-    function getSegmentColorByChar(c){
-        switch (c){
-            case 'p':
-                return "blue";
-            case 'h':
-                return "red";
-            case 'f':
-                return "black";
-            case 'c':
-                return "green";
-            default:
-                return "#aaa";
-        }
-    }
-    function newJson(lat, lng){
-        var dt=new Date();
-        var date=dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate()+" "+
-            dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
-        var json={
-        "titulo": "titulo1", // string vazia ou não
-        "segmento": 'n', // char com a letra referente ao segmento
-        "descricao": "descricao1", // string vazia ou não
-        "lat": lat, //latitude
-        "long": lng, //longitude
-        //"foto": ["foto1", "foto2"], // array de strings, vazio ou contendo URL das fotos
-        "status": "nao-iniciado", // não-iniciado, iniciado, cancelado, reforços, finalizado **
-        "data_hora": date // formato padrão de timestamp
-        };
-        return json;
-    }
+
     // Initializes map
     $scope.map = new google.maps.Map(document.getElementById("map"), {
         center: my_position,
         zoom: 14
     });
-
-    $scope.updateArrayOfJsons = function(json){
-        correctdata = serializeData(json);
-        $scope.makePostRequest(json, correctdata);        
-        $scope.makeGetRequest();        
-    }
-    $scope.makePostRequest = function(json, correctdata){    
-        $http({
-            method: 'POST',
-            url: apiURL,
-            data: correctdata,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(
-            function(response){
-                // success callback
-                console.log("Colocou: " + json)
-                //make get request
-            }, 
-            function(response){
-                // failure callback
-                console.log("Failed to load data")
-            }
-        );
-    }
 
     $scope.heatmap = new google.maps.visualization.HeatmapLayer({
         data: getPoints(),
@@ -126,7 +83,6 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     // Initializes infowindow 
     $scope.infowindow = new google.maps.InfoWindow({
         content: "<div id='infowindow'></div>"
-        ///content: $scope.contentString
     });
 
     // Routes API 
@@ -153,18 +109,19 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         });
     }
     $scope.updateHeatmap();
+
     function getPoints() {
         var points = [];
-        if ($scope.markers == undefined) return [];
+        if ($scope.markers == undefined)
+            return [];
         $scope.markers.forEach(function(marker) {
             if (marker.icon.fillColor == segmentoColor(segmento) ||
-                segmento == "global")
+                segmento == "global" && marker.position != undefined)
                 points.push(new google.maps.LatLng(
                     marker.position.lat(), marker.position.lng()));
         });
         return points;
     }
-    
 
     $scope.toggleHeatmap = function() {
         $scope.heatmap.setMap($scope.heatmap.getMap() ? null : $scope.map);
@@ -177,7 +134,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     $scope.changeOpacity = function() {
         $scope.heatmap.set('opacity', $scope.heatmap.get('opacity') ? null : 0.2);
     }
-    $scope.contentString = "<div id='infowindow'></div>";
+
 
     /*********************************************** 
      Creates new $scope.markers 
@@ -185,37 +142,46 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     $scope.markers = [];
 
-    $scope.createMarker = function(elem) {
-        var pos = {lat: elem.lat , lng: elem.long};
-        var color =getSegmentColorByChar(elem.segmento);
-
+    $scope.createMarker = function() {
         var marker = new google.maps.Marker({
             position: positions[i],
             map: $scope.map,
             draggable: true,
-            obj: elem,
             icon: pinSymbol(colors[i])
         });
-
         marker.addListener('click', function(event) {
-        	$scope.genContentString(this.obj);
-        	$scope.map.setCenter(this.getPosition());
-            $scope.selection = this;
-            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
-            $scope.infowindow.open($scope.map, this);
-            $("#infowindow").html($compile($scope.contentString)($scope));
             $scope.getDistance(marker.position);
-            //$("#infowindow").html($compile('<menu/>')($scope));
+            $scope.selection = marker;
+            $scope.infowindow.open($scope.map, marker);
+            $("#infowindow").html($compile('<menu/>')($scope));
             $scope.infowindow.setPosition(marker.getPosition());
+            $scope.map.setCenter(marker.getPosition());
         });
         google.maps.event.addListener(marker, 'dragend', function() {
             $scope.updateHeatmap();
         });
         $scope.markers.push(marker);
         $scope.updateHeatmap();
-    }////
+    }
 
-    
+    var jsonOfJsons = getJsonOfJsons();
+
+    for (var key in jsonOfJsons) {
+        if (jsonOfJsons.hasOwnProperty(key)) {
+            var json = jsonOfJsons[key];
+            var pos = { lat: json.lat, lng: json.long };
+            var color = getSegmentColorByChar(json.segmento)
+            $scope.createMarker(key, pos, color);
+        }
+        /* 
+         for (var i = 1; i <= len; i++) { 
+         var indexString=i.toString(); 
+         var json=jsonOfJsons[indexString]; 
+         var pos = {lat: json.lat , lng: json.long};         
+         var color =getSegmentColorByChar(json.segmento) 
+         $scope.createMarker(indexString,pos, color); 
+         }*/
+    }
 
     /*********************************************** 
      Routes Service 
@@ -332,7 +298,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     }
 
     for (var i = 0; i < 6; i++) {
-        $scope.createMarker(positions[i]);
+        $scope.createMarker();
     }
 
     for (var i = 0; i < 1; i++) {
@@ -375,7 +341,6 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     // Event to create a new marker
     google.maps.event.addListener($scope.map, 'click', function(event) {
-    	$scope.updateArrayOfJsons(newJson(event.latLng.lat(), event.latLng.lng()));
         var new_marker = new google.maps.Marker({
             position: event.latLng,
             map: $scope.map,
@@ -414,105 +379,20 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
             scale: 1,
         };
     }
-    $scope.makePatchRequest = function(id, json,correctdata) {        
-        $http({
-            method: 'PATCH',
-            url: apiURL+id,
-            data: correctdata,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(
-            function(response){
-                // success callback
-                console.log("Colocou: " + json)
-                //make get request
-            }, 
-            function(response){
-                // failure callback
-                console.log("Failed to load data")
-            }
-        );
 
-    }
-    $scope.colorMarker = function(id,color, segment) {
-        $scope.ocurrenceModel.segmento = segment;
-
-        var idDB=arrayOfJsons[$scope.markers.indexOf($scope.selection)]._id;
+    $scope.colorMarker = function(color, segmento) {
         $scope.selection.setIcon(pinSymbol(color));
-        console.log("id"+id+" "+idDB)
-        var json={
-            "segmento":segment
-        };
-        correctdata = serializeData(json);
-        $scope.makePatchRequest(idDB, json, correctdata);
-        $scope.makeGetRequest();
-
+        $scope.ocurrenceModel.segmento = segmento;
     }
 
     $scope.deleteMarker = function(param) {
-        var id=arrayOfJsons[$scope.markers.indexOf($scope.selection)]._id;
-        console.log("id"+id);
         $scope.selection.setMap(null);
         // Remove o marcador e salva os dados
-        $scope.deleteRequest(id);
         $scope.markers.splice($scope.markers.indexOf($scope.selection), 1);
         $scope.updateHeatmap();
     }
-    $scope.falseAlert = function(param){
-        //TODO
-        //delete from map
-        //delete from database
-        $scope.selection.setMap(null);        
-    }
-    $scope.endAlert = function(param){
-        //TODO
-        $scope.selection.setMap(null);
-    }
-    $scope.reinforcementAlert = function(param){
-        //TODO
-    }
-    $scope.genContentString = function(m) {
-        //var coor= {lat: m.lat, lng: m.long};
-        var id = m.id;
-        // TODO: Corrigir aqui
-        $scope.contentString = '<div id="content">' +
-            '<h1 >'+m.titulo+'</h1>' +
-            '<div>' +
-            '<p><b>Horário de ocorrência: </b>'+ m.data_hora  + '</p>' +
-            '<p><b>Coordenadas: </b>{' + m.lat+', '+m.long + '}</p>' +
-            '<p><a href="http://www.argus-engenharia.com.br/site/wp-content/uploads/2015/03/incendio620x465.jpg">Fotos do alerta</a></p> ';
-        if (segmento == 'global')
-            $scope.contentString +=
-            '<h4>Delegar segmento</h4>' +
-            '<button class="btn btn-primary" ng-click="colorMarker('+id+',\'blue\',\'p\')">Segmento 1</button> ' +
-            '<button class="btn btn-danger" ng-click="colorMarker('+id+',\'red\',\'h\')">Segmento 2</button> ' +
-            '<button class="btn btn-default" style="color:white; background-color:black;" ng-click="colorMarker('+id+',\'black\',\'f\')">Segmento 3</button> ' +
-            '<button class="btn btn-success" ng-click="colorMarker('+id+',\'green\',\'c\')">Segmento 4</button> ';
-        $scope.contentString +=
-            '<hr>' +
-            '<h4>Comandos:</h4>' +
-            '<button class="btn btn-warning" ng-click="deleteMarker()">Alerta falso</button> ' +
-            '<button class="btn btn-default" ng-click="deleteMarker()">Alerta de Reforços</button>' +
-            '<button class="btn btn-danger" ng-click="deleteMarker()">Finalizar alerta</button> ' +
-            '</div>' +
-            '</div>';
-    }
 
-    $scope.deleteMarkers = function() {
-        if (segmento != 'global') {
-            for (var i = 0; i < $scope.markers.length; i++) {
-                if ($scope.markers[i].icon.fillColor != segmentoColor(segmento)) {
-                    $scope.markers[i].setMap(null);
-                }
-            }
-        }
-    }
-    
-    arrayOfJsons.forEach($scope.createMarker);
 
-    // Função para ajudar o Mock
-    $scope.deleteMarkers();
     $scope.ocurrenceModel = {
         "id": "", // gerado pelo BD
         "titulo": "Fireman Alert", // string vazia ou nao
@@ -573,82 +453,8 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         }
         screenfull.toggle($("#mapVC")[0]);
     }
-    $scope.deleteRequest = function(id){
-        $http({
-            method: 'DELETE',
-            url: apiURL+id,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function successCallback(response){
-            console.log("delete request")    
-            
-        }, function errorCallback(response){
-            console.log("Error")
-        });
-    }
-    $scope.loadMarkers = function(){
-        // Paint the map
-        $scope.markers.forEach(function (m){
-            m.setMap(null);
-        });
-        $scope.markers = [];
-        console.log("começo do for")
-        console.log(arrayOfJsons.length)
-        for (i = 0; i < arrayOfJsons.length; i++){
-            console.log("blabla")
-            var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
-            var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: $scope.map,
-                draggable: true,
-                obj: arrayOfJsons[i],
-                icon: pinSymbol(color)
-            });
-            marker.addListener('click', function(event) {
-                $scope.genContentString(this.obj);
-                $scope.map.setCenter(this.getPosition());
-                $scope.selection = this;
-                $scope.infowindow.setContent("<div id=\'infowindow'></div>");
-                $scope.infowindow.open($scope.map, this);
-                $("#infowindow").html($compile($scope.contentString)($scope));
-            });  
-            $scope.markers.push(marker);
-            $scope.updateHeatmap();
-            
-        }
-    }     
-    $scope.makeGetRequest = function(){
-        $http({
-            method: 'GET',
-            url: apiURL,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function successCallback(response){
-                arrayOfJsons = response.data;
-                $scope.loadMarkers();
-                // apply changes in view
-                console.log("OK")
-            
-        }, function errorCallback(response){
-            console.log("Error")
-        });
-    }
-    $interval(
-        function(){
-            $scope.makeGetRequest();
-        }, 
-        nSeconds*1000
-    );
-    $scope.makeGetRequest();
-    $scope.loadMarkers();
-
 
 });
-	
-
 
 /* Detecta Esc para sair de FullScreen*/
 $(document).keyup(function(e) {
