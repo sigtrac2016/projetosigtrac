@@ -593,12 +593,9 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
             m.setMap(null);
         });
         $scope.markers = [];
-        console.log("começo do for")
-        console.log(arrayOfJsons.length)
         for (i = 0; i < arrayOfJsons.length; i++){
             if(getUrlParameter("segmento")[0]==arrayOfJsons[i].segmento)
             {
-                console.log("blabla")
                 var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
                 var color = getSegmentColorByChar(arrayOfJsons[i].segmento)
                 var marker = new google.maps.Marker({
