@@ -529,7 +529,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
             m.setMap(null);
         });
         $scope.markers = [];
-        for (i = 0; i < arrayOfJsons.length; i++){
+        for (i = 0; i < arrayOfJsons.length; i++){           
             if(getUrlParameter("segmento")==undefined || getUrlParameter("segmento")[0]==arrayOfJsons[i].segmento)
             {
                 var pos = {lat: arrayOfJsons[i].lat , lng: arrayOfJsons[i].long};
@@ -570,9 +570,6 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         }, function errorCallback(response){
             console.log("Error")
         });
-        //  for (var i = 0; i < 1; i++) {
-        //      $scope.createGenericPoint(i);
-        // }
         $http.get('/airDrone')
         .then(function success(data) {
             data = data.data;
