@@ -170,35 +170,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
     $scope.markers = [];
 
-    $scope.createMarker = function(elem) {
-        var pos = {lat: elem.lat , lng: elem.long};
-        var color =getSegmentColorByChar(elem.segmento);
-
-        var marker = new google.maps.Marker({
-            position: positions[i],
-            map: $scope.map,
-            draggable: true,
-            obj: elem,
-            icon: imageIconModel
-        });
-
-        marker.addListener('click', function(event) {
-            $scope.genContentString(this.obj);
-            $scope.map.setCenter(this.getPosition());
-            $scope.selection = this;
-            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
-            $scope.infowindow.open($scope.map, this);
-            $("#infowindow").html($compile($scope.contentString)($scope));
-            $scope.getDistance(marker.position);
-            //$("#infowindow").html($compile('<menu/>')($scope));
-            $scope.infowindow.setPosition(marker.getPosition());
-        });
-        google.maps.event.addListener(marker, 'dragend', function() {
-            $scope.updateHeatmap();
-        });
-        $scope.markers.push(marker);
-        $scope.updateHeatmap();
-    }////
+    
 
     
 
@@ -386,8 +358,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         };
         correctdata = serializeData(json);
         $scope.makePatchRequest(idDB, json, correctdata);
-        $scope.makeGetRequest();
-
+        
     }
 
     $scope.deleteMarker = function() {
@@ -445,7 +416,6 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         }
     }
     
-    arrayOfJsons.forEach($scope.createMarker);
 
     // Função para ajudar o Mock
     $scope.deleteMarkers();
