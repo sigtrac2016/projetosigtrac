@@ -297,13 +297,13 @@ app.controller("mapVC", function($scope, $http, $compile) {
         $scope.updateHeatmap();
     }
 
-    for (var i = 0; i < 6; i++) {
-        $scope.createMarker();
-    }
+    // for (var i = 0; i < 6; i++) {
+    //     $scope.createMarker();
+    // }
+    // for (var i = 0; i < 1; i++) {
+    //     $scope.createGenericPoint();
+    // }
 
-    for (var i = 0; i < 1; i++) {
-        $scope.createGenericPoint();
-    }
 
     /***********************************************
      Creates new air drone
