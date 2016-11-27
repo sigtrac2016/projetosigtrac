@@ -82,5 +82,5 @@ var getDistance = function(p1, p2) {
     return d; // returns the distance in km
 };
 
-exports.segmentoColor = segmentoColor;
-exports.getUrlParameter = getUrlParameter;
+//exports.segmentoColor = segmentoColor;
+//exports.getUrlParameter = getUrlParameter;

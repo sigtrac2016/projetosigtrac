@@ -22,6 +22,4 @@ describe('Scripts', function() {
             assert.equal("police", util.getUrlParameter("segmento"));
         });
     });
-
-
 });

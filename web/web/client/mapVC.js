@@ -5,7 +5,7 @@
  */
 
 var apiURL = "http://localhost:8080/api/chamados/";
-var nSeconds = 15;
+var nSeconds = 20;
 
 
 /* Templates used to render HTML */
@@ -268,20 +268,20 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
     var imageIconModel = $scope.genericPointModel.url_icone;
     $scope.createGenericPoint = function(i) {
         var marker = new google.maps.Marker({
-            position: positions2[i],
+            position:  positions2[i],
             map: $scope.map,
             draggable: true,
             icon: imageIconModel
         });
         marker.addListener('click', function(event) {
             $scope.getDistance(event.latLng);
-            $scope.selection = marker;
-            $scope.infowindow.open($scope.map, marker);
-            $("#infowindow").html($compile('<menugen/>')($scope));
-            $scope.infowindow.setPosition(marker.getPosition());
             $scope.map.setCenter(marker.getPosition());
-        });
-        $scope.markers.push(marker);
+            $scope.selection = marker;
+            $scope.infowindow.setContent("<div id=\'infowindow'></div>");
+            $scope.infowindow.open($scope.map, marker);
+            $scope.infowindow.setPosition(marker.getPosition());
+            $("#infowindow").html($compile('<menugen/>')($scope));
+        });  
         $scope.updateHeatmap();
     }
 
@@ -358,7 +358,7 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
         };
         correctdata = serializeData(json);
         $scope.makePatchRequest(idDB, json, correctdata);
-        
+
     }
 
     $scope.deleteMarker = function() {
@@ -565,8 +565,11 @@ app.controller("mapVC", function($scope, $http, $compile, $interval) {
 
             $scope.markers.push(marker);
             $scope.updateHeatmap();
-
         });
+
+        for(var i=0;i<1;i++){
+            $scope.createGenericPoint(i);
+        }
     }
     $interval(
         function(){
