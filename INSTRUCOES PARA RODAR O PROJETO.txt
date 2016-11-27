@@ -1,8 +1,13 @@
-ABRIR 3 CMDS E EXECUTAR:
+-instalar o mongoDB
 
-	"C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
+ABRIR 3 CMDS E EXECUTAR no diretorio do projeto (projetosigtrac):
+
+	"C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"         
 
 	node web/server.js 
 
 	node iot-api/server
-	localhost:5000
+
+
+
+Colocar no browser      -->       localhost:5000   (funciona para muitas janelas)
