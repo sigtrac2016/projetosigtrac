@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var SensorSchema = new Schema({
 	alias: String,
 	name: String,
+	type: String,
 	timeCreated: Date,
 	timeLastUpdated: Date,
 	value: Schema.Types.Mixed,
