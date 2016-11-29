@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="Main" oid="!ed/3c31/96E/920/57e18706113c">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="StatusButtonColor" type="int" oid="!ed/3cd7/96E/920/57e18846796c" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_COLOR_INDEX" WidgetType="Label" WidgetName="StatusVal">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Emit" type="bool" oid="!ed/3d63/96E/920/57e189747189" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_COLOR_INDEX" WidgetType="Label" WidgetName="StatusVal">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="StatusVal">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="OnOffBut">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="83" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="VSpdReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="82" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="HSpdReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="84" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="DirReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="101" ParameterIdent="A661_ORIENTATION" WidgetType="Symbol" WidgetName="Symbol">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="TakeoffLandBut">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="80" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="AltReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="93" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="YawReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="79" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="LatReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="96" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="LongReadout">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="StatusButtonText" type="char^10" oid="!ed/3c56/96E/920/57e1879047c2" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_STRING" Size="10" WidgetType="Label" WidgetName="StatusVal">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Str_size" type="int" oid="!ed/3d64/96E/920/57e189a247d1" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="StatusVal">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="OnOffBut">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="TakeoffLandBut">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="OnOffBut">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="OnButton" type="bool" oid="!ed/3c55/96E/920/57e187724dc" instancepath="Main/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LayerActive" type="bool" oid="!ed/3dc8/96E/920/57e18cbd4bd7" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LayerVisible" type="bool" oid="!ed/3dc7/96E/920/57e18c9a4266" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ButtonText" type="char^10" oid="!ed/3de1/96E/920/57e18db77b44" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_STRING" Size="10" WidgetType="PushButton" WidgetName="OnOffBut">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="VertSpeedChange">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="VertSpeedInput" type="real" oid="!ed/4049/23A9/CDC/580f60a82327" instancepath="Main/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="VertSpeedOutput" type="real" oid="!ed/404a/23A9/CDC/580f60a82977" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="83" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="VSpdReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="48" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="HorSpeedChange">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="HorSpeedInput" type="real" oid="!ed/3ed2/324B/DD8/580faf9e36f3" instancepath="Main/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="50" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="DirectionChange">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="DirInput" type="real" oid="!ed/3ee4/324B/DD8/580fb07b1b2" instancepath="Main/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="HorSpeedOutput" type="real" oid="!ed/3edc/324B/DD8/580fafb16075" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="82" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="HSpdReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="DirOutput" type="real" oid="!ed/3eee/324B/DD8/580fb090142b" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="84" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="DirReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CompassDir" type="real" oid="!ed/3e59/4E19/47C/5834c2a54f3b" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="RotationAngle" type="fr" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="101" ParameterIdent="A661_ORIENTATION" WidgetType="Symbol" WidgetName="Symbol">
+							<A661Data>
+								<DataField value="RotationAngle"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="TakeoffLandBut">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TkoffButton" type="bool" oid="!ed/40d3/4E19/47C/5834c5135e45" instancepath="Main/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TkoffText" type="char^10" oid="!ed/40da/4E19/47C/5834c5306115" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_STRING" Size="10" WidgetType="PushButton" WidgetName="TakeoffLandBut">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="AltitudeOut" type="real" oid="!ed/4184/4E19/47C/5834c7321be9" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="80" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="AltReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="YawOut" type="real" oid="!ed/4447/4E19/47C/5834d4cdaaf" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="93" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="YawReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Latitude" type="real" oid="!ed/4455/4E19/47C/5834d6424a13" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="79" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="LatReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Longitude" type="real" oid="!ed/445f/4E19/47C/5834d657fff" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="96" ParameterIdent="A661_VALUE" WidgetType="NumericReadout" WidgetName="LongReadout">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="VertSpeedControl" oid="!ed/3df8/23A9/CDC/580f549670ba">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="LayerVisible" type="bool" oid="!ed/3e1a/23A9/CDC/580f55923eae" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LayerActive" type="bool" oid="!ed/3e1b/23A9/CDC/580f5596674a" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="VertSpeedChange">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="VertSpeedInput" type="real" oid="!ed/3dfa/23A9/CDC/580f54f584f" instancepath="VertSpeedControl/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Emit" type="bool" oid="!ed/3e19/23A9/CDC/580f558c7a60" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="48" ParameterIdent="A661_VALUE" WidgetType="Slider" WidgetName="HorSpeedChange">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="VertSpeedVal">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="VertSpeedOutput" type="real" oid="!ed/3dfb/23A9/CDC/580f55023496" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="48" ParameterIdent="A661_VALUE" WidgetType="Slider" WidgetName="HorSpeedChange">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="VertSpeedChange">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TestNotify" type="bool" oid="!ed/3fc7/23A9/CDC/580f5e2a38e8" instancepath="VertSpeedControl/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Str_size" type="int" oid="!ed/3e6c/23A9/CDC/580f57f65548" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="VertSpeedVal">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TestOut" type="char^10" oid="!ed/3fc8/23A9/CDC/580f5e2a2d30" instancepath="VertSpeedControl/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\..\..\UADF.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_STRING" Size="10" WidgetType="Label" WidgetName="VertSpeedVal">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+		<OperatorMapping name="StatusControl" oid="!ed/3ec2/60DA/3A0/580f716a6c04"/>
+		<OperatorMapping name="VariableControl" oid="!ed/3f47/60DA/3A0/580f72e628fc"/>
+		<OperatorMapping name="Switch" oid="!ed/414c/96E/920/57e18f302061"/>
+	</operatorMappings>
+</MappingFile>

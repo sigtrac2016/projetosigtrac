@@ -1,0 +1,3 @@
+-target_dir "C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation" -expall -target C -O 3 -name_length 200 -significance_length 31 -user_config "./user_macros.h" -probes -debug 
+-node Main
+"C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/scade_model_without_unused.scade"
