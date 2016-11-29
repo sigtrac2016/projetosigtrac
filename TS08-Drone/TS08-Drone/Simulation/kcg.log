@@ -1,0 +1,15 @@
+$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/config.txt
+** Generation date: 2016-11-22T21:53:34
+*************************************************************$
+*** Code Generation Warning (WAR_604): Renaming interface identifier
+  at file C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/scade_model_without_unused.scade, line 48, character 0
+  at path float/
+ Interface element float has been renamed because it is not a valid C identifier
+1 warning was found
+No error was found
+No failure occurred
+$**************** KCG Version 6.4 (build i21) ****************
+** C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation\kcg.log
+** Generation date: 2016-11-22T21:53:38
+*************************************************************$

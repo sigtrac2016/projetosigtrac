@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Constant name="RED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="21"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/3c33/96E/920/57e1874e18f1"/>
+			</pragmas>
+		</Constant>
+		<Constant name="GREEN">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="51"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/3c44/96E/920/57e1875f16ff"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BTN_TEXT_SIZE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="10"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/3c57/96E/920/57e187d326dc"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TURN_OFF">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['T', 'u', 'r', 'n', ' ', 'O', 'f', 'f', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'u'"/>
+						<ConstValue value="'r'"/>
+						<ConstValue value="'n'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/3cce/96E/920/57e188186730"/>
+			</pragmas>
+		</Constant>
+		<Type name="T_String">
+			<definition>
+				<Table>
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</type>
+					<size>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="BTN_TEXT_SIZE"/>
+							</path>
+						</IdExpression>
+					</size>
+				</Table>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/3ce0/96E/920/57e1886a2eeb"/>
+			</pragmas>
+		</Type>
+		<Constant name="TURN_ON">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['T', 'u', 'r', 'n', ' ', 'O', 'n', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'u'"/>
+						<ConstValue value="'r'"/>
+						<ConstValue value="'n'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'n'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/3d50/96E/920/57e188ad319e"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ON_TEXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['O', 'n', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'n'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4071/96E/920/57e18e456441"/>
+			</pragmas>
+		</Constant>
+		<Constant name="OFF_TEXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['O', 'f', 'f', ' ', ' ', ' ', ' ', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4137/96E/920/57e18e8c1aec"/>
+			</pragmas>
+		</Constant>
+		<Type name="float">
+			<definition>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/3e41/23A9/CDC/580f57176279"/>
+			</pragmas>
+		</Type>
+		<Constant name="TAKEOFF">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['T', 'a', 'k', 'e', 'o', 'f', 'f', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'a'"/>
+						<ConstValue value="'k'"/>
+						<ConstValue value="'e'"/>
+						<ConstValue value="'o'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="'f'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4065/4E19/47C/5834c4be280a"/>
+			</pragmas>
+		</Constant>
+		<Constant name="LAND">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['L', 'a', 'n', 'd', ' ', ' ', ' ', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'L'"/>
+						<ConstValue value="'a'"/>
+						<ConstValue value="'n'"/>
+						<ConstValue value="'d'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/40c4/4E19/47C/5834c4db736a"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/config.txt
+** Generation date: 2016-11-22T21:53:38
+*************************************************************$-->
+<Model date="2016-11-22T21:53:38" commandLine="kcg64.exe -config C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/config.txt">
+  <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+  <Option name="xml_filter" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="input_file"
+      value="C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation/scade_model_without_unused.scade"/>
+  <Option name="probes" value="#on#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="debug" value="#on#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="input_threshold" value="#off#"/>
+  <Option name="header" value="#off#"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="name_length" value="200"/>
+  <Option name="globals_prefix" value="#off#"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="optimization_level" value="3"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="target_dir" value="C:/Users/SHIGEMURA-PC/TS08-Drone/TS08-Drone/Simulation"/>
+  <Option name="target" value="C"/>
+  <Option name="node" value="Main"/>
+  <Option name="auth" value="#off#"/>
+  <Constant scadeName="BTN_TEXT_SIZE" scadeType="int" targetName="BTN_TEXT_SIZE" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="TURN_OFF" scadeType="T_String" targetName="TURN_OFF" targetType="T_String"/>
+  <Constant scadeName="TURN_ON" scadeType="T_String" targetName="TURN_ON" targetType="T_String"/>
+  <Constant scadeName="OFF_TEXT" scadeType="T_String" targetName="OFF_TEXT" targetType="T_String"/>
+  <Constant scadeName="ON_TEXT" scadeType="T_String" targetName="ON_TEXT" targetType="T_String"/>
+  <Constant scadeName="RED" scadeType="int" targetName="RED" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="GREEN" scadeType="int" targetName="GREEN" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="LAND" scadeType="T_String" targetName="LAND" targetType="T_String"/>
+  <Constant scadeName="TAKEOFF" scadeType="T_String" targetName="TAKEOFF" targetType="T_String"/>
+  <NamedType scadeName="T_String" targetName="T_String" refType="T_String"/>
+  <NamedType scadeName="float" targetName="_1_float" refType="kcg_real"/>
+  <RootNode scadeName="Main" headerFile="Main.h" targetCycleFct="Main" targetInitFct="Main_reset"
+      targetInitializationFct="Main_init">
+    <Input scadeName="OnButton" scadeType="bool" targetName="OnButton" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="VertSpeedInput" scadeType="float" targetName="VertSpeedInput" targetType="_1_float" inCtx="true"/>
+    <Input scadeName="HorSpeedInput" scadeType="float" targetName="HorSpeedInput" targetType="_1_float" inCtx="true"/>
+    <Input scadeName="DirInput" scadeType="float" targetName="DirInput" targetType="_1_float" inCtx="true"/>
+    <Input scadeName="TkoffButton" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="StatusButtonText" scadeType="T_String" targetName="StatusButtonText" targetType="T_String"
+        inCtx="true"/>
+    <Output scadeName="StatusButtonColor" scadeType="int" targetName="StatusButtonColor" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="Emit" scadeType="bool" targetName="Emit" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="Str_size" scadeType="int" targetName="Str_size" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="LayerVisible" scadeType="bool" targetName="LayerVisible" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="LayerActive" scadeType="bool" targetName="LayerActive" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="ButtonText" scadeType="T_String" targetName="ButtonText" targetType="T_String" inCtx="true"/>
+    <Output scadeName="VertSpeedOutput" scadeType="float" targetName="VertSpeedOutput" targetType="_1_float"
+        inCtx="true"/>
+    <Output scadeName="HorSpeedOutput" scadeType="float" targetName="HorSpeedOutput" targetType="_1_float"
+        inCtx="true"/>
+    <Output scadeName="DirOutput" scadeType="float" targetName="DirOutput" targetType="_1_float" inCtx="true"/>
+    <Output scadeName="CompassDir" scadeType="real" targetName="CompassDir" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="TkoffText" scadeType="T_String" targetName="TkoffText" targetType="T_String" inCtx="true"/>
+    <Output scadeName="AltitudeOut" scadeType="real" targetName="AltitudeOut" targetType="kcg_real" mem="true"
+        inCtx="true"/>
+    <Output scadeName="YawOut" scadeType="real" targetName="YawOut" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="Latitude" scadeType="real" targetName="Latitude" targetType="kcg_real" mem="true" inCtx="true"/>
+    <Output scadeName="Longitude" scadeType="real" targetName="Longitude" targetType="kcg_real" mem="true"
+        inCtx="true"/>
+    <Local scadeName="On" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L10" scadeType="bool" targetName="Emit" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L11" scadeType="bool" targetName="LayerVisible" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L51" scadeType="T_String" targetName="ButtonText" targetType="T_String" inCtx="true"/>
+    <Local scadeName="_L46" scadeType="int" targetName="StatusButtonColor" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L45" scadeType="T_String" targetName="StatusButtonText" targetType="T_String" inCtx="true"/>
+    <Local scadeName="_L53" scadeType="bool" targetName="OnButton" targetType="kcg_bool"/>
+    <Local scadeName="_L54" scadeType="float" targetName="VertSpeedOutput" targetType="_1_float" inCtx="true"/>
+    <Local scadeName="_L36" scadeType="float" targetName="VertSpeedInput" targetType="_1_float"/>
+    <Local scadeName="_L56" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L57" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L63" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L62" scadeType="float" targetName="HorSpeedOutput" targetType="_1_float" inCtx="true"/>
+    <Local scadeName="_L66" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L65" scadeType="float" targetName="DirOutput" targetType="_1_float" inCtx="true"/>
+    <Local scadeName="_L67" scadeType="float" targetName="HorSpeedInput" targetType="_1_float"/>
+    <Local scadeName="_L68" scadeType="float" targetName="DirInput" targetType="_1_float"/>
+    <Local scadeName="_L69" scadeType="T_String" targetName="TkoffText" targetType="T_String" inCtx="true"/>
+    <Local scadeName="_L70" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool"/>
+    <Memory scadeName="_L73" scadeType="real" targetName="AltitudeOut" targetType="kcg_real" inCtx="true"/>
+    <Memory scadeName="_L75" scadeType="real" targetName="Longitude" targetType="kcg_real" inCtx="true"/>
+    <Memory scadeName="_L74" scadeType="real" targetName="Latitude" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L76" scadeType="float" targetName="HorSpeedInput" targetType="_1_float"/>
+    <Local scadeName="_L77" scadeType="float" targetName="DirInput" targetType="_1_float"/>
+    <NodeInlining scadeName="StatusControl" instName="2">
+      <Input scadeName="OnButton" scadeType="bool" targetName="OnButton" targetType="kcg_bool"/>
+      <Output scadeName="StatusButtonText" scadeType="T_String" targetName="StatusButtonText" targetType="T_String"
+          inCtx="true"/>
+      <Output scadeName="StatusButtonColor" scadeType="int" targetName="StatusButtonColor" targetType="kcg_int"
+          inCtx="true"/>
+      <Output scadeName="ButtonText" scadeType="T_String" targetName="ButtonText" targetType="T_String" inCtx="true"/>
+      <Output scadeName="On" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="_L23" scadeType="T_String" targetName="StatusButtonText" targetType="T_String" inCtx="true"/>
+      <Local scadeName="_L8" scadeType="int" targetName="StatusButtonColor" targetType="kcg_int" inCtx="true"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="OnButton" targetType="kcg_bool"/>
+      <Local scadeName="_L2" scadeType="T_String" targetName="ButtonText" targetType="T_String" inCtx="true"/>
+      <Local scadeName="_L27" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="_L28" scadeType="bool" targetName="output_2_2" targetType="kcg_bool" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="3"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <NodeInstance scadeName="if" instName="1"/>
+      <NodeInlining scadeName="Switch" instName="2">
+        <Input scadeName="input" scadeType="bool" targetName="OnButton" targetType="kcg_bool"/>
+        <Output scadeName="output" scadeType="bool" targetName="output_2_2" targetType="kcg_bool" inCtx="true"/>
+        <Memory scadeName="_L1" scadeType="bool" targetName="_L1_2_2" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="OnButton" targetType="kcg_bool"/>
+        <Local scadeName="_L3" scadeType="bool" targetName="output_2_2" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+        <NodeInstance scadeName="if" instName="1"/>
+        <FbyOp instName="1">
+          <Memory targetName="_L1_2_2" targetType="kcg_bool" inCtx="true"/>
+          <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+        </FbyOp>
+        <NodeInstance scadeName="not" instName="1"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="VariableControl" instName="1">
+      <Input scadeName="VarInput" scadeType="float" targetName="VertSpeedInput" targetType="_1_float"/>
+      <Input scadeName="On" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <Output scadeName="VarOutput" scadeType="float" targetName="VertSpeedOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="float" targetName="VertSpeedInput" targetType="_1_float"/>
+      <Local scadeName="_L2" scadeType="real" targetName="VertSpeedOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L3" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="1"/>
+    </NodeInlining>
+    <NodeInlining scadeName="VariableControl" instName="3">
+      <Input scadeName="VarInput" scadeType="float" targetName="HorSpeedInput" targetType="_1_float"/>
+      <Input scadeName="On" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <Output scadeName="VarOutput" scadeType="float" targetName="HorSpeedOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="float" targetName="HorSpeedInput" targetType="_1_float"/>
+      <Local scadeName="_L2" scadeType="real" targetName="HorSpeedOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L3" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="1"/>
+    </NodeInlining>
+    <NodeInlining scadeName="VariableControl" instName="4">
+      <Input scadeName="VarInput" scadeType="float" targetName="DirInput" targetType="_1_float"/>
+      <Input scadeName="On" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <Output scadeName="VarOutput" scadeType="float" targetName="DirOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="float" targetName="DirInput" targetType="_1_float"/>
+      <Local scadeName="_L2" scadeType="real" targetName="DirOutput" targetType="_1_float" inCtx="true"/>
+      <Local scadeName="_L3" scadeType="bool" targetName="On" targetType="kcg_bool" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="1"/>
+    </NodeInlining>
+    <NodeInlining scadeName="Takeoff" instName="1">
+      <Input scadeName="TakeoffBtn" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool"/>
+      <Output scadeName="TakeoffBtnText" scadeType="T_String" targetName="TkoffText" targetType="T_String"
+          inCtx="true"/>
+      <Output scadeName="Altitude" scadeType="real" targetName="AltitudeOut" targetType="kcg_real" mem="true"
+          inCtx="true"/>
+      <Local scadeName="_L7" scadeType="bool" targetName="output_1_1" targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="T_String" targetName="TkoffText" targetType="T_String" inCtx="true"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool"/>
+      <Local scadeName="_L26" scadeType="real" targetName="_L26_1" targetType="kcg_real" inCtx="true"/>
+      <Memory scadeName="_L32" scadeType="bool" targetName="_L32_1" targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="_L34" scadeType="real" targetName="_L34_1" targetType="kcg_real" inCtx="true"/>
+      <Memory scadeName="_L41" scadeType="real" targetName="AltitudeOut" targetType="kcg_real" inCtx="true"/>
+      <Memory scadeName="_L49" scadeType="bool" targetName="_L49_1" targetType="kcg_bool" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="3"/>
+      <NodeInlining scadeName="Switch" instName="1">
+        <Input scadeName="input" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool"/>
+        <Output scadeName="output" scadeType="bool" targetName="output_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Memory scadeName="_L1" scadeType="bool" targetName="_L1_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="TkoffButton" targetType="kcg_bool"/>
+        <Local scadeName="_L3" scadeType="bool" targetName="output_1_1" targetType="kcg_bool" inCtx="true"/>
+        <NodeInstance scadeName="if" instName="1"/>
+        <FbyOp instName="1">
+          <Memory targetName="_L1_1_1" targetType="kcg_bool" inCtx="true"/>
+          <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+        </FbyOp>
+        <NodeInstance scadeName="not" instName="1"/>
+      </NodeInlining>
+      <NodeInstance scadeName="+" instName="1"/>
+      <NodeInstance scadeName="if" instName="6"/>
+      <NodeInstance scadeName="&lt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="7"/>
+      <FbyOp instName="3">
+        <Memory targetName="AltitudeOut" targetType="kcg_real" inCtx="true"/>
+        <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+      <NodeInstance scadeName="if" instName="9"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="10"/>
+      <NodeInstance scadeName="if" instName="11"/>
+      <FbyOp instName="5">
+        <Memory targetName="_L32_1" targetType="kcg_bool" inCtx="true"/>
+        <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+      <FbyOp instName="6">
+        <Memory targetName="_L49_1" targetType="kcg_bool" inCtx="true"/>
+        <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+    </NodeInlining>
+    <NodeInlining scadeName="HorPosControl" instName="1">
+      <Input scadeName="HorVel" scadeType="real" targetName="HorSpeedInput" targetType="_1_float"/>
+      <Input scadeName="Direction" scadeType="real" targetName="DirInput" targetType="_1_float"/>
+      <Output scadeName="Latitude" scadeType="real" targetName="Latitude" targetType="kcg_real" mem="true"
+          inCtx="true"/>
+      <Output scadeName="Longitude" scadeType="real" targetName="Longitude" targetType="kcg_real" mem="true"
+          inCtx="true"/>
+      <Local scadeName="_L1" scadeType="real" targetName="HorSpeedInput" targetType="_1_float"/>
+      <Local scadeName="_L2" scadeType="real" targetName="DirInput" targetType="_1_float"/>
+      <Memory scadeName="_L3" scadeType="real" targetName="Latitude" targetType="kcg_real" inCtx="true"/>
+      <Local scadeName="_L8" scadeType="bool" targetName="_L8_1" targetType="kcg_bool" inCtx="true"/>
+      <Local scadeName="_L10" scadeType="bool" targetName="_L10_1" targetType="kcg_bool" inCtx="true"/>
+      <Memory scadeName="_L16" scadeType="real" targetName="Longitude" targetType="kcg_real" inCtx="true"/>
+      <Local scadeName="_L21" scadeType="real" targetName="_L21_1" targetType="kcg_real" inCtx="true"/>
+      <NodeInstance scadeName="+" instName="1"/>
+      <FbyOp instName="1">
+        <Memory targetName="Latitude" targetType="kcg_real" inCtx="true"/>
+        <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+      <NodeInstance scadeName="if" instName="1"/>
+      <NodeInstance scadeName="&gt;" instName="1"/>
+      <NodeInstance scadeName="&gt;" instName="2"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <NodeInstance scadeName="+" instName="2"/>
+      <FbyOp instName="2">
+        <Memory targetName="Longitude" targetType="kcg_real" inCtx="true"/>
+        <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+      <NodeInstance scadeName="if" instName="3"/>
+      <NodeInstance scadeName="and" instName="2"/>
+      <NodeInstance scadeName="*" instName="1"/>
+    </NodeInlining>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_Main"/>
+    <InCtxType targetName="inC_Main"/>
+  </RootNode>
+  <ExpNode scadeName="StatusControl"/>
+  <ExpNode scadeName="Switch"/>
+  <ExpNode scadeName="VariableControl"/>
+  <ExpNode scadeName="Takeoff"/>
+  <ExpNode scadeName="HorPosControl"/>
+  <ArrayType targetName="T_String" cellType="kcg_char" size="10" targetCopyFct="kcg_copy_T_String"
+      targetCompFct="kcg_comp_T_String"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+</Model>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** kcg_trace.xml
+** Generation date: 2016-11-22T21:53:38
+*************************************************************$-->
