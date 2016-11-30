@@ -12,7 +12,7 @@ function newJson(id, lat, lng) {
         dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
     var json = {
         "id": id, // gerado pelo BD 
-        "titulo": "title3", // string vazia ou não 
+        "titulo": "title", // string vazia ou não 
         "segmento": 'p', // char com a letra referente ao segmento 
         "descricao": "description3", // string vazia ou não 
         "lat": lat, //latitude 
